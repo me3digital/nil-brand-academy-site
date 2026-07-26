@@ -122,13 +122,18 @@ footer a{color:var(--muted)}
   <thead><tr><th>Service</th><th>What it does</th><th>What it receives</th></tr></thead>
   <tbody>
     <tr><td><strong>Google Analytics 4</strong><br>and Google Tag Manager</td><td>Site analytics</td><td>Usage and device data, referral source, ad click identifiers</td></tr>
-    <tr><td><strong>Google Ads</strong></td><td>Advertising and conversion measurement</td><td>That an ad click led to a visit or a purchase</td></tr>
+    <tr><td><strong>Google Ads</strong></td><td>Advertising and conversion measurement</td><td>That an ad click led to a visit or a purchase, and a scrambled (hashed) version of your email address used only to match that purchase to the advertisement you clicked</td></tr>
     <tr><td><strong>ChatGPT Ads</strong> (OpenAI)</td><td>Advertising measurement. Planned, not yet active</td><td>That an ad led to a visit or a purchase</td></tr>
     <tr><td><strong>Kit</strong> (formerly ConvertKit)</td><td>Checkout and email delivery</td><td>Name, email, order details</td></tr>
     <tr><td><strong>Stripe</strong></td><td>Payment processing</td><td>Payment and billing information</td></tr>
     <tr><td><strong>Netlify</strong></td><td>Website hosting</td><td>Standard server logs, including IP address</td></tr>
   </tbody>
 </table></div>
+
+<h3>How we measure whether an advertisement worked</h3>
+<p>Our checkout is hosted by Kit, and it does not pass the advertising click identifier through to us. So when a purchase happens we cannot tell on our own which advertisement produced it.</p>
+<p>To close that gap we send Google a <strong>hashed</strong> version of your email address alongside the purchase. Hashing converts your address into a fixed string of characters using SHA-256, a one-way process: it cannot be reversed back into your email. Google compares that string against its own records to work out whether the purchase followed one of our advertisements, and reports the result to us as a count, never as a name or an address.</p>
+<p><strong>We never send Google your actual email address</strong>, and we do not use this to build a profile of you or to target you with further advertising. If you would rather not participate, you can control personalised advertising through <a href="https://myadcenter.google.com/" rel="noopener">Google My Ad Center</a>, or email us and we will exclude your purchase from this matching.</p>
 
 <p><strong>We do not sell your personal information, and we do not share it with advertisers for their own independent use.</strong></p>
 
@@ -165,7 +170,7 @@ footer a{color:var(--muted)}
 <p>Questions, requests or complaints: <a href="mailto:contact@me3digital.com">contact@me3digital.com</a><br>
 ME3 Digital, Longwood, Florida, United States</p>
 
-<p class="updated">Last updated 26 July 2026.</p>
+<p class="updated">Last updated 26 July 2026. This version adds the section on how we measure whether an advertisement worked.</p>
 
 </div></main>
 
