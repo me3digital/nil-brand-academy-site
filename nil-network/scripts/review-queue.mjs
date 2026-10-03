@@ -36,7 +36,7 @@ const recommend = (g, pending, review) => {
   return 'KEEP NOINDEX. State-rule-dominant. Useful in Find My School, not as an indexed page, unless the school or district confirms NIL guidance of its own.';
 };
 let md = `# Per-school review checklists\n\nOne record per school. Statewide and national rules are not repeated here: they are reviewed once in the central queue.\n\n`;
-const summary = [];
+const summary = []; const records = [];
 for (const g of gates) {
   const id = g.institution_id;
   const inst = (await q(`select i.*, d.name as district, c.short_name as conference from institutions i left join school_districts d on d.id = i.district_id left join governing_bodies c on c.id = i.conference_id where i.id = $1`, [id]))[0];
@@ -76,6 +76,16 @@ for (const g of gates) {
   md += `  - ${CHECKS.map(([k, l]) => `${l}: ${g[k] ? 'PASS' : 'FAIL'}`).join('\n  - ')}\n`;
   md += `- **Reason for failures:** ${autoFails.length ? autoFails.join('; ') + '.' : 'No automated check fails.'} Human review and editorial approval are not recorded (only a person can record them).${pending ? ` ${pending} school rule(s) await school confirmation.` : ''}${review ? ` ${review} school rule(s) are under review.` : ''}\n`;
   md += `- **Recommended editorial status:** ${rec}\n\n`;
+  records.push({ name: inst.name, type: inst.institution_type, sector: inst.sector, city: inst.city, conference: inst.conference, district: inst.district, bodies, path: g.path,
+    value_class: g.value_class, value_label: g.value_class_label, seo_status: g.seo_status, nil_items: Number(g.nil_items),
+    sources: srcs.map((x) => ({ title: x.title, url: x.url, date: x.published_on ? String(x.published_on instanceof Date ? x.published_on.toISOString().slice(0, 10) : x.published_on) : null })),
+    not_found: N('not_found'), policy_found: !!search?.public_policy_found, locations: search?.locations_checked?.length || 0, policies: policies.map((p) => ({ title: p.title, status: p.policy_status, covers_nil: p.covers_nil })),
+    disclosure: disc.map((d) => ({ what: d.what, recipient: d.recipient, when: d.deadline_text, platform: d.platform_name })),
+    contacts: contacts.map((c) => ({ office: c.office, person: c.person_name, role: c.role, phone: c.phone, scope: c.contact_scope, url: c.url })),
+    rules: rules.map((r) => ({ slug: r.rule_slug, scope: r.scope_type, topic: r.topic_label, topic_slug: r.topic_slug, answer: ANS[r.answer], trust: TRUST[r.trust_state], nil_specific: r.nil_specific, summary: r.summary })),
+    claims: N('claim'), ambiguities: [...N('ambiguity'), ...N('conflict').map((c) => 'Conflict: ' + c)], manual: N('manual_review'), left_off: N('left_off_page'),
+    checks: CHECKS.map(([k, l]) => [l, !!g[k]]), reason: (autoFails.length ? autoFails.join('; ') + '. ' : 'No automated check fails. ') + 'Human review and editorial approval are not recorded.' + (pending ? ` ${pending} school rule(s) await school confirmation.` : '') + (review ? ` ${review} school rule(s) are under review.` : ''),
+    recommended: rec });
   summary.push({ name: inst.name, type: inst.institution_type, city: inst.city, path: g.path, value_class: g.value_class, seo_status: g.seo_status, index_status: g.index_status, nil_items: Number(g.nil_items),
     school_rules: rules.filter((r) => r.scope_type === 'institution').length, pending, review, policy_found: !!search?.public_policy_found, policy_published: policies.some((p) => p.policy_status === 'published' && p.covers_nil),
     workflow: disc.length > 0, contact: contacts.length > 0, athletics_contact: g.athletics_contact_found, sources: srcs.length, claims: N('claim').length, ambiguities: N('ambiguity').length + N('conflict').length, manual: N('manual_review').length,
@@ -89,5 +99,6 @@ for (const t of ['institutions', 'school_districts', 'governing_bodies', 'source
 fs.writeFileSync('review/summary.json', JSON.stringify({ schools: summary, sources: src, counts, queue: { central: central.length, shared: shared.length, school: school.length },
   centralByIssuer: Object.fromEntries([...new Set(central.map((r) => r.issuer))].map((i) => [i, central.filter((r) => r.issuer === i).length])),
   conflicts: await q(`select r.slug, c.severity, c.summary from conflicts c join rules r on r.id = c.rule_id where c.status = 'open' order by c.severity, r.slug`) }, null, 1));
+fs.writeFileSync('review/data.json', JSON.stringify({ generated: new Date().toISOString().slice(0, 10), records, queue: queue.map((r) => ({ slug: r.rule_slug, scope: r.scope_type, issuer: r.issuer, topic: r.topic, answer: ANS[r.answer], citation: r.citation, trust: TRUST[r.trust_state], pages: Number(r.pages_inheriting), summary: r.summary, group: central.includes(r) ? 'central' : shared.includes(r) ? 'shared' : 'school' })) }));
 console.log('central', central.length, 'shared', shared.length, 'school', school.length, '| sources', src, '| schools', summary.length);
 process.exit(0);
