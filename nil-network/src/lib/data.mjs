@@ -60,7 +60,11 @@ export function buildTopics(rows) {
   const topics = [...byTopic.values()];
   for (const t of topics) {
     t.layers.sort((a, b) => a.layer_order - b.layer_order);
-    const answered = t.layers.filter((l) => l.answer !== 'not_addressed');
+    const firm = (l) => l.trust_state !== 'NEEDS_REVIEW' && l.trust_state !== 'PENDING_INSTITUTION_CONFIRMATION' && l.trust_state !== 'SUPERSEDED';
+    let answered = t.layers.filter((l) => l.answer !== 'not_addressed');
+    // A rule that is under review, or that the school has not confirmed as current, stays visible but never sets the bottom line
+    // while a checked rule on the same topic exists.
+    if (answered.some(firm)) answered = answered.filter(firm);
     if (!answered.length) { t.answer = 'not_addressed'; t.lead = t.layers[t.layers.length - 1]; }
     else if (answered.some((l) => l.answer === 'unclear')) { t.answer = 'unclear'; t.lead = answered.find((l) => l.answer === 'unclear'); }
     else {
@@ -122,7 +126,7 @@ export function trustCounts(topics) {
 }
 // Everything Find My School can answer: schools with a page, and schools we know of but have not built.
 export async function getFindIndex() {
-  return q(`select i.name, i.short_name, i.city, i.institution_type, s.name as state, s.code, s.slug as state_slug, p.path
+  return q(`select i.name, i.short_name, i.city, i.county, i.search_aliases, i.institution_type, s.name as state, s.code, s.slug as state_slug, p.path
     from institutions i join states s on s.id = i.state_id left join pages p on p.institution_id = i.id order by i.name`);
 }
 export async function getState(slug) { return (await q(`select * from states where slug = $1`, [slug]))[0]; }
@@ -230,16 +234,18 @@ export async function getSport(slug) {
 }
 export const gateChecks = (g) => [
   ['Governing body identified', g.chk_governing_body],
-  ['Current NIL status established', g.chk_current_status],
-  ['No rule still under review or awaiting the school', g.chk_rules_verified],
-  ['Primary source attached to every rule', g.chk_sources_attached],
-  ['Rule matrix populated (8 or more topics answered)', g.chk_matrix_populated],
-  ['School and district policy search documented (3 or more public locations)', g.chk_school_info_checked],
-  ['School-specific value beyond state rules (3 or more school-level facts)', g.chk_school_specific_value],
-  ['School contact matched to the school\'s official page', g.chk_contact_checked],
-  ['Scenarios answered (5 or more)', g.chk_scenarios_answered],
-  ['Every inherited rule reviewed by a person (recorded once per rule)', g.chk_last_verified],
-  ['No open high-severity source conflict', g.chk_no_open_conflict],
-  ['Title, description and canonical complete', g.meta_complete],
-  ['Editorial approval', g.human_approved],
+  ['Current statewide and national rules established (none under review or awaiting the school)', g.chk_rules_established],
+  ['Primary sources attached to every rule', g.chk_sources_attached],
+  ['Rule summaries trace to canonical records', g.chk_rules_traceable],
+  ['School and district research completed (3 or more public locations)', g.chk_school_info_checked],
+  ['School-specific value present (NIL-specific school or district facts; a contact alone does not count)', g.chk_school_specific_value],
+  ['Official contact checked against the school\'s page', g.chk_contact_checked],
+  ['Scenarios populated (5 or more)', g.chk_scenarios_answered],
+  ['Title and meta description complete', g.chk_title_meta],
+  ['Canonical complete', g.chk_canonical],
+  ['Internal links complete', g.chk_internal_links],
+  ['No unresolved high-severity source conflict', g.chk_no_open_conflict],
+  ['Human review complete (recorded by a person, once per rule)', g.chk_human_review],
+  ['Editorial approval complete (recorded by a person)', g.chk_editorial_approval],
 ];
+export const SEO_STATUS = { NOT_ELIGIBLE: 'Not eligible', SEO_ELIGIBLE_HUMAN_REVIEW_PENDING: 'SEO-eligible / human review pending', APPROVED_TO_INDEX: 'Approved to index' };
