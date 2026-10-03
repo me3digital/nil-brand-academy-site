@@ -1,7 +1,0 @@
----
-import HubPage from '../../../../components/HubPage.astro';
-import { allHubPaths, getHub } from '../../../../lib/data.mjs';
-export async function getStaticPaths() { return (await allHubPaths('high_school')).map((p) => ({ params: { state: p.state, slug: p.slug } })); }
-const hub = await getHub(Astro.params.state, 'high_school', Astro.params.slug);
----
-<HubPage hub={hub} />
