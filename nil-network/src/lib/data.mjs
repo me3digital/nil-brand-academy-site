@@ -228,8 +228,8 @@ export async function getSports() {
 }
 export async function getSport(slug) {
   const sport = (await q(`select * from sports where slug = $1`, [slug]))[0];
-  const schools = await q(`select distinct i.name, i.institution_type, p.path from institution_sports s join institutions i on i.id = s.institution_id
-    left join pages p on p.institution_id = i.id where s.sport_id = $1 order by i.name collate "C"`, [sport.id]);
+  const schools = await q(`select * from (select distinct i.name, i.institution_type, p.path from institution_sports s join institutions i on i.id = s.institution_id
+    left join pages p on p.institution_id = i.id where s.sport_id = $1) x order by name collate "C", path`, [sport.id]);
   return { sport, schools };
 }
 export const gateChecks = (g) => [
