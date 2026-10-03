@@ -7,6 +7,8 @@
 [build.environment]
   NODE_VERSION = "22"
   NIL_STAGING = "1"
+  # Hosted builds must read the live database. Without DATABASE_URL the build fails instead of using repo files.
+  NIL_REQUIRE_DB = "1"
 
 # Staging is blocked from search engines three ways: this header, the robots meta on every page, and robots.txt.
 [[headers]]

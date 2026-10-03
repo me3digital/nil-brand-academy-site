@@ -4,6 +4,9 @@ import '@fontsource/lato/400.css';
 import '@fontsource/lato/700.css';
 import '@fontsource/lato/900.css';
 import { SITE, STAGING, checkoutLink, DISCLAIMER } from '../lib/site.mjs';
+import { buildProvenance } from '../lib/db.mjs';
+const prov = STAGING ? await buildProvenance() : null;
+const builtAt = new Date().toISOString().slice(0, 19) + 'Z';
 const { title, description, path, indexable = false, pageType, crumbs = [], jsonld = [], ctx = {} } = Astro.props;
 const canonical = SITE + path;
 const robots = STAGING ? 'noindex, nofollow' : indexable ? 'index, follow, max-image-preview:large' : 'noindex, follow';
@@ -42,7 +45,7 @@ const dl = { page_type: pageType, ...ctx, index_status: indexable ? 'index' : 'n
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-{STAGING && <div class="staging" role="note">Staging preview. Not live, not indexed.</div>}
+{STAGING && <div class="staging" role="note" data-source={prov.source} data-ledger={prov.ledger} data-built={builtAt}>Staging preview. Not live, not indexed. Data: {prov.source === 'supabase' ? `live Supabase database (ledger ${prov.ledger})` : 'files in the repo, not the live database'}. Built {builtAt}.</div>}
 <header class="site"><div class="wrap hwrap">
   <a class="brand" href="/">NIL Brand Academy<span>Built by ME3 Digital</span></a>
   <nav class="nav-right" aria-label="Main">
