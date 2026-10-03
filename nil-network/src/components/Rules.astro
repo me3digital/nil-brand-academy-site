@@ -1,0 +1,28 @@
+---
+// Layer 2: the full rule matrix as cards grouped by category. All text is in the HTML; categories collapse to keep the page scannable.
+import Chip from './Chip.astro';
+import Refs from './Refs.astro';
+import Trust from './Trust.astro';
+const { categories, sources, idPrefix = '', openFirst = true } = Astro.props;
+---
+<div class="rules">
+{categories.map((c, i) => (
+  <details class="cat" open={openFirst && i === 0}>
+    <summary><span class="cn">{c.name}</span><span class="cc">{c.topics.length} {c.topics.length === 1 ? 'rule' : 'rules'}</span></summary>
+    <div class="catbody">
+    {c.topics.map((t) => (
+      <article class="rule" id={`${idPrefix}rule-${t.slug}`}>
+        <header><h3>{t.label}</h3><Chip answer={t.chip} /></header>
+        {t.layers.map((l) => (
+          <p class="layer"><b>{l.issuer_name}:</b> {l.summary} <Trust state={l.trust_state} />
+            {l.conditions && <span class="cond">{l.conditions}</span>}
+            {l.review_note && l.trust_state !== 'VERIFIED_TO_OFFICIAL_SOURCE' && <span class="cond">Why this label: {l.review_note}</span>}
+            <span class="cite">{l.citation}</span> <Refs layer={l} sources={sources} />
+          </p>
+        ))}
+      </article>
+    ))}
+    </div>
+  </details>
+))}
+</div>

@@ -1,0 +1,161 @@
+---
+// State hub: "Understand <State> NIL in one place."
+// Order: status, college vs high school, can and cannot, key rules, find your school, colleges, high schools, changes, sources.
+import Base from '../../../layouts/Base.astro';
+import Chip from '../../../components/Chip.astro';
+import Refs from '../../../components/Refs.astro';
+import Trust from '../../../components/Trust.astro';
+import Rules from '../../../components/Rules.astro';
+import Scenarios from '../../../components/Scenarios.astro';
+import SourceList from '../../../components/SourceList.astro';
+import Changes from '../../../components/Changes.astro';
+import SectionNav from '../../../components/SectionNav.astro';
+import FindSchool from '../../../components/FindSchool.astro';
+import Cta from '../../../components/Cta.astro';
+import { getStates, getStateHub, getPage, getInstitutions, pageIndexable, fmtDate, quickOf, shortOf, QUICK_LABEL } from '../../../lib/data.mjs';
+import { SITE } from '../../../lib/site.mjs';
+export async function getStaticPaths() { return (await getStates()).map((s) => ({ params: { state: s.slug } })); }
+const hub = await getStateHub(Astro.params.state);
+const { state, levels, changeLog, watch, bodies, sources, checked, trust } = hub;
+const page = await getPage(`/nil/states/${state.slug}/`);
+const indexable = await pageIndexable(page.path);
+const colleges = await getInstitutions(state.id, 'college');
+const highSchools = await getInstitutions(state.id, 'high_school');
+const crumbs = [{ name: 'NIL rules', href: '/nil/' }, { name: 'States', href: '/nil/states/' }, { name: state.name, href: page.path }];
+const hs = levels.high_school, col = levels.college;
+const T = (lv, slug) => lv.topics.find((t) => t.slug === slug);
+const hsStatus = T(hs, 'nil-allowed'), colStatus = T(col, 'nil-allowed');
+const disc = (lv) => (T(lv, 'disclosure-required')?.layers || []).filter((l) => l.disclosure);
+const jsonld = [{ '@context': 'https://schema.org', '@type': 'CollectionPage', name: page.h1, url: SITE + page.path, description: page.meta_description, dateModified: String(checked),
+  about: { '@type': 'State', name: state.name } }];
+// College vs high school, side by side, from the quick-answer scenarios both levels share.
+const cell = (lv, slug) => {
+  const s = lv.scenarios.find((x) => x.slug === slug);
+  if (!s) return { status: 'CHECK_FIRST', line: 'No statewide rule. Your school sets this.', topic: null };
+  let status = quickOf(s.lead), line = shortOf(s.lead);
+  if (status === 'NOT_PUBLICLY_SPECIFIED') { status = 'CHECK_FIRST'; line = 'No statewide rule. Your school sets this.'; }
+  return { status, line, topic: s.topic, lead: s.lead };
+};
+const compare = hs.scenarios.filter((s) => s.is_quick).map((s) => ({ slug: s.slug, question: s.question, hs: cell(hs, s.slug), col: cell(col, s.slug) }));
+const makers = (lv) => [...new Set(['nil-allowed', 'disclosure-required', 'deal-review'].flatMap((x) => (T(lv, x)?.layers || []).filter((l) => l.answer !== 'not_addressed').map((l) => l.issuer_name)))].join(', ');
+const perm = (lv) => lv.topics.filter((t) => !t.info && t.slug !== 'nil-allowed');
+const can = (lv) => perm(lv).filter((t) => t.answer === 'yes' || t.answer === 'yes_with_conditions');
+const cannot = (lv) => perm(lv).filter((t) => t.answer === 'no');
+const ask = (lv) => perm(lv).filter((t) => t.answer === 'only_with_approval');
+const withPage = (list) => list.filter((i) => i.path);
+const noPage = (list) => list.filter((i) => !i.path);
+const levelRows = [['high-school', 'High school athletes', hs, 'high_school'], ['college', 'College athletes', col, 'college']];
+const nav = [['status', 'Status'], ['compare', 'College vs high school'], ['can', 'Can and cannot'], ['high-school', 'High school rules'], ['college', 'College rules'],
+  ['find', 'Find your school'], ['colleges', 'Colleges'], ['high-schools', 'High schools'], ['changes', 'Changes'], ['sources', 'Sources']];
+---
+<Base title={page.title} description={page.meta_description} path={page.path} indexable={indexable} pageType="state_hub" crumbs={crumbs} jsonld={jsonld} ctx={{ state: state.code }}>
+  <section class="hero"><div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><ol>{crumbs.map((c, i) => <li>{i < crumbs.length - 1 ? <a href={c.href}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</li>)}</ol></nav>
+    <div class="eyebrow">Understand {state.name} NIL in one place</div>
+    <h1>{page.h1}</h1>
+    <p class="lede"><span class={`qs big ${quickOf(hsStatus.lead)}`}>{QUICK_LABEL[quickOf(hsStatus.lead)]}</span> <strong>High school and college athletes in {state.name} can both earn NIL money.</strong> They follow two different rulebooks.</p>
+    <p class="herolinks"><a class="hbtn" href="#find">Find my school</a><a class="hlink" href="#high-school">I am in high school</a><a class="hlink" href="#college">I am in college</a></p>
+  </div></section>
+  <SectionNav items={nav} />
+  <div class="wrap">
+
+  <section class="block" id="status">
+    <h2 class="sec">{state.name} NIL status</h2>
+    <div class="grid2">
+      <a class="card statuscard" href="#high-school">
+        <p class="lbl">High school</p><h3>Allowed, with rules</h3>
+        <p>{shortOf(hsStatus.lead)} Rule maker: {makers(hs)}.</p>
+        <p class="more">{disc(hs)[0] ? `Disclosure: ${disc(hs)[0].disclosure.form_name || 'required'} within five business days of signing.` : ''}</p>
+      </a>
+      <a class="card statuscard" href="#college">
+        <p class="lbl">College</p><h3>Allowed, with rules</h3>
+        <p>{shortOf(colStatus.lead)} Rule makers: {makers(col)}.</p>
+        <p class="more">{shortOf(T(col, 'disclosure-required').lead)}</p>
+      </a>
+    </div>
+    <dl class="facts">
+      <div><dt>Last checked</dt><dd>{fmtDate(checked)}</dd></div>
+      <div><dt>Checked against the official source</dt><dd>{trust.VERIFIED_TO_OFFICIAL_SOURCE} of {trust.total} statewide rules</dd></div>
+      <div><dt>Under review</dt><dd>{trust.NEEDS_REVIEW + trust.PENDING_INSTITUTION_CONFIRMATION}</dd></div>
+    </dl>
+  </section>
+
+  <section class="block" id="compare">
+    <h2 class="sec">College vs high school</h2>
+    <p class="sub">Same questions, two rulebooks. The answers are often opposite, so make sure you are reading the right column.</p>
+    <div class="cmp" role="table" aria-label={`${state.name} NIL: high school compared with college`}>
+      <div class="cmprow cmphead" role="row"><span role="columnheader">Question</span><span role="columnheader">High school</span><span role="columnheader">College</span></div>
+      {compare.map((r) => (
+        <div class="cmprow" role="row">
+          <span class="cq" role="rowheader">{r.question}</span>
+          <span role="cell"><em class="cl">High school</em><span class={`qs ${r.hs.status}`}>{QUICK_LABEL[r.hs.status]}</span><small>{r.hs.line} {r.hs.topic && <a class="ref" href={`#high-school-rule-${r.hs.topic.slug}`} aria-label={`High school rule for: ${r.question}`}>Rule</a>}</small></span>
+          <span role="cell"><em class="cl">College</em><span class={`qs ${r.col.status}`}>{QUICK_LABEL[r.col.status]}</span><small>{r.col.line} {r.col.topic && <a class="ref" href={`#college-rule-${r.col.topic.slug}`} aria-label={`College rule for: ${r.question}`}>Rule</a>}</small></span>
+        </div>
+      ))}
+    </div>
+    <p class="legend"><b>Yes</b> allowed. <b>No</b> not allowed. <b>Depends</b> allowed in some cases. <b>Check first</b> needs approval or consent, or your school decides.</p>
+    <p class="ctx" data-cta="contextual"><span>Now that you know what's allowed, find your first brands to pitch.</span> <a href="#get-guide" data-cta="lead_magnet" data-cta-location="state_contextual">Get the free guide</a></p>
+  </section>
+
+  <section class="block" id="can">
+    <h2 class="sec">What athletes can and cannot do</h2>
+    {levelRows.map(([id, label, lv]) => (
+      <details class="fold" open={id === 'high-school'}>
+        <summary>{label}: {can(lv).length} allowed, {cannot(lv).length} not allowed, {ask(lv).length} check first</summary>
+        <div class="grid2">
+          <div class="card can"><h3>Can</h3><ul class="tick">{can(lv).map((t) => <li><b>{t.label}.</b> {shortOf(t.lead)} <Trust state={t.lead.trust_state} /> <a class="ref" href={`#${id}-rule-${t.slug}`} aria-label={`${label} rule: ${t.label}`}>Rule</a></li>)}</ul></div>
+          <div class="card cannot"><h3>Cannot</h3><ul class="cross">{cannot(lv).map((t) => <li><b>{t.label}.</b> {shortOf(t.lead)} <Trust state={t.lead.trust_state} /> <a class="ref" href={`#${id}-rule-${t.slug}`} aria-label={`${label} rule: ${t.label}`}>Rule</a></li>)}</ul></div>
+          {ask(lv).length > 0 && <div class="card ask"><h3>Check first</h3><ul class="plain">{ask(lv).map((t) => <li><b>{t.label}.</b> {shortOf(t.lead)} <Trust state={t.lead.trust_state} /> <a class="ref" href={`#${id}-rule-${t.slug}`} aria-label={`${label} rule: ${t.label}`}>Rule</a></li>)}</ul></div>}
+        </div>
+      </details>
+    ))}
+  </section>
+
+  {levelRows.map(([id, label, lv, level]) => (
+    <section class="block" id={id}>
+      <h2 class="sec">{label}: key {state.name} rules</h2>
+      <p class="sub">{level === 'high_school' ? 'These rules apply at every FHSAA member school. A school or district can add its own, which is what the school pages cover.' : `These rules apply at every ${state.name} Division I school. Each school adds its own rules on logos, gear and prohibited categories, which is what the school pages cover.`}</p>
+      {disc(lv).map((l) => (
+        <div class="disc-card">
+          <div class="head">Disclosure: {l.issuer_name} <span>&middot; {l.citation}</span></div>
+          <div class="cell"><p class="lbl">What</p><p>{l.disclosure.what}</p></div>
+          <div class="cell"><p class="lbl">Who receives it</p><p>{l.disclosure.recipient}</p></div>
+          <div class="cell"><p class="lbl">When</p><p>{l.disclosure.deadline_text}</p></div>
+          <div class="foot">{l.disclosure.form_url && <a class="ref" href={l.disclosure.form_url} rel="noopener nofollow" target="_blank">{l.disclosure.form_name} (PDF)</a>}{l.disclosure.platform_url && <a class="ref" href={l.disclosure.platform_url} rel="noopener nofollow" target="_blank">{l.disclosure.platform_name}</a>} <Trust state={l.trust_state} always /> <Refs layer={l} sources={sources} /></div>
+        </div>
+      ))}
+      <Rules categories={lv.categories} sources={sources} idPrefix={`${id}-`} openFirst={false} />
+      <details class="fold"><summary>Can I do this? {lv.scenarios.length} common situations</summary>
+        <Scenarios scenarios={lv.scenarios} sources={sources} idPrefix={`${id}-`} />
+      </details>
+    </section>
+  ))}
+
+  <section class="block" id="find">
+    <FindSchool heading={`Find your ${state.name} school`} stateCode={state.code} />
+    <p class="sub" style="margin-top:14px">School pages add what the statewide rules leave open: the school's own policy, who to ask, and local detail.</p>
+  </section>
+
+  {[['colleges', `${state.name} colleges`, colleges, 'college'], ['high-schools', `${state.name} high schools`, highSchools, 'high_school']].map(([id, label, list]) => (
+    <section class="block" id={id}>
+      <h2 class="sec">{label}</h2>
+      <ul class="dir">{withPage(list).map((i) => <li><a class="card" href={i.path}><h3>{i.name}</h3><p>{i.city}, {state.name}</p></a></li>)}</ul>
+      {noPage(list).length > 0 && <p class="cite" style="margin-top:12px">On our list, page not built yet: {noPage(list).map((i) => i.name).join(', ')}. The statewide rules above apply to them.</p>}
+      <p style="margin-top:14px"><a class="ref" href={`/nil/${state.slug}/${id}/`}>All {label}</a></p>
+    </section>
+  ))}
+
+  <section class="block" id="changes">
+    <h2 class="sec">What changed?</h2>
+    <Changes changeLog={changeLog} watch={watch} checked={checked} scopeNote={`Recorded changes to the rules that apply in ${state.name}, newest first.`} />
+  </section>
+
+  <section class="block" id="sources">
+    <h2 class="sec">Sources and how we checked</h2>
+    <p>Who makes the rules in {state.name}:</p>
+    <ul class="plain">{bodies.map((b) => <li><b>{b.name}.</b> {b.description} <a class="ref" href={b.website_url} rel="noopener nofollow" target="_blank">Official site</a></li>)}</ul>
+    <details class="fold" id="sourcelist" open><summary>All sources ({sources.length})</summary><SourceList sources={sources} checked={checked} /></details>
+  </section>
+  <section class="block" id="next"><Cta pageType="state_hub" level="both" location="state_footer" /></section>
+  </div>
+</Base>

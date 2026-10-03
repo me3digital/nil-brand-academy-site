@@ -1,0 +1,17 @@
+---
+import Simple from '../../../../components/Simple.astro';
+import FindSchool from '../../../../components/FindSchool.astro';
+import { getStates, getState, getInstitutions } from '../../../../lib/data.mjs';
+export async function getStaticPaths() { return (await getStates()).map((s) => ({ params: { state: s.slug } })); }
+const state = await getState(Astro.params.state);
+const list = await getInstitutions(state.id, 'high_school');
+const path = `/nil/${state.slug}/high-schools/`;
+---
+<Simple path={path} pageType="high_school_directory" eyebrow={`${state.name} high schools`} ctx={{ state: state.code }}
+  crumbs={[{ name: 'NIL rules', href: '/nil/' }, { name: state.name, href: `/nil/states/${state.slug}/` }, { name: `${state.name} high schools`, href: path }]}
+  lede={`School by school NIL pages for ${state.name} high schools. The statewide rules live on the ${state.name} hub; school pages add the school's own policy and contacts.`}>
+  <FindSchool heading="Find my school" type="high_school" stateCode={state.code} />
+  <h2 class="sec" style="margin-top:40px">Schools with a full NIL page</h2>
+  <ul class="dir">{list.filter((i) => i.path).map((i) => <li><a class="card" href={i.path}><h3>{i.name}</h3><p>{i.city}, {state.name}</p></a></li>)}</ul>
+  <p style="margin-top:18px">Statewide rules: <a class="ref" href={`/nil/states/${state.slug}/`}>{state.name} NIL rules</a></p>
+</Simple>

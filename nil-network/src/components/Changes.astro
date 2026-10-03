@@ -1,0 +1,30 @@
+---
+// "What changed?" Shows only recorded changes. An empty history is stated, never padded.
+import { fmtDate } from '../lib/data.mjs';
+const { changeLog, watch, conflicts = [], checked, n = null, scopeNote = null } = Astro.props;
+const TYPE = { adopted: 'Adopted', amended: 'Amended', on_agenda: 'On agenda', repealed: 'Repealed', clarified: 'Clarified' };
+const last = changeLog[0];
+const src = (c) => (n && c.source_slug && n(c.source_slug)) ? { href: `#source-${n(c.source_slug)}`, label: `[${n(c.source_slug)}]`, ext: false } : c.source_url ? { href: c.source_url, label: 'View source', ext: true } : null;
+---
+<dl class="facts">
+  <div><dt>Last checked</dt><dd>{fmtDate(checked)}</dd></div>
+  <div><dt>Most recent rule change</dt><dd>{last ? `${fmtDate(last.changed_on)} (${last.issuer})` : 'None recorded'}</dd></div>
+</dl>
+{scopeNote && <p class="sub">{scopeNote}</p>}
+{changeLog.length > 0 && <ol class="chg">
+  {changeLog.map((c) => { const s = src(c); return (
+    <li>
+      <div class="when"><b>{fmtDate(c.changed_on)}</b><span>{c.issuer} &middot; {TYPE[c.change_type] || c.change_type}</span></div>
+      <p>{c.summary} {s && <span class="cite"><a href={s.href} rel={s.ext ? 'noopener nofollow' : undefined} target={s.ext ? '_blank' : undefined}>{s.label}</a></span>}</p>
+      {(c.previous_text || c.current_text) && <dl class="diff">
+        {c.previous_text && <div class="was"><dt>Previous rule</dt><dd>{c.previous_text}</dd></div>}
+        {c.current_text && <div class="now"><dt>Current rule</dt><dd>{c.current_text}</dd></div>}
+        {c.effective_on && <div><dt>Effective</dt><dd>{fmtDate(c.effective_on)}</dd></div>}
+      </dl>}
+    </li>
+  ); })}
+</ol>}
+{watch.length > 0 && <h3 class="h3">What we are watching</h3>}
+{watch.map((w) => { const s = src(w); return <div class="note"><b>{w.title}.</b> {w.status_text} {w.summary} <span class="cite">As of {fmtDate(w.as_of)} {s && <a href={s.href} rel={s.ext ? 'noopener nofollow' : undefined} target={s.ext ? '_blank' : undefined}>{s.label}</a>}</span></div>; })}
+{conflicts.length > 0 && <h3 class="h3">Where official sources differ</h3>}
+{conflicts.map((c) => <div class="note warn">{c.summary}</div>)}

@@ -1,0 +1,7 @@
+---
+// Public trust label for one rule layer. Shown only when it tells the reader something: anything other than "checked against the official source".
+import { TRUST } from '../lib/data.mjs';
+const { state, always = false } = Astro.props;
+const t = TRUST[state];
+---
+{t && (always || state !== 'VERIFIED_TO_OFFICIAL_SOURCE') && <span class={`trust ${t.cls}`}>{t.short}</span>}

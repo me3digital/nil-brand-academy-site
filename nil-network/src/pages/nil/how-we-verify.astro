@@ -1,0 +1,26 @@
+---
+import Simple from '../../components/Simple.astro';
+import { TRUST } from '../../lib/data.mjs';
+---
+<Simple path="/nil/how-we-verify/" pageType="methodology" eyebrow="Our method" crumbs={[{ name: 'NIL rules', href: '/nil/' }, { name: 'How we verify', href: '/nil/how-we-verify/' }]}
+  lede="Every rule on this site is a record in a database, tied to the document it came from, the date we checked it and how we checked it.">
+  <h2 class="sec">Where rules come from</h2>
+  <p>We use primary sources first: statutes, association bylaws, official forms, regulations and a school's own published policy. News stories and law firm summaries help us find a rule. They are never the source we cite when a primary document exists.</p>
+  <h2 class="sec" style="margin-top:30px">What the labels mean</h2>
+  <ul class="plain">
+    <li><b>{TRUST.VERIFIED_TO_OFFICIAL_SOURCE.label}.</b> We located the official primary document and checked the rule against its text, on screen or as raw page text.</li>
+    <li><b>{TRUST.PUBLIC_POLICY_NOT_LOCATED.label}.</b> We searched public sources and did not find a school or district rule on the question. This describes our search. It does not mean no policy exists, and we list where we looked.</li>
+    <li><b>{TRUST.PENDING_INSTITUTION_CONFIRMATION.label}.</b> The answer needs direct confirmation from the school, and we have asked or are about to.</li>
+    <li><b>{TRUST.NEEDS_REVIEW.label}.</b> A source exists, but its meaning, whether it is current, or whether it applies needs a closer look. Treat it as a lead, not a fact.</li>
+    <li><b>{TRUST.SUPERSEDED.label}.</b> An older rule kept for the record. It is no longer current.</li>
+  </ul>
+  <p>We do not use the words "human verified" unless a person has reviewed the record. Today these checks are done by reading the official documents. An attorney or school official has not reviewed them.</p>
+  <h2 class="sec" style="margin-top:30px">When we cannot find a school policy</h2>
+  <p>We never say a school has no NIL policy. We say that no publicly available school-specific policy was located in the sources reviewed as of a date, and we record every place we looked and every document we could not open.</p>
+  <h2 class="sec" style="margin-top:30px">How rules cascade</h2>
+  <p>A school page shows every rule that applies there: state law, the athletic association or NCAA, the district and the school itself. When layers differ, the strictest one sets the bottom line and every layer stays visible. When a statewide rule changes, every school page under it updates from the same record.</p>
+  <h2 class="sec" style="margin-top:30px">When official sources differ</h2>
+  <p>Sometimes two official documents word a rule differently. We show both and say which one we follow.</p>
+  <h2 class="sec" style="margin-top:30px">What we do not do</h2>
+  <p>We do not give legal advice, guess at rules we cannot source, or fill silence with assumptions. Where the public rules do not address a question, the page says so and points you to the person at your school who can answer.</p>
+</Simple>

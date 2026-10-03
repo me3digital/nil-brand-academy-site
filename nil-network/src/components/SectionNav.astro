@@ -1,0 +1,7 @@
+---
+// Section navigation. Sticky pill row on every viewport; on mobile it scrolls sideways and keeps the current section in view.
+const { items } = Astro.props;   // [[id, label], ...]
+---
+<nav class="jump" aria-label="On this page"><div class="wrap" data-jump>
+  {items.map(([id, label]) => <a href={`#${id}`}>{label}</a>)}
+</div></nav>

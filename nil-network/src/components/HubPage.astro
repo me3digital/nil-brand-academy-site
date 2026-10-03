@@ -1,0 +1,313 @@
+---
+// School NIL hub. One component, two templates: the college and high school versions share the data model
+// but differ in emphasis, section order and the blocks they show.
+// Layer 1 (top): quick answer, intelligence summary, yes/no grid. Layer 2 (below): full rules, sources, history.
+import Base from '../layouts/Base.astro';
+import Chip from './Chip.astro';
+import Refs from './Refs.astro';
+import Trust from './Trust.astro';
+import Quick from './Quick.astro';
+import Rules from './Rules.astro';
+import Scenarios from './Scenarios.astro';
+import SourceList from './SourceList.astro';
+import Changes from './Changes.astro';
+import SectionNav from './SectionNav.astro';
+import Cta from './Cta.astro';
+import { fmtDate, gateChecks, quickOf, shortOf, QUICK_LABEL, TRUST } from '../lib/data.mjs';
+import { SITE, STAGING } from '../lib/site.mjs';
+const { hub } = Astro.props;
+const { state, inst, topics, categories, scenarios, page, gate, bodies, policies, programs, contacts, sports, guidance, changeLog, watch, intel, sources, n, checked, search, trust } = hub;
+const isHS = inst.institution_type === 'high_school';
+const level = inst.institution_type;
+const short = inst.short_name || inst.name;
+const dirPath = `/nil/${state.slug}/${isHS ? 'high-schools' : 'colleges'}/`;
+const crumbs = [
+  { name: 'NIL rules', href: '/nil/' }, { name: state.name, href: `/nil/states/${state.slug}/` },
+  { name: isHS ? `${state.name} high schools` : `${state.name} colleges`, href: dirPath }, { name: inst.name, href: page.path },
+];
+const T = (slug) => topics.find((t) => t.slug === slug);
+const status = T('nil-allowed');
+const discTopic = T('disclosure-required');
+const perm = topics.filter((t) => !t.info && t.slug !== 'nil-allowed');
+const can = perm.filter((t) => t.answer === 'yes' || t.answer === 'yes_with_conditions');
+const ask = perm.filter((t) => t.answer === 'only_with_approval');
+const cannot = perm.filter((t) => t.answer === 'no');
+const silent = perm.filter((t) => t.answer === 'not_addressed');
+const prohibitedLayers = (T('prohibited-categories')?.layers || []).filter((l) => l.prohibited.length);
+const disclosures = (discTopic?.layers || []).filter((l) => l.disclosure);
+const openConflicts = [...new Map(topics.flatMap((t) => t.layers.flatMap((l) => l.conflicts)).map((c) => [c.id, c])).values()];
+const steps = guidance.filter((g) => g.block_type === 'action_step');
+const parent = guidance.filter((g) => g.block_type === 'parent_guidance');
+const indexable = gate.index_status === 'index';
+const sector = inst.sector === 'public' ? 'Public' : 'Private';
+const typeLabel = isHS ? `${sector} high school` : `${sector} university`;
+const refFor = (g) => { const t = g.topic_slug && T(g.topic_slug); return t ? t.lead : g.external || null; };
+const ipTopics = topics.filter((t) => t.in_ip_matrix);
+const schoolLayers = topics.flatMap((t) => t.layers.filter((l) => l.scope_type === 'institution' && l.answer !== 'not_addressed').map((l) => ({ ...l, label: t.label, slug: t.slug })));
+const districtLayers = topics.flatMap((t) => t.layers.filter((l) => l.scope_type === 'district').map((l) => ({ ...l, label: t.label, slug: t.slug })));
+// Who can be on the other side of a deal. The same rule topics read very differently at each level.
+const whoTopics = ['collectives', 'boosters', 'school-staff-involvement', 'school-payments', 'agents'].map(T).filter(Boolean);
+const intl = T('international-athletes');
+const review = T('deal-review');
+const parentRule = T('parent-guardian');
+const contractLength = T('contract-length');
+const policyLine = search
+  ? (search.public_policy_found
+      ? `Public NIL guidance from ${short} was located and reviewed as of ${fmtDate(search.search_date)}.`
+      : `No publicly available school-specific NIL policy was located in the sources reviewed as of ${fmtDate(search.search_date)}.`)
+  : 'A search for a school-specific NIL policy has not been recorded yet.';
+const policyShort = search ? (search.public_policy_found ? 'Public guidance located' : 'No public policy located') : 'Not yet searched';
+const confidence = `${trust.VERIFIED_TO_OFFICIAL_SOURCE} of ${trust.total} rules checked against the official source`;
+const confidenceRest = [
+  trust.NEEDS_REVIEW ? `${trust.NEEDS_REVIEW} under review` : null,
+  trust.PENDING_INSTITUTION_CONFIRMATION ? `${trust.PENDING_INSTITUTION_CONFIRMATION} awaiting the school` : null,
+  trust.PUBLIC_POLICY_NOT_LOCATED ? `${trust.PUBLIC_POLICY_NOT_LOCATED} not located in public sources` : null,
+].filter(Boolean).join(', ');
+const statusQuick = quickOf(status.lead);
+const nav = isHS
+  ? [['overview', 'Overview'], ['can', 'What you can do'], ['disclosure', 'Disclosure'], ['parents', 'For parents'], ['school', 'School rules'], ['matrix', 'Rule matrix'],
+     ['ip', 'Logos and facilities'], ['scenarios', 'Scenarios'], ['sources', 'Sources'], ['changes', 'Changes'], ['next', 'Next steps']]
+  : [['overview', 'Overview'], ['can', 'What you can do'], ['disclosure', 'Disclosure'], ['school', 'School rules'], ['matrix', 'Rule matrix'],
+     ['ip', 'Logos and facilities'], ['scenarios', 'Scenarios'], ...(parent.length ? [['parents', 'For parents']] : []), ['sources', 'Sources'], ['changes', 'Changes'], ['next', 'Next steps']];
+const jsonld = [{
+  '@context': 'https://schema.org', '@type': 'WebPage', name: page.h1, url: SITE + page.path, description: page.meta_description,
+  dateModified: String(checked), isPartOf: { '@type': 'WebSite', name: 'NIL Brand Academy', url: SITE + '/' },
+  publisher: { '@type': 'Organization', name: 'NIL Brand Academy', parentOrganization: { '@type': 'Organization', name: 'ME3 Digital' } },
+  about: { '@type': isHS ? 'HighSchool' : 'CollegeOrUniversity', name: inst.name, sameAs: inst.website_url,
+    address: { '@type': 'PostalAddress', streetAddress: inst.street_address || undefined, addressLocality: inst.city, addressRegion: state.code, postalCode: inst.postal_code || undefined, addressCountry: 'US' } },
+  citation: sources.filter((s) => s.is_primary).map((s) => ({ '@type': 'CreativeWork', name: s.title, url: s.url })),
+}];
+const sportList = [...new Map(sports.map((s) => [s.slug, s])).values()];
+const allowed = status.answer === 'yes' || status.answer === 'yes_with_conditions';
+const statusText = allowed ? 'Allowed, with rules' : status.answer === 'no' ? 'Not allowed' : 'Not publicly specified';
+const strip = (t) => String(t).replace(/^Yes[.,]\s*/, '').replace(/^./, (c) => c.toUpperCase());
+const discShort = discTopic ? strip(shortOf(discTopic.lead)) : 'No disclosure rule located';
+---
+<Base title={page.title} description={page.meta_description} path={page.path} indexable={indexable} pageType={page.page_type} crumbs={crumbs} jsonld={jsonld}
+  ctx={{ state: state.code, school: inst.slug, level, publication_state: inst.publication_state }}>
+  <section class="hero"><div class="wrap herogrid">
+    <div>
+      <nav class="crumbs" aria-label="Breadcrumb"><ol>{crumbs.map((c, i) => <li>{i < crumbs.length - 1 ? <a href={c.href}>{c.name}</a> : <span aria-current="page">{c.name}</span>}</li>)}</ol></nav>
+      <div class="eyebrow">{isHS ? 'High school NIL hub' : 'College NIL hub'}</div>
+      <h1>{page.h1}</h1>
+      <p class="lede"><span class={`qs big ${statusQuick}`}>{QUICK_LABEL[statusQuick]}</span> <strong>{allowed ? `${short} athletes can earn NIL money.` : `NIL at ${short}:`}</strong> {strip(shortOf(status.lead))}</p>
+      <p class="herolinks"><a class="hbtn" href="#can">What can I do?</a><a class="hlink" href="#disclosure">{isHS ? 'How Form GA1 works' : 'How reporting works'}</a>{isHS && <a class="hlink" href="#parents">I am a parent</a>}</p>
+    </div>
+    <aside class="summary" aria-label="NIL intelligence summary">
+      <p class="sumtitle">NIL intelligence summary</p>
+      <dl>
+        <div><dt>School</dt><dd>{inst.name}</dd></div>
+        <div><dt>Location</dt><dd>{inst.city}, {state.name}</dd></div>
+        <div><dt>Type</dt><dd>{typeLabel}</dd></div>
+        <div><dt>Governing body</dt><dd>{bodies.map((b) => b.short_name).join(', ')}</dd></div>
+        <div><dt>NIL status</dt><dd>{statusText}</dd></div>
+        <div><dt>Disclosure</dt><dd>{discShort}</dd></div>
+        <div><dt>School policy</dt><dd>{policyShort}</dd></div>
+        <div><dt>Last checked</dt><dd>{fmtDate(checked)}</dd></div>
+        <div class="wide"><dt>Source confidence</dt><dd>{confidence}{confidenceRest && <small>{confidenceRest}</small>}</dd></div>
+      </dl>
+    </aside>
+  </div></section>
+
+  <SectionNav items={nav} />
+
+  <div class="wrap">
+  <section class="block" id="overview">
+    <h2 class="sec">Overview</h2>
+    <p class="sub">{isHS
+      ? `${inst.name} is an FHSAA member school in ${inst.district_name || state.name}. Its athletes follow FHSAA Bylaw 9.9, plus anything the district or school adds.`
+      : `${inst.name} athletes follow three layers of rules: ${state.name} law, NCAA and College Sports Commission rules, and ${short}'s own guidance.`}</p>
+    <dl class="snap">
+      <div><dt>School</dt><dd>{inst.name}<small><a class="ref" href={inst.website_url} rel="noopener nofollow" target="_blank">Official site</a></small></dd></div>
+      <div><dt>Location</dt><dd>{inst.city}, {state.name}{inst.county && <small>{inst.county}</small>}</dd></div>
+      <div><dt>School type</dt><dd>{typeLabel}{isHS && inst.district_name && <small>{inst.district_name}</small>}</dd></div>
+      <div><dt>Rule makers</dt><dd>{bodies.map((b) => b.short_name).join(', ')}{!isHS && <small>Plus {state.name} law</small>}</dd></div>
+      <div><dt>{isHS ? 'Membership' : 'Division and conference'}</dt><dd>{inst.division}{inst.conference_name && <small>{inst.conference_name}</small>}</dd></div>
+      <div><dt>School-specific policy</dt><dd>{policyShort}<small><a class="ref" href="#school">What we found</a></small></dd></div>
+    </dl>
+    {sportList.length > 0 && <details class="fold"><summary>Sports at {short} ({sportList.length})</summary><p>{sportList.map((s, i) => (<><a class="ref" href={`/nil/sports/${s.slug}/`}>{s.name}</a>{i < sportList.length - 1 ? ', ' : ''}</>))}</p></details>}
+  </section>
+
+  <section class="block" id="can">
+    <h2 class="sec">Just tell me what I can do</h2>
+    <p class="sub">The short answers. Each one comes from a rule in the matrix below, with its source.</p>
+    <Quick scenarios={scenarios} />
+    <p class="legend"><b>Yes</b> allowed. <b>No</b> not allowed. <b>Depends</b> allowed in some cases. <b>Check first</b> needs approval or consent. <b>Not publicly specified</b> the public rules we reviewed do not say.</p>
+    <p class="ctx" data-cta="contextual"><span>Now that you know what's allowed, find your first brands to pitch.</span> <a href="#get-guide" data-cta="lead_magnet" data-cta-location="hub_contextual">Get the free guide</a></p>
+
+    <h3 class="h3" id="who">{isHS ? 'Who cannot be part of your deal' : 'Who is paying you matters'}</h3>
+    <p class="sub">{isHS
+      ? 'In Florida high school sports the deal has to stay between your family and the business. These people and groups are off limits.'
+      : 'In college the same deal is treated differently depending on who pays. Deals with collectives, boosters and other school-connected payors get extra review.'}</p>
+    <ul class="who">{whoTopics.map((t) => <li><span class={`qs ${quickOf(t.lead)}`}>{QUICK_LABEL[quickOf(t.lead)]}</span><div><b>{t.label}.</b> {t.lead.summary} <Trust state={t.lead.trust_state} /> <Refs layer={t.lead} sources={sources} /></div></li>)}</ul>
+    {!isHS && intl && <div class="note warn"><b>International athletes: check before you sign.</b> {intl.lead.summary} <Trust state={intl.lead.trust_state} /> <Refs layer={intl.lead} sources={sources} /></div>}
+
+    <details class="fold">
+      <summary>Every can, cannot and approval item ({can.length + cannot.length + ask.length + silent.length + prohibitedLayers.length})</summary>
+      <div class="grid2">
+        <div class="card can"><h4>You can</h4><ul class="tick">{can.map((t) => <li><b>{t.label}.</b> {t.lead.summary} <Trust state={t.lead.trust_state} /> <Refs layer={t.lead} sources={sources} /></li>)}</ul></div>
+        <div class="card cannot"><h4>You cannot</h4>
+          <ul class="cross">
+            {cannot.map((t) => <li><b>{t.label}.</b> {t.lead.summary} <Trust state={t.lead.trust_state} /> <Refs layer={t.lead} sources={sources} /></li>)}
+            {prohibitedLayers.map((l) => <li><b>Prohibited categories ({l.issuer_name}).</b> {l.prohibited.map((p) => p.wording[0].toUpperCase() + p.wording.slice(1)).join('; ')}. <Refs layer={l} sources={sources} /></li>)}
+          </ul>
+        </div>
+        {ask.length > 0 && <div class="card ask"><h4>Check first</h4><ul class="plain">{ask.map((t) => <li><b>{t.label}.</b> {t.lead.summary} <Trust state={t.lead.trust_state} /> <Refs layer={t.lead} sources={sources} /></li>)}</ul></div>}
+        {silent.length > 0 && <div class="card"><h4>Not publicly specified</h4><ul class="plain">{silent.map((t) => <li><b>{t.label}.</b> {t.lead.summary}</li>)}</ul></div>}
+      </div>
+    </details>
+  </section>
+
+  <section class="block" id="disclosure">
+    <h2 class="sec">{isHS ? 'Disclosure: Form GA1' : 'Disclosure: reporting in NIL Go'}</h2>
+    <p class="sub">What you have to report, who gets it, and how long you have.</p>
+    {disclosures.map((l) => (
+      <div class="disc-card">
+        <div class="head">{l.issuer_name} <span>&middot; {l.citation}</span></div>
+        <div class="cell"><p class="lbl">What</p><p>{l.disclosure.what}</p></div>
+        <div class="cell"><p class="lbl">Who receives it</p><p>{l.disclosure.recipient}</p></div>
+        <div class="cell"><p class="lbl">When</p><p>{l.disclosure.deadline_text}{l.disclosure.threshold_usd && ` (deals of $${Number(l.disclosure.threshold_usd)} or more)`}</p></div>
+        <div class="foot">
+          {l.disclosure.form_url && <a class="ref" href={l.disclosure.form_url} rel="noopener nofollow" target="_blank">{l.disclosure.form_name} (PDF)</a>}
+          {l.disclosure.platform_url && <a class="ref" href={l.disclosure.platform_url} rel="noopener nofollow" target="_blank">{l.disclosure.platform_name}</a>}
+          {' '}<Trust state={l.trust_state} always /> <Refs layer={l} sources={sources} />
+          {l.conditions && <span> &middot; {l.conditions}</span>}
+        </div>
+      </div>
+    ))}
+    {disclosures.length === 0 && <div class="note">No disclosure rule was located for this school in the sources reviewed. Ask your athletic department before you sign.</div>}
+    {!isHS && review && <div class="note"><b>After you report: deal review.</b> {review.lead.summary} <Trust state={review.lead.trust_state} /> <Refs layer={review.lead} sources={sources} /></div>}
+    {isHS && parentRule && <div class="note"><b>A parent or guardian signs too.</b> {parentRule.lead.summary} <Trust state={parentRule.lead.trust_state} /> <Refs layer={parentRule.lead} sources={sources} /></div>}
+    {isHS && contractLength && <div class="note"><b>The deal cannot outlast high school.</b> {contractLength.lead.summary} <Trust state={contractLength.lead.trust_state} /> <Refs layer={contractLength.lead} sources={sources} /></div>}
+  </section>
+
+  {isHS && parent.length > 0 && <section class="block" id="parents">
+    <h2 class="sec">For parents and guardians</h2>
+    <p class="sub">Your child is a minor and you are part of the process. Here is what the rules ask of you.</p>
+    <div class="grid2">
+      {parent.map((g) => { const r = refFor(g); return (
+        <div class="card"><h3>{g.title}</h3><p style="margin:0">{g.body} {r && <span class="cite">{r.citation}</span>} {r && <Refs layer={r} sources={sources} />}</p></div>
+      ); })}
+    </div>
+  </section>}
+
+  <section class="block" id="school">
+    <h2 class="sec">{isHS ? 'School and district rules' : `${short}'s own rules`}</h2>
+    <div class={`note ${search && search.public_policy_found ? '' : 'warn'}`}>
+      <b>{policyLine}</b>
+      {search && !search.public_policy_found && <> That is a statement about what we could find in public, not about what the school has. An internal or unpublished policy may exist, so ask before you sign.</>}
+      {search && search.notes && search.public_policy_found && <> {search.notes}</>}
+    </div>
+    {search && <details class="fold">
+      <summary>Where we looked ({search.locations_checked.length} public sources)</summary>
+      <ul class="plain">{search.locations_checked.map((l) => <li>{l}</li>)}</ul>
+      {search.locations_unreachable?.length > 0 && <><p><b>Documents we could not open:</b></p><ul class="plain">{search.locations_unreachable.map((l) => <li>{l}</li>)}</ul></>}
+      <p><b>School confirmation:</b> {search.institution_confirmation ? `Confirmed by the school on ${fmtDate(search.confirmed_on)}.` : 'Not yet requested or received.'}</p>
+    </details>}
+    {policies.map((p) => (
+      <div class="note"><b>{p.title}.</b> {p.summary} {p.source_slug && <span class="cite"><a href={`#source-${n(p.source_slug)}`}>[{n(p.source_slug)}]</a></span>}</div>
+    ))}
+    {isHS && <>
+      <h3 class="h3">Your district: {inst.district_name}</h3>
+      {districtLayers.length > 0
+        ? <ul class="plain">{districtLayers.map((l) => <li><b>{l.label}.</b> {l.summary} <Trust state={l.trust_state} /> <a class="ref" href={`#rule-${l.slug}`}>Full rule</a> <Refs layer={l} sources={sources} /></li>)}</ul>
+        : <p>No district rule on NIL was located in the sources reviewed.</p>}
+    </>}
+    {schoolLayers.length > 0 && <>
+      <h3 class="h3">What {short} adds to the {isHS ? 'statewide' : 'national'} rules</h3>
+      <ul class="plain">{schoolLayers.map((l) => <li><b>{l.label}.</b> {shortOf(l)} <Trust state={l.trust_state} /> <a class="ref" href={`#rule-${l.slug}`}>Full rule</a></li>)}</ul>
+    </>}
+    {programs.length > 0 && <>
+      <h3 class="h3">How NIL runs at {short}</h3>
+      <ul class="plain">{programs.map((p) => <li><b>{p.name}.</b> {p.description} {p.source_slug && <span class="cite"><a href={`#source-${n(p.source_slug)}`}>[{n(p.source_slug)}]</a></span>}</li>)}</ul>
+    </>}
+    <h3 class="h3" id="contact">Who to ask</h3>
+    {contacts.length > 0
+      ? <ul class="plain">{contacts.map((c) => <li><b>{c.office}</b>{c.person_name && `, ${c.person_name} (${c.role})`}{!c.person_name && `: ${c.role}`}.{c.phone && ` ${c.phone}.`} <a class="ref" href={c.url} rel="noopener nofollow" target="_blank">Official page</a> {c.source_slug && <span class="cite"><a href={`#source-${n(c.source_slug)}`}>[{n(c.source_slug)}]</a></span>}</li>)}</ul>
+      : <p>No public NIL contact was located. Start with the athletic department.</p>}
+    <p class="cite">Contacts come from the school's public pages as of {fmtDate(checked)}. The school has not confirmed them to us.</p>
+  </section>
+
+  <section class="block" id="matrix">
+    <h2 class="sec">NIL rule matrix</h2>
+    <p class="sub">Every rule that applies at {inst.name}, layer by layer. When layers differ, the strictest one sets the bottom line. Open a group to read the rules and their sources.</p>
+    <Rules categories={categories} sources={sources} />
+  </section>
+
+  <section class="block" id="ip">
+    <h2 class="sec">Logos, uniform, facilities and school name</h2>
+    <p class="sub">The questions brands ask first. Where the public rules are silent, we say so.</p>
+    <ul class="ipl">{ipTopics.map((t) => <li><div><b>{t.question}</b><p>{shortOf(t.lead)} <Trust state={t.lead.trust_state} /> <a class="ref" href={`#rule-${t.slug}`}>Full rule</a></p></div><Chip answer={t.chip} /></li>)}</ul>
+  </section>
+
+  <section class="block" id="scenarios">
+    <h2 class="sec">Can I do this?</h2>
+    <p class="sub">Common situations, answered from the rules above. Open one to see which rule decides it.</p>
+    <Scenarios scenarios={scenarios} sources={sources} />
+  </section>
+
+  {intel.length > 0 && <section class="block" id="local">
+    <h2 class="sec">Local NIL opportunity intelligence</h2>
+    <ul class="plain">{intel.map((i) => <li><b>{i.title}.</b> {i.body}</li>)}</ul>
+  </section>}
+
+  {!isHS && parent.length > 0 && <section class="block" id="parents">
+    <h2 class="sec">For parents and families</h2>
+    <p class="sub">Your athlete is an adult and signs for themselves. Here is where family can still help.</p>
+    <div class="grid2">
+      {parent.map((g) => { const r = refFor(g); return (
+        <div class="card"><h3>{g.title}</h3><p style="margin:0">{g.body} {r && <span class="cite">{r.citation}</span>} {r && <Refs layer={r} sources={sources} />}</p></div>
+      ); })}
+    </div>
+  </section>}
+
+  <section class="block" id="sources">
+    <h2 class="sec">Sources and how we checked</h2>
+    <dl class="facts">
+      <div><dt>Last checked</dt><dd>{fmtDate(checked)}</dd></div>
+      <div><dt>Checked against the official source</dt><dd>{trust.VERIFIED_TO_OFFICIAL_SOURCE} of {trust.total} rules</dd></div>
+      <div><dt>Under review</dt><dd>{trust.NEEDS_REVIEW + trust.PENDING_INSTITUTION_CONFIRMATION}</dd></div>
+      <div><dt>Not located in public sources</dt><dd>{trust.PUBLIC_POLICY_NOT_LOCATED}</dd></div>
+    </dl>
+    <details class="fold">
+      <summary>What the labels mean</summary>
+      <ul class="plain">
+        <li><b>{TRUST.VERIFIED_TO_OFFICIAL_SOURCE.label}.</b> We located the official document and checked the rule against its text.</li>
+        <li><b>{TRUST.PUBLIC_POLICY_NOT_LOCATED.label}.</b> We searched public sources and did not find a school or district rule on this. That does not mean none exists.</li>
+        <li><b>{TRUST.PENDING_INSTITUTION_CONFIRMATION.label}.</b> We have asked, or need to ask, the school to confirm it.</li>
+        <li><b>{TRUST.NEEDS_REVIEW.label}.</b> A source exists, but its meaning, currency or fit needs a closer look. Treat it as a lead.</li>
+        <li><b>{TRUST.SUPERSEDED.label}.</b> Kept for the record. No longer the current rule.</li>
+      </ul>
+      <p>These checks were done by reading the official documents. An attorney or school official has not reviewed this page.</p>
+    </details>
+    <details class="fold" id="sourcelist" open>
+      <summary>All sources ({sources.length})</summary>
+      <SourceList sources={sources} checked={checked} />
+    </details>
+  </section>
+
+  <section class="block" id="changes">
+    <h2 class="sec">What changed?</h2>
+    <Changes changeLog={changeLog} watch={watch} conflicts={openConflicts} checked={checked} n={n}
+      scopeNote={`Rule changes that affect ${short} athletes, newest first. We began tracking on ${fmtDate(checked)}. No ${isHS ? 'school or district' : 'school'} level change has been recorded since.`} />
+  </section>
+
+  <section class="block" id="next">
+    <h2 class="sec">Next steps</h2>
+    <p class="sub">What to do, in order, when a brand reaches out.</p>
+    <ol class="steps">
+      {steps.map((g) => { const r = refFor(g); return (
+        <li><h3>{g.title}</h3><p>{g.body} {r && <span class="cite">{r.citation}</span>} {r && <Refs layer={r} sources={sources} />} {g.link_url && <a class="ref" href={g.link_url} rel="noopener nofollow" target="_blank">{g.link_label}</a>}</p></li>
+      ); })}
+      <li><h3>Ask your school before anything unusual</h3><p>If a deal touches something on this page marked "check first" or "not publicly specified", ask {contacts[0] ? contacts[0].office : 'your athletic department'} before you sign.</p></li>
+    </ol>
+    <Cta pageType={page.page_type} level={level} />
+  </section>
+
+  {STAGING && <section class="block" id="gate">
+    <h2 class="sec">Index quality gate (staging only)</h2>
+    <p class="sub">This page is <b>{gate.index_status}</b>. It enters the sitemap only when every check passes.</p>
+    <ul class="gate">{gateChecks(gate).map(([label, ok]) => <li class={ok ? 'pass' : 'fail'}>{label}</li>)}</ul>
+  </section>}
+  </div>
+</Base>

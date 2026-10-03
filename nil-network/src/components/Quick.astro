@@ -1,0 +1,23 @@
+---
+// Layer 1: "Just tell me what I can do." One status per question, each tied to a rule record and linked to it.
+import { QUICK_LABEL, quickOf, shortOf } from '../lib/data.mjs';
+import Trust from './Trust.astro';
+const { scenarios, idPrefix = '', stateLevel = false } = Astro.props;
+const quick = scenarios.filter((s) => s.is_quick);
+const rows = quick.map((s) => {
+  let status = quickOf(s.lead), line = shortOf(s.lead);
+  // On a state page, silence at the statewide layer means the school decides. Say that instead of leaving a blank.
+  if (stateLevel && status === 'NOT_PUBLICLY_SPECIFIED') { status = 'CHECK_FIRST'; line = 'No statewide rule. Your school sets this, so check your school page.'; }
+  return { ...s, status, line };
+});
+---
+<ul class="quick">
+  {rows.map((s) => (
+    <li class={`q ${s.status}`} data-quick={s.slug}>
+      <span class={`qs ${s.status}`}>{QUICK_LABEL[s.status]}</span>
+      <h3>{s.question}</h3>
+      <p>{s.line} {s.lead && <Trust state={s.lead.trust_state} />}</p>
+      {s.topic && <a class="qlink" href={`#${idPrefix}rule-${s.topic.slug}`} aria-label={`See the rule and source for: ${s.question}`}>Rule and source</a>}
+    </li>
+  ))}
+</ul>

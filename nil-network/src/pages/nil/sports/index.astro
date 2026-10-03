@@ -1,0 +1,10 @@
+---
+import Simple from '../../../components/Simple.astro';
+import { getSports } from '../../../lib/data.mjs';
+const sports = await getSports();
+---
+<Simple path="/nil/sports/" pageType="sports_index" eyebrow="By sport" crumbs={[{ name: 'NIL rules', href: '/nil/' }, { name: 'Sports', href: '/nil/sports/' }]}
+  lede="Find schools by sport. NIL rules do not change by sport, but the opportunities do.">
+  <h2 class="sec">Browse</h2>
+  <ul class="dir">{sports.map((s) => <li><a class="card" href={`/nil/sports/${s.slug}/`}><h3>{s.name}</h3><p>{s.schools} {s.schools === 1 ? 'school' : 'schools'} in the network</p></a></li>)}</ul>
+</Simple>

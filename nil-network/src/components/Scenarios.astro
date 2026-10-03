@@ -1,0 +1,18 @@
+---
+import Chip from './Chip.astro';
+import Refs from './Refs.astro';
+import Trust from './Trust.astro';
+const { scenarios, sources, idPrefix = '' } = Astro.props;
+---
+{scenarios.map((s) => (
+  <details class="sc" data-scenario={s.slug}>
+    <summary><span>{s.question}</span><Chip answer={s.answer} /></summary>
+    <div class="ans">
+      {s.governs.map((t) => t.layers.filter((l) => l.answer !== 'not_addressed').map((l) => (
+        <p><b>{l.issuer_name}:</b> {l.summary} <Trust state={l.trust_state} /> <span class="cite">{l.citation}</span> <Refs layer={l} sources={sources} /></p>
+      )))}
+      {s.answer === 'not_addressed' && <p>{s.lead ? s.lead.summary : 'The rules we checked do not settle this.'} A school's own rules may cover it, so ask your school before you go ahead.</p>}
+      {s.conditions.length > 0 && <p><b>Also check:</b> {s.conditions.map((t, i) => (<><a class="ref" href={`#${idPrefix}rule-${t.slug}`}>{t.label.toLowerCase()}</a>{i < s.conditions.length - 1 ? ', ' : '.'}</>))}</p>}
+    </div>
+  </details>
+))}

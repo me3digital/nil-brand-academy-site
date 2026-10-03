@@ -1,0 +1,30 @@
+---
+import { checkoutLink, LEAD_MAGNET_URL, KIT_FORM_UID, KIT_FORM_SCRIPT, BLOG } from '../lib/site.mjs';
+const { pageType, level, location = 'hub_footer' } = Astro.props;
+---
+<div class="ctaband">
+  <h2>You know the rules. Now get brand ready.</h2>
+  <p>Knowing what is allowed is step one. Brands choose the athlete they can count on, so the next step is showing up like a professional.</p>
+  <div class="ctagrid">
+    <div class="ctastep" id="get-guide">
+      <div class="k">Free</div>
+      <h3>5 Brands to Pitch</h3>
+      <p>A free guide to the kinds of brands that hire athletes like you, and how to approach them.</p>
+      <div class="kitform" data-cta="lead_magnet" data-cta-location={location}><script async data-uid={KIT_FORM_UID} src={KIT_FORM_SCRIPT}></script></div>
+      <noscript><a class="go" href={LEAD_MAGNET_URL}>Get the free guide</a></noscript>
+    </div>
+    <div class="ctastep">
+      <div class="k">Build</div>
+      <h3>The NIL Launch Kit</h3>
+      <p>The guide, workbook and 8 templates that take you from first pitch to a signed, disclosed deal.</p>
+      <a class="go" href={checkoutLink(pageType)} data-cta="product" data-cta-location={location}>See the Kit</a>
+    </div>
+    <div class="ctastep">
+      <div class="k">Learn</div>
+      <h3>Keep going</h3>
+      <p><a class="txt" href={BLOG.mediaKit.href} data-cta="education">{BLOG.mediaKit.title}</a></p>
+      <p><a class="txt" href={BLOG.disclosure.href} data-cta="education">{BLOG.disclosure.title}</a></p>
+      {level === 'high_school' && <p><a class="txt" href={BLOG.whatIsNil.href} data-cta="education">{BLOG.whatIsNil.title}</a></p>}
+    </div>
+  </div>
+</div>

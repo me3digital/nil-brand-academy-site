@@ -1,0 +1,42 @@
+---
+// Find My School. Every school we know of is in the HTML; the script only filters. Works as a plain list without JavaScript.
+import { getFindIndex } from '../lib/data.mjs';
+const { type = '', heading = 'Find my school', level = 'h2', stateCode = '' } = Astro.props;
+const all = await getFindIndex();
+const states = [...new Map(all.map((i) => [i.code, i.state])).entries()];
+const H = level;
+const uid = 'fs' + (type || 'all');
+---
+<div class="find" data-find>
+  <H class={level === 'h2' ? 'sec' : 'h3'}>{heading}</H>
+  <form class="findform" role="search" onsubmit="return false">
+    <div class="f grow"><label for={`${uid}-q`}>School name or city</label><input id={`${uid}-q`} type="search" name="q" autocomplete="off" placeholder="Start typing, like Seminole or Gainesville" data-find-q /></div>
+    <div class="f"><label for={`${uid}-s`}>State</label><select id={`${uid}-s`} data-find-state>
+      <option value="">All states</option>{states.map(([code, name]) => <option value={code} selected={code === stateCode}>{name}</option>)}</select></div>
+    <div class="f"><label for={`${uid}-t`}>School type</label><select id={`${uid}-t`} data-find-type>
+      <option value="" selected={!type}>All</option><option value="college" selected={type === 'college'}>College</option><option value="high_school" selected={type === 'high_school'}>High school</option></select></div>
+  </form>
+  <p class="findcount" aria-live="polite" data-find-count></p>
+  <ul class="findlist">
+    {all.map((i) => (
+      <li data-name={`${i.name} ${i.short_name || ''} ${i.city}`.toLowerCase()} data-state={i.code} data-type={i.institution_type}>
+        {i.path
+          ? <a class="frow" href={i.path}><span class="fn">{i.name}</span><span class="fm">{i.city}, {i.code} &middot; {i.institution_type === 'college' ? 'College' : 'High school'}</span><span class="fgo">View NIL rules</span></a>
+          : <a class="frow soon" href={`/nil/states/${i.state_slug}/#${i.institution_type === 'college' ? 'college' : 'high-school'}`}><span class="fn">{i.name}</span><span class="fm">{i.city}, {i.code} &middot; {i.institution_type === 'college' ? 'College' : 'High school'}</span><span class="fgo">School page not built yet. See the {i.state} rules that apply</span></a>}
+      </li>
+    ))}
+  </ul>
+  <p class="findnone" hidden data-find-none>We have not covered that school yet. Statewide rules still apply to it: <a class="ref" href="/nil/states/">pick your state</a>.</p>
+</div>
+<script is:inline>
+(function(){document.querySelectorAll('[data-find]').forEach(function(root){
+  if(root.dataset.ready)return;root.dataset.ready='1';
+  var q=root.querySelector('[data-find-q]'),s=root.querySelector('[data-find-state]'),t=root.querySelector('[data-find-type]'),
+      items=[].slice.call(root.querySelectorAll('.findlist li')),none=root.querySelector('[data-find-none]'),count=root.querySelector('[data-find-count]');
+  function run(){var term=q.value.trim().toLowerCase(),n=0;
+    items.forEach(function(li){var ok=(!term||li.dataset.name.indexOf(term)>-1)&&(!s.value||li.dataset.state===s.value)&&(!t.value||li.dataset.type===t.value);li.hidden=!ok;if(ok)n++;});
+    none.hidden=n>0;count.textContent=n+(n===1?' school':' schools');
+    if(term.length>2&&window.dataLayer)window.dataLayer.push({event:'find_school_search',results:n});}
+  [q,s,t].forEach(function(el){el.addEventListener('input',run);});run();
+});})();
+</script>

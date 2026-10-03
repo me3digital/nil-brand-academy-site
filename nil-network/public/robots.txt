@@ -1,0 +1,3 @@
+# This file is only served on the staging host. In production the main site's robots.txt applies.
+User-agent: *
+Disallow: /
