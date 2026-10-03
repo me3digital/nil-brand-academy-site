@@ -13,7 +13,7 @@ import SourceList from './SourceList.astro';
 import Changes from './Changes.astro';
 import SectionNav from './SectionNav.astro';
 import Cta from './Cta.astro';
-import { fmtDate, gateChecks, quickOf, shortOf, QUICK_LABEL, TRUST } from '../lib/data.mjs';
+import { fmtDate, gateChecks, quickOf, shortOf, QUICK_LABEL, TRUST, SEO_STATUS } from '../lib/data.mjs';
 import { SITE, INTERNAL } from '../lib/site.mjs';
 const { hub } = Astro.props;
 const { state, inst, topics, categories, scenarios, page, gate, bodies, policies, programs, contacts, sports, guidance, changeLog, watch, intel, sources, n, checked, search, trust } = hub;
@@ -44,6 +44,7 @@ const typeLabel = isHS ? `${sector} high school` : `${sector} university`;
 const refFor = (g) => { const t = g.topic_slug && T(g.topic_slug); return t ? t.lead : g.external || null; };
 const ipTopics = topics.filter((t) => t.in_ip_matrix);
 const schoolLayers = topics.flatMap((t) => t.layers.filter((l) => l.scope_type === 'institution' && l.answer !== 'not_addressed').map((l) => ({ ...l, label: t.label, slug: t.slug })));
+const schoolSilent = topics.flatMap((t) => t.layers.filter((l) => l.scope_type === 'institution' && l.answer === 'not_addressed').map((l) => ({ ...l, label: t.label, slug: t.slug })));
 const districtLayers = topics.flatMap((t) => t.layers.filter((l) => l.scope_type === 'district').map((l) => ({ ...l, label: t.label, slug: t.slug })));
 // Who can be on the other side of a deal. The same rule topics read very differently at each level.
 const whoTopics = ['collectives', 'boosters', 'school-staff-involvement', 'school-payments', 'agents'].map(T).filter(Boolean);
@@ -116,7 +117,7 @@ const discShort = discTopic ? strip(shortOf(discTopic.lead)) : 'No disclosure ru
     <h2 class="sec">Overview</h2>
     <p class="sub">{isHS
       ? `${inst.name} is an FHSAA member school in ${inst.district_name || state.name}. Its athletes follow ${status.lead.citation.replace(/ \(.*$/, "")}, plus anything the district or school adds.`
-      : `${inst.name} athletes follow three layers of rules: ${state.name} law, NCAA and College Sports Commission rules, and ${short}'s own guidance.`}</p>
+      : `${inst.name} athletes follow three layers of rules: ${state.name} law, NCAA and College Sports Commission rules, and whatever ${short} publishes itself.`}</p>
     <dl class="snap">
       <div><dt>School</dt><dd>{inst.name}<small><a class="ref" href={inst.website_url} rel="noopener nofollow" target="_blank">Official site</a></small></dd></div>
       <div><dt>Location</dt><dd>{inst.city}, {state.name}{inst.county && <small>{inst.county}</small>}</dd></div>
@@ -205,7 +206,7 @@ const discShort = discTopic ? strip(shortOf(discTopic.lead)) : 'No disclosure ru
       <p><b>School confirmation:</b> {search.institution_confirmation ? `Confirmed by the school on ${fmtDate(search.confirmed_on)}.` : 'Not yet requested or received.'}</p>
     </details>}
     {policies.map((p) => (
-      <div class="note"><b>{p.title}.</b> {p.summary} {p.source_slug && <span class="cite"><a href={`#source-${n(p.source_slug)}`}>[{n(p.source_slug)}]</a></span>}</div>
+      <div class="note"><b>{p.title}.</b> {p.summary}{p.policy_status === 'outdated' && <> <b>This document predates the current rules and is not treated as current.</b></>}{p.policy_status === 'unconfirmed' && <> <b>The school has not confirmed that this is current.</b></>} {p.source_slug && <span class="cite"><a href={`#source-${n(p.source_slug)}`}>[{n(p.source_slug)}]</a></span>}</div>
     ))}
     {isHS && <>
       <h3 class="h3">Your district: {inst.district_name}</h3>
@@ -216,6 +217,10 @@ const discShort = discTopic ? strip(shortOf(discTopic.lead)) : 'No disclosure ru
     {schoolLayers.length > 0 && <>
       <h3 class="h3">What {short} adds to the {isHS ? 'statewide' : 'national'} rules</h3>
       <ul class="plain">{schoolLayers.map((l) => <li><b>{l.label}.</b> {shortOf(l)} <Trust state={l.trust_state} /> <a class="ref" href={`#rule-${l.slug}`}>Full rule</a></li>)}</ul>
+    </>}
+    {schoolSilent.length > 0 && <>
+      <h3 class="h3">Not located at {short}</h3>
+      <ul class="plain">{schoolSilent.map((l) => <li><b>{l.label}.</b> {l.summary} <Trust state={l.trust_state} /> <Refs layer={l} sources={sources} /></li>)}</ul>
     </>}
     {programs.length > 0 && <>
       <h3 class="h3">How NIL runs at {short}</h3>
@@ -306,7 +311,7 @@ const discShort = discTopic ? strip(shortOf(discTopic.lead)) : 'No disclosure ru
 
   {INTERNAL && <section class="block" id="gate">
     <h2 class="sec">Index quality gate (staging only)</h2>
-    <p class="sub">This page is <b>{gate.index_status}</b>. It enters the sitemap only when every check passes.</p>
+    <p class="sub">This page is <b>{gate.index_status}</b>. Status: <b>{SEO_STATUS[gate.seo_status]}</b>. School-specific value: <b>{gate.value_class}. {gate.value_class_label}</b>. It enters the sitemap only when every check passes, and the last two can only be recorded by a person.</p>
     <ul class="gate">{gateChecks(gate).map(([label, ok]) => <li class={ok ? 'pass' : 'fail'}>{label}</li>)}</ul>
   </section>}
   </div>

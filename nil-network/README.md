@@ -39,3 +39,16 @@ Without `DATABASE_URL` the build runs on an in-process Postgres loaded from the 
 - The build reads the database at build time. With `DATABASE_URL` set (Netlify environment variable only) it reads Supabase; without it, it builds the identical data from `db/migrations` and `db/seed` in process.
 - QA: `node scripts/audit.mjs <paths>`, `node scripts/qa-interact.mjs`, `node scripts/linkcheck.mjs` against `python3 -m http.server 4321` in `dist/`.
 - This branch is never merged into `main`. Launch is a single proxy rule on the production site.
+
+## Phase 3: Florida pilot population (2026-10-03)
+
+- **Scope:** 13 Florida Division I colleges and 17 high schools (Seminole High plus 16 Orange County Public Schools high schools). Every school page is noindex.
+- **Population workflow:** research files in `db/seed/research/` hold only what a school, district or conference publishes itself. `db/seed/pilot.mjs` turns them into seed rows and assigns trust states. Statewide and national rules are never restated per school: they are inherited from the canonical rule rows.
+- **Trust states for school rules:** quotes read as raw page text are "checked against the official source". A college rule that rests only on a page dated before July 2025, or on an undated or outdated school policy, is "awaiting school confirmation" and never sets a page's bottom line while a checked rule exists. A rule resting on a document that could only be read in part is "under review".
+- **Quality gate (`0006_pilot_gate.sql`):**
+  - School-specific value needs at least one NIL-specific item from the school or district (a rule that addresses NIL, a published NIL policy, a current NIL program, or a school confirmation) and three school-level facts in total. A contact counts as at most one. A contact alone never passes.
+  - Value class A (strong), B (moderate), C (state-rule-dominant / thin), D (incomplete). C and D stay noindex whatever else passes.
+  - `seo_status`: `NOT_ELIGIBLE`, `SEO_ELIGIBLE_HUMAN_REVIEW_PENDING`, `APPROVED_TO_INDEX`. A page indexes only when every automated check passes and a person has recorded both the rule reviews and the page approval.
+  - `record_human_review` and `approve_page` refuse automated names, and table constraints refuse the same writes done directly. `node scripts/test-guards.mjs` proves it on the local reference database.
+- **TLS:** the build verifies the database server certificate (chain and host name). Supabase signs its certificates with its own root, so that public root certificate ships in `db/certs/` and is trusted alongside Node's standard roots. `rejectUnauthorized` is `true`. The staging banner shows `TLS certificate verified` when the connection passed.
+- **Commands:** `node scripts/gate-report.mjs` (gate per page), `node scripts/review-queue.mjs` (human review queue and per-school checklists into `review/`), `node scripts/pilot-qa.mjs` (QA across every built page; set `QA_BASE` for the hosted site), `node scripts/bundle-update.mjs 0006_pilot_gate.sql` (hosted database update).

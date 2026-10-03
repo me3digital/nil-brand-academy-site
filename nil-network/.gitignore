@@ -53,3 +53,7 @@ supabase/.env
 *.swp
 .DS_Store
 Thumbs.db
+
+# QA and review outputs (regenerated from the database)
+qa/
+review/
