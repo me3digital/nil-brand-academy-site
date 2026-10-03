@@ -36,7 +36,7 @@ export const sources = [
   { slug: 'sbe-consent-2025-07-16', title: 'State Board of Education Consent Item: Ratification of FHSAA Bylaws, July 16, 2025', url: 'https://www.fldoe.org/core/fileparse.php/20872/urlt/10-1.pdf', organization: 'Florida Department of Education', source_type: 'board_document', published_on: '2025-07-16' },
   { slug: 'fl-stat-1006-20', title: 'Section 1006.20, Florida Statutes (2026): Athletics in public K-12 schools', url: 'http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=1000-1099/1006/Sections/1006.20.html', organization: 'Florida Legislature', gb: 'florida-legislature', source_type: 'statute', published_note: '2026 Florida Statutes' },
   { slug: 'fhsaa-handbook-2024-25', title: '2024-25 FHSAA Handbook (revised February 20, 2025)', url: 'https://s3.amazonaws.com/fhsaa.org/documents/2024/11/20/2425_handbook_update_11424.pdf', organization: 'Florida High School Athletic Association', gb: 'fhsaa', source_type: 'bylaw', published_on: '2025-02-20' },
-  { slug: 'fhsaa-handbook-2026-27', title: '2026-27 FHSAA Handbook', url: 'https://s3.amazonaws.com/fhsaa.org/documents/2026/7/22/2627_handbook_website_7_22.pdf', organization: 'Florida High School Athletic Association', gb: 'fhsaa', source_type: 'bylaw', published_on: '2026-07-22', notes: 'Current handbook. Article 9 could not be machine-read; a person must compare Bylaw 9.9 here against the ratification text.' },
+  { slug: 'fhsaa-handbook-2026-27', title: '2026-27 FHSAA Handbook, Bylaws (2026-27 Edition, posted July 22, 2026)', url: 'https://s3.amazonaws.com/fhsaa.org/documents/2026/7/22/2627_handbook_website_7_22.pdf', organization: 'Florida High School Athletic Association', gb: 'fhsaa', source_type: 'bylaw', published_on: '2026-07-22', notes: 'Current handbook, "applicable to the 2026-27 school year". The NIL bylaw is numbered 9.10 here. Read as raw text on 2026-10-03 and compared word for word with the October 2024 text.' },
   { slug: 'fhsaa-nil-resources', title: 'Amateurism and Name, Image and Likeness (NIL) resources', url: 'https://fhsaa.com/sports/2024/8/12/ABOUT_NILResources.aspx', organization: 'Florida High School Athletic Association', gb: 'fhsaa', source_type: 'official_webpage', published_on: '2024-08-12' },
   { slug: 'fl-hb-981-2025', title: 'CS/CS/HB 981 (2025) Athlete Representation and Compensation, bill page', url: 'https://www.flsenate.gov/Session/Bill/2025/981', organization: 'Florida Senate', gb: 'florida-legislature', source_type: 'legislative_record', published_on: '2025-06-16' },
   // ---- Florida college law
@@ -400,25 +400,90 @@ export const rules = [
     sources: [S('shs-media-credentials', 'Media Credential Request', 'for news and editorial coverage ... DEADLINE 48 HOURS PRIOR TO EVENT START ... The dissemination of editorial content must be a primary purpose of the media outlet')] },
 ];
 
+// ================================================================= second-pass source review, 2026-10-03
+// Each change below was made after reading the official text directly (raw text of the live page or PDF).
+// Nothing here is a human or legal review.
+sources.push(
+  { slug: 'sbe-fhsaa-bylaws-2026-07-22', title: 'State Board of Education Consent Item, July 22, 2026: Ratification of FHSAA Bylaws, Summary of Approved Bylaws', url: 'https://www.fldoe.org/file/20954/36-2.pdf', organization: 'Florida Department of Education', gb: 'fhsaa', source_type: 'board_document', published_on: '2026-07-22', is_primary: true },
+  { slug: 'fhsaa-rules-publications', title: 'FHSAA Rules and Publications page (links the current Handbook and Form GA1)', url: 'https://fhsaa.com/sports/2020/1/28/RulesPub.aspx', organization: 'Florida High School Athletic Association', gb: 'fhsaa', source_type: 'official_webpage', is_primary: true },
+  { slug: 'fl-stat-468-454', title: 'Section 468.454, Florida Statutes (2026): Athlete agents, contracts', url: 'http://www.leg.state.fl.us/statutes/index.cfm?App_mode=Display_Statute&URL=0400-0499/0468/Sections/0468.454.html', organization: 'Florida Legislature', gb: 'florida-legislature', source_type: 'statute', is_primary: true },
+  { slug: 'scps-policy-7510', title: 'Seminole County School Board Policy 7510, Use of District Facilities (revised 11/14/23)', url: 'https://go.neola.com/semi-fl/policy/policy-manual/po7510', organization: 'Seminole County Public Schools', source_type: 'district_policy', published_on: '2023-11-14', is_primary: true },
+);
+const R = (slug) => { const r = rules.find((x) => x.slug === slug); if (!r) throw new Error('second pass: unknown rule ' + slug); return r; };
+
+// FHSAA. The 2026-27 Handbook renumbers the NIL bylaw from 9.9 to 9.10. Its text was compared word for word with the
+// October 2024 text. Substance is unchanged: one subtitle gained the word "Defined" and policy cross-references were updated.
+rules.filter((r) => r.scope.gb === 'fhsaa').forEach((r) => {
+  r.sources.push(S('fhsaa-handbook-2026-27', 'Bylaw 9.10 (numbered 9.9 before 2026-27), pages 30 to 31', null, 'machine_raw_text'));
+});
+R('fhsaa-nil-allowed').effective_note = 'First approved by the FHSAA Board on June 4, 2024. The 2026-27 Handbook, which states "These Bylaws are applicable to the 2026-27 school year", carries the same rules as Bylaw 9.10. A clarifying amendment (the word "Defined" added to the NIL collectives subtitle) was on the State Board of Education consent agenda on July 22, 2026, effective July 1, 2026. The State Board vote record was not located.';
+R('fhsaa-nil-allowed').sources.push(S('sbe-fhsaa-bylaws-2026-07-22', 'Summary of Approved Bylaws, row 9.9', 'Adds “Defined” to the subtitle for NIL Collectives. Effective July 1, 2026', 'machine_raw_text'));
+R('fhsaa-disclosure').sources.push(S('fhsaa-rules-publications', 'Forms list', 'Affidavit of Amateurism (GA1)', 'machine_raw_text'));
+
+Object.assign(R('fhsaa-boosters'), {
+  conditions: 'Bylaw 1.4.17 lists six groups. Members of a booster organization are group (e), so the full bar applies to them. Group (f), people and businesses that donate to or help promote the athletic program, is treated differently: the bylaw applies only the NIL collective prohibitions to them. Groups (a) and (b) are student-athletes and their own families, and the bylaw does not explain how the bar is meant to apply to them. Ask your athletic director if a deal involves a teammate\'s or relative\'s business.',
+});
+R('fhsaa-boosters').sources = [
+  S('fhsaa-handbook-2026-27', 'Bylaw 1.4.17 (a) to (f), page 8 area', '(e) A member of an athletic booster organization of that school; (f) A person, business, organization, or group that makes financial or in-kind contributions to the athletic department or that is otherwise involved in promoting the school\'s interscholastic athletic program.', 'machine_raw_text'),
+  S('fhsaa-handbook-2026-27', 'Bylaw 9.10.4.5', 'No school employee, athletic department staff member, or representative of a school\'s athletic interests as defined in Bylaw 1.4.17 (a-e), may form, direct, offer, provide, or otherwise engage in any activity outlined in FHSAA Bylaw 9.9. Representatives of a school\'s athletic interests as defined in Bylaw 1.4.17(f) are subject to the prohibitions included in 9.9.4.2 and 9.9.4.4(i).', 'machine_raw_text'),
+  ...R('fhsaa-boosters').sources.filter((x) => x.src !== 'fhsaa-handbook-2024-25' && x.src !== 'fhsaa-handbook-2026-27'),
+];
+R('fhsaa-transfers').conditions = 'The exceptions in Bylaw 9.3.2.2 include a military move, foster care placement, a court-ordered change in custody, a full and complete move, and reassignment by the district school board. The transfer bylaw was substantively amended for 2026-27, so ask your athletic director whether one applies to you.';
+R('fhsaa-transfers').sources.push(S('fhsaa-handbook-2026-27', 'Bylaw 9.3.2.2', 'A student may not participate in sports at two different schools during the same school year, unless the student qualifies under one the following', 'machine_raw_text'));
+
+// Florida statutes, read as raw text from the 2026 Florida Statutes.
+R('fl-college-agents').sources.forEach((x) => { x.check = 'machine_raw_text'; });
+Object.assign(R('fl-college-disclosure'), {
+  citation: 'Sections 1006.74 and 468.454(6) and (7), Florida Statutes',
+  summary: 'Florida\'s NIL statute, section 1006.74, has no requirement to disclose NIL deals to the school. The deal-reporting duty comes from NCAA rules. Florida law does require notice of an agent contract: the agent must tell the athletic director within 72 hours of signing, or before the athlete\'s next athletic event if that is sooner, and the athlete must also inform the school.',
+  conditions: 'This notice is about signing with an athlete agent, not about each NIL deal.',
+});
+R('fl-college-disclosure').sources.push(S('fl-stat-468-454', 's. 468.454(6)', 'Within 72 hours after entering into an agent contract or before the next scheduled athletic event in which the student athlete may participate, whichever occurs first, the athlete agent must give notice in a record of the existence of the contract to the athletic director of the educational institution at which the student athlete is enrolled', 'machine_raw_text'));
+R('fl-hs-no-statute').sources.forEach((x) => { x.check = 'machine_raw_text'; });
+
+// NCAA. Article 22 of the 2026-27 Division I Manual was read in full as raw text (report generated October 3, 2026).
+Object.assign(R('ncaa-logos-marks'), {
+  citation: 'NCAA Division I Manual 2026-27, Article 22 (no provision on school marks in NIL deals)',
+  summary: 'NCAA Bylaws 22.01 through 22.3 say nothing about athletes using school logos or marks in third-party deals, so your school\'s policy decides. The NCAA tells athletes to "Review your campus NIL policy and applicable state law."',
+  conditions: 'Bylaw 22.4 is a separate rule that limits commercial logos on uniforms and equipment worn in competition.',
+});
+R('ncaa-logos-marks').sources.push(S('ncaa-d1-manual-2026-27', 'Article 22, Bylaws 22.01 to 22.3 read in full: no mention of logos, marks, uniforms or apparel', null, 'machine_raw_text'));
+R('ncaa-prohibited-categories').sources.forEach((x) => { x.check = 'machine_raw_text'; x.locator = 'Article 22 read in full: no list of prohibited product or industry categories'; });
+Object.assign(R('ncaa-school-staff'), {
+  citation: 'NCAA Division I Bylaws 22.1.1, 22.1.1.1 and 22.2.3',
+  summary: 'Yes, within limits. A school may act as a marketing agent for an athlete on third-party NIL deals. A school may not guarantee a third-party deal, and the payor must attest that the school did not direct it to make the deal and that it funded the payment itself.',
+  conditions: 'A June 2025 NCAA question and answer document adds that a school may help identify or facilitate a deal when the third party funds the whole payment. That document predates the current Manual.',
+});
+
+// University of Florida. The International Center FAQ was re-read as raw page text and every quoted passage matched.
+R('uf-international').sources.forEach((x) => { if (x.quote) x.check = 'machine_raw_text'; });
+R('uf-international').conditions = [R('uf-international').conditions, 'The International Center page carries no date.'].filter(Boolean).join(' ');
+
+// Seminole County and Seminole High School.
+Object.assign(R('scps-facilities'), {
+  conditions: 'Board Policy 7510 (revised 11/14/23) was read in full. It sets the request, fee and insurance process and does not mention filming, photography or commercial shoots. The district\'s Facility Use Handbook was not read.',
+});
+R('scps-facilities').sources.forEach((x) => { x.check = 'machine_raw_text'; });
+R('scps-facilities').sources.push(S('scps-policy-7510', 'Policy 7510, whole policy', 'The required certificate of insurance must be provided seven (7) business days prior to the Facility use; failure to provide the required insurance may result in the cancellation of the Facility use.', 'machine_raw_text'));
+Object.assign(R('shs-event-footage'), {
+  answer: 'only_with_approval',
+  citation: 'Seminole High School Athletics, Media Credential Request terms',
+  summary: 'Only with written approval. Seminole High School\'s media credential terms prohibit secondary or commercial use of pictures, audio or film of its athletics events made by a credential holder, including advertising and sales promotion, without prior specific written approval of Seminole High School Athletics. Separately, FHSAA Bylaw 9.9.4.3 bars referring to a member school event or game in NIL activity.',
+  conditions: 'These terms bind credentialed media. The page does not address footage shot by families or the athlete.',
+});
+R('shs-event-footage').sources = [S('shs-media-credentials', 'Media Credential Request, use of coverage', 'Any secondary or commercial use of any picture, audio description, film/tape, or drawing of any Seminole High School Athletics Events taken or made by the Credential Holder (including, but not limited to use in delayed editorial, advertising, sales promotion, or merchandising) is prohibited without prior specific written approval of Seminole High School Athletics.', 'machine_raw_text')];
+
+
+
 // TRUST STATES. Set per rule from what was actually checked on 2026-10-03.
 //   visual_source_check = read on screen from the official document (FHSAA-hosted Bylaw 9.9 pages and Form GA1, Revised 10/24)
 //   raw_source_text     = full page text read directly from the official site
 // No rule is marked human_review. Only a person can set that.
-const NEEDS_REVIEW = {
-  'fhsaa-boosters': 'Bylaw 1.4.17 (the definition this rule depends on) was not checked visually.',
-  'fl-hs-no-statute': 'Absence finding. A search of Florida Statutes found no high school NIL statute; a person should confirm.',
-  'fl-college-agents': 'Sections 468.452 and 468.453 were machine-extracted, not read as raw text.',
-  'fl-college-disclosure': 'Section 1006.74 confirmed. Athlete agent statutes (sections 468.454 and following) not checked.',
-  'ncaa-logos-marks': 'Absence finding from a keyword scan of Article 22.',
-  'ncaa-prohibited-categories': 'Absence finding. NCAA sports wagering rules outside Article 22 were not reviewed.',
-  'ncaa-school-staff': 'The House settlement Q&A (June 2025) predates later Manual revisions.',
-  'uf-international': 'The UF International Center FAQ was machine-extracted and its date is unclear.',
-  'scps-facilities': 'District Policy 7510 and the Facility Use Handbook could not be opened.',
-};
+const NEEDS_REVIEW = {};   // every rule was resolved one way or the other in the second pass; open questions live in conditions and in the conflicts table
 const NOT_LOCATED = {
-  'uf-facilities': 'UF\'s NIL overview page was read in full. It does not address facility use for NIL.',
-  'shs-event-footage': 'The school\'s athletics pages were reviewed. No rule on commercial use of event footage was located.',
-  'fhsaa-facilities': 'Bylaw 9.9 was read in full. It does not mention facilities.',
+  'uf-facilities': 'UF\'s NIL overview page was read in full on October 3, 2026. It does not address facility use for NIL.',
+  'fhsaa-facilities': 'The NIL bylaw in the 2026-27 Handbook was read in full. It does not mention facilities.',
+  'fl-hs-no-statute': 'No Florida statute on high school NIL was located. Section 1006.20 was read; it leaves eligibility to FHSAA bylaws.',
 };
 // UF's NIL overview page was re-read as raw page text on 2026-10-03 and every quoted passage below was matched against it.
 rules.forEach((r) => r.sources.forEach((x) => { if (x.src === 'uf-nil-overview' && x.quote) x.check = 'machine_raw_text'; }));
@@ -472,6 +537,16 @@ const QUICK_ANSWERS = {
 rules.forEach((r) => { const qa = QUICK_ANSWERS[r.slug]; if (qa) { r.quick_status = qa[0]; r.short_answer = qa[1]; } });
 for (const k of Object.keys(QUICK_ANSWERS)) if (!rules.find((r) => r.slug === k)) throw new Error('quick answer for unknown rule ' + k);
 
+
+// ----------------------------------------------------------------- 2026-27 renumbering: Bylaw 9.9 is now Bylaw 9.10
+// Rule text, citations and guidance use the current number. Verbatim source quotes and locators keep the number printed in the document quoted.
+const renum = (t) => (typeof t === 'string' ? t.replace(/\b9\.9(?=\.\d|\b)(?!\d)/g, '9.10') : t);
+rules.forEach((r) => {
+  for (const k of ['summary', 'conditions', 'citation', 'short_answer', 'review_note']) r[k] = renum(r[k]);
+  if (r.disclosure) for (const k of Object.keys(r.disclosure)) r.disclosure[k] = renum(r.disclosure[k]);
+});
+R('fhsaa-nil-allowed').citation = 'FHSAA Bylaw 9.10.4 (numbered 9.9.4 before 2026-27)';
+
 // ----------------------------------------------------------------- institutions
 export const institutions = [
   { slug: 'university-of-florida', name: 'University of Florida', short_name: 'UF', institution_type: 'college', sector: 'public', state: 'FL', city: 'Gainesville',
@@ -521,10 +596,10 @@ export const nilPrograms = [
 ];
 
 export const contacts = [
-  { inst: 'university-of-florida', office: 'UAA Compliance Office', role: 'Compliance office, general contact', phone: '(352) 375-4683 ext. 6022', url: 'https://floridagators.com/sports/2015/12/10/_compliance_', source: 'uf-compliance', is_public: true, show: true, status: 'researched' },
-  { inst: 'university-of-florida', office: 'UAA Licensing', role: 'Merchandise, apparel and logo approval', url: 'https://floridagators.com/sports/2025/8/6/overview-name-image-likeness', source: 'uf-nil-overview', is_public: true, show: true, status: 'researched' },
-  { inst: 'university-of-florida', office: 'UF International Center, International Student Services', role: 'First stop for international athletes', url: 'https://internationalcenter.ufl.edu/iss/maintaining-f-1-status/employment-or-training/ncaa---frequently-asked-questions/', source: 'uf-iss-ncaa-faq', is_public: true, show: true, status: 'researched' },
-  { inst: 'seminole-high-school-sanford', office: 'Seminole High School Athletics', role: 'Athletic Director', person_name: 'Woody Cox', phone: '407-320-5057 (athletics office)', url: 'https://shsnolessports.com/about-us/', source: 'shs-athletics-about', is_public: true, show: true, status: 'researched' },
+  { inst: 'university-of-florida', office: 'UAA Compliance Office', role: 'Compliance office, general contact', phone: '(352) 375-4683 ext. 6022', url: 'https://floridagators.com/sports/2015/12/10/_compliance_', source: 'uf-compliance', is_public: true, show: true, status: 'verified' },
+  { inst: 'university-of-florida', office: 'UAA Licensing', role: 'Merchandise, apparel and logo approval', url: 'https://floridagators.com/sports/2025/8/6/overview-name-image-likeness', source: 'uf-nil-overview', is_public: true, show: true, status: 'verified' },
+  { inst: 'university-of-florida', office: 'UF International Center, International Student Services', role: 'First stop for international athletes', url: 'https://internationalcenter.ufl.edu/iss/maintaining-f-1-status/employment-or-training/ncaa---frequently-asked-questions/', source: 'uf-iss-ncaa-faq', is_public: true, show: true, status: 'verified' },
+  { inst: 'seminole-high-school-sanford', office: 'Seminole High School Athletics', role: 'Athletic Director', person_name: 'Woody Cox', phone: '407-320-5057 (athletics office)', url: 'https://shsnolessports.com/about-us/', source: 'shs-athletics-about', is_public: true, show: true, status: 'verified' },
 ];
 
 // ----------------------------------------------------------------- scenarios
@@ -626,3 +701,19 @@ export const marketAreas = [
   { slug: 'orlando-metro', name: 'Orlando metro', state: 'FL', counties: ['Orange County', 'Seminole County', 'Osceola County', 'Lake County'], institutions: ['seminole-high-school-sanford'] },
   { slug: 'gainesville-metro', name: 'Gainesville metro', state: 'FL', counties: ['Alachua County'], institutions: ['university-of-florida'] },
 ];
+
+// ----------------------------------------------------------------- second pass, continued (after all exports exist)
+guidance.forEach((g) => { g.title = renum(g.title); g.body = renum(g.body); });
+watchItems.forEach((w) => { w.status_text = renum(w.status_text); w.summary = renum(w.summary); });
+pages.forEach((p) => { p.meta_description = renum(p.meta_description); });
+// Resolved: section 468.454 was read. It requires notice of agent contracts, which the rule now states.
+conflicts.splice(conflicts.findIndex((c) => c.rule === 'fl-college-disclosure'), 1);
+conflicts.forEach((c) => { c.summary = renum(c.summary); });
+conflicts.push({ rule: 'fhsaa-boosters', severity: 'low', opened_on: '2026-10-03', summary: 'The 2026-27 Handbook renumbers the NIL bylaw to 9.10, but Bylaw 9.10.4.5 still refers to "FHSAA Bylaw 9.9", "9.9.4.2" and "9.9.4.4(i)", and Form GA1 (revised 10/24), which FHSAA still links as the current form, cites Bylaw 9.9. We read these as the same rules under their old number.' });
+changeLog.push(
+  { gb: 'fhsaa', rule: 'fhsaa-nil-allowed', changed_on: '2026-07-01', change_type: 'amended', source: 'sbe-fhsaa-bylaws-2026-07-22', effective_on: '2026-07-01',
+    summary: 'For 2026-27 the NIL bylaw was renumbered from 9.9 to 9.10, and the NIL collectives subtitle gained the word "Defined". A word-for-word comparison with the October 2024 text found no change to what athletes may or may not do.',
+    previous_text: 'Bylaw 9.9, Amateurism and Name, Image, and Likeness (NIL). Subsection 9.9.4.2, "NIL Collectives."', current_text: 'Bylaw 9.10, Amateurism and Name, Image, and Likeness (NIL). Subsection 9.10.4.2, "NIL Collectives Defined."' },
+  { gb: 'fhsaa', rule: 'fhsaa-transfers', changed_on: '2026-07-22', change_type: 'on_agenda', source: 'sbe-fhsaa-bylaws-2026-07-22',
+    summary: 'Substantive amendments to Bylaw 9.3 (transfers), following SB 538, were on the State Board of Education consent agenda for ratification. The NIL transfer rule depends on the exceptions in Bylaw 9.3.2.2.' },
+);

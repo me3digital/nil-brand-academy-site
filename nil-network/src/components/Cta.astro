@@ -1,5 +1,5 @@
 ---
-import { checkoutLink, LEAD_MAGNET_URL, KIT_FORM_UID, KIT_FORM_SCRIPT, BLOG } from '../lib/site.mjs';
+import { checkoutLink, KIT_FORM_ACTION, BLOG } from '../lib/site.mjs';
 const { pageType, level, location = 'hub_footer' } = Astro.props;
 ---
 <div class="ctaband">
@@ -10,8 +10,12 @@ const { pageType, level, location = 'hub_footer' } = Astro.props;
       <div class="k">Free</div>
       <h3>5 Brands to Pitch</h3>
       <p>A free guide to the kinds of brands that hire athletes like you, and how to approach them.</p>
-      <div class="kitform" data-cta="lead_magnet" data-cta-location={location}><script async data-uid={KIT_FORM_UID} src={KIT_FORM_SCRIPT}></script></div>
-      <noscript><a class="go" href={LEAD_MAGNET_URL}>Get the free guide</a></noscript>
+      <form class="guideform" action={KIT_FORM_ACTION} method="post" data-cta="lead_magnet" data-cta-location={location}>
+        <label for="guide-email">Your email address</label>
+        <input id="guide-email" type="email" name="email_address" autocomplete="email" inputmode="email" placeholder="you@example.com" required />
+        <button type="submit">Send me the free guide</button>
+        <p class="fine">We email the guide and a short series on getting brand ready. Unsubscribe anytime.</p>
+      </form>
     </div>
     <div class="ctastep">
       <div class="k">Build</div>

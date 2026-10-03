@@ -1,6 +1,7 @@
 -- Validation fingerprint. Run the same query on the local reference database and on Supabase; every row must match.
 with t as (
   select 'tables' k, count(*)::text v from information_schema.tables where table_schema='public' and table_type='BASE TABLE' and table_name <> 'schema_migrations'
+  union all select 'functions', count(*)::text from pg_proc p join pg_namespace n on n.oid=p.pronamespace where n.nspname='public' and p.proname in ('record_human_review','approve_page')
   union all select 'views', count(*)::text from information_schema.views where table_schema='public'
   union all select 'columns', count(*)::text from information_schema.columns where table_schema='public' and table_name <> 'schema_migrations'
   union all select 'foreign_keys', count(*)::text from information_schema.table_constraints where constraint_schema='public' and constraint_type='FOREIGN KEY'

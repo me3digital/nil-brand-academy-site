@@ -14,7 +14,7 @@ import Changes from './Changes.astro';
 import SectionNav from './SectionNav.astro';
 import Cta from './Cta.astro';
 import { fmtDate, gateChecks, quickOf, shortOf, QUICK_LABEL, TRUST } from '../lib/data.mjs';
-import { SITE, STAGING } from '../lib/site.mjs';
+import { SITE, INTERNAL } from '../lib/site.mjs';
 const { hub } = Astro.props;
 const { state, inst, topics, categories, scenarios, page, gate, bodies, policies, programs, contacts, sports, guidance, changeLog, watch, intel, sources, n, checked, search, trust } = hub;
 const isHS = inst.institution_type === 'high_school';
@@ -115,7 +115,7 @@ const discShort = discTopic ? strip(shortOf(discTopic.lead)) : 'No disclosure ru
   <section class="block" id="overview">
     <h2 class="sec">Overview</h2>
     <p class="sub">{isHS
-      ? `${inst.name} is an FHSAA member school in ${inst.district_name || state.name}. Its athletes follow FHSAA Bylaw 9.9, plus anything the district or school adds.`
+      ? `${inst.name} is an FHSAA member school in ${inst.district_name || state.name}. Its athletes follow ${status.lead.citation.replace(/ \(.*$/, "")}, plus anything the district or school adds.`
       : `${inst.name} athletes follow three layers of rules: ${state.name} law, NCAA and College Sports Commission rules, and ${short}'s own guidance.`}</p>
     <dl class="snap">
       <div><dt>School</dt><dd>{inst.name}<small><a class="ref" href={inst.website_url} rel="noopener nofollow" target="_blank">Official site</a></small></dd></div>
@@ -304,7 +304,7 @@ const discShort = discTopic ? strip(shortOf(discTopic.lead)) : 'No disclosure ru
     <Cta pageType={page.page_type} level={level} />
   </section>
 
-  {STAGING && <section class="block" id="gate">
+  {INTERNAL && <section class="block" id="gate">
     <h2 class="sec">Index quality gate (staging only)</h2>
     <p class="sub">This page is <b>{gate.index_status}</b>. It enters the sitemap only when every check passes.</p>
     <ul class="gate">{gateChecks(gate).map(([label, ok]) => <li class={ok ? 'pass' : 'fail'}>{label}</li>)}</ul>
