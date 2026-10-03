@@ -65,7 +65,10 @@ const QUICK = { yes: 'YES', yes_with_conditions: 'DEPENDS', only_with_approval: 
 const SOURCE_TYPES = new Set(['statute', 'regulation', 'bylaw', 'board_document', 'form', 'institution_policy', 'district_policy', 'official_faq', 'official_webpage', 'government_database', 'legislative_record', 'secondary_reporting']);
 const isDate = (d) => typeof d === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(d);
 const tidy = (t) => (typeof t === 'string' ? t.replace(/\s+/g, ' ').trim() : t);
-const noneIfNull = (t) => (t && !/^none$/i.test(t) ? tidy(t) : null);
+// Research-process remarks are for the review notes, not for the public page.
+const publicText = (t) => tidy(String(t).replace(/Read through a summarising tool\.\s*/g, '').replace(/Confirm wording[^.]*by hand\.\s*/g, '').replace(/Closest topic match\.\s*/g, '')
+  .replace(/School-specific( part)?:\s*(\w)/g, (m, a, c) => 'What the school adds: ' + c));
+const noneIfNull = (t) => (t && !/^none$/i.test(t) && publicText(t) ? publicText(t) : null);
 
 const SPORT_FIX = [[/\s*\([^)]*\)\s*/g, ' '], [/^(?:boys|girls)\s+/i, ''], [/&/g, 'and'],
   [/^track$/i, 'Track and Field'], [/^swim and dive$/i, 'Swimming and Diving'], [/^(?:sideline|spirit) cheer$/i, 'Cheerleading'], [/^competitive cheer$/i, 'Competitive Cheerleading']];
