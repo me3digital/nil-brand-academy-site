@@ -45,7 +45,7 @@ const dl = { page_type: pageType, ...ctx, index_status: indexable ? 'index' : 'n
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
-{STAGING && <div class="staging" role="note" data-source={prov.source} data-ledger={prov.ledger} data-built={builtAt}>Staging preview. Not live, not indexed. Data: {prov.source === 'supabase' ? `live Supabase database (ledger ${prov.ledger})` : 'files in the repo, not the live database'}. Built {builtAt}.</div>}
+{STAGING && <div class="staging" role="note" data-source={prov.source} data-ledger={prov.ledger} data-built={builtAt} data-tls={prov.tls?.verified ? 'verified' : 'none'} data-tls-issuer={prov.tls?.issuer || ''}>Staging preview. Not live, not indexed. Data: {prov.source === 'supabase' ? `live Supabase database (ledger ${prov.ledger}, TLS certificate verified)` : 'files in the repo, not the live database'}. Built {builtAt}.</div>}
 <header class="site"><div class="wrap hwrap">
   <a class="brand" href="/">NIL Brand Academy<span>Built by ME3 Digital</span></a>
   <nav class="nav-right" aria-label="Main">

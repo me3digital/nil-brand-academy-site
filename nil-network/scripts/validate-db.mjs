@@ -1,13 +1,14 @@
 // Compares the connected database (DATABASE_URL) with a fresh local build of the same migrations + seed.
 // Row counts per table, cascade size per school, quality-gate result per page, orphan checks, RLS state.
 import pg from 'pg';
+import { tlsOptions } from '../src/lib/db.mjs';
 import { PGlite } from '@electric-sql/pglite';
 import fs from 'node:fs';
 import { buildSeedSql } from './seed.mjs';
 const local = new PGlite();
 for (const f of fs.readdirSync('db/migrations').sort()) await local.exec(fs.readFileSync('db/migrations/' + f, 'utf8'));
 await local.exec(buildSeedSql());
-const remote = new pg.Client({ connectionString: process.env.DATABASE_URL }); await remote.connect();
+const remote = new pg.Client({ connectionString: process.env.DATABASE_URL, ssl: tlsOptions(new URL(process.env.DATABASE_URL).hostname) }); await remote.connect();
 const both = async (sql) => [(await local.query(sql)).rows, (await remote.query(sql)).rows];
 let bad = 0;
 const [lt] = await both(`select tablename from pg_tables where schemaname='public' and tablename <> 'schema_migrations' order by 1`);

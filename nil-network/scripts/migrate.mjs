@@ -3,8 +3,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import pg from 'pg';
+import { tlsOptions } from '../src/lib/db.mjs';
 if (!process.env.DATABASE_URL) { console.error('DATABASE_URL is not set. Refusing to run.'); process.exit(1); }
-const client = new pg.Client({ connectionString: process.env.DATABASE_URL });
+const client = new pg.Client({ connectionString: process.env.DATABASE_URL, ssl: tlsOptions(new URL(process.env.DATABASE_URL).hostname) });
 await client.connect();
 await client.query(`create table if not exists public.schema_migrations (name text primary key, applied_at timestamptz not null default now())`);
 await client.query(`alter table public.schema_migrations enable row level security`);

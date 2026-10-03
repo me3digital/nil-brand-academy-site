@@ -3,6 +3,7 @@
 //   otherwise         -> in-process Postgres (PGlite) loaded from db/migrations + seed, for staging and CI
 import fs from 'node:fs';
 import path from 'node:path';
+import tls from 'node:tls';
 
 const root = process.env.NIL_ROOT || process.cwd();   // run builds from the project root
 let dbPromise;
@@ -10,6 +11,15 @@ let dbPromise;
 // NIL_REQUIRE_DB=1 (set for the hosted staging and launch builds) makes a missing connection a hard failure,
 // so a hosted build can never quietly fall back to the files in the repo.
 let source = null;
+let tlsInfo = null;
+
+// TLS: the server certificate is verified on every connection (chain and host name). Supabase signs its database
+// certificates with its own root CA, which is not in Node's default trust store, so that public root certificate is
+// shipped in db/certs/ and trusted alongside the standard roots. Verification is never switched off.
+export function tlsOptions(host) {
+  const supabaseRoot = fs.readFileSync(path.join(root, 'db/certs/supabase-root-2021-ca.crt'), 'utf8');
+  return { ca: [supabaseRoot, ...tls.rootCertificates], rejectUnauthorized: true, servername: host, minVersion: 'TLSv1.2' };
+}
 
 // Reads a Postgres connection string without the URL parser, so a password containing characters such as @ # / ? works
 // as typed. If the password was pasted with the template's square brackets still around it, the bare form is tried too.
@@ -30,12 +40,14 @@ async function boot() {
     const candidates = parseDatabaseUrl(process.env.DATABASE_URL);
     let lastCode = 'unparseable';
     for (const cfg of candidates) {
-      const client = new pg.Client({ ...cfg, ssl: { rejectUnauthorized: false } });
+      const client = new pg.Client({ ...cfg, ssl: tlsOptions(cfg.host) });
       try {
         await client.connect();
         source = 'supabase';
         // Keep the process alive only while a query is in flight, so the build can exit when it is done.
         const stream = client.connection?.stream; let busy = 0; stream?.unref?.();
+        if (!stream?.encrypted || stream.authorized !== true) { try { await client.end(); } catch {} throw Object.assign(new Error('tls'), { code: 'TLS_NOT_VERIFIED' }); }
+        tlsInfo = { verified: true, protocol: stream.getProtocol?.() || null, issuer: stream.getPeerCertificate?.()?.issuer?.CN || null };
         return { query: async (sql, params) => { if (busy++ === 0) stream?.ref?.(); try { return await client.query(sql, params); } finally { if (--busy === 0) stream?.unref?.(); } } };
       } catch (e) { lastCode = e.code || e.name || 'error'; try { await client.end(); } catch {} }
     }
@@ -67,7 +79,7 @@ export async function q(sql, params = []) {
 // cannot be produced by a repo-file build.
 export async function buildProvenance() {
   await getDb();
-  if (source !== 'supabase') return { source, ledger: null, database: null };
+  if (source !== 'supabase') return { source, ledger: null, database: null, tls: null };
   const r = (await q(`select current_database() as database, count(*)::int as migrations, to_char(max(applied_at) at time zone 'UTC', 'YYYY-MM-DD"T"HH24:MI:SS"Z"') as ledger from schema_migrations`))[0];
-  return { source, ...r };
+  return { source, ...r, tls: tlsInfo };
 }
