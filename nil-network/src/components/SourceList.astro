@@ -1,0 +1,14 @@
+---
+import { fmtDate } from '../lib/data.mjs';
+const { sources, checked } = Astro.props;
+const TYPE = { statute: 'Statute', regulation: 'Regulation', bylaw: 'Bylaw', board_document: 'Board document', form: 'Official form', institution_policy: 'School publication',
+  district_policy: 'District page', official_faq: 'Official FAQ', official_webpage: 'Official page', government_database: 'Government database', legislative_record: 'Legislative record', secondary_reporting: 'Secondary reporting' };
+---
+<ol class="sources">
+  {sources.map((s) => (
+    <li id={`source-${s.n}`}>
+      <a href={s.url} rel="noopener nofollow" target="_blank" data-source={s.slug}>{s.title}</a>
+      <small>{s.organization} &middot; {TYPE[s.source_type]} &middot; {s.is_primary ? 'Primary source' : 'Secondary source'} &middot; Checked {fmtDate(checked)}</small>
+    </li>
+  ))}
+</ol>

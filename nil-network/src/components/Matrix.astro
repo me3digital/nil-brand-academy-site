@@ -1,0 +1,31 @@
+---
+import Chip from './Chip.astro';
+import Refs from './Refs.astro';
+const { categories, sources, caption, ipOnly = false, idPrefix = '' } = Astro.props;
+const cats = categories.map((c) => ({ ...c, topics: c.topics.filter((t) => (ipOnly ? t.in_ip_matrix : true)) })).filter((c) => c.topics.length);
+---
+<div class="tablewrap" tabindex="0" role="region" aria-label={caption}>
+<table class="matrix">
+  <caption>{caption}</caption>
+  <thead><tr><th scope="col">{ipOnly ? 'Question' : 'Topic'}</th><th scope="col">Bottom line</th><th scope="col">What each rule says</th></tr></thead>
+  <tbody>
+  {cats.map((c) => (<>
+    {!ipOnly && <tr class="cat"><th colspan="3" scope="colgroup">{c.name}</th></tr>}
+    {c.topics.map((t) => (
+      <tr id={ipOnly ? undefined : `${idPrefix}rule-${t.slug}`}>
+        <th scope="row">{ipOnly ? t.question : t.label}</th>
+        <td><Chip answer={t.chip} /></td>
+        <td>
+          {t.layers.map((l) => (
+            <p class="layer"><b>{l.issuer_name}:</b> {l.summary} {l.verification_status === 'needs_verification' && <span class="tag">Needs verification</span>}
+              {l.conditions && <span class="cond">{l.conditions}</span>}
+              <span class="cite">{l.citation}</span> <Refs layer={l} sources={sources} />
+            </p>
+          ))}
+        </td>
+      </tr>
+    ))}
+  </>))}
+  </tbody>
+</table>
+</div>

@@ -1,0 +1,6 @@
+---
+// Numbered links to the page's source list for one rule layer.
+const { layer, sources } = Astro.props;
+const nums = [...new Set((layer?.sources || []).map((s) => sources.find((x) => x.slug === s.slug)?.n).filter(Boolean))];
+---
+{nums.length > 0 && <span class="cite">{nums.map((n) => <a href={`#source-${n}`} aria-label={`Source ${n}`}>[{n}]</a>)}</span>}

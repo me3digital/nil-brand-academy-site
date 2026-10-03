@@ -1,0 +1,10 @@
+---
+import Simple from '../../../components/Simple.astro';
+import { getStates } from '../../../lib/data.mjs';
+const states = await getStates();
+---
+<Simple path="/nil/states/" pageType="states_index" eyebrow="By state" crumbs={[{ name: 'NIL rules', href: '/nil/' }, { name: 'States', href: '/nil/states/' }]}
+  lede="NIL rules are set state by state for high schools, and by national bodies plus state law for colleges.">
+  <h2 class="sec">Browse</h2>
+  <ul class="dir">{states.map((s) => <li><a class="card" href={`/nil/states/${s.slug}/`}><h3>{s.name}</h3><p>State hub, colleges and high schools.</p></a></li>)}</ul>
+</Simple>

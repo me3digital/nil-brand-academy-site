@@ -1,0 +1,18 @@
+---
+import Simple from '../../components/Simple.astro';
+import { getStates } from '../../lib/data.mjs';
+import { BLOG } from '../../lib/site.mjs';
+const states = await getStates();
+---
+<Simple path="/nil/" pageType="national_hub" eyebrow="NIL intelligence network" crumbs={[{ name: 'NIL rules', href: '/nil/' }]}
+  lede="Know the rules, build your brand, earn the deal. Start with the rules that apply to your state and your school, each one traced to its source.">
+  <h2 class="sec">Start with your state</h2>
+  <ul class="dir">{states.map((s) => <li><a class="card" href={`/nil/states/${s.slug}/`}><h3>{s.name} NIL rules</h3><p>High school and college rules, disclosure steps and school pages.</p></a></li>)}</ul>
+  <h2 class="sec" style="margin-top:36px">Browse</h2>
+  <ul class="plain">
+    <li><a class="ref" href="/nil/states/">NIL rules by state</a></li>
+    <li><a class="ref" href="/nil/sports/">NIL by sport</a></li>
+    <li><a class="ref" href="/nil/how-we-verify/">How we verify every rule</a></li>
+    <li><a class="ref" href={BLOG.whatIsNil.href}>{BLOG.whatIsNil.title}</a></li>
+  </ul>
+</Simple>
