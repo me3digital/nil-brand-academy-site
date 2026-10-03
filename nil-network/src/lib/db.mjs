@@ -33,9 +33,10 @@ async function boot() {
       const client = new pg.Client({ ...cfg, ssl: { rejectUnauthorized: false } });
       try {
         await client.connect();
-        client.connection?.stream?.unref?.();   // do not hold the build process open
         source = 'supabase';
-        return { query: (sql, params) => client.query(sql, params) };
+        // Keep the process alive only while a query is in flight, so the build can exit when it is done.
+        const stream = client.connection?.stream; let busy = 0; stream?.unref?.();
+        return { query: async (sql, params) => { if (busy++ === 0) stream?.ref?.(); try { return await client.query(sql, params); } finally { if (--busy === 0) stream?.unref?.(); } } };
       } catch (e) { lastCode = e.code || e.name || 'error'; try { await client.end(); } catch {} }
     }
     // Never echo the connection string or the driver's message: only a code.
