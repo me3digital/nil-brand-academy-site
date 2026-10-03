@@ -31,3 +31,11 @@ Without `DATABASE_URL` the build runs on an in-process Postgres loaded from the 
 3. A school page is indexable only when `v_page_quality_gate.index_status = 'index'`, which also needs `pages.human_approved`.
 4. No school logos, mascots or colors. School names only.
 5. Production launch needs Michaela's written approval. See the pre-launch report.
+
+## Phase 2A status (2026-10-03)
+
+- Database: Supabase project "NIL Brand Academy" (org ME3 Digital, East US). Schema and seed applied from `db/deploy/supabase_bundle.sql`. `db/deploy/validate.sql` returns the same 41-check fingerprint locally and on Supabase.
+- Staging: separate Netlify project `nil-brand-academy-staging`, built from this branch with base directory `nil-network`. Blocked from indexing by robots.txt, a robots meta tag and an `X-Robots-Tag` header.
+- The build reads the database at build time. With `DATABASE_URL` set (Netlify environment variable only) it reads Supabase; without it, it builds the identical data from `db/migrations` and `db/seed` in process.
+- QA: `node scripts/audit.mjs <paths>`, `node scripts/qa-interact.mjs`, `node scripts/linkcheck.mjs` against `python3 -m http.server 4321` in `dist/`.
+- This branch is never merged into `main`. Launch is a single proxy rule on the production site.
