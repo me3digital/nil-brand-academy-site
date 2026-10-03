@@ -1,41 +1,112 @@
+cascade:apopka-high-school-apopka=27
+cascade:bethune-cookman-university=23
+cascade:boone-high-school-orlando=28
+cascade:colonial-high-school-orlando=26
+cascade:dr-phillips-high-school-orlando=26
+cascade:edgewater-high-school-orlando=27
+cascade:florida-am-university=25
+cascade:florida-atlantic-university=32
+cascade:florida-gulf-coast-university=30
+cascade:florida-international-university=34
+cascade:florida-state-university=26
+cascade:jacksonville-university=31
+cascade:jones-high-school-orlando=26
+cascade:lake-nona-high-school-orlando=26
+cascade:maynard-evans-high-school-orlando=26
+cascade:oak-ridge-high-school-orlando=26
+cascade:ocoee-high-school-ocoee=26
+cascade:olympia-high-school-orlando=27
 cascade:seminole-high-school-sanford=24
-cascade:university-of-central-florida=20
+cascade:stetson-university=25
+cascade:timber-creek-high-school-orlando=26
+cascade:university-of-central-florida=25
 cascade:university-of-florida=33
-check_constraints=36
-columns=460
-foreign_keys=64
-functions=2
-gate:/nil/florida/colleges/university-of-florida/=noindex rules=33 review=0 topics=24 school=12 scen=12 checks=11111111101
-gate:/nil/florida/high-schools/seminole-high-school-sanford/=noindex rules=24 review=0 topics=22 school=2 scen=13 checks=11111111101
-hash:change_log=bd04146b21b4299268efeca02851f4dd
-hash:rule_sources=9704b46f1b33b0be1860cb0b84616eeb
-hash:rule_text=28a2df06f4c5615c90dd6796c6092726
-indexes=55
+cascade:university-of-miami=25
+cascade:university-of-north-florida=32
+cascade:university-of-south-florida=23
+cascade:wekiva-high-school-apopka=26
+cascade:west-orange-high-school-winter-garden=26
+cascade:windermere-high-school-windermere=26
+cascade:winter-park-high-school-winter-park=27
+check_constraints=40
+class:A=5
+class:B=3
+class:C=18
+class:D=4
+columns=497
+foreign_keys=67
+functions=3
+gate:/nil/florida/colleges/bethune-cookman-university/=noindex NOT_ELIGIBLE class=C rules=23 review=1 topics=15 nil=0 sup=1 scen=6 checks=10111011111100
+gate:/nil/florida/colleges/florida-am-university/=noindex NOT_ELIGIBLE class=C rules=25 review=3 topics=16 nil=0 sup=1 scen=6 checks=10111011111100
+gate:/nil/florida/colleges/florida-atlantic-university/=noindex SEO_ELIGIBLE_HUMAN_REVIEW_PENDING class=A rules=32 review=0 topics=18 nil=12 sup=1 scen=8 checks=11111111111100
+gate:/nil/florida/colleges/florida-gulf-coast-university/=noindex NOT_ELIGIBLE class=C rules=30 review=9 topics=19 nil=0 sup=1 scen=10 checks=10111011111100
+gate:/nil/florida/colleges/florida-international-university/=noindex SEO_ELIGIBLE_HUMAN_REVIEW_PENDING class=A rules=34 review=0 topics=22 nil=14 sup=1 scen=11 checks=11111111111100
+gate:/nil/florida/colleges/florida-state-university/=noindex SEO_ELIGIBLE_HUMAN_REVIEW_PENDING class=A rules=26 review=0 topics=17 nil=8 sup=1 scen=7 checks=11111111111100
+gate:/nil/florida/colleges/jacksonville-university/=noindex NOT_ELIGIBLE class=C rules=31 review=10 topics=21 nil=0 sup=1 scen=10 checks=10111011111100
+gate:/nil/florida/colleges/stetson-university/=noindex NOT_ELIGIBLE class=C rules=25 review=4 topics=16 nil=1 sup=1 scen=6 checks=10111011111100
+gate:/nil/florida/colleges/university-of-central-florida/=noindex SEO_ELIGIBLE_HUMAN_REVIEW_PENDING class=B rules=25 review=0 topics=16 nil=4 sup=2 scen=7 checks=11111111111100
+gate:/nil/florida/colleges/university-of-florida/=noindex SEO_ELIGIBLE_HUMAN_REVIEW_PENDING class=A rules=33 review=0 topics=24 nil=16 sup=1 scen=12 checks=11111111111100
+gate:/nil/florida/colleges/university-of-miami/=noindex SEO_ELIGIBLE_HUMAN_REVIEW_PENDING class=B rules=25 review=0 topics=16 nil=6 sup=1 scen=7 checks=11111111111100
+gate:/nil/florida/colleges/university-of-north-florida/=noindex SEO_ELIGIBLE_HUMAN_REVIEW_PENDING class=A rules=32 review=0 topics=20 nil=15 sup=1 scen=11 checks=11111111111100
+gate:/nil/florida/colleges/university-of-south-florida/=noindex SEO_ELIGIBLE_HUMAN_REVIEW_PENDING class=B rules=23 review=0 topics=15 nil=3 sup=1 scen=6 checks=11111111111100
+gate:/nil/florida/high-schools/apopka-high-school-apopka/=noindex NOT_ELIGIBLE class=C rules=27 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/boone-high-school-orlando/=noindex NOT_ELIGIBLE class=D rules=28 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/colonial-high-school-orlando/=noindex NOT_ELIGIBLE class=C rules=26 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/dr-phillips-high-school-orlando/=noindex NOT_ELIGIBLE class=D rules=26 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/edgewater-high-school-orlando/=noindex NOT_ELIGIBLE class=C rules=27 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/jones-high-school-orlando/=noindex NOT_ELIGIBLE class=D rules=26 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/lake-nona-high-school-orlando/=noindex NOT_ELIGIBLE class=C rules=26 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/maynard-evans-high-school-orlando/=noindex NOT_ELIGIBLE class=C rules=26 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/oak-ridge-high-school-orlando/=noindex NOT_ELIGIBLE class=D rules=26 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/ocoee-high-school-ocoee/=noindex NOT_ELIGIBLE class=C rules=26 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/olympia-high-school-orlando/=noindex NOT_ELIGIBLE class=C rules=27 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/seminole-high-school-sanford/=noindex NOT_ELIGIBLE class=C rules=24 review=0 topics=22 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/timber-creek-high-school-orlando/=noindex NOT_ELIGIBLE class=C rules=26 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/wekiva-high-school-apopka/=noindex NOT_ELIGIBLE class=C rules=26 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/west-orange-high-school-winter-garden/=noindex NOT_ELIGIBLE class=C rules=26 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/windermere-high-school-windermere/=noindex NOT_ELIGIBLE class=C rules=26 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+gate:/nil/florida/high-schools/winter-park-high-school-winter-park/=noindex NOT_ELIGIBLE class=C rules=27 review=0 topics=21 nil=0 sup=2 scen=13 checks=11111011111100
+hash:change_log=21eb264990096f408f68eea6e228411a
+hash:rule_sources=adb6d89dae8be9a355d8457c38b521a3
+hash:rule_text=81885303d9c3c7145f6003cce24921b5
+hash:sources=e96736184878be9ffbe06aa7dbeaffce
+human:pages_marked_approved=0
+human:rule_versions_marked_human_review=0
+indexes=56
 orphan_rule_sources=0
 rls_policies=0
 rows:conflicts=6
-rows:disclosure_requirements=3
-rows:governing_bodies=6
+rows:disclosure_requirements=7
+rows:governing_bodies=12
 rows:guidance_blocks=18
-rows:institutions=3
-rows:pages=9
-rows:policy_searches=3
-rows:rule_change_log=11
+rows:institutions=30
+rows:nil_programs=48
+rows:pages=37
+rows:policy_searches=31
+rows:rule_change_log=12
 rows:rule_topics=30
-rows:rule_version_sources=125
-rows:rule_versions=57
-rows:rules=57
+rows:rule_version_sources=287
+rows:rule_versions=156
+rows:rules=156
 rows:scenarios=14
-rows:sources=47
+rows:school_contacts=95
+rows:school_districts=2
+rows:school_nil_policies=14
+rows:school_review_notes=630
+rows:sources=260
 rows:states=1
-rows:verification_events=57
+rows:verification_events=156
 rows:watch_items=3
 rules_without_source=0
+seo:NOT_ELIGIBLE=22
+seo:SEO_ELIGIBLE_HUMAN_REVIEW_PENDING=8
 state_rules:college=20
 state_rules:high_school=23
-tables=35
-tables_with_rls=35
-trust:PUBLIC_POLICY_NOT_LOCATED=3
-trust:VERIFIED_TO_OFFICIAL_SOURCE=54
-unique_and_pk=53
+tables=36
+tables_with_rls=36
+trust:NEEDS_REVIEW=4
+trust:PENDING_INSTITUTION_CONFIRMATION=23
+trust:PUBLIC_POLICY_NOT_LOCATED=19
+trust:VERIFIED_TO_OFFICIAL_SOURCE=110
+unique_and_pk=54
 views=7

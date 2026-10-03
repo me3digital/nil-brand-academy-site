@@ -1,3 +1,4 @@
+import { applyPilot } from './pilot.mjs';
 // Florida pilot seed. Every rule carries its source, locator and verbatim quote.
 // Status vocabulary used here:
 //   researched          = primary source opened, quote machine-extracted, waiting for a human check
@@ -717,3 +718,27 @@ changeLog.push(
   { gb: 'fhsaa', rule: 'fhsaa-transfers', changed_on: '2026-07-22', change_type: 'on_agenda', source: 'sbe-fhsaa-bylaws-2026-07-22',
     summary: 'Substantive amendments to Bylaw 9.3 (transfers), following SB 538, were on the State Board of Education consent agenda for ratification. The NIL transfer rule depends on the exceptions in Bylaw 9.3.2.2.' },
 );
+
+// ----------------------------------------------------------------- Phase 3: Florida pilot population
+// Canonical rule edits (made once, inherited by every Division I school in the pilot).
+R('ncaa-disclosure').sources.push(S('csc-faq', 'If a school has not opted in to the system, do their student-athletes\' NIL deals have to go through this platform?', 'Yes, all Division I student-athletes, regardless of whether or not their school has opted in to revenue sharing, have to report third-party NIL deals valued at $600 or more in the aggregate into the NIL Go platform.', 'machine_raw_text'));
+R('ncaa-disclosure').conditions = 'This applies whether or not your school opted in to revenue sharing. One representative may enter the deal, but the athlete must submit it.';
+R('ncaa-school-payments').sources.push(S('csc-faq', 'What is the process for a school opting in or out of revenue sharing?', 'Each year, schools outside of the ACC, Big Ten, Big 12, Pac-12 and SEC will have the option to opt in to or out of revenue sharing.', 'machine_raw_text'));
+R('ncaa-school-payments').summary += ' Schools outside the ACC, Big Ten, Big 12, Pac-12 and SEC choose each year whether to opt in, so check what your school has announced.';
+// General district and school rules that never mention NIL: shown, but not counted as NIL-specific value.
+R('scps-facilities').nil_specific = false;
+R('shs-event-footage').nil_specific = false;
+institutions.find((i) => i.slug === 'university-of-florida').search_aliases = ['UF', 'Florida'];
+const CONTACT_SCOPE = { 'UAA Compliance Office': 'compliance', 'UAA Licensing': 'licensing', 'UF International Center, International Student Services': 'international', 'Seminole High School Athletics': 'athletics' };
+contacts.forEach((c) => { c.contact_scope = CONTACT_SCOPE[c.office]; });
+nilPrograms.forEach((p) => { p.is_current = true; });
+schoolPolicies.forEach((p) => { p.covers_nil = true; });
+
+// Notes for the human review checklist. Never rendered on a public page.
+export const reviewNotes = [];
+export const districtSearches = [];
+applyPilot({ governingBodies, districts, sources, rules, institutions, policySearches, schoolPolicies, nilPrograms, contacts, pages, marketAreas, reviewNotes, districtSearches });
+changeLog.push({ gb: 'ncaa', rule: 'ncaa-school-payments', changed_on: '2026-10-03', change_type: 'clarified', source: 'csc-faq',
+  summary: 'We added the College Sports Commission\'s statement that schools outside the ACC, Big Ten, Big 12, Pac-12 and SEC choose each year whether to opt in to revenue sharing, and that NIL Go reporting applies either way.' });
+{ const slugs = rules.map((r) => r.slug); const dup = slugs.filter((x, i) => slugs.indexOf(x) !== i); if (dup.length) throw new Error('duplicate rule slugs: ' + dup.join(', ')); }
+{ const ss = new Set(sources.map((x) => x.slug)); for (const r of rules) for (const x of r.sources) if (!ss.has(x.src)) throw new Error(`rule ${r.slug} cites unknown source ${x.src}`); }

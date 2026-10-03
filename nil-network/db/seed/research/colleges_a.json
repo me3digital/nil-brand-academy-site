@@ -1,0 +1,1138 @@
+{
+ "researched_on": "2026-10-03",
+ "method_note": "Official athletics pages were read as raw page text in a browser tab where possible (read_method raw_text). Pages read only through a summarising fetch tool are marked extraction and need a hand check of the quotes.",
+ "districts": [],
+ "conferences": [
+  {
+   "slug": "acc",
+   "name": "Atlantic Coast Conference",
+   "short_name": "ACC",
+   "website_url": "https://theacc.com/",
+   "sources": [
+    {
+     "id": "c1",
+     "title": "Settlement Documents Filed in College Athletics Class-Action Lawsuits",
+     "url": "https://theacc.com/news/2024/7/26/general-settlement-documents-filed-in-college-athletics-class-action-lawsuits.aspx",
+     "organization": "Atlantic Coast Conference",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2024-07-26",
+     "notes": "Joint statement of the five autonomy conference commissioners and the NCAA president. Pre-approval, describes the proposed settlement. Read through a summarising tool."
+    },
+    {
+     "id": "c2",
+     "title": "ACC Board Directs Conference-Wide Eligibility Enforcement",
+     "url": "https://theacc.com/news/2026/8/27/general-acc-board-directs-conference-wide-eligibility-enforcement.aspx",
+     "organization": "Atlantic Coast Conference",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2026-08-27",
+     "notes": "Checked. About athletes returning from pro careers. Not about NIL."
+    }
+   ],
+   "rules": [],
+   "notes": "A separate ACC NIL rule or NIL guidance page for members: Not located in the public sources reviewed as of October 3, 2026. Searches of theacc.com found only a July 26, 2024 joint statement on the House settlement filing, which describes national terms, and unrelated eligibility news. No ACC-specific NIL rule was recorded."
+  },
+  {
+   "slug": "american",
+   "name": "American Conference",
+   "short_name": "American",
+   "website_url": "https://theamerican.org/",
+   "sources": [
+    {
+     "id": "c1",
+     "title": "About the American Conference",
+     "url": "https://theamerican.org/sports/2013/6/22/ABOUT_0622134018.aspx",
+     "organization": "American Conference",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through a summarising tool. Lists 15 members including the University of South Florida."
+    },
+    {
+     "id": "c2",
+     "title": "USF's sports conference sets $10M minimum for schools to share revenue with athletes",
+     "url": "https://www.wusf.org/sports/2025-03-13/usfs-sports-conference-sets-minimum-schools-share-revenue-athletes",
+     "organization": "WUSF",
+     "source_type": "secondary_reporting",
+     "is_primary": false,
+     "published_on": "2025-03-13",
+     "notes": "News report used for discovery only. The official conference release was not located."
+    }
+   ],
+   "rules": [
+    {
+     "topic": "school-payments",
+     "scope": "conference",
+     "answer": "yes",
+     "summary": "The American says it was the first conference to set league-wide minimum investment and revenue sharing protocols for member schools to give financial benefits to athletes.",
+     "conditions": "The conference's About page gives no amounts or terms. News reports describe the size and timing of the minimum and say Army and Navy are excluded. The official release with the terms was not located.",
+     "citation": "American Conference About page",
+     "quick_status": "YES",
+     "short_answer": "The American sets a league-wide minimum for sharing revenue with athletes.",
+     "sources": [
+      {
+       "source_id": "c1",
+       "locator": "About",
+       "quote": "The American became the first conference to establish league-wide minimum investment and revenue sharing protocols to provide financial benefits to student-athletes.",
+       "read_method": "extraction"
+      }
+     ]
+    }
+   ],
+   "notes": "The American publishes one sentence on its About page about league-wide minimum investment and revenue sharing protocols. A conference NIL rule, NIL guidance page or the official release with the terms: Not located in the public sources reviewed as of October 3, 2026."
+  }
+ ],
+ "schools": [
+  {
+   "slug": "florida-state-university",
+   "name": "Florida State University",
+   "short_name": "FSU",
+   "institution_type": "college",
+   "sector": "public",
+   "city": "Tallahassee",
+   "county": "Leon County",
+   "street_address": "403 Stadium Drive West",
+   "postal_code": "32304",
+   "website_url": "https://www.fsu.edu/",
+   "athletics_url": "https://seminoles.com/",
+   "athletics_brand": null,
+   "division": "NCAA Division I",
+   "conference_slug": "acc",
+   "district_slug": null,
+   "nces_id": null,
+   "profile_source_id": "s3",
+   "sports": {
+    "mens": [
+     "Baseball",
+     "Basketball",
+     "Cross Country",
+     "Football",
+     "Golf",
+     "Swimming & Diving",
+     "Tennis"
+    ],
+    "womens": [
+     "Basketball",
+     "Beach Volleyball",
+     "Cross Country",
+     "Golf",
+     "Lacrosse",
+     "Soccer",
+     "Softball",
+     "Swimming & Diving",
+     "Tennis",
+     "Volleyball"
+    ]
+   },
+   "sports_source_id": "s1",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Florida State Compliance",
+     "url": "https://seminoles.com/sports/2017/7/4/compliance",
+     "organization": "Florida State University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "URL carries a 2017 date but the text is current. It names NIL Go and links a November 2025 NIL Go presentation. Sport list taken from the site menu on this page; Indoor and Outdoor Track & Field are listed without a gender label and Football, Soccer, Volleyball, Baseball, Softball, Lacrosse and Beach Volleyball have no gender label on the menu."
+    },
+    {
+     "id": "s2",
+     "title": "The Florida State Factor (NIL at Florida State University)",
+     "url": "https://seminoles.com/feature/nil",
+     "organization": "Florida State University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Undated. Uses 2023 sales figures. Does not mention The Battle's End or revenue sharing."
+    },
+    {
+     "id": "s3",
+     "title": "Staff Directory",
+     "url": "https://seminoles.com/staff-directory",
+     "organization": "Florida State University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through a summarising tool. Address and compliance staff taken from this page."
+    },
+    {
+     "id": "s4",
+     "title": "The Brand (FSU Trademark Licensing and Athletics Branding)",
+     "url": "https://seminoles.com/feature/the-brand/",
+     "organization": "Florida State University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "licensing.fsu.edu/name-image-likeness-nil redirects here. Undated."
+    },
+    {
+     "id": "s5",
+     "title": "Florida State Athletics Announces Strategic NIL Partnership with The Battle's End Collective",
+     "url": "https://seminoles.com/news/2025/8/27/florida-state-athletics-announces-strategic-nil-partnership-with-the-battles-end-collective",
+     "organization": "Florida State University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2025-08-27",
+     "notes": "Read through a summarising tool."
+    },
+    {
+     "id": "s6",
+     "title": "Florida State NIL Guidelines",
+     "url": "https://seminoles.com/news/2021/6/29/nilinfo",
+     "organization": "Florida State University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2021-06-29",
+     "notes": "OUTDATED. Written for the 2021 Florida law. Still online. Not used for current rules."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": true,
+    "locations_checked": [
+     "seminoles.com Florida State Compliance page",
+     "seminoles.com/feature/nil (The Florida State Factor)",
+     "seminoles.com staff directory",
+     "seminoles.com/feature/the-brand (trademark licensing, NIL tab)",
+     "seminoles.com news release of 2025-08-27 on The Battle's End",
+     "seminoles.com Florida State NIL Guidelines (2021)"
+    ],
+    "locations_unreachable": [
+     "https://seminoles.com/documents/2024/12/12/NIL_-_Use_of_Marks_and_Group_Licensing.pdf",
+     "https://seminoles.com/documents/download/2024/2/7/Florida_State_NIL_FAQs_-_Student_Athletes.pdf",
+     "https://seminoles.com/documents/download/2024/9/19/Florida_State_NIL_FAQs_Fans_Supporters_and_Businesses_-_Fall_2024.pdf",
+     "https://seminoles.com/documents/2025/11/24/NIL_Go_New_Student-Athlete_Presentation.pdf",
+     "https://seminoles.com/images/2021/06/IN_Compliance-Reporting_one-pager-2.pdf"
+    ],
+    "notes": "FSU publishes current NIL guidance on its Compliance page and a licensing rule on its brand page. Several PDFs exist but would not open with the tools used."
+   },
+   "school_policy": {
+    "title": "Florida State Compliance: Agents & Advisors and NCAA Guidelines on NIL",
+    "summary": "This is the FSU Athletics compliance page. It covers booster rules, agent registration with FSU, and how athletes disclose third-party NIL deals in NIL Go. It is a web page, not a signed policy document.",
+    "policy_status": "published",
+    "source_id": "s1",
+    "adopted_on": null
+   },
+   "rules": [
+    {
+     "topic": "disclosure-required",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "FSU says athletes must disclose third-party NIL deals worth $600 or more in NIL Go within 5 business days of execution.",
+     "conditions": "This matches the national rule. The FSU page adds that deals with the same sponsor count together toward $600 and warns that failure to disclose may cost eligibility.",
+     "citation": "FSU Compliance page, NIL Disclosure via NILGO",
+     "quick_status": "YES",
+     "short_answer": "Report deals of $600 or more in NIL Go within 5 business days.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "NIL Disclosure via NILGO",
+       "quote": "Any NIL deals involving third parties worth $600 or more must be disclosed by the student-athlete in NIL Go within 5 business days of execution.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s1",
+       "locator": "NIL Disclosure via NILGO",
+       "quote": "Failure to disclose may lead to penalties, including the loss of NCAA eligibility.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "agents",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "FSU says every agent must register with FSU before contacting an FSU athlete about NIL or pro sports. This is on top of state, NCAA and players association rules.",
+     "conditions": "For NIL only, FSU says an agent may be registered with the State of Florida. Agents not registered with FSU must complete registration in seven business days.",
+     "citation": "FSU Compliance page, Agents & Advisors",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Agents must register with FSU first.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Agents & Advisors",
+       "quote": "all agents must be registered with Florida State University (FSU) in addition to the requirements established by the State of Florida, the NCAA, and the applicable professional association.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s1",
+       "locator": "FSU Agent Registration",
+       "quote": "To register with FSU, please complete the online Agent Registration Form.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s1",
+       "locator": "Contact Between Non-Registered Agents and Student-Athletes",
+       "quote": "All non-FSU registered agents must complete the registration in seven business days.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "agents",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FSU says an athlete or parent may contact an agent, but the athlete must tell the FSU Athletics Compliance Office before the first contact. Agents who write to athletes must send a copy to the Compliance Office.",
+     "conditions": null,
+     "citation": "FSU Compliance page, Contact Between Registered Agents and Student-Athletes",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Tell FSU Compliance before first contact with an agent.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Student-Athlete Initiating Contact",
+       "quote": "provided the student-athlete notifies FSU Athletics Compliance Office prior to initiating contact for the first time.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s1",
+       "locator": "Agent Initiating Contact",
+       "quote": "FSU permits athlete agents to send correspondence regarding their services to student-athletes provided a copy of such correspondence is also submitted to FSU Athletics Compliances Office.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-logos-marks",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "FSU says NIL deals without university trademarks need no prior approval. Anything that uses FSU logos or athletic marks, or implies university affiliation, must go through the Office of Trademark Licensing and be cleared by FSU's Global Partnerships team.",
+     "conditions": "FSU also says NIL items must follow brand standards and be made by licensed vendors.",
+     "citation": "FSU The Brand page, NIL tab",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "FSU logos in NIL need licensing approval first.",
+     "sources": [
+      {
+       "source_id": "s4",
+       "locator": "NIL",
+       "quote": "Student-athletes may participate in NIL opportunities that do not involve university trademarks without prior approval.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s4",
+       "locator": "NIL",
+       "quote": "any merchandise, endorsements or promotions that include FSU logos, athletic marks or imply university affiliation must go through the Office of Trademark Licensing and receive additional clearance from FSU’s Global Partnerships team.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s4",
+       "locator": "Sponsorship",
+       "quote": "Any commercial use of FSU Athletic marks - including sponsorship, advertising, endorsements, or NIL campaigns - must be coordinated through this office.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-logos-marks",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FSU says its corporate partners signed through Florida State Global Partnerships / Legends can use FSU logos and marks in deals with athletes.",
+     "conditions": "Applies to official FSU corporate partners only. Page is undated.",
+     "citation": "The Florida State Factor page",
+     "quick_status": "DEPENDS",
+     "short_answer": "Official FSU partners can use FSU marks in athlete deals.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "Connect with student-athletes with local & national brands",
+       "quote": "These partners have the ability to use FSU logos and marks in deals with student athletes.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "own-merchandise",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FSU says athletes who opt in to group licensing agreements can earn royalties from officially licensed merchandise that pairs their NIL with FSU marks.",
+     "conditions": "Page is undated and cites 2023 figures.",
+     "citation": "The Florida State Factor page, group licensing",
+     "quick_status": "DEPENDS",
+     "short_answer": "Opt in to group licensing to earn royalties on FSU co-branded gear.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "Opportunities",
+       "quote": "By opting into group licensing agreements, student-athletes are able to earn royalties from the sale of jerseys, t-shirts, and other officially licensed merchandise featuring their NIL with Florida State marks.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "collectives",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "FSU Athletics named The Battle's End as its official NIL collective on August 27, 2025. FSU said the Rising Spear collective would be dissolved and folded into The Battle's End.",
+     "conditions": "Read through a summarising tool. Confirm wording by hand.",
+     "citation": "FSU Athletics news release, 2025-08-27",
+     "quick_status": "YES",
+     "short_answer": "The Battle's End is FSU's official NIL collective.",
+     "sources": [
+      {
+       "source_id": "s5",
+       "locator": "News release",
+       "quote": "the official NIL collective of Florida State Athletics",
+       "read_method": "extraction"
+      },
+      {
+       "source_id": "s5",
+       "locator": "News release",
+       "quote": "soliciting, engaging, and executing third-party marketing partnerships with regional businesses directly involving FSU student-athletes",
+       "read_method": "extraction"
+      }
+     ]
+    },
+    {
+     "topic": "boosters",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FSU's booster page sends boosters to its NIL site for rules on NIL activity with current athletes. It asks boosters with an existing relationship to a recruit to contact the Compliance Office.",
+     "conditions": "The page lists general booster recruiting limits. It does not set a separate FSU booster NIL rule.",
+     "citation": "FSU Compliance page, Fans & Boosters",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Boosters should check FSU's NIL site and Compliance first.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Fans & Boosters",
+       "quote": "For information related to NIL activities with current student-athletes, please visit the Florida State Factor – NIL at Florida State University website.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s1",
+       "locator": "Friendships & Boundaries",
+       "quote": "If you have any existing relationship with a prospect being recruited by FSU, please contact the FSU Athletic Compliance Office to disclose.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "The Battle's End",
+     "program_type": "collective",
+     "description": "FSU Athletics announced it as \"the official NIL collective of Florida State Athletics\" on August 27, 2025.",
+     "url": "https://thebattlesend.com/pages/join-the-battles-end-fsu-nil",
+     "source_id": "s5",
+     "current": true
+    },
+    {
+     "name": "Rising Spear",
+     "program_type": "collective",
+     "description": "FSU's August 27, 2025 release said this collective would be dissolved and its work moved into The Battle's End.",
+     "url": "https://seminoles.com/news/2025/8/27/florida-state-athletics-announces-strategic-nil-partnership-with-the-battles-end-collective",
+     "source_id": "s5",
+     "current": false
+    },
+    {
+     "name": "Florida State Global Partnerships (Legends)",
+     "program_type": "sponsorship_sales",
+     "description": "FSU says \"Florida State Global Partnerships is the official multimedia rights holder for Florida State Athletics\" and that NIL campaigns using FSU Athletic marks must be coordinated through it.",
+     "url": "https://seminoles.com/feature/the-brand/",
+     "source_id": "s4",
+     "current": true
+    },
+    {
+     "name": "FSU Office of Trademark Licensing",
+     "program_type": "licensing",
+     "description": "FSU says NIL items with FSU logos or marks \"must go through the Office of Trademark Licensing\".",
+     "url": "https://seminoles.com/feature/the-brand/",
+     "source_id": "s4",
+     "current": true
+    },
+    {
+     "name": "INFLCR Exchange (Florida State)",
+     "program_type": "marketplace",
+     "description": "FSU's NIL page links \"Connect with student-athletes\" to an INFLCR exchange for Florida State.",
+     "url": "https://dash.inflcr.com/exchange/florida-state-university",
+     "source_id": "s2",
+     "current": "unknown"
+    },
+    {
+     "name": "The Player Shop",
+     "program_type": "licensing",
+     "description": "FSU's NIL page links to a store for student-athlete merchandise sold under group licensing.",
+     "url": "https://shop.seminoles.com/the-player-shop/x-49461892+z-895950-4065891985",
+     "source_id": "s2",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "FSU Athletics Compliance Office",
+     "role": "NCAA rules, agent registration, NIL disclosure questions",
+     "person_name": "Tasha Fisher, Associate Athletics Director for Governance and Compliance",
+     "phone": "850-644-5932",
+     "email": null,
+     "url": "https://seminoles.com/staff-directory",
+     "source_id": "s3"
+    },
+    {
+     "office": "FSU Athletics NIL",
+     "role": "NIL Coordinator",
+     "person_name": "Charlie Votey",
+     "phone": null,
+     "email": null,
+     "url": "https://seminoles.com/feature/nil",
+     "source_id": "s2"
+    },
+    {
+     "office": "FSU Athletics Student-Athlete Development",
+     "role": "Associate Athletics Director, Student-Athlete Development (listed as an NIL contact)",
+     "person_name": "Sarah Petronio",
+     "phone": null,
+     "email": null,
+     "url": "https://seminoles.com/feature/nil",
+     "source_id": "s2"
+    },
+    {
+     "office": "Florida State Global Partnerships",
+     "role": "General Manager. Business deals that use FSU marks with athletes",
+     "person_name": "Bill Houston",
+     "phone": null,
+     "email": null,
+     "url": "https://seminoles.com/feature/nil",
+     "source_id": "s2"
+    },
+    {
+     "office": "FSU Brand Management & Trademark Licensing",
+     "role": "Assistant Athletics Director. Approval to use FSU logos and marks",
+     "person_name": "Dane Smith",
+     "phone": null,
+     "email": null,
+     "url": "https://seminoles.com/feature/nil",
+     "source_id": "s2"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "Third-party NIL deals worth $600 or more, including cash, non-cash benefits and deals that could exceed $600",
+    "recipient": "NIL Go (the athlete enters the deal)",
+    "deadline_text": "within 5 business days of execution",
+    "platform_name": "NIL Go",
+    "platform_url": "https://help.nilgo.com/en/",
+    "form_name": null,
+    "form_url": null,
+    "source_id": "s1",
+    "quote": "Any NIL deals involving third parties worth $600 or more must be disclosed by the student-athlete in NIL Go within 5 business days of execution."
+   },
+   "important_claims": [
+    "FSU requires agents to register with FSU (online Agent Registration Form) before contacting an athlete about NIL.",
+    "FSU says NIL uses of FSU logos or marks must go through the Office of Trademark Licensing and FSU's Global Partnerships team.",
+    "The Battle's End is FSU's official NIL collective since August 27, 2025, and Rising Spear was to be dissolved (read by extraction, confirm wording).",
+    "FSU's compliance page states the NIL Go rule: $600 or more, within 5 business days.",
+    "Named NIL contacts and emails on seminoles.com/feature/nil are still current.",
+    "Street address 403 Stadium Drive West, Tallahassee, FL 32304 came from the staff directory through a summarising tool."
+   ],
+   "ambiguities": [
+    "The 2021 page 'Florida State NIL Guidelines' (seminoles.com/news/2021/6/29/nilinfo) is still online. It says deals must be reported in the INFLCR app, that campus facilities need written authorization, and that international athletes should consult the FSU Center for Global Engagement. It predates the House settlement and is not treated as current.",
+    "seminoles.com/feature/nil is undated, cites 2023 sales figures, and does not mention The Battle's End or revenue sharing.",
+    "The Brand page is undated.",
+    "The staff directory also lists a phone number for the NIL Coordinator. It was read by extraction only and was left out.",
+    "The site menu does not label gender for every sport, so the sports lists should be checked. Track & Field (indoor and outdoor) was left out because the menu gives no gender."
+   ],
+   "conflicts": [
+    "The 2021 NIL Guidelines page says to report deals in the INFLCR app. The current Compliance page says to disclose in NIL Go. The Compliance page is the current one."
+   ],
+   "manual_review": [
+    "https://seminoles.com/documents/2024/12/12/NIL_-_Use_of_Marks_and_Group_Licensing.pdf : linked from the NIL page as 'Use of University Marks & Group Licensing'. Could not be opened. Likely holds the detailed logo and uniform rules.",
+    "https://seminoles.com/documents/download/2024/2/7/Florida_State_NIL_FAQs_-_Student_Athletes.pdf : 2024 athlete FAQ, blocked by robots rules. Pre-House.",
+    "https://seminoles.com/documents/download/2024/9/19/Florida_State_NIL_FAQs_Fans_Supporters_and_Businesses_-_Fall_2024.pdf : Fall 2024 FAQ for fans and businesses, blocked. Pre-House.",
+    "https://seminoles.com/documents/2025/11/24/NIL_Go_New_Student-Athlete_Presentation.pdf : NIL Go presentation linked from the Compliance page, not opened.",
+    "https://seminoles.com/news/2025/8/27/florida-state-athletics-announces-strategic-nil-partnership-with-the-battles-end-collective : confirm exact quotes."
+   ],
+   "not_found": [
+    "FSU revenue-sharing statement on seminoles.com",
+    "current facility-use rule for NIL shoots",
+    "current FSU list of prohibited NIL categories",
+    "current international athlete NIL guidance",
+    "current rule on wearing the uniform in NIL content (may be in the unopened marks PDF)"
+   ]
+  },
+  {
+   "slug": "university-of-miami",
+   "name": "University of Miami",
+   "short_name": "Miami",
+   "institution_type": "college",
+   "sector": "private",
+   "city": "Coral Gables",
+   "county": "Miami-Dade County",
+   "street_address": null,
+   "postal_code": null,
+   "website_url": "https://www.miami.edu/",
+   "athletics_url": "https://miamihurricanes.com/",
+   "athletics_brand": null,
+   "division": "NCAA Division I",
+   "conference_slug": "acc",
+   "district_slug": null,
+   "nces_id": null,
+   "profile_source_id": "s3",
+   "sports": {
+    "mens": [
+     "Baseball",
+     "Basketball",
+     "Football",
+     "Tennis"
+    ],
+    "womens": [
+     "Basketball",
+     "Soccer",
+     "Tennis",
+     "Volleyball"
+    ]
+   },
+   "sports_source_id": "s6",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Name, Image & Likeness Program",
+     "url": "https://miamihurricanes.com/nil/",
+     "organization": "University of Miami Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Undated. Names Legends Global and Fanatics Licensing Management."
+    },
+    {
+     "id": "s2",
+     "title": "Miami NIL Program / Guidelines (Miami NIL Policy)",
+     "url": "https://miamihurricanes.com/nil-guidelines/",
+     "organization": "University of Miami Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "OUTDATED. Undated, but written under the NCAA interim NIL policy and cites May 2022 NCAA guidance. Still online."
+    },
+    {
+     "id": "s3",
+     "title": "Compliance",
+     "url": "https://miamihurricanes.com/compliance/",
+     "organization": "University of Miami Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Compliance office contact and staff list."
+    },
+    {
+     "id": "s4",
+     "title": "Agents & Financial Planners",
+     "url": "https://miamihurricanes.com/agents-financial-planners/",
+     "organization": "University of Miami Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Undated letter from the compliance office."
+    },
+    {
+     "id": "s5",
+     "title": "From the Desk of Dan Radakovich",
+     "url": "https://miamihurricanes.com/news/2025/07/01/from-the-desk-of-dan-radakovich-40",
+     "organization": "University of Miami Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2025-07-01",
+     "notes": "Read through a summarising tool."
+    },
+    {
+     "id": "s6",
+     "title": "Staff Directory",
+     "url": "https://miamihurricanes.com/staff-directory/",
+     "organization": "University of Miami Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Department list used for sports. Golf, Rowing, Swimming & Diving and Track & Field/Cross Country are listed with no gender label and were left out of the sports lists."
+    },
+    {
+     "id": "s7",
+     "title": "Canes Connection Named Official NIL Collective of UM Athletics",
+     "url": "https://miamihurricanes.com/news/2023/11/17/canes-connection-named-official-nil-collective-of-um-athletics/",
+     "organization": "University of Miami Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2023-11-17",
+     "notes": "Pre-House announcement. Status restated in the July 1, 2025 letter."
+    },
+    {
+     "id": "s8",
+     "title": "Boosters, Friends & Fans",
+     "url": "https://miamihurricanes.com/boosters-friends-fans/",
+     "organization": "University of Miami Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Links a 'Booster NIL Poster' PDF that was not opened."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": true,
+    "locations_checked": [
+     "miamihurricanes.com/nil (Name, Image & Likeness Program)",
+     "miamihurricanes.com/nil-guidelines (Miami NIL Policy)",
+     "miamihurricanes.com/nil-ncaapolicy",
+     "miamihurricanes.com/compliance",
+     "miamihurricanes.com/agents-financial-planners",
+     "miamihurricanes.com/boosters-friends-fans",
+     "miamihurricanes.com staff directory",
+     "From the Desk of Dan Radakovich, July 1, 2025",
+     "Canes Connection announcement, November 17, 2023"
+    ],
+    "locations_unreachable": [
+     "https://miamihurricanes.com/documents/688da163-3d52-441d-8024-8f031b40b30d.pdf (Booster NIL Poster, not opened)",
+     "https://miamihurricanes.com/documents/0ab679f4-47fe-4df8-a13d-fb60583401df.pdf (Booster Brochure, not opened)"
+    ],
+    "notes": "Miami publishes a 'Miami NIL Policy' page, but it was written before the House settlement and still describes Opendorse disclosure. Current NIL Go or post-settlement disclosure guidance from Miami: Not located in the public sources reviewed as of October 3, 2026."
+   },
+   "school_policy": {
+    "title": "Miami NIL Policy (Miami NIL Program / Guidelines)",
+    "summary": "This is the athletics department NIL policy page. It covers disclosure, who may pay athletes, agents, international athletes and use of university marks. It was written under the NCAA interim policy and has not been updated for the House settlement.",
+    "policy_status": "outdated",
+    "source_id": "s2",
+    "adopted_on": null
+   },
+   "rules": [
+    {
+     "topic": "school-logos-marks",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "Miami says athletes may use Miami Athletics marks and logos by securing agreements with approved University licensees or sponsors.",
+     "conditions": "Miami says sponsorship rights are managed by Legends Global and licensing and retail rights by Fanatics Licensing Management. Page is undated.",
+     "citation": "Miami Name, Image & Likeness Program page",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Miami marks need a deal with an approved licensee or sponsor.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Name, Image & Likeness",
+       "quote": "UM student-athletes may use Miami Athletics related marks and logos by securing agreements with approved University licensees and/or sponsors.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s1",
+       "locator": "Name, Image & Likeness",
+       "quote": "Sponsorship rights are managed by Legends Global and licensing/retail rights are managed by Fanatics Licensing Management.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "collectives",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "Miami Athletics names Canes Connection as its official NIL collective. Miami says it builds partnerships with local businesses and connects them with Miami athletes.",
+     "conditions": "First announced November 17, 2023. Restated in the athletic director's letter of July 1, 2025.",
+     "citation": "Miami NIL page; UM Athletics release 2023-11-17; AD letter 2025-07-01",
+     "quick_status": "YES",
+     "short_answer": "Canes Connection is Miami's official NIL collective.",
+     "sources": [
+      {
+       "source_id": "s7",
+       "locator": "News release",
+       "quote": "University of Miami Athletics has announced that Canes Connection is now its Official Name, Image & Likeness (NIL) Collective.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s1",
+       "locator": "Canes Connection",
+       "quote": "Canes Connection manages NIL opportunities for Miami student-athletes by building valuable partnerships with local businesses and connecting those businesses with UM student-athletes.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s5",
+       "locator": "Letter",
+       "quote": "Canes Connection is the Official NIL Collective of Miami Athletics",
+       "read_method": "extraction"
+      }
+     ]
+    },
+    {
+     "topic": "school-payments",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "Miami's athletic director wrote on July 1, 2025 that athletics departments can now share revenue directly with athletes. He named the Miami sports that will take part in revenue sharing for 2025-26.",
+     "conditions": "Read through a summarising tool. Covers 2025-26 only. Confirm wording and the sport list by hand.",
+     "citation": "From the Desk of Dan Radakovich, 2025-07-01",
+     "quick_status": "YES",
+     "short_answer": "Miami shares revenue with athletes in named sports.",
+     "sources": [
+      {
+       "source_id": "s5",
+       "locator": "Letter",
+       "quote": "Athletics departments are now able to directly share revenue with student-athletes",
+       "read_method": "extraction"
+      },
+      {
+       "source_id": "s5",
+       "locator": "Letter",
+       "quote": "will participate in revenue sharing",
+       "read_method": "extraction"
+      }
+     ]
+    },
+    {
+     "topic": "agents",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Miami's compliance office asks athletes, parents or their representatives to tell the Compliance Office about conversations with agents, marketing representatives, brand managers and similar people. Miami asks that meetings take place on campus with UM staff present.",
+     "conditions": "Undated letter. It is written about agents in general and does not mention NIL by name.",
+     "citation": "Miami Agents & Financial Planners page",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Tell Miami Compliance about talks with agents or marketing reps.",
+     "sources": [
+      {
+       "source_id": "s4",
+       "locator": "Letter from the Compliance Office",
+       "quote": "University of Miami student-athletes, their parents, or representatives should disclose conversations with covered individuals to the Compliance Office.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s4",
+       "locator": "Letter from the Compliance Office",
+       "quote": "Our institutional policy, as laid out in the student-athlete handbook requests that meetings take place on-campus with UM staff members present.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "nil-education",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "Miami says Altius Sports Partners gives NIL strategy guidance and education support for Miami Athletics.",
+     "conditions": "Page is undated.",
+     "citation": "Miami Name, Image & Likeness Program page",
+     "quick_status": "YES",
+     "short_answer": "Miami provides NIL education through Altius Sports Partners.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Name, Image & Likeness",
+       "quote": "Altius Sports Partners provides ongoing strategic guidance on NIL for Miami Athletics as well as comprehensive educational support benefitting all internal and external stakeholders.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "Canes Connection",
+     "program_type": "collective",
+     "description": "Miami Athletics announced that \"Canes Connection is now its Official Name, Image & Likeness (NIL) Collective.\"",
+     "url": "https://canesconnection.com/",
+     "source_id": "s7",
+     "current": true
+    },
+    {
+     "name": "Miami Exchange (INFLCR)",
+     "program_type": "marketplace",
+     "description": "Miami says athletes \"are able to maximize NIL opportunities through the Miami Exchange.\"",
+     "url": "https://app.inflcr.com/exchange/university-of-miami",
+     "source_id": "s1",
+     "current": "unknown"
+    },
+    {
+     "name": "Altius Sports Partners",
+     "program_type": "education",
+     "description": "Miami says Altius \"provides ongoing strategic guidance on NIL for Miami Athletics\".",
+     "url": "https://miamihurricanes.com/nil/",
+     "source_id": "s1",
+     "current": "unknown"
+    },
+    {
+     "name": "Legends Global (sponsorship rights)",
+     "program_type": "sponsorship_sales",
+     "description": "Miami says \"Sponsorship rights are managed by Legends Global\".",
+     "url": "https://miamihurricanes.com/nil/",
+     "source_id": "s1",
+     "current": true
+    },
+    {
+     "name": "Fanatics Licensing Management",
+     "program_type": "licensing",
+     "description": "Miami says \"licensing/retail rights are managed by Fanatics Licensing Management.\"",
+     "url": "https://miamihurricanes.com/nil/",
+     "source_id": "s1",
+     "current": true
+    }
+   ],
+   "contacts": [
+    {
+     "office": "University of Miami Athletics Compliance Office",
+     "role": "NCAA and ACC rules questions, NIL policy questions",
+     "person_name": "Dan Raben, Executive Associate Athletic Director, Compliance",
+     "phone": "305-284-2692",
+     "email": null,
+     "url": "https://miamihurricanes.com/compliance/",
+     "source_id": "s3"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "Miami's only published NIL policy page predates the House settlement and still says to disclose in the Opendorse app at least 48 hours before signing. Do not present this as current.",
+    "Canes Connection is the official NIL collective of Miami Athletics (2023 release, restated July 1, 2025).",
+    "Miami marks and logos may be used in NIL only through agreements with approved licensees or sponsors (Legends Global, Fanatics Licensing Management).",
+    "Miami AD letter of July 1, 2025 says named sports take part in revenue sharing for 2025-26 (read by extraction).",
+    "Compliance contact: [email on the official page], 305-284-2692."
+   ],
+   "ambiguities": [
+    "The 'Miami NIL Policy' page is undated and pre-House. It says: disclose all NIL activities through the Opendorse app at least 48 hours before execution; university employees and athletics support entities may not pay athletes for NIL; prohibited categories are in a department policy given to athletes (the list is not published); agents must be registered with the State of Florida; contracts may not run past eligibility; international athletes need approval from International Student and Scholar Services for off-campus employment; no use of Miami trademarks, logos, marks or colors without written approval. None of this is treated as current.",
+    "The NIL page names both INFLCR (Miami Exchange) and the policy page names Opendorse. It is unclear which platform Miami uses today.",
+    "The NIL page and Agents page are undated.",
+    "Street address was not read on an official page and is left empty.",
+    "Sports with no gender label in the staff directory (Golf, Rowing, Swimming & Diving, Track & Field/Cross Country) were left out of the sports lists."
+   ],
+   "conflicts": [
+    "The Miami NIL Policy page says university-linked entities may not pay athletes for NIL. The July 1, 2025 AD letter says athletics departments can now share revenue directly. The policy page has not been updated."
+   ],
+   "manual_review": [
+    "https://miamihurricanes.com/nil-guidelines/ : confirm with Miami Compliance whether this page is still in force and what replaced Opendorse disclosure.",
+    "https://miamihurricanes.com/documents/688da163-3d52-441d-8024-8f031b40b30d.pdf : Booster NIL Poster, not opened.",
+    "https://miamihurricanes.com/news/2025/07/01/from-the-desk-of-dan-radakovich-40 : confirm exact wording on revenue sharing sports and Canes Connection.",
+    "https://miamihurricanes.com/compliance-forms/ : compliance forms page, not opened."
+   ],
+   "not_found": [
+    "current Miami disclosure instructions that mention NIL Go",
+    "published list of Miami prohibited NIL categories",
+    "facility-use rule for NIL shoots",
+    "uniform-in-content rule",
+    "named NIL staff contact on the NIL page",
+    "current international athlete NIL guidance"
+   ]
+  },
+  {
+   "slug": "university-of-south-florida",
+   "name": "University of South Florida",
+   "short_name": "USF",
+   "institution_type": "college",
+   "sector": "public",
+   "city": "Tampa",
+   "county": "Hillsborough County",
+   "street_address": null,
+   "postal_code": null,
+   "website_url": "https://www.usf.edu/",
+   "athletics_url": "https://gousfbulls.com/",
+   "athletics_brand": null,
+   "division": "NCAA Division I",
+   "conference_slug": "american",
+   "district_slug": null,
+   "nces_id": null,
+   "profile_source_id": "s3",
+   "sports": {
+    "mens": [],
+    "womens": []
+   },
+   "sports_source_id": "s3",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Name, Image, & Likeness",
+     "url": "https://gousfbulls.com/sports/2025/8/29/name-image-likeness.aspx",
+     "organization": "USF Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2025-08-29",
+     "notes": "Date taken from the URL. Current NIL landing page with staff contacts."
+    },
+    {
+     "id": "s2",
+     "title": "Name, Images, Likeness Guidelines",
+     "url": "https://gousfbulls.com/sports/2022/7/18/name-images-likeness-guidelines",
+     "organization": "USF Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2022-07-18",
+     "notes": "OUTDATED. Date taken from the URL. Written under the 2021 Florida law and NCAA interim policy. Still online."
+    },
+    {
+     "id": "s3",
+     "title": "Compliance Home",
+     "url": "https://gousfbulls.com/sports/2017/7/7/Compliance%20-%20Home",
+     "organization": "USF Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "No NIL content. Names the Senior Associate Athletics Director / Compliance. Sports list was not read from an official page."
+    },
+    {
+     "id": "s4",
+     "title": "USF Athletics launches Bulls Athletic Properties to lead revenue strategy",
+     "url": "https://gousfbulls.com/news/2025/6/20/general-usf-athletics-launches-bulls-athletic-properties-to-lead-revenue-strategy",
+     "organization": "USF Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2025-06-20",
+     "notes": "Read through a summarising tool."
+    },
+    {
+     "id": "s5",
+     "title": "USF's NIL collective shuts down as universities move to direct pay for athletes",
+     "url": "https://www.wusf.org/sports/2026-04-08/usfs-nil-collective-shuts-down-as-universities-move-to-direct-pay-for-athletes",
+     "organization": "WUSF",
+     "source_type": "secondary_reporting",
+     "is_primary": false,
+     "published_on": "2026-04-03",
+     "notes": "News report. Used for discovery only. Tool gave the date as April 3, 2026; the URL shows 2026-04-08."
+    },
+    {
+     "id": "s6",
+     "title": "What is NIL?",
+     "url": "https://gousfbulls.com/sports/2025/8/29/what-is-nil",
+     "organization": "USF Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2025-08-29",
+     "notes": "Same text as the NIL landing page."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": true,
+    "locations_checked": [
+     "gousfbulls.com Name, Image, & Likeness page (2025)",
+     "gousfbulls.com What is NIL? page (2025)",
+     "gousfbulls.com Name, Images, Likeness Guidelines (2022)",
+     "gousfbulls.com Compliance home page",
+     "gousfbulls.com news release on Bulls Athletic Properties (2025-06-20)",
+     "WUSF report on the Fowler Avenue Collective (secondary)"
+    ],
+    "locations_unreachable": [
+     "https://gousfbulls.com/documents/2022/7/18/USF_NIL_Policy__Updated_7.13.2021_.pdf (USF NIL Policy PDF, blocked by robots rules)"
+    ],
+    "notes": "USF's only published NIL rules are a 2022 guidelines page and a 2021 policy PDF, both written before the House settlement. The current 2025 NIL page gives staff contacts and a program description but no rules. Current USF NIL rules: Not located in the public sources reviewed as of October 3, 2026."
+   },
+   "school_policy": {
+    "title": "USF Name, Images, Likeness Guidelines (and linked USF NIL Policy, updated 7.13.2021)",
+    "summary": "This is the USF Athletics NIL guidelines page with an FAQ. It covers who may pay athletes, use of USF marks and uniforms, banned vendor types, disclosure and agents. It was written before the House settlement and is not treated as current.",
+    "policy_status": "outdated",
+    "source_id": "s2",
+    "adopted_on": null
+   },
+   "rules": [
+    {
+     "topic": "nil-education",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "USF says its program gives athletes the resources and knowledge to build and promote their personal brand.",
+     "conditions": null,
+     "citation": "USF Name, Image, & Likeness page",
+     "quick_status": "YES",
+     "short_answer": "USF runs an NIL education and support program.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "What is NIL?",
+       "quote": "Our program provides athletes with the resources and knowledge they need to build, leverage, and promote their personal brand.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-staff-involvement",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "USF lists two athletics staff members for NIL: a Director of NIL Administration and a Director of NIL Engagement. USF invites businesses to contact them about partnering with athletes.",
+     "conditions": null,
+     "citation": "USF Name, Image, & Likeness page, Our Staff",
+     "quick_status": "YES",
+     "short_answer": "USF has NIL staff that businesses can contact.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Our Staff",
+       "quote": "Interested in learning more about NIL opportunities or exploring ways to partner with our student-athletes? There are many ways to get involved, and our team is here to help guide you.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "Bulls Athletic Properties",
+     "program_type": "in_house_unit",
+     "description": "USF Athletics said on June 20, 2025 that this new division leads multimedia rights and business strategy and \"will also work in close coordination with athletics development and name, image, and likeness (NIL) programs\".",
+     "url": "https://gousfbulls.com/news/2025/6/20/general-usf-athletics-launches-bulls-athletic-properties-to-lead-revenue-strategy",
+     "source_id": "s4",
+     "current": true
+    },
+    {
+     "name": "Fowler Avenue Collective",
+     "program_type": "collective",
+     "description": "WUSF reported in April 2026 that this USF-focused collective ceased operations and pointed donors to the Bulls Club. This is news reporting, not a USF statement.",
+     "url": "https://www.fowleravenue.com/",
+     "source_id": "s5",
+     "current": false
+    },
+    {
+     "name": "INFLCR (reporting app named in the 2022 guidelines)",
+     "program_type": "marketplace",
+     "description": "USF's 2022 guidelines tell athletes to \"Report the activity via INFLCR\". The page predates the House settlement.",
+     "url": "https://gousfbulls.com/sports/2022/7/18/name-images-likeness-guidelines",
+     "source_id": "s2",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "USF Athletics NIL",
+     "role": "Director of NIL Administration",
+     "person_name": "Ansel Triebe-Pay",
+     "phone": null,
+     "email": null,
+     "url": "https://gousfbulls.com/sports/2025/8/29/name-image-likeness.aspx",
+     "source_id": "s1"
+    },
+    {
+     "office": "USF Athletics NIL",
+     "role": "Director of NIL Engagement",
+     "person_name": "Mercedes Sapp",
+     "phone": null,
+     "email": null,
+     "url": "https://gousfbulls.com/sports/2025/8/29/name-image-likeness.aspx",
+     "source_id": "s1"
+    },
+    {
+     "office": "USF Athletic Compliance Office",
+     "role": "Senior Associate Athletics Director / Compliance",
+     "person_name": "Brendan Armitage",
+     "phone": null,
+     "email": null,
+     "url": "https://gousfbulls.com/sports/2017/7/7/Compliance%20-%20Home",
+     "source_id": "s3"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "USF's published NIL rules (2022 guidelines page, 2021 policy PDF) predate the House settlement. Do not present them as current.",
+    "USF's current NIL page (August 2025) lists Ansel Triebe-Pay (Director of NIL Administration) and Mercedes Sapp (Director of NIL Engagement) with emails.",
+    "USF launched Bulls Athletic Properties on June 20, 2025, which works with its NIL programs (read by extraction).",
+    "The Fowler Avenue Collective closed in April 2026 according to WUSF. This is secondary reporting, not a USF statement.",
+    "USF's compliance page has no NIL content."
+   ],
+   "ambiguities": [
+    "The 2022 guidelines page is pre-House. It says: USF, the athletic department, staff or boosters may not pay or arrange NIL pay; USF marks, logos, green and gold colors, team photos and video and all parts of the uniform need written agreement or permission from the University (it names Kim Hill, USF's Chief Marketing Officer); athletes may not sell or sign USF-issued gear; no NIL deals with gambling or sports wagering vendors or vendors tied to performance enhancing drugs; contracts may not run past participation at USF; agents must be licensed in Florida. None of this is treated as current.",
+    "The 2022 page names Kim Hill as the person who grants written permission for marks. This was not confirmed as current.",
+    "Page dates for USF sources were taken from the URLs.",
+    "Street address and sports list were not read on an official page and are left empty.",
+    "No USF statement on the status of any collective was found. The closure of the Fowler Avenue Collective comes from news reporting.",
+    "The Bulls Athletic Properties release calls it an 'independent division'. Its exact legal form is not stated."
+   ],
+   "conflicts": [
+    "Inside the 2022 guidelines page: the rules text says athletes must disclose 'within four days' and the FAQ says 'Within five days of NIL agreement through the INFLCR App.'"
+   ],
+   "manual_review": [
+    "https://gousfbulls.com/documents/2022/7/18/USF_NIL_Policy__Updated_7.13.2021_.pdf : USF NIL Policy PDF, blocked by robots rules. Outdated but is the only formal policy document found.",
+    "https://gousfbulls.com/sports/2022/7/18/name-images-likeness-guidelines : ask USF NIL staff whether this page is still in force.",
+    "https://gousfbulls.com/staff-directory : confirm compliance and NIL staff contacts and phone numbers.",
+    "https://gousfbulls.com/news/2022/9/2/baseball-usf-athletics-expands-inflcr-partnership-adding-the-bull-market-exchange : 2022 Bull Market Exchange release, not opened. Check if the exchange is still live."
+   ],
+   "not_found": [
+    "current USF disclosure instructions that mention NIL Go",
+    "USF revenue-sharing statement on gousfbulls.com",
+    "current USF rule on logos, marks and uniforms in NIL",
+    "facility-use rule for NIL shoots",
+    "current prohibited categories list",
+    "international athlete NIL guidance",
+    "agent registration process at USF",
+    "official USF statement naming a collective"
+   ]
+  }
+ ]
+}

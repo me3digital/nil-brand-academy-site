@@ -56,7 +56,7 @@ export function buildSeedSql() {
       district_id: id('school_districts', i.district), conference_id: id('governing_bodies', i.conference),
       division: i.division, classification: i.classification, nces_id: i.nces_id, ipeds_id: i.ipeds_id,
       website_url: i.website_url, athletics_url: i.athletics_url, athletics_brand: i.athletics_brand,
-      profile_source_id: id('sources', i.profile_source), publication_state: i.publication_state,
+      profile_source_id: id('sources', i.profile_source), publication_state: i.publication_state, search_aliases: i.search_aliases,
     }));
     (i.governing || []).forEach((g) => add(ins('institution_governing_bodies', { institution_id: instId(i.slug), governing_body_id: id('governing_bodies', g) })));
     Object.entries(i.sports || {}).forEach(([gender, names]) => names.forEach((n) => add(ins('institution_sports', {
@@ -75,7 +75,7 @@ export function buildSeedSql() {
       rule_id: id('rules', r.slug), version_no: 1, answer: r.answer, summary: r.summary, conditions: r.conditions,
       citation: r.citation, effective_date: r.effective_date, effective_note: r.effective_note,
       verification_status: r.status || 'researched', change_note: r.change_note,
-      trust_state: r.trust, review_method: r.method, review_note: r.review_note, quick_status: r.quick_status, short_answer: r.short_answer,
+      trust_state: r.trust, review_method: r.method, review_note: r.review_note, quick_status: r.quick_status, short_answer: r.short_answer, nil_specific: r.nil_specific === false ? false : undefined,
     }));
     r.sources.forEach((s) => add(ins('rule_version_sources', {
       rule_version_id: rv, source_id: id('sources', s.src), locator: s.locator, quote: s.quote,
@@ -93,13 +93,18 @@ export function buildSeedSql() {
     locations_checked: p.locations_checked, locations_unreachable: p.locations_unreachable, searched_by: CHECKED_BY, notes: p.notes })));
   F.schoolPolicies.forEach((p) => add(ins('school_nil_policies', {
     institution_id: instId(p.inst), title: p.title, summary: p.summary, policy_status: p.policy_status,
-    source_id: id('sources', p.source), adopted_on: p.adopted_on, verification_status: 'needs_verification' })));
+    source_id: id('sources', p.source), adopted_on: p.adopted_on, verification_status: 'needs_verification', covers_nil: p.covers_nil !== false })));
   F.nilPrograms.forEach((p) => add(ins('nil_programs', {
     institution_id: instId(p.inst), name: p.name, program_type: p.program_type, description: p.description, url: p.url,
-    source_id: id('sources', p.source), verification_status: 'researched', sort_order: p.sort })));
+    source_id: id('sources', p.source), verification_status: 'researched', sort_order: p.sort, is_current: p.is_current })));
   F.contacts.forEach((c) => add(ins('school_contacts', {
     institution_id: instId(c.inst), office: c.office, role: c.role, person_name: c.person_name, email: c.email, phone: c.phone,
-    url: c.url, is_public: c.is_public, show_on_page: c.show, source_id: id('sources', c.source), verification_status: c.status })));
+    url: c.url, is_public: c.is_public, show_on_page: c.show, source_id: id('sources', c.source), verification_status: c.status, contact_scope: c.contact_scope || 'general' })));
+  (F.districtSearches || []).forEach((p) => add(ins('policy_searches', {
+    district_id: id('school_districts', p.district), public_policy_found: p.public_policy_found, search_date: p.search_date,
+    locations_checked: p.locations_checked, locations_unreachable: p.locations_unreachable, searched_by: CHECKED_BY, notes: p.notes })));
+  (F.reviewNotes || []).forEach((n) => add(ins('school_review_notes', {
+    institution_id: instId(n.inst), district_id: id('school_districts', n.district), governing_body_id: id('governing_bodies', n.gb), kind: n.kind, body: n.body })));
 
   F.scenarios.forEach(([slug, question, applies_to, sort_order, governs, conds]) => {
     add(ins('scenarios', { slug, question, applies_to, sort_order, is_quick: F.QUICK.includes(slug) }));

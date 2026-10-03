@@ -1,0 +1,1074 @@
+{
+ "researched_on": "2026-10-03",
+ "method_note": "Official pages were found by web search. Most were read as raw page text in a browser tab. A few were read through a summarising fetch tool and are marked extraction or noted in the source.",
+ "districts": [],
+ "conferences": [
+  {
+   "slug": "swac",
+   "name": "Southwestern Athletic Conference",
+   "short_name": "SWAC",
+   "website_url": "https://swac.org/",
+   "sources": [
+    {
+     "id": "c1",
+     "title": "2025 SWAC Spring Meetings Recap",
+     "url": "https://swac.org/news/2025/6/16/general-2025-26-swac-spring-meeting-recap.aspx",
+     "organization": "Southwestern Athletic Conference",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2025-06-16",
+     "notes": "Read as raw page text in a browser."
+    },
+    {
+     "id": "c2",
+     "title": "The SWAC is all in on House settlement",
+     "url": "https://hbcusports.com/2025/06/16/the-swac-is-all-in-on-house-settlement-heres-how-schools-will-be-impacted/",
+     "organization": "HBCU Sports",
+     "source_type": "secondary_reporting",
+     "is_primary": false,
+     "published_on": "2025-06-16",
+     "notes": "Discovery only. Led to the official SWAC release."
+    }
+   ],
+   "rules": [
+    {
+     "topic": "school-payments",
+     "scope": "conference",
+     "answer": "yes_with_conditions",
+     "summary": "The SWAC says all twelve of its member schools opted in to the House settlement. The SWAC also says it set no scholarship caps in the sports it sponsors.",
+     "conditions": "This is a conference statement from June 2025. It does not name each school and it does not say how much, or whether, any school pays athletes directly. Florida A&M and Bethune-Cookman were SWAC members at that time.",
+     "citation": "2025 SWAC Spring Meetings Recap",
+     "quick_status": "DEPENDS",
+     "short_answer": "SWAC says all twelve members opted in to the House settlement.",
+     "sources": [
+      {
+       "source_id": "c1",
+       "locator": "Second paragraph",
+       "quote": "All twelve SWAC member institutions have opted-in to the House Settlement. Additionally, the league placed no scholarship caps on any sports in which the conference currently sponsors.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "notes": "The only SWAC-published NIL-related item found was the June 16, 2025 spring meetings recap saying all twelve members opted in to the House settlement. No SWAC NIL policy, NIL page or member NIL rule was found in the swac.org site menu links checked. Not located in the public sources reviewed as of October 3, 2026."
+  },
+  {
+   "slug": "asun",
+   "name": "Atlantic Sun Conference",
+   "short_name": "ASUN",
+   "website_url": "https://asunsports.org/",
+   "sources": [
+    {
+     "id": "c1",
+     "title": "ASUN Announces Partnership With BuzzU",
+     "url": "https://asunsports.org/news/2023/12/7/asun-buzzu-partnership.aspx",
+     "organization": "Atlantic Sun Conference",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2023-12-13",
+     "notes": "Read as raw page text in a browser. Page shows 12/13/2023. Pre-House settlement."
+    },
+    {
+     "id": "c2",
+     "title": "House Settlement Opt-Ins",
+     "url": "https://businessofcollegesports.com/other/house-settlement-opt-ins/",
+     "organization": "Business of College Sports",
+     "source_type": "secondary_reporting",
+     "is_primary": false,
+     "published_on": "2025-07-27",
+     "notes": "Discovery only. Tracker lists all ASUN members, including Jacksonville, as opted in. Not an official source."
+    }
+   ],
+   "rules": [],
+   "notes": "No ASUN NIL rule for members was found. The ASUN published a December 2023 release about a preferred partnership with BuzzU, described as 'a leading data analytics firm in the name, image and likeness (NIL) industry'. That release is older than the House settlement and its current status is unknown. No official ASUN statement on House settlement opt-in was located. Not located in the public sources reviewed as of October 3, 2026."
+  }
+ ],
+ "schools": [
+  {
+   "slug": "florida-am-university",
+   "name": "Florida Agricultural and Mechanical University",
+   "short_name": "Florida A&M",
+   "institution_type": "college",
+   "sector": "public",
+   "city": "Tallahassee",
+   "county": "Leon County",
+   "street_address": null,
+   "postal_code": null,
+   "website_url": "https://www.famu.edu/",
+   "athletics_url": "https://famuathletics.com/",
+   "athletics_brand": null,
+   "division": "NCAA Division I",
+   "conference_slug": "swac",
+   "district_slug": null,
+   "nces_id": null,
+   "profile_source_id": "s3",
+   "sports": {
+    "mens": [
+     "Baseball",
+     "Basketball",
+     "Football",
+     "Golf",
+     "Track & Field"
+    ],
+    "womens": [
+     "Basketball",
+     "Bowling",
+     "Cheerleading",
+     "Cross Country",
+     "Softball",
+     "Tennis",
+     "Track & Field",
+     "Volleyball"
+    ]
+   },
+   "sports_source_id": "s3",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Athletics Compliance (Office of Compliance and Ethics)",
+     "url": "https://www.famu.edu/administration/compliance-and-ethics/athletics-compliance.php",
+     "organization": "Florida A&M University",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Undated page. NIL guidance sits in collapsed accordion sections under Students. Read as raw page text in a browser."
+    },
+    {
+     "id": "s2",
+     "title": "NIL Suggested Question Checklist (PDF)",
+     "url": "https://www.famu.edu/administration/compliance-and-ethics/pdfs/NIL%20Suggested%20Question%20Checklist.pdf",
+     "organization": "Florida A&M University",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": "2024-08-16",
+     "notes": "Linked from s1. File exists (server last-modified date Aug 16, 2024) but its text could not be read. Date is the server file date, not a printed date."
+    },
+    {
+     "id": "s3",
+     "title": "Staff Directory",
+     "url": "https://famuathletics.com/staff-directory",
+     "organization": "Florida A&M Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read as raw page text in a browser on 2026-10-03. Site menu on this page also lists sports and the 'Rattlers Local Exchange - NIL' link."
+    },
+    {
+     "id": "s4",
+     "title": "Florida A&M Athletics and INFLCR Partner to Create the Rattlers Local Exchange",
+     "url": "https://famuathletics.com/news/2022/2/24/general-florida-am-athletics-and-inflcr-partner-to-create-the-rattlers-local-exchange-first-hbcu-to-join-local-exchange.aspx",
+     "organization": "Florida A&M Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2022-02-24",
+     "notes": "Pre-House settlement news release. Read through a summarising tool."
+    },
+    {
+     "id": "s5",
+     "title": "Florida A&M Athletics Leads the Way for NIL in the SWAC with INFLCR",
+     "url": "https://famuathletics.com/news/2021/6/30/FAMU-INFLCR.aspx",
+     "organization": "Florida A&M Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2021-06-30",
+     "notes": "Pre-House settlement news release. Read through a summarising tool."
+    },
+    {
+     "id": "s6",
+     "title": "Licensing",
+     "url": "https://famuathletics.com/sports/2020/6/15/licensing",
+     "organization": "Florida A&M Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Vendor licensing steps through CLC. Does not mention NIL. Read as raw page text."
+    },
+    {
+     "id": "s7",
+     "title": "2025 SWAC Spring Meetings Recap",
+     "url": "https://swac.org/news/2025/6/16/general-2025-26-swac-spring-meeting-recap.aspx",
+     "organization": "Southwestern Athletic Conference",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2025-06-16",
+     "notes": "Conference source, not a school source."
+    },
+    {
+     "id": "s8",
+     "title": "House Settlement Opt-Ins",
+     "url": "https://businessofcollegesports.com/other/house-settlement-opt-ins/",
+     "organization": "Business of College Sports",
+     "source_type": "secondary_reporting",
+     "is_primary": false,
+     "published_on": "2025-07-27",
+     "notes": "Discovery only."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": true,
+    "locations_checked": [
+     "famu.edu Athletics Compliance page (Office of Compliance and Ethics)",
+     "famuathletics.com Staff Directory and site menu",
+     "famuathletics.com Licensing page",
+     "famuathletics.com 2022 Rattlers Local Exchange release",
+     "famuathletics.com 2021 INFLCR release",
+     "swac.org 2025 Spring Meetings Recap",
+     "Web searches of famuathletics.com for NIL, revenue sharing, House settlement and collective"
+    ],
+    "locations_unreachable": [
+     "https://www.famu.edu/administration/compliance-and-ethics/pdfs/NIL%20Suggested%20Question%20Checklist.pdf (file exists, text not readable with the tools used)"
+    ],
+    "notes": "FAMU publishes short NIL guidance for athletes on its university compliance page. It is guidance, not a full policy document. No formal FAMU NIL policy, regulation or handbook section was located."
+   },
+   "school_policy": {
+    "title": "Athletics Compliance: Name, Image, Likeness (NIL) guidance for students",
+    "summary": "This is a section of the FAMU Office of Compliance and Ethics web page. It explains NIL in plain terms and gives a short compliance checklist, tips on deals, brand and time management, and a link to a question checklist. It is undated and does not mention the House settlement or NIL Go.",
+    "policy_status": "unconfirmed",
+    "source_id": "s1",
+    "adopted_on": null
+   },
+   "rules": [
+    {
+     "topic": "disclosure-required",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "FAMU says athletes should always report NIL deals to the FAMU Athletics Compliance Office.",
+     "conditions": "The page does not name a reporting system, form or deadline. The page is undated.",
+     "citation": "FAMU Athletics Compliance page, Eligibility and Compliance",
+     "quick_status": "YES",
+     "short_answer": "Report every NIL deal to FAMU Athletics Compliance.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Students > Name, Image, Likeness (NIL) > Eligibility and Compliance",
+       "quote": "Always report NIL deals to the FAMU Athletics Compliance Office.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "deal-terms",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FAMU tells athletes to avoid NIL contracts that conflict with team commitments or university sponsorships.",
+     "conditions": "FAMU does not publish a list of its sponsors or say how a conflict is checked. Ask the compliance office.",
+     "citation": "FAMU Athletics Compliance page, Eligibility and Compliance",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Avoid deals that clash with team duties or FAMU sponsors.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Students > Name, Image, Likeness (NIL) > Eligibility and Compliance",
+       "quote": "Avoid contracts that conflict with team commitments or university sponsorships.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "nil-education",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "FAMU tells athletes to ask coaches, academic advisors and the Athletics Compliance Office for advice so NIL work fits their goals and commitments. FAMU also links a Suggested Questions Checklist for negotiating a deal.",
+     "conditions": "The checklist PDF could not be read.",
+     "citation": "FAMU Athletics Compliance page, Balancing your Time and Effort",
+     "quick_status": "YES",
+     "short_answer": "FAMU offers NIL guidance and a question checklist.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Students > Name, Image, Likeness (NIL) > Balancing your Time and Effort",
+       "quote": "Consult with coaches, academic advisors, and the Athletics Compliance Office to ensure your NIL activities align with your goals and commitments.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "Rattlers Local Exchange",
+     "program_type": "marketplace",
+     "description": "FAMU Athletics announced this INFLCR-run exchange in February 2022 and calls it 'a student-athlete NIL business registry'. The athletics site menu still links to it as 'Rattlers Local Exchange - NIL'.",
+     "url": "https://dash.inflcr.com/exchange/florida-am-university",
+     "source_id": "s4",
+     "current": "unknown"
+    },
+    {
+     "name": "INFLCR partnership",
+     "program_type": "education",
+     "description": "FAMU Athletics announced on June 30, 2021 that it adopted the INFLCR brand-building and compliance platform for NIL.",
+     "url": "https://famuathletics.com/news/2021/6/30/FAMU-INFLCR.aspx",
+     "source_id": "s5",
+     "current": "unknown"
+    },
+    {
+     "name": "FAMU trademark licensing through CLC",
+     "program_type": "licensing",
+     "description": "FAMU Athletics lists 'Steps to become a licensed vendor for Florida A&M University' through CLC. The page does not mention NIL or athletes.",
+     "url": "https://famuathletics.com/sports/2020/6/15/licensing",
+     "source_id": "s6",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "FAMU Athletics Compliance",
+     "role": "Deputy Athletic Director / Senior Woman Administrator / Chief Integrity Officer (listed under Compliance)",
+     "person_name": "Brittney Johnson",
+     "phone": null,
+     "email": null,
+     "url": "https://famuathletics.com/staff-directory",
+     "source_id": "s3"
+    },
+    {
+     "office": "FAMU Athletics Compliance",
+     "role": "Associate Athletics Director, Eligibility & Compliance",
+     "person_name": "Kelly Bickham",
+     "phone": null,
+     "email": null,
+     "url": "https://famuathletics.com/staff-directory",
+     "source_id": "s3"
+    },
+    {
+     "office": "FAMU Athletics Compliance",
+     "role": "Compliance Coordinator",
+     "person_name": "Alexus Davenport",
+     "phone": null,
+     "email": null,
+     "url": "https://famuathletics.com/staff-directory",
+     "source_id": "s3"
+    },
+    {
+     "office": "FAMU Athletics Compliance",
+     "role": "Compliance Coordinator",
+     "person_name": "Tia Huie",
+     "phone": null,
+     "email": null,
+     "url": "https://famuathletics.com/staff-directory",
+     "source_id": "s3"
+    },
+    {
+     "office": "FAMU Athletics Compliance",
+     "role": "Compliance Coordinator",
+     "person_name": "Terrence Williams",
+     "phone": null,
+     "email": null,
+     "url": "https://famuathletics.com/staff-directory",
+     "source_id": "s3"
+    },
+    {
+     "office": "FAMU Athletics Brand Advancement",
+     "role": "Associate Athletics Director for Brand Advancement",
+     "person_name": "Dennis Driscoll",
+     "phone": null,
+     "email": null,
+     "url": "https://famuathletics.com/staff-directory",
+     "source_id": "s3"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "NIL deals",
+    "recipient": "FAMU Athletics Compliance Office",
+    "deadline_text": "Not stated on the page",
+    "platform_name": null,
+    "platform_url": null,
+    "form_name": null,
+    "form_url": null,
+    "source_id": "s1",
+    "quote": "Always report NIL deals to the FAMU Athletics Compliance Office."
+   },
+   "important_claims": [
+    "FAMU says to always report NIL deals to the FAMU Athletics Compliance Office. No system or deadline is named.",
+    "FAMU says to avoid contracts that conflict with team commitments or university sponsorships.",
+    "The SWAC (not FAMU itself) says all twelve SWAC members opted in to the House settlement (June 16, 2025).",
+    "Rattlers Local Exchange is still linked in the athletics site menu, but the announcement is from 2022. Current status was not confirmed.",
+    "Compliance staff names and emails are as printed in the athletics staff directory on October 3, 2026."
+   ],
+   "ambiguities": [
+    "The famu.edu NIL guidance is undated and does not mention the House settlement, revenue sharing or NIL Go. Its linked checklist PDF has a server file date of August 2024, so the guidance may predate July 2025.",
+    "The INFLCR (2021) and Rattlers Local Exchange (2022) releases are pre-House settlement. Whether FAMU still uses INFLCR for disclosure is not confirmed.",
+    "The staff directory prints the name 'Terrence Williams' with the email '[email on the official page]'. Spelling differs.",
+    "The sports list is taken from the athletics site menu. Cheerleading is listed under Women's Sports there. The menu may not show every sponsored sport (for example men's cross country).",
+    "The staff directory lists Dennis Driscoll with an email that was cut off in the text read, so no email is recorded."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://www.famu.edu/administration/compliance-and-ethics/pdfs/NIL%20Suggested%20Question%20Checklist.pdf : open by hand, text could not be read.",
+    "https://dash.inflcr.com/exchange/florida-am-university : confirm the Rattlers Local Exchange is still live.",
+    "https://famuathletics.com/ : check by hand for any 2025 or 2026 statement on revenue sharing, NIL Go or a collective."
+   ],
+   "not_found": [
+    "A FAMU statement of its own that it opted in to the House settlement or revenue sharing (only the SWAC conference statement was found)",
+    "Any FAMU statement on NIL Go reporting",
+    "A named disclosure platform, form or deadline in current FAMU guidance",
+    "FAMU rules on agents for NIL",
+    "A school-affiliated collective or NIL entity named on official FAMU pages",
+    "FAMU booster guidance on NIL",
+    "Rule on athletes using FAMU logos, marks or uniforms in NIL deals",
+    "Facility-use rule for NIL shoots",
+    "Prohibited NIL categories added by FAMU",
+    "International athlete NIL guidance",
+    "A staff member with NIL in their title"
+   ]
+  },
+  {
+   "slug": "bethune-cookman-university",
+   "name": "Bethune-Cookman University",
+   "short_name": "Bethune-Cookman",
+   "institution_type": "college",
+   "sector": "private",
+   "city": "Daytona Beach",
+   "county": "Volusia County",
+   "street_address": null,
+   "postal_code": null,
+   "website_url": "https://www.cookman.edu/",
+   "athletics_url": "https://bcuathletics.com/",
+   "athletics_brand": null,
+   "division": "NCAA Division I",
+   "conference_slug": "swac",
+   "district_slug": null,
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "mens": [
+     "Baseball",
+     "Basketball",
+     "Cross Country",
+     "Football",
+     "Track and Field"
+    ],
+    "womens": [
+     "Basketball",
+     "Cross Country",
+     "Golf",
+     "Softball",
+     "Tennis",
+     "Track and Field",
+     "Volleyball"
+    ]
+   },
+   "sports_source_id": "s1",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Staff Directory",
+     "url": "https://bcuathletics.com/staff-directory",
+     "organization": "Bethune-Cookman University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read as raw page text in a browser on 2026-10-03. Site menu on this page lists sports, the collective link and the NIL Merchandise link."
+    },
+    {
+     "id": "s2",
+     "title": "Compliance",
+     "url": "https://bcuathletics.com/sports/2016/8/10/bethune_cookman_university_compliance.aspx",
+     "organization": "Bethune-Cookman University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Mission statement and NCAA eligibility links. No NIL text. Read as raw page text."
+    },
+    {
+     "id": "s3",
+     "title": "Booster FAQ",
+     "url": "https://bcuathletics.com/sports/2022/4/5/booster-faq.aspx",
+     "organization": "Bethune-Cookman University Athletics",
+     "source_type": "official_faq",
+     "is_primary": true,
+     "published_on": "2022-04-05",
+     "notes": "Date is from the URL. No NIL or collective text found on the page. Read as raw page text."
+    },
+    {
+     "id": "s4",
+     "title": "Hail Maroon and Gold Collective Unveiled",
+     "url": "https://bcuathletics.com/news/2024/8/1/general-hail-maroon-and-gold-collective-unveiled.aspx",
+     "organization": "Bethune-Cookman University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2024-08-01",
+     "notes": "Pre-House settlement news release. Read as raw page text."
+    },
+    {
+     "id": "s5",
+     "title": "2025 SWAC Spring Meetings Recap",
+     "url": "https://swac.org/news/2025/6/16/general-2025-26-swac-spring-meeting-recap.aspx",
+     "organization": "Southwestern Athletic Conference",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2025-06-16",
+     "notes": "Conference source, not a school source."
+    },
+    {
+     "id": "s6",
+     "title": "House Settlement Opt-Ins",
+     "url": "https://businessofcollegesports.com/other/house-settlement-opt-ins/",
+     "organization": "Business of College Sports",
+     "source_type": "secondary_reporting",
+     "is_primary": false,
+     "published_on": "2025-07-27",
+     "notes": "Discovery only."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "bcuathletics.com Compliance page",
+     "bcuathletics.com Booster FAQ",
+     "bcuathletics.com Staff Directory and site menu",
+     "bcuathletics.com 2024 Hail Maroon and Gold Collective release",
+     "hailmaroongold.com (did not resolve)",
+     "swac.org 2025 Spring Meetings Recap",
+     "Web searches of bcuathletics.com and cookman.edu for NIL, compliance, House settlement and revenue sharing"
+    ],
+    "locations_unreachable": [
+     "https://bcuathletics.com/documents/2024/12/5/BCU_Style_Guide_2025_26.pdf (Athletics Style Guide, blocked to the fetch tool)",
+     "https://hailmaroongold.com (domain did not resolve on 2026-10-03)"
+    ],
+    "notes": "A Bethune-Cookman NIL policy or NIL guidance page: Not located in the public sources reviewed as of October 3, 2026. The compliance page and Booster FAQ do not mention NIL."
+   },
+   "school_policy": null,
+   "rules": [
+    {
+     "topic": "collectives",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Bethune-Cookman Athletics announced the Hail Maroon and Gold Collective in August 2024 as a partnership with Student Athlete NIL (SANIL). B-CU says SANIL is not officially affiliated with the athletics department but is acknowledged by it.",
+     "conditions": "This release is from August 2024, before the House settlement. The collective website linked from the athletics menu did not load on October 3, 2026, so current status is unknown.",
+     "citation": "Hail Maroon and Gold Collective Unveiled (Aug. 1, 2024)",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "B-CU acknowledged a third-party collective in 2024. Current status unknown.",
+     "sources": [
+      {
+       "source_id": "s4",
+       "locator": "Final paragraph",
+       "quote": "SANIL is not officially affiliated with Bethune-Cookman Athletics but is acknowledged by the athletics department and will operate within NCAA, Southwestern Athletic Conference (SWAC), and Florida state parameters",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "Hail Maroon and Gold Collective",
+     "program_type": "collective",
+     "description": "B-CU Athletics announced it on August 1, 2024 as 'a groundbreaking partnership with Student Athlete NIL'. The athletics site menu still links to hailmaroongold.com, which did not resolve on October 3, 2026.",
+     "url": "https://bcuathletics.com/news/2024/8/1/general-hail-maroon-and-gold-collective-unveiled.aspx",
+     "source_id": "s4",
+     "current": "unknown"
+    },
+    {
+     "name": "NIL Merchandise (Influxer)",
+     "program_type": "licensing",
+     "description": "The B-CU athletics site menu has an 'NIL Merchandise' link that points to an Influxer Merch store page for Bethune-Cookman. The store page itself was not opened.",
+     "url": "https://influxermerch.com/colleges/bethune-cookman-university/sports",
+     "source_id": "s1",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "B-CU Office of Athletics Compliance",
+     "role": "Senior Associate Director of Athletics for Student-Athlete Services (listed under Compliance)",
+     "person_name": "Jason Pompey",
+     "phone": "386-481-2212",
+     "email": null,
+     "url": "https://bcuathletics.com/staff-directory",
+     "source_id": "s1"
+    },
+    {
+     "office": "B-CU Office of Athletics Compliance",
+     "role": "Compliance Coordinator",
+     "person_name": "Lauren Butts",
+     "phone": "386-481-2206",
+     "email": null,
+     "url": "https://bcuathletics.com/staff-directory",
+     "source_id": "s1"
+    },
+    {
+     "office": "B-CU Office of Athletics Compliance",
+     "role": "NCAA Certifying Officer",
+     "person_name": "April Hudson",
+     "phone": "386-481-2325",
+     "email": null,
+     "url": "https://bcuathletics.com/staff-directory",
+     "source_id": "s1"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "No B-CU NIL policy or NIL guidance page was located on official sites.",
+    "B-CU's 2024 release says SANIL, which runs the Hail Maroon and Gold Collective, is not officially affiliated with B-CU Athletics but is acknowledged by it.",
+    "hailmaroongold.com did not resolve on October 3, 2026, though the athletics menu still links to it.",
+    "The SWAC (not B-CU itself) says all twelve SWAC members opted in to the House settlement (June 16, 2025).",
+    "Compliance staff names, phones and emails are as printed in the athletics staff directory on October 3, 2026."
+   ],
+   "ambiguities": [
+    "The collective release is from August 2024, before the House settlement. It should not be treated as a current rule.",
+    "The athletics menu spells the link 'Hail Maroon and Gold NIL Colletive'.",
+    "The 2024 release names Reggie Theus as Athletic Director. Current leadership was not checked.",
+    "The sports list is taken from the athletics site menu and may not show every sponsored sport. Cheerleading is listed there as co-ed and is left out."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://bcuathletics.com/documents/2024/12/5/BCU_Style_Guide_2025_26.pdf : Athletics Style Guide. Open by hand for logo and mark approval rules.",
+    "https://hailmaroongold.com : confirm whether the collective still operates.",
+    "https://influxermerch.com/colleges/bethune-cookman-university/sports : confirm the NIL merchandise store is live.",
+    "B-CU student-athlete handbook, if one exists. Not found online."
+   ],
+   "not_found": [
+    "A B-CU statement of its own that it opted in to the House settlement or revenue sharing (only the SWAC conference statement was found)",
+    "Any B-CU statement on NIL Go reporting",
+    "B-CU NIL policy, NIL FAQ or NIL compliance page",
+    "How B-CU athletes disclose NIL deals (system, form, deadline)",
+    "B-CU rules on agents for NIL",
+    "B-CU booster guidance on NIL (the Booster FAQ does not mention NIL)",
+    "Rule on athletes using B-CU logos, marks or uniforms in NIL deals",
+    "Facility-use rule for NIL shoots",
+    "Prohibited NIL categories added by B-CU",
+    "International athlete NIL guidance",
+    "A staff member with NIL in their title"
+   ]
+  },
+  {
+   "slug": "jacksonville-university",
+   "name": "Jacksonville University",
+   "short_name": "Jacksonville",
+   "institution_type": "college",
+   "sector": "private",
+   "city": "Jacksonville",
+   "county": "Duval County",
+   "street_address": "2800 University Blvd. N.",
+   "postal_code": "32211",
+   "website_url": "https://www.ju.edu/",
+   "athletics_url": "https://judolphins.com/",
+   "athletics_brand": null,
+   "division": "NCAA Division I",
+   "conference_slug": "asun",
+   "district_slug": null,
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "mens": [
+     "Baseball",
+     "Basketball",
+     "Cross Country",
+     "Golf",
+     "Lacrosse",
+     "Rowing",
+     "Soccer"
+    ],
+    "womens": [
+     "Basketball",
+     "Beach Volleyball",
+     "Cross Country",
+     "Golf",
+     "Lacrosse",
+     "Rowing",
+     "Soccer",
+     "Softball",
+     "Track & Field",
+     "Volleyball"
+    ]
+   },
+   "sports_source_id": "s2",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Name, Image and Likeness",
+     "url": "https://judolphins.com/sports/2022/5/9/name-image-and-likeness.aspx",
+     "organization": "Jacksonville University Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2022-05-09",
+     "notes": "Date is from the URL. Page cites May 10, 2022 NCAA guidance and Florida Statute 1006.74. Still linked from the Compliance menu on 2026-10-03. Read as raw page text in a browser. Footer prints the address."
+    },
+    {
+     "id": "s2",
+     "title": "Staff Directory: Compliance",
+     "url": "https://judolphins.com/staff-directory/compliance-department/4",
+     "organization": "Jacksonville University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read as raw page text in a browser on 2026-10-03. Also shows the sports menu."
+    },
+    {
+     "id": "s3",
+     "title": "Current Student Athletes (Compliance)",
+     "url": "https://judolphins.com/sports/2019/2/5/information-compliance-current-student-athletes.aspx",
+     "organization": "Jacksonville University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Undated. Read through a summarising tool."
+    },
+    {
+     "id": "s4",
+     "title": "Boosters & Fans (Compliance)",
+     "url": "https://judolphins.com/sports/2019/2/5/information-compliance-fans-and-boosters-copy.aspx",
+     "organization": "Jacksonville University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Undated. Read through a summarising tool."
+    },
+    {
+     "id": "s5",
+     "title": "Compliance",
+     "url": "https://judolphins.com/sports/compliance",
+     "organization": "Jacksonville University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Hub page. Menu links to the NIL page, Prospects, Coaches & Staff, Current Student-Athletes, Boosters & Fans and Compliance Staff."
+    },
+    {
+     "id": "s6",
+     "title": "House Settlement Opt-Ins",
+     "url": "https://businessofcollegesports.com/other/house-settlement-opt-ins/",
+     "organization": "Business of College Sports",
+     "source_type": "secondary_reporting",
+     "is_primary": false,
+     "published_on": "2025-07-27",
+     "notes": "Discovery only. Lists Jacksonville as opted in. Not an official source."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": true,
+    "locations_checked": [
+     "judolphins.com Name, Image and Likeness page",
+     "judolphins.com Compliance hub and menu",
+     "judolphins.com Current Student Athletes compliance page",
+     "judolphins.com Boosters & Fans compliance page",
+     "judolphins.com Staff Directory (Compliance)",
+     "asunsports.org home and BuzzU release",
+     "Web searches of judolphins.com and ju.edu for House settlement, revenue sharing, collective and brand guidelines"
+    ],
+    "locations_unreachable": [
+     "https://www.herejacksonville.com/ju-unf-ncaa-settlement/ (secondary article on JU and the House settlement, would not open)"
+    ],
+    "notes": "JU publishes an NIL page with guidelines, booster and collective guidance and contacts. The page dates from 2022 and has not been updated for the House settlement."
+   },
+   "school_policy": {
+    "title": "Name, Image and Likeness (JU Athletics)",
+    "summary": "This is the NIL page on the JU athletics site. It covers disclosure through INFLCR, logo and facility approval, agents, banned deal categories, boosters and collectives, and international athletes. It dates from 2022 and cites Florida law and NCAA guidance from before the House settlement.",
+    "policy_status": "outdated",
+    "source_id": "s1",
+    "adopted_on": null
+   },
+   "rules": [
+    {
+     "topic": "disclosure-required",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "JU says athletes must disclose all NIL opportunities in a timely manner and give JU athletics copies of any signed agreements. JU says INFLCR is the tool for disclosure.",
+     "conditions": "JU says this is not an approval process. The page ties the duty to Florida Statute 1006.74, which is from before the House settlement. This page dates from 2022, before the House settlement. Confirm with JU compliance that it still applies.",
+     "citation": "JU Name, Image and Likeness page, NIL Overview and Guidelines",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Disclose every NIL deal to JU athletics and send signed copies.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "NIL Overview and Guidelines",
+       "quote": "Student-athletes must disclose all NIL opportunities in a timely manner and provide JU athletics with copies of any signed agreements. This is not an approval process but a component of the Florida state law.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s1",
+       "locator": "INFLCR",
+       "quote": "INFLCR will provide an easier way for student-athletes to disclose their NIL activities.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-logos-marks",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "JU says athletes who want to use JU logos, word marks or other university intellectual property must first get written approval from JU's Office of Marketing and Communications.",
+     "conditions": "This page dates from 2022, before the House settlement. Confirm with JU compliance that it still applies.",
+     "citation": "JU Name, Image and Likeness page, NIL Overview and Guidelines",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Get written approval before using JU logos or marks.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "NIL Overview and Guidelines",
+       "quote": "Student-athletes who wish to use JU logos, word marks, or other University intellectual property (slogans, etc.) must first receive written approval from JU's Office of Marketing and Communications.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-facilities",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "JU says use of athletic department facilities needs approval in advance. JU mentions location agreements, liability waivers and rental fees.",
+     "conditions": "This page dates from 2022, before the House settlement. Confirm with JU compliance that it still applies.",
+     "citation": "JU Name, Image and Likeness page, NIL Overview and Guidelines",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Get approval before using JU athletic facilities.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "NIL Overview and Guidelines",
+       "quote": "The use of athletic department facilities will require approval in advance (location agreements, including waiver of liability forms and applicable rental fees).",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "prohibited-categories",
+     "scope": "institution",
+     "answer": "no",
+     "summary": "JU says athletes may not sign NIL deals with gambling or sports wagering companies, or with companies tied to nutritional supplements or substances on the NCAA banned list.",
+     "conditions": "This page dates from 2022, before the House settlement. Confirm with JU compliance that it still applies.",
+     "citation": "JU Name, Image and Likeness page, NIL Overview and Guidelines",
+     "quick_status": "NO",
+     "short_answer": "No deals with gambling, supplement or banned-substance companies.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "NIL Overview and Guidelines",
+       "quote": "Student-athletes will not be permitted to enter into NIL agreements with gambling/sports wagering companies or companies associated with nutritional supplements and/or any substances on the NCAA's banned substance list.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "agents",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "JU says athletes may have agents or lawyers advise them on NIL deals. JU says agents must be registered in Florida and lawyers must be in good standing with the Florida bar.",
+     "conditions": "JU says these advisers may not be used for professional playing opportunities. This page dates from 2022, before the House settlement. Confirm with JU compliance that it still applies.",
+     "citation": "JU Name, Image and Likeness page, NIL Overview and Guidelines",
+     "quick_status": "DEPENDS",
+     "short_answer": "Agents and lawyers are allowed for NIL advice, with conditions.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "NIL Overview and Guidelines",
+       "quote": "Student-athletes are permitted to have agents or lawyers to advise them on NIL deals, but still may not engage these individuals for professional playing opportunities.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s1",
+       "locator": "NIL Overview and Guidelines",
+       "quote": "Agents must be registered in the state of Florida and lawyers must be in good standing with the Florida bar.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "contract-length",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "JU says a contract with an agent or consultant, or for any NIL activity, may not last beyond the athlete's time in college sports.",
+     "conditions": "This page dates from 2022, before the House settlement. Confirm with JU compliance that it still applies.",
+     "citation": "JU Name, Image and Likeness page, NIL Overview and Guidelines",
+     "quick_status": "DEPENDS",
+     "short_answer": "NIL and agent contracts must end when college play ends.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "NIL Overview and Guidelines",
+       "quote": "an agent or consultant or for any NIL activity may not extend beyond intercollegiate athletics participation.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "team-activities",
+     "scope": "institution",
+     "answer": "no",
+     "summary": "JU says athletes may not miss class or required JU practice or competition for an NIL activity.",
+     "conditions": "This page dates from 2022, before the House settlement. Confirm with JU compliance that it still applies.",
+     "citation": "JU Name, Image and Likeness page, NIL Overview and Guidelines",
+     "quick_status": "NO",
+     "short_answer": "Do not miss class, practice or games for NIL.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "NIL Overview and Guidelines",
+       "quote": "Student-athletes may not miss class or required JU practice or competition to engage in an NIL activity.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "team-issued-gear",
+     "scope": "institution",
+     "answer": "no",
+     "summary": "JU says athletes may not sell items they received from taking part in JU athletics, such as awards, apparel and equipment.",
+     "conditions": "This page dates from 2022, before the House settlement. Confirm with JU compliance that it still applies.",
+     "citation": "JU Name, Image and Likeness page, NIL Overview and Guidelines",
+     "quick_status": "NO",
+     "short_answer": "Do not sell gear or awards received from JU athletics.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "NIL Overview and Guidelines",
+       "quote": "Student-athletes may not sell any items that he or she has received from his or her participation in JU athletics (participation gifts, awards, apparel, equipment, etc.)",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "boosters",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "JU says booster-owned companies, or companies that employ boosters, may pay an athlete for NIL as long as the deal is not arranged by the university, athletic department, coaches or staff.",
+     "conditions": "This wording reflects 2022 NCAA guidance. This page dates from 2022, before the House settlement. Confirm with JU compliance that it still applies.",
+     "citation": "JU Name, Image and Likeness page, NIL Overview and Guidelines",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Booster companies may do NIL deals if JU did not arrange them (2022 wording).",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "NIL Overview and Guidelines",
+       "quote": "Booster owned companies or companies they are employed by may provide compensation for a student-athlete's name, image, likeness so long as it is not arranged by the University, athletic department, coaches or staff.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "international-athletes",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "JU says international athletes should not enter any NIL agreement without guidance from JU International Student Services.",
+     "conditions": "This page dates from 2022, before the House settlement. Confirm with JU compliance that it still applies.",
+     "citation": "JU Name, Image and Likeness page, NIL Overview and Guidelines",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "International athletes: talk to JU International Student Services first.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "NIL Overview and Guidelines",
+       "quote": "International student-athletes should not enter into any NIL agreements without the guidance from JU International Student Services to guard against any potential immigration issues.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "parent-guardian",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "JU says financial aid questions tied to NIL pay should go to Jacksonville University Student Financial Services, because Pell Grant or need-based aid could be affected.",
+     "conditions": "Closest topic match. This is a financial aid referral, not a parent or guardian rule. This page dates from 2022, before the House settlement. Confirm with JU compliance that it still applies.",
+     "citation": "JU Name, Image and Likeness page, NIL Overview and Guidelines",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Ask JU Student Financial Services how NIL pay affects aid.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "NIL Overview and Guidelines",
+       "quote": "Those questions should be directed to the Jacksonville University Student Financial Services.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "INFLCR",
+     "program_type": "education",
+     "description": "JU says it 'has partnered with INFLCR to assist our student-athletes in education, compliance, disclosure forms, brand awareness and social media content'.",
+     "url": "https://judolphins.com/sports/2022/5/9/name-image-and-likeness.aspx",
+     "source_id": "s1",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "JU Athletics Compliance",
+     "role": "Associate AD / Compliance",
+     "person_name": "Rob Saunders",
+     "phone": "(904) 256-7255",
+     "email": null,
+     "url": "https://judolphins.com/staff-directory/compliance-department/4",
+     "source_id": "s2"
+    },
+    {
+     "office": "JU Athletics Compliance",
+     "role": "Director of Compliance",
+     "person_name": "Daniel Calderon",
+     "phone": "(904) 256-7421",
+     "email": null,
+     "url": "https://judolphins.com/staff-directory/compliance-department/4",
+     "source_id": "s2"
+    },
+    {
+     "office": "JU Office of Marketing and Communications",
+     "role": "Written approval to use JU logos, word marks and other university intellectual property",
+     "person_name": null,
+     "phone": null,
+     "email": null,
+     "url": "https://judolphins.com/sports/2022/5/9/name-image-and-likeness.aspx",
+     "source_id": "s1"
+    },
+    {
+     "office": "JU International Student Services",
+     "role": "Guidance for international athletes before any NIL agreement",
+     "person_name": null,
+     "phone": null,
+     "email": null,
+     "url": "https://judolphins.com/sports/2022/5/9/name-image-and-likeness.aspx",
+     "source_id": "s1"
+    },
+    {
+     "office": "JU Student Financial Services",
+     "role": "Questions on how NIL pay affects financial aid",
+     "person_name": null,
+     "phone": null,
+     "email": null,
+     "url": "https://judolphins.com/sports/2022/5/9/name-image-and-likeness.aspx",
+     "source_id": "s1"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "All NIL opportunities, with copies of any signed agreements",
+    "recipient": "JU athletics (Compliance office)",
+    "deadline_text": "in a timely manner",
+    "platform_name": "INFLCR",
+    "platform_url": "https://dash.inflcr.com/",
+    "form_name": null,
+    "form_url": null,
+    "source_id": "s1",
+    "quote": "Student-athletes must disclose all NIL opportunities in a timely manner and provide JU athletics with copies of any signed agreements."
+   },
+   "important_claims": [
+    "JU's NIL page dates from 2022 and has not been updated for the House settlement. Every JU rule here needs a human check before it is shown as current.",
+    "JU requires written approval from its Office of Marketing and Communications before athletes use JU logos or word marks.",
+    "JU bars NIL deals with gambling, sports wagering, nutritional supplement and banned-substance companies.",
+    "JU names INFLCR as its disclosure tool and asks for copies of signed agreements.",
+    "JU tells international athletes not to sign any NIL deal without guidance from JU International Student Services.",
+    "No official JU statement on House settlement opt-in was found. Only a secondary tracker lists JU as opted in."
+   ],
+   "ambiguities": [
+    "The JU NIL page is dated May 9, 2022 by its URL. It cites Florida Statute 1006.74 and May 10, 2022 NCAA guidance, both from before the House settlement. It is still the NIL page linked in the Compliance menu.",
+    "The page says 'Neither JU nor JU staff members may compensate or arrange compensation' for NIL and that staff 'cannot facilitate NIL conversations or arrangements'. These lines reflect pre-House rules and are not recorded as current rules.",
+    "The page says NIL pay 'must be within fair market value' without saying who checks this.",
+    "The NIL page lists Daniel Calderon as Compliance Coordinator. The staff directory lists him as Director of Compliance. The directory title is used.",
+    "The NIL page also lists Rick Canter (Deputy AD) and Dee Brown (Senior Associate AD for University & Athletics Relations) as resources. Their current roles were not confirmed in the directory, so they are not recorded as contacts.",
+    "The INFLCR link on the page was captured through a summarising tool as https://dash.inflcr.com/. Whether JU still uses INFLCR is not confirmed.",
+    "The JU Current Student Athletes page (read by extraction) also mentions JumpForward for forms."
+   ],
+   "conflicts": [
+    "Title for Daniel Calderon differs between the NIL page (Compliance Coordinator) and the staff directory (Director of Compliance)."
+   ],
+   "manual_review": [
+    "https://judolphins.com/sports/2022/5/9/name-image-and-likeness.aspx : confirm with JU whether this 2022 page is still its NIL policy.",
+    "https://www.herejacksonville.com/ju-unf-ncaa-settlement/ : secondary article titled 'Jacksonville University and UNF Join House v. NCAA Settlement'. Would not open. Check whether it cites an official JU statement.",
+    "https://www.ju.edu/ : find the Office of Marketing and Communications brand or logo approval page. Not located."
+   ],
+   "not_found": [
+    "An official JU statement that it opted in to the House settlement or revenue sharing",
+    "Any JU statement on NIL Go reporting",
+    "A JU-affiliated collective or NIL entity named on official pages",
+    "A JU NIL marketplace or exchange",
+    "A JU brand or licensing page with the logo approval process",
+    "A staff member with NIL in their title"
+   ]
+  }
+ ]
+}

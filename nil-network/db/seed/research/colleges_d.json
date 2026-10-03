@@ -1,0 +1,1311 @@
+{
+ "researched_on": "2026-10-03",
+ "method_note": "Official athletics pages were read as raw page text in a browser tab, with a summarising fetch tool used for discovery. The UNF guide (an image) and the Stetson policy (an embedded Word viewer) were read by eye from the rendered page.",
+ "districts": [],
+ "conferences": [],
+ "schools": [
+  {
+   "slug": "university-of-north-florida",
+   "name": "University of North Florida",
+   "short_name": "North Florida",
+   "institution_type": "college",
+   "sector": "public",
+   "city": "Jacksonville",
+   "county": "Duval County",
+   "street_address": "1 UNF Dr.",
+   "postal_code": "32224",
+   "website_url": "https://www.unf.edu",
+   "athletics_url": "https://unfospreys.com",
+   "athletics_brand": "North Florida Athletics",
+   "division": "NCAA Division I",
+   "conference_slug": "asun",
+   "district_slug": null,
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "mens": [
+     "Baseball",
+     "Basketball",
+     "Cross Country",
+     "Golf",
+     "Soccer",
+     "Tennis",
+     "Track and Field"
+    ],
+    "womens": [
+     "Basketball",
+     "Beach Volleyball",
+     "Cross Country",
+     "Golf",
+     "Soccer",
+     "Softball",
+     "Swimming and Diving",
+     "Tennis",
+     "Track and Field",
+     "Volleyball"
+    ]
+   },
+   "sports_source_id": "s1",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "NIL Fact Sheet (page hosting the Name, Image, Likeness Reference Guide)",
+     "url": "https://unfospreys.com/sports/2023/11/30/nil-fact-sheet-2025-26",
+     "organization": "University of North Florida Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Page body is one image. Image file path is dated 2025/11/3. URL slug says 2025-26. Text was read from the image by eye. Site navigation on this page gave the sport list and the footer address."
+    },
+    {
+     "id": "s2",
+     "title": "NIL Reference Guide image",
+     "url": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/unfospreys.com/images/2025/11/3/NIL_Reference_Guide.png",
+     "organization": "University of North Florida Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2025-11-03",
+     "notes": "Direct image file shown on s1. Date taken from the file path, not from a printed date."
+    },
+    {
+     "id": "s3",
+     "title": "Compliance Corner (Student-Athletes)",
+     "url": "https://unfospreys.com/sports/2007/11/14/complianceathletes",
+     "organization": "University of North Florida Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Undated page. Links to NIL Guidance and Teamworks."
+    },
+    {
+     "id": "s4",
+     "title": "Compliance Corner",
+     "url": "https://unfospreys.com/sports/2007/11/14/compliance",
+     "organization": "University of North Florida Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Lists UNF Compliance Staff with phones and emails. Its NIL Guidance link still points to an older 2021 URL slug."
+    },
+    {
+     "id": "s5",
+     "title": "Compliance Corner (Friends & Alumni)",
+     "url": "https://unfospreys.com/sports/2007/11/14/complianceboosters",
+     "organization": "University of North Florida Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Undated booster guidance page."
+    },
+    {
+     "id": "s6",
+     "title": "North Florida Athletics Opts In To NCAA House Settlement",
+     "url": "https://unfospreys.com/news/2025/7/1/general-north-florida-athletics-announces-decision-to-opt-in-to-house-settlement",
+     "organization": "University of North Florida Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2025-07-01",
+     "notes": ""
+    },
+    {
+     "id": "s7",
+     "title": "North Florida Athletics Launches Osprey Boosters: A New Era of Donor Engagement and Impact",
+     "url": "https://unfospreys.com/news/2025/10/22/unf-athletics-launches-osprey-boosters-a-new-era-of-donor-engagement-and-impact",
+     "organization": "University of North Florida Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2025-10-22",
+     "notes": "Read through a summarising tool only."
+    },
+    {
+     "id": "s8",
+     "title": "What opting into House v. NCAA settlement means for UNF Athletics",
+     "url": "https://unfspinnaker.com/110607/latest/what-opting-into-house-v-ncaa-settlement-means-for-unf-athletics/",
+     "organization": "UNF Spinnaker (student media)",
+     "source_type": "secondary_reporting",
+     "is_primary": false,
+     "published_on": null,
+     "notes": "Discovery only."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": true,
+    "locations_checked": [
+     "NIL Fact Sheet / NIL Reference Guide (unfospreys.com)",
+     "Compliance Corner (Student-Athletes)",
+     "Compliance Corner (main page with staff list)",
+     "Compliance Corner (Friends & Alumni)",
+     "House settlement opt-in news release (July 1, 2025)",
+     "Osprey Boosters launch news release (October 22, 2025)"
+    ],
+    "locations_unreachable": [
+     "UNF Student-Athlete Handbook (www.unf.edu/athletics/student-handbook/) was not opened",
+     "UNF Brand Guidelines / licensing page was not opened"
+    ],
+    "notes": "UNF publishes a one page NIL Reference Guide as an image on its athletics site. It includes a short list of 'Additional UNF NIL Policies'. A longer formal policy document was not opened."
+   },
+   "school_policy": {
+    "title": "Name, Image, Likeness Reference Guide (North Florida Athletics)",
+    "summary": "A one page guide for UNF athletes. It lists general do's and don'ts, what the school may and may not do, six 'Additional UNF NIL Policies', and the NIL tools UNF provides.",
+    "policy_status": "published",
+    "source_id": "s1",
+    "adopted_on": null
+   },
+   "rules": [
+    {
+     "topic": "disclosure-required",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "UNF says its athletes must report all NIL activities to the Athletics Department through NILGo.com.",
+     "conditions": "School-specific: UNF says ALL activities, with no dollar minimum stated on the guide.",
+     "citation": "UNF NIL Reference Guide (2025-26), Additional UNF NIL Policies",
+     "quick_status": "YES",
+     "short_answer": "Report every NIL activity through NIL Go.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "Additional UNF NIL Policies",
+       "quote": "SAs are obligated to report ALL NIL activities to the Athletics Department through NILGo.com.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "agents",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "UNF says athlete agents who represent UNF athletes for NIL must be registered in the State of Florida. UNF says a professional service provider may be used for NIL activities only.",
+     "conditions": null,
+     "citation": "UNF NIL Reference Guide (2025-26)",
+     "quick_status": "DEPENDS",
+     "short_answer": "Agents are allowed for NIL only and must be registered in Florida.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "Additional UNF NIL Policies",
+       "quote": "Athlete agents representing UNF SAs for NIL opportunities must be registered in the State of Florida.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s2",
+       "locator": "General Student-Athlete Guidelines, DO's",
+       "quote": "activities only.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "prohibited-categories",
+     "scope": "institution",
+     "answer": "no",
+     "summary": "UNF lists business types its athletes may not sign NIL agreements with. The list covers gambling and sports wagering, alcohol, tobacco, marijuana, controlled substances, CBD, adult entertainment, and vendors tied to NCAA banned substances.",
+     "conditions": null,
+     "citation": "UNF NIL Reference Guide (2025-26), Additional UNF NIL Policies",
+     "quick_status": "NO",
+     "short_answer": "UNF bans NIL deals in a set list of categories.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "Additional UNF NIL Policies",
+       "quote": "SAs may not enter into agreements with gambling/sports wagering, alcohol, tobacco, marijuana, controlled substances, CBD, adult entertainment, or vendors associated with NCAA banned substances.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-logos-marks",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "UNF says using UNF logos requires written authorization from UNF.",
+     "conditions": "The guide does not name the office that gives the authorization.",
+     "citation": "UNF NIL Reference Guide (2025-26), Additional UNF NIL Policies",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Get written permission from UNF before using its logos.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "Additional UNF NIL Policies",
+       "quote": "Use of UNF logos and/or campus grounds/facilities require written authorization from UNF.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-facilities",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "UNF says using campus grounds or facilities for NIL needs written authorization. UNF says athletes ask through the NIL Facility Request workflow in Teamworks Compliance & Recruiting.",
+     "conditions": null,
+     "citation": "UNF NIL Reference Guide (2025-26) and Compliance Corner (Student-Athletes)",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Ask first through the Teamworks NIL Facility Request workflow.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "Additional UNF NIL Policies",
+       "quote": "Use of UNF logos and/or campus grounds/facilities require written authorization from UNF.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s3",
+       "locator": "Fee for Lesson",
+       "quote": "University facilities may ONLY be used if prior approval is given.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s3",
+       "locator": "Fee for Lesson",
+       "quote": "Any student-athletes requesting to use university facilities can do so through the NIL Facility Request workflow on Teamworks Compliance & Recruiting.",
+       "read_method": "extraction"
+      }
+     ]
+    },
+    {
+     "topic": "team-activities",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "UNF says NIL activities may not conflict with academic or team related activities. The guide also says athletes may not promote NIL activity while on call for required athletic activities.",
+     "conditions": null,
+     "citation": "UNF NIL Reference Guide (2025-26)",
+     "quick_status": "DEPENDS",
+     "short_answer": "NIL work must not clash with class or team time.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "Additional UNF NIL Policies",
+       "quote": "NIL activities may not conflict with academic nor team related activities.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "international-athletes",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "UNF advises international athletes that NIL earnings may hurt their immigration status. UNF tells them to consult counsel and the UNF International Center.",
+     "conditions": null,
+     "citation": "UNF NIL Reference Guide (2025-26) and Compliance Corner (Student-Athletes)",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "International athletes should talk to counsel and the UNF International Center first.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "Additional UNF NIL Policies",
+       "quote": "International SAs are advised that NIL earnings may negatively impact their immigration status and should consult counsel and the UNF International Center regarding NIL opportunities.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s3",
+       "locator": "International student-athletes",
+       "quote": "limits on NIL activity for international student-athletes mean that international student-athletes are also more restricted on fee-for-lesson instruction.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "boosters",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "UNF says athletes can sign NIL agreements with boosters when there is a valid business purpose. UNF tells boosters not to use an athlete to promote a product without an approved NIL agreement in place.",
+     "conditions": "The booster page is undated.",
+     "citation": "UNF NIL Reference Guide (2025-26) and Compliance Corner (Friends & Alumni)",
+     "quick_status": "DEPENDS",
+     "short_answer": "Booster deals need a valid business purpose and an approved NIL agreement.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "General Student-Athlete Guidelines, DO's",
+       "quote": "SAs can enter into NIL agreements with boosters so long as there is a valid business purpose",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s5",
+       "locator": "What boosters may not do",
+       "quote": "promote the sale of any commercial product without an approved NIL",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "appearances-autographs",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "UNF says an athlete who gives paid lessons must disclose it as an NIL activity.",
+     "conditions": "Closest topic match. The rule is about fee-for-lesson instruction.",
+     "citation": "Compliance Corner (Student-Athletes), Fee for Lesson",
+     "quick_status": "DEPENDS",
+     "short_answer": "Paid lessons count as NIL and must be disclosed.",
+     "sources": [
+      {
+       "source_id": "s3",
+       "locator": "Fee for Lesson",
+       "quote": "Any student-athlete wishing to provide fee for lesson instruction must disclose it as an NIL activity.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-payments",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "UNF announced on July 1, 2025 that it opted in to the House v. NCAA settlement terms. UNF's guide also lists entering an endorsement agreement with an athlete as something the school may do.",
+     "conditions": "No revenue sharing amounts or per-sport plan were read on official pages.",
+     "citation": "UNF news release, July 1, 2025",
+     "quick_status": "YES",
+     "short_answer": "UNF says it opted in to the House settlement.",
+     "sources": [
+      {
+       "source_id": "s6",
+       "locator": "First paragraph",
+       "quote": "The University of North Florida and North Florida Athletics have officially opted in to the terms of the House v. NCAA settlement",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s2",
+       "locator": "Institutional Support, Permissible",
+       "quote": "Enter into an endorsement agreement with a student-athlete (SA).",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-staff-involvement",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "UNF's guide lists what the school may do, such as introduce athletes to an NIL entity and share stock photos or video. It also lists what staff may not do, such as provide services other than education unless all UNF students get the same benefit.",
+     "conditions": "The guide frames these as NCAA rules. The UNF-specific part is the reference to UNF's general student body.",
+     "citation": "UNF NIL Reference Guide (2025-26), Institutional Support",
+     "quick_status": "DEPENDS",
+     "short_answer": "UNF staff can help in limited ways.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "Institutional Support, Permissible",
+       "quote": "Provide stock, stored photo/video/graphics to a SA or NIL entity.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s2",
+       "locator": "Institutional Support, Impermissible",
+       "quote": "unless the same benefit is generally available to UNF's students.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "nil-education",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "UNF says it supports athlete NIL with in-person and online educational programming.",
+     "conditions": null,
+     "citation": "UNF NIL Reference Guide (2025-26), UNF Support of Student-Athlete NIL Activity",
+     "quick_status": "YES",
+     "short_answer": "UNF offers NIL education.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "UNF Support of Student-Athlete NIL Activity",
+       "quote": "In-person and online educational programming.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "SWOOP Exchange (Influencer)",
+     "program_type": "marketplace",
+     "description": "UNF says its Influencer agreement provides digital content from UNF Athletics staff and \"an NIL marketplace (SWOOP Exchange) to UNF student-athletes\".",
+     "url": "https://unfospreys.com/sports/2023/11/30/nil-fact-sheet-2025-26",
+     "source_id": "s2",
+     "current": true
+    },
+    {
+     "name": "NOCAP Sports",
+     "program_type": "marketplace",
+     "description": "UNF says its NOCAP Sports agreement gives UNF athletes \"an additional virtual marketplace for NIL opportunities\".",
+     "url": "https://unfospreys.com/sports/2023/11/30/nil-fact-sheet-2025-26",
+     "source_id": "s2",
+     "current": true
+    },
+    {
+     "name": "Athlete's Thread",
+     "program_type": "licensing",
+     "description": "UNF says Athlete's Thread \"carries UNF-branded apparel that is customizable with UNF student-athletes' Name or Image\".",
+     "url": "https://unfospreys.com/sports/2023/11/30/nil-fact-sheet-2025-26",
+     "source_id": "s2",
+     "current": true
+    },
+    {
+     "name": "Influxer",
+     "program_type": "licensing",
+     "description": "UNF says Influxer \"offers student-athletes a personalized store and a variety of customizable merchandise\".",
+     "url": "https://unfospreys.com/sports/2023/11/30/nil-fact-sheet-2025-26",
+     "source_id": "s2",
+     "current": true
+    },
+    {
+     "name": "Osprey Boosters Talent Fund",
+     "program_type": "in_house_unit",
+     "description": "UNF says the Talent Fund lets donors support \"scholarship enhancements and revenue-sharing opportunities for student-athletes\".",
+     "url": "https://unfospreys.com/news/2025/10/22/unf-athletics-launches-osprey-boosters-a-new-era-of-donor-engagement-and-impact",
+     "source_id": "s7",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "UNF Athletics Compliance",
+     "role": "Senior Associate Athletics Director / SWA for Compliance & Administration",
+     "person_name": "Donna Kirk",
+     "phone": "(904) 620-2819",
+     "email": null,
+     "url": "https://unfospreys.com/sports/2007/11/14/compliance",
+     "source_id": "s4"
+    },
+    {
+     "office": "UNF Athletics Compliance",
+     "role": "Associate Athletics Director for Compliance & Administration",
+     "person_name": "Nancy Miller",
+     "phone": "(904) 620-1325",
+     "email": null,
+     "url": "https://unfospreys.com/sports/2007/11/14/compliance",
+     "source_id": "s4"
+    },
+    {
+     "office": "UNF Athletics Compliance",
+     "role": "Compliance Coordinator",
+     "person_name": "Wyatt Wingenroth",
+     "phone": null,
+     "email": null,
+     "url": "https://unfospreys.com/sports/2007/11/14/compliance",
+     "source_id": "s4"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "All NIL activities",
+    "recipient": "UNF Athletics Department",
+    "deadline_text": "No deadline is printed on the UNF guide.",
+    "platform_name": "NIL Go",
+    "platform_url": "https://nilgo.com",
+    "form_name": null,
+    "form_url": null,
+    "source_id": "s2",
+    "quote": "SAs are obligated to report ALL NIL activities to the Athletics Department through NILGo.com."
+   },
+   "important_claims": [
+    "UNF says athletes must report ALL NIL activities through NILGo.com (no dollar minimum on the guide).",
+    "UNF bans NIL deals with gambling/sports wagering, alcohol, tobacco, marijuana, controlled substances, CBD, adult entertainment and vendors tied to NCAA banned substances.",
+    "UNF says logos and campus facilities need written authorization. Facility requests go through a Teamworks NIL Facility Request workflow.",
+    "UNF announced on July 1, 2025 that it opted in to the House settlement.",
+    "UNF lists SWOOP Exchange (Influencer), NOCAP Sports, Athlete's Thread and Influxer as NIL tools.",
+    "Compliance contacts: Donna Kirk, Nancy Miller, Wyatt Wingenroth."
+   ],
+   "ambiguities": [
+    "The NIL Reference Guide is an image with no printed date. The 2025-11-03 date comes from the file path. The page URL carries a 2023/11/30 date and a 2025-26 slug.",
+    "The guide says report through NILGo.com, while the compliance page points facility requests to Teamworks. It is unclear if deals must also be entered in Teamworks.",
+    "The guide says 'Influencer' agreement. This appears to be the Teamworks Influencer product, but the guide does not say so.",
+    "The Compliance Corner pages are undated and may predate the House settlement.",
+    "No dedicated NIL staff member is named. Compliance staff are listed as the general contact."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://unfospreys.com/sports/2023/11/30/nil-fact-sheet-2025-26 : text is inside an image and was read by eye. Check every quote against the image.",
+    "www.unf.edu/athletics/student-handbook/ : UNF Student-Athlete Handbook was not opened. It may hold a longer NIL section.",
+    "https://unfospreys.com/news/2025/10/22/unf-athletics-launches-osprey-boosters-a-new-era-of-donor-engagement-and-impact : read through a summariser only. Confirm the Talent Fund wording."
+   ],
+   "not_found": [
+    "A collective or school-affiliated NIL entity named by UNF. Not located in the public sources reviewed as of October 3, 2026.",
+    "A named NIL staff contact separate from compliance.",
+    "A UNF licensing office contact or NIL logo approval form.",
+    "A disclosure deadline in UNF's own words.",
+    "Revenue sharing amounts or distribution plan.",
+    "Uniform or team-issued gear rule for NIL content."
+   ]
+  },
+  {
+   "slug": "florida-gulf-coast-university",
+   "name": "Florida Gulf Coast University",
+   "short_name": "FGCU",
+   "institution_type": "college",
+   "sector": "public",
+   "city": "Fort Myers",
+   "county": "Lee County",
+   "street_address": "10501 FGCU Blvd. S.",
+   "postal_code": "33965",
+   "website_url": "https://www.fgcu.edu",
+   "athletics_url": "https://fgcuathletics.com",
+   "athletics_brand": "FGCU Athletics",
+   "division": "NCAA Division I",
+   "conference_slug": "asun",
+   "district_slug": null,
+   "nces_id": null,
+   "profile_source_id": "s2",
+   "sports": {
+    "mens": [
+     "Baseball",
+     "Basketball",
+     "Cross Country",
+     "Golf",
+     "Soccer",
+     "Tennis"
+    ],
+    "womens": [
+     "Basketball",
+     "Beach Volleyball",
+     "Cross Country",
+     "Golf",
+     "Soccer",
+     "Softball",
+     "Swimming and Diving",
+     "Tennis",
+     "Volleyball"
+    ]
+   },
+   "sports_source_id": "s2",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "FGCU Name, Image, Likeness",
+     "url": "https://fgcuathletics.com/sports/2021/6/30/fgcu-name-image-likeness.aspx",
+     "organization": "FGCU Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2021-06-30",
+     "notes": "Date is from the URL. No revision date is printed. Page still names ARMS and bars school payments, so parts predate the House settlement."
+    },
+    {
+     "id": "s2",
+     "title": "Compliance",
+     "url": "https://fgcuathletics.com/sports/2014/8/17/compliance.aspx",
+     "organization": "FGCU Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Compliance office address, contacts, and site navigation with sport list."
+    },
+    {
+     "id": "s3",
+     "title": "FGCU partners with Teamworks for improved student-athlete opportunities",
+     "url": "https://fgcuathletics.com/news/2025/5/19/general-fgcu-partners-with-teamworks-for-improved-student-athlete-opportunities.aspx",
+     "organization": "FGCU Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2025-05-19",
+     "notes": ""
+    },
+    {
+     "id": "s4",
+     "title": "NIL collective created to support FGCU student-athletes",
+     "url": "https://fgcuathletics.com/news/2023/9/20/mens-basketball-nil-collective-created-to-support-fgcu-student-athletes.aspx",
+     "organization": "FGCU Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2023-09-20",
+     "notes": "Pre-House settlement announcement."
+    },
+    {
+     "id": "s5",
+     "title": "We're All In! Our Path to Sustained Success",
+     "url": "https://fgcuathletics.com/news/2025/4/22/general-we-re-all-in-our-path-to-sustained-success.aspx",
+     "organization": "FGCU Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2025-04-22",
+     "notes": "Written before final approval of the House settlement."
+    },
+    {
+     "id": "s6",
+     "title": "FGCU opts into NCAA settlement, will share revenue with athletes",
+     "url": "https://www.gulfshorebusiness.com/gb_daily/fgcu-opts-into-ncaa-settlement-will-share-revenue-with-athletes/",
+     "organization": "Gulfshore Business",
+     "source_type": "secondary_reporting",
+     "is_primary": false,
+     "published_on": null,
+     "notes": "Seen in search results only. Page would not load (HTTP 429). Discovery only."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": true,
+    "locations_checked": [
+     "FGCU Name, Image, Likeness page (fgcuathletics.com)",
+     "FGCU Compliance page",
+     "Teamworks partnership news release (May 19, 2025)",
+     "SWFL Flight Crew collective news release (September 20, 2023)",
+     "We're All In! Our Path to Sustained Success (April 22, 2025)"
+    ],
+    "locations_unreachable": [
+     "Gulfshore Business article on FGCU opt-in (HTTP 429)",
+     "FGCU Boosters, Alumni & Fans compliance page was not opened",
+     "FGCU Agents compliance page was not opened"
+    ],
+    "notes": "FGCU publishes an NIL guidance page on its athletics site. It appears to date from 2021 and has not been fully updated for the House settlement."
+   },
+   "school_policy": {
+    "title": "FGCU Name, Image, Likeness",
+    "summary": "A web page of NIL guidance for FGCU athletes. It covers logos and uniforms, facilities, disclosure, agents and attorneys, minors, and international athletes. Parts of it appear to predate the House settlement.",
+    "policy_status": "outdated",
+    "source_id": "s1",
+    "adopted_on": null
+   },
+   "rules": [
+    {
+     "topic": "school-logos-marks",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "FGCU says athletes may use University or athletic department marks and logos only if the rights were secured through an agreement.",
+     "conditions": "The page points to FGCU Athletics Marketing, Corporate Sponsorships, and University Marketing for sponsorship information or an agreement.",
+     "citation": "FGCU Name, Image, Likeness page",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "You need a signed agreement to use FGCU marks or logos.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Body text",
+       "quote": "Student-athletes will only be allowed to use University or athletic department related marks and logos, including all aspects of the uniform, if those rights have been secured through an agreement granting specified rights.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "uniform-in-content",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "FGCU says all aspects of the uniform are covered by the same rule as marks and logos. Rights must be secured through an agreement first.",
+     "conditions": null,
+     "citation": "FGCU Name, Image, Likeness page",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Uniform use in NIL content needs an agreement.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Body text",
+       "quote": "including all aspects of the uniform, if those rights have been secured through an agreement granting specified rights.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-facilities",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "FGCU says using athletic department facilities needs advance approval. This includes location agreements, liability waiver forms and any rental fees, coordinated with the Facility and Operations Department.",
+     "conditions": null,
+     "citation": "FGCU Name, Image, Likeness page",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Get approval before using FGCU athletic facilities.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Body text",
+       "quote": "The use of athletic department facilities will require approval in advance (location agreements, including waiver of liability forms and applicable rental fees).",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s1",
+       "locator": "Body text",
+       "quote": "Rental and waiver of liability agreements will be coordinated with the Facility and Operations Department.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "disclosure-required",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FGCU's page says an athlete who discloses NIL activities must do so no later than 30 days after signing. It says disclosure at FGCU starts in the Name, Image and Likeness Approval workflow in ARMS.",
+     "conditions": "Possibly outdated. FGCU announced a move to Teamworks in May 2025. The page does not mention NIL Go.",
+     "citation": "FGCU Name, Image, Likeness page",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "FGCU's page says disclose within 30 days through ARMS. This may be outdated.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Body text",
+       "quote": "must provide such disclosures not later than 30 days after entering into or signing an agreement.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s1",
+       "locator": "Body text",
+       "quote": "Disclosure at FGCU can be initiated through the Name, Image and Likeness Approval workflow in ARMS.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "agents",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FGCU says athletes may get an agent or lawyer only for NIL and not for future professional contract talks. FGCU says an agent must be licensed in Florida and an attorney must be a member in good standing of The Florida Bar.",
+     "conditions": null,
+     "citation": "FGCU Name, Image, Likeness page",
+     "quick_status": "DEPENDS",
+     "short_answer": "Agents and lawyers are allowed for NIL only.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Body text",
+       "quote": "Student-athletes may secure representation (agent or lawyer), ONLY for Name, Image and Likeness and NOT for future professional athletic contract negotiations.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s1",
+       "locator": "Body text",
+       "quote": "must be a member in good standing of The Florida Bar.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "international-athletes",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "FGCU says international athletes should not enter NIL agreements without guidance from the FGCU International Services Center.",
+     "conditions": null,
+     "citation": "FGCU Name, Image, Likeness page",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "International athletes should go to the International Services Center first.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Body text",
+       "quote": "International student-athletes should not enter into any NIL agreements without the guidance from the Florida Gulf Coast University International Services Center to guard against any potential immigration issues.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "parent-guardian",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FGCU's page says an athlete under 18 must have an NIL contract approved under state statutes 743.08 and 743.09.",
+     "conditions": "Restates state law. Kept because FGCU publishes it as its own guidance.",
+     "citation": "FGCU Name, Image, Likeness page",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Under 18 contracts need approval under the statutes FGCU cites.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Body text",
+       "quote": "A student-athlete under the age of 18 years must have any contract for compensation for her or his name, image, likeness, or persona approved under state statutes 743.08 and 743.09.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "team-activities",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FGCU says it expects NIL opportunities not to conflict with academic or team related activities.",
+     "conditions": null,
+     "citation": "FGCU Name, Image, Likeness page",
+     "quick_status": "DEPENDS",
+     "short_answer": "NIL should not clash with class or team time.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Body text",
+       "quote": "The expectation is that NIL compensation opportunities will not conflict with academic or team related activities.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "collectives",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FGCU's page says FGCU may not give financial, physical or human resources or other indirect financial support to an NIL entity such as a collective. In 2023 FGCU Athletics announced SWFL Flight Crew as a third-party collective.",
+     "conditions": "Both statements predate the House settlement. Current status of the collective was not confirmed.",
+     "citation": "FGCU Name, Image, Likeness page and 2023 news release",
+     "quick_status": "DEPENDS",
+     "short_answer": "FGCU says it cannot fund a collective.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Body text",
+       "quote": "It is not permissible for Florida Gulf Coast to provide financial, physical or human resources or any other form of indirect financial support to an NIL entity (e.g., collective).",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s4",
+       "locator": "Body text",
+       "quote": "SWFL Flight Crew is a third-party B corporation that connects FGCU student-athletes with opportunities to leverage their NIL.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-payments",
+     "scope": "institution",
+     "answer": "not_addressed",
+     "summary": "FGCU's NIL page still says the university, athletic department and staff may not pay an athlete for NIL. An April 2025 FGCU article said the school will take part in the new NCAA model and named revenue sharing as an initiative.",
+     "conditions": "The NIL page text appears outdated. A formal official opt-in announcement was not located.",
+     "citation": "FGCU NIL page; 'We're All In!' article (April 22, 2025)",
+     "quick_status": "NOT_PUBLICLY_SPECIFIED",
+     "short_answer": "FGCU's official pages do not clearly state current school payment rules.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Body text",
+       "quote": "Florida Gulf Coast University, the athletic department, and staff members may not compensate a current or prospective intercollegiate athlete for her or his name, image, likeness",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s5",
+       "locator": "Capitalizing on Change",
+       "quote": "FGCU will be allowed to increase student-athlete scholarships and provide enhanced support to our student-athletes through initiatives such as revenue sharing.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "nil-education",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "FGCU says its Student-Athlete Development staff give financial literacy workshops. It says the Athletics Communications Office helps with brand building and NIL workshops.",
+     "conditions": null,
+     "citation": "FGCU Name, Image, Likeness page",
+     "quick_status": "YES",
+     "short_answer": "FGCU offers NIL and money workshops.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Body text",
+       "quote": "The FGCU Athletics Student-Athlete Development staff will provide student athletes with financial literacy workshops.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "Teamworks Influencer",
+     "program_type": "marketplace",
+     "description": "FGCU said in May 2025 that its Teamworks suite includes \"Influencer, a comprehensive name, image and likeness (NIL) business management solution\".",
+     "url": "https://fgcuathletics.com/news/2025/5/19/general-fgcu-partners-with-teamworks-for-improved-student-athlete-opportunities.aspx",
+     "source_id": "s3",
+     "current": "unknown"
+    },
+    {
+     "name": "SWFL Flight Crew",
+     "program_type": "collective",
+     "description": "FGCU Athletics announced it in September 2023 as \"the first-ever name, image and likeness (NIL) collective for FGCU Athletics\".",
+     "url": "https://fgcuathletics.com/news/2023/9/20/mens-basketball-nil-collective-created-to-support-fgcu-student-athletes.aspx",
+     "source_id": "s4",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "FGCU Athletics Compliance Office",
+     "role": "Assistant Director of Athletics for Compliance. Listed as Key Contact on the NIL page.",
+     "person_name": "Dan Teliski",
+     "phone": "(239) 590-1305",
+     "email": null,
+     "url": "https://fgcuathletics.com/sports/2014/8/17/compliance.aspx",
+     "source_id": "s2"
+    },
+    {
+     "office": "FGCU Athletics Compliance Office",
+     "role": "Compliance Coordinator II",
+     "person_name": "Tayla Young",
+     "phone": null,
+     "email": null,
+     "url": "https://fgcuathletics.com/sports/2014/8/17/compliance.aspx",
+     "source_id": "s2"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "NIL activities and agreements (as described on a page that may be outdated)",
+    "recipient": "FGCU Athletics Compliance",
+    "deadline_text": "not later than 30 days after entering into or signing an agreement",
+    "platform_name": "ARMS (named on the page; FGCU announced Teamworks in May 2025)",
+    "platform_url": null,
+    "form_name": "Name, Image and Likeness Approval workflow",
+    "form_url": null,
+    "source_id": "s1",
+    "quote": "Disclosure at FGCU can be initiated through the Name, Image and Likeness Approval workflow in ARMS."
+   },
+   "important_claims": [
+    "FGCU's NIL page names ARMS as the disclosure system and a 30 day deadline. Check whether Teamworks or NIL Go has replaced this.",
+    "FGCU says marks, logos and all aspects of the uniform need a rights agreement.",
+    "FGCU says athletic facility use needs advance approval, a location agreement, waiver and possible rental fee.",
+    "FGCU says international athletes should not sign NIL deals without International Services Center guidance.",
+    "SWFL Flight Crew was announced as FGCU's collective in 2023. Current status not confirmed.",
+    "FGCU House settlement opt-in was seen only in secondary reporting, not in an official FGCU release."
+   ],
+   "ambiguities": [
+    "The NIL page has a 2021/6/30 URL date and no revision date. It names ARMS and bars school payments, so it likely predates July 2025. Treat as outdated guidance.",
+    "The Teamworks release (May 2025) does not say Teamworks replaced ARMS for NIL disclosure.",
+    "SWFL Flight Crew: the 2023 release calls it a third-party B corporation. No official page read says if it is still active.",
+    "The April 2025 article says FGCU 'will participate in the new era of the NCAA' but does not use the words opt in."
+   ],
+   "conflicts": [
+    "FGCU NIL page says the school 'may not compensate' athletes for NIL, while the April 2025 FGCU article lists revenue sharing as a planned initiative."
+   ],
+   "manual_review": [
+    "https://www.gulfshorebusiness.com/gb_daily/fgcu-opts-into-ncaa-settlement-will-share-revenue-with-athletes/ : would not load. Use only to find an official FGCU opt-in statement.",
+    "https://fgcuathletics.com/sports/2014/8/28/boosterscompliance.aspx : booster page not opened.",
+    "https://fgcuathletics.com/sports/2014/8/28/complianceagents.aspx : agents page not opened.",
+    "https://fgcuathletics.com/documents/2024/9/13/A_Path_For_Sustained_Success.pdf : PDF linked in site menu, not opened. May mention revenue sharing.",
+    "swflflightcrew.com : collective site named in the 2023 release. Not opened. Check if still active."
+   ],
+   "not_found": [
+    "An official FGCU statement that it opted in to the House settlement. Not located in the public sources reviewed as of October 3, 2026.",
+    "Any FGCU statement on NIL Go reporting. Not located in the public sources reviewed as of October 3, 2026.",
+    "Prohibited NIL categories added by FGCU.",
+    "A named NIL staff member separate from compliance.",
+    "A licensing office contact for NIL logo requests (page names departments only).",
+    "Booster-specific NIL guidance."
+   ]
+  },
+  {
+   "slug": "stetson-university",
+   "name": "Stetson University",
+   "short_name": "Stetson",
+   "institution_type": "college",
+   "sector": "private",
+   "city": "DeLand",
+   "county": "Volusia County",
+   "street_address": null,
+   "postal_code": null,
+   "website_url": "https://www.stetson.edu",
+   "athletics_url": "https://gohatters.com",
+   "athletics_brand": "Stetson University Athletics",
+   "division": "NCAA Division I",
+   "conference_slug": "asun",
+   "district_slug": null,
+   "nces_id": null,
+   "profile_source_id": "s3",
+   "sports": {
+    "mens": [
+     "Baseball",
+     "Basketball",
+     "Cross Country",
+     "Football",
+     "Golf",
+     "Rowing",
+     "Soccer",
+     "Tennis"
+    ],
+    "womens": [
+     "Basketball",
+     "Beach Volleyball",
+     "Cross Country",
+     "Golf",
+     "Lacrosse",
+     "Rowing",
+     "Soccer",
+     "Softball",
+     "Tennis",
+     "Volleyball"
+    ]
+   },
+   "sports_source_id": "s3",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Name, Image, and Likeness Policy v.5 (Public)",
+     "url": "https://stetsonuniversity.navexone.com/content/docview/?docid=303&public=true",
+     "organization": "Stetson University (policy library on NAVEX One)",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2025-09-16",
+     "notes": "Six page Word document in an embedded viewer. Status shown: Published. Effective Date shown: September 16, 2025. Only the first screen of page 1 and part of page 3 could be read, by eye from the viewer."
+    },
+    {
+     "id": "s2",
+     "title": "Student-Athlete Handbook",
+     "url": "https://gohatters.com/sports/2023/6/27/student-athlete-handbook.aspx",
+     "organization": "Stetson University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Index page. Its 'Name, Image, Likeness (NIL)' link goes to s1."
+    },
+    {
+     "id": "s3",
+     "title": "Stetson Athletics to Opt In to NCAA House Settlement Beginning in 2026-27",
+     "url": "https://gohatters.com/news/2025/12/18/stetson-athletics-to-opt-in-to-ncaa-house-settlement.aspx",
+     "organization": "Stetson University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2025-12-18",
+     "notes": "Site navigation on this page gave the sport list."
+    },
+    {
+     "id": "s4",
+     "title": "Stetson Athletics Compliance Resource Center",
+     "url": "https://gohatters.com/sports/2013/5/14/207662460.aspx",
+     "organization": "Stetson University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Lists compliance contact. Links a 2019-20 Policies & Procedures Manual. No NIL text."
+    },
+    {
+     "id": "s5",
+     "title": "Stetson Athletics Announces Partnership with Influxer for Student-Athlete NIL Opportunities",
+     "url": "https://gohatters.com/news/2024/10/23/athletic-department-stetson-athletics-announces-partnership-with-influxer-for-student-athlete-nil-opportunities.aspx",
+     "organization": "Stetson University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2024-10-23",
+     "notes": "Pre-House settlement announcement."
+    },
+    {
+     "id": "s6",
+     "title": "Stetson Partners With Affinity For Trademark Licensing Services",
+     "url": "https://gohatters.com/news/2026/4/6/general-stetson-partners-with-affinity-for-trademark-licensing-services.aspx",
+     "organization": "Stetson University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2026-04-06",
+     "notes": ""
+    },
+    {
+     "id": "s7",
+     "title": "A Note from the Director of Athletics",
+     "url": "https://gohatters.com/news/2026/5/6/general-a-note-from-the-director-of-athletics.aspx",
+     "organization": "Stetson University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2026-05-06",
+     "notes": ""
+    },
+    {
+     "id": "s8",
+     "title": "Staff Directory",
+     "url": "https://gohatters.com/staff-directory",
+     "organization": "Stetson University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": ""
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": true,
+    "locations_checked": [
+     "Student-Athlete Handbook index (gohatters.com)",
+     "Name, Image, and Likeness Policy v.5 on Stetson's NAVEX One policy library (partly read)",
+     "Compliance Resource Center",
+     "Compliance pages for Student-Athletes, Boosters, Agents/Advisors and Prospective Student-Athletes (no NIL text found)",
+     "House settlement opt-in news release (December 18, 2025)",
+     "Influxer partnership news release (October 23, 2024)",
+     "Affinity Licensing news release (April 6, 2026)",
+     "A Note from the Director of Athletics (May 6, 2026)",
+     "Staff Directory"
+    ],
+    "locations_unreachable": [
+     "Name, Image, and Likeness Policy v.5: pages 1 (rest), 2, 4, 5 and 6 would not render reliably in the embedded Word viewer and robots.txt blocked the fetch tool",
+     "Stetson Branding Guide PDF (gohatters.com/documents/2023/6/30/Stetson_Hatters_Guide2.0.pdf) was not opened"
+    ],
+    "notes": "Stetson has a published university NIL policy, effective September 16, 2025. Only part of it could be read, so most of its rules are not recorded here."
+   },
+   "school_policy": {
+    "title": "Name, Image, and Likeness Policy",
+    "summary": "A six page Stetson University policy for the DeLand Campus. The Director of Athletics is the responsible executive. The part read covers school NIL agreements with athletes and disclosure of deals to NIL Go.",
+    "policy_status": "published",
+    "source_id": "s1",
+    "adopted_on": "2025-09-16"
+   },
+   "rules": [
+    {
+     "topic": "disclosure-required",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "Stetson's policy says an athlete who is considering a contract or transaction for pay, in money or in kind, for use of their name, image or likeness must disclose it to NIL Go.",
+     "conditions": "The sentence continues past the part of the page that was readable. Any deadline, dollar threshold or second recipient was not read.",
+     "citation": "Stetson University Name, Image, and Likeness Policy v.5, page 3",
+     "quick_status": "YES",
+     "short_answer": "Disclose NIL deals to NIL Go.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Page 3",
+       "quote": "related to the use of their name, image, or likeness must disclose the contract or transaction to NIL",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-payments",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Stetson's policy says the university, or an entity it owns, controls, funds or operates, may enter a written license or endorsement agreement for an athlete's NIL. Stetson also announced it will opt in to the House settlement starting in 2026-27.",
+     "conditions": "The policy limits the agreement to a period not to exceed the athlete's period of eligibility.",
+     "citation": "Stetson University Name, Image, and Likeness Policy v.5, page 3; news release December 18, 2025",
+     "quick_status": "DEPENDS",
+     "short_answer": "Stetson may sign NIL agreements with athletes and opts in to House from 2026-27.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Page 3, item a",
+       "quote": "Enter into a written license and/or endorsement agreement for the use of a student-athlete's name, image or likeness, or other rights",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s3",
+       "locator": "First paragraph",
+       "quote": "Stetson University athletics will formally opt in to the NCAA House settlement beginning with the 2026–27 academic year",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s3",
+       "locator": "Body text",
+       "quote": "Any new scholarships or direct payments to student-athletes will come from contributions and fundraised dollars.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "contract-length",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Stetson's policy says a school agreement for an athlete's NIL may not run longer than the athlete's period of eligibility. If both agree, content made while the athlete is enrolled may keep being used after eligibility ends.",
+     "conditions": "Applies to agreements between Stetson and the athlete.",
+     "citation": "Stetson University Name, Image, and Likeness Policy v.5, page 3, item a",
+     "quick_status": "DEPENDS",
+     "short_answer": "School NIL agreements end with eligibility, with one content exception.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Page 3, item a",
+       "quote": "for a period not to exceed the student- athlete's period of eligibility.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s1",
+       "locator": "Page 3, item a",
+       "quote": "continue the use of such content after the student-athlete's eligibility has expired",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-staff-involvement",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Stetson's policy says the university may act as a marketing agent for an athlete on noninstitutional NIL contracts. It says a parent, guardian, lawyer or other representative may assist the athlete unless the athlete waives that help in writing.",
+     "conditions": null,
+     "citation": "Stetson University Name, Image, and Likeness Policy v.5, page 3, item b",
+     "quick_status": "DEPENDS",
+     "short_answer": "Stetson may act as a marketing agent for outside deals.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Page 3, item b",
+       "quote": "Act as a marketing agent for a student-athlete with respect to noninstitutional name, image or likeness contracts.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s1",
+       "locator": "Page 3, item b",
+       "quote": "unless the student-athlete waives in writing the assistance of a parent, guardian, lawyer, or other competent representative.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-logos-marks",
+     "scope": "institution",
+     "answer": "not_addressed",
+     "summary": "Stetson announced that Affinity Licensing is its exclusive trademark licensing agency from July 1, 2026. The part of the NIL policy that was read does not cover athlete use of Stetson marks.",
+     "conditions": "The unread pages of the NIL policy may cover marks, uniforms and facilities.",
+     "citation": "News release, April 6, 2026",
+     "quick_status": "NOT_PUBLICLY_SPECIFIED",
+     "short_answer": "Logo rules for NIL were not read. Licensing runs through Affinity Licensing.",
+     "sources": [
+      {
+       "source_id": "s6",
+       "locator": "First paragraph",
+       "quote": "Stetson University announced it has partnered with Affinity Licensing for exclusive trademark licensing agency representation effective July 1, 2026.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "Influxer (Stetson NIL Merch)",
+     "program_type": "licensing",
+     "description": "Stetson Athletics said in October 2024 that it partnered with Influxer so fans can \"purchase personalized merchandise\" tied to athletes' NIL.",
+     "url": "https://gohatters.com/news/2024/10/23/athletic-department-stetson-athletics-announces-partnership-with-influxer-for-student-athlete-nil-opportunities.aspx",
+     "source_id": "s5",
+     "current": true
+    },
+    {
+     "name": "Affinity Licensing (trademark licensing agency)",
+     "program_type": "licensing",
+     "description": "Stetson said Affinity Licensing provides \"exclusive trademark licensing agency representation effective July 1, 2026\".",
+     "url": "https://gohatters.com/news/2026/4/6/general-stetson-partners-with-affinity-for-trademark-licensing-services.aspx",
+     "source_id": "s6",
+     "current": true
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Stetson Athletics Compliance Office",
+     "role": "Associate AD for Compliance",
+     "person_name": "Brian Maxey",
+     "phone": "(386) 822-7490",
+     "email": null,
+     "url": "https://gohatters.com/sports/2013/5/14/207662460.aspx",
+     "source_id": "s4"
+    },
+    {
+     "office": "Stetson Athletics",
+     "role": "Director of Athletics. Named as Responsible Executive on the NIL policy.",
+     "person_name": "Dr. Ricky Ray",
+     "phone": null,
+     "email": null,
+     "url": "https://gohatters.com/news/2025/12/18/stetson-athletics-to-opt-in-to-ncaa-house-settlement.aspx",
+     "source_id": "s3"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "A contract or transaction for compensation, payment or in-kind, for use of name, image or likeness",
+    "recipient": "NIL Go (rest of sentence not read)",
+    "deadline_text": "Not read. The sentence continued beyond the readable part of the page.",
+    "platform_name": "NIL Go",
+    "platform_url": null,
+    "form_name": null,
+    "form_url": null,
+    "source_id": "s1",
+    "quote": "related to the use of their name, image, or likeness must disclose the contract or transaction to NIL"
+   },
+   "important_claims": [
+    "Stetson has a published university NIL Policy (v.5), effective September 16, 2025, with the Director of Athletics as responsible executive.",
+    "The policy says athletes must disclose NIL contracts or transactions to NIL Go.",
+    "The policy lets Stetson, or an entity it controls, sign NIL license or endorsement agreements with athletes and act as a marketing agent.",
+    "Stetson announced on December 18, 2025 that it opts in to the House settlement beginning 2026-27.",
+    "Stetson says new scholarships or direct payments will come from contributions and fundraised dollars.",
+    "Affinity Licensing is the exclusive trademark licensing agency from July 1, 2026."
+   ],
+   "ambiguities": [
+    "Only about one page of the six page NIL policy was read. Rules on agents, boosters, logos, facilities, prohibited categories, international athletes and penalties may be in the unread pages.",
+    "The policy viewer showed a last saved time of 07/30/2026, while the effective date is September 16, 2025. The policy may have been revised.",
+    "The policy took effect in September 2025, before Stetson's House opt-in begins in 2026-27. It is unclear if NIL Go disclosure applied to Stetson athletes during 2025-26.",
+    "Quotes from the policy were read by eye from a rendered Word page. One quote keeps a stray space ('student- athlete's') as shown on screen.",
+    "The Compliance Resource Center links a 2019-20 Policies & Procedures Manual, which predates NIL."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://stetsonuniversity.navexone.com/content/docview/?docid=303&public=true : open by hand and read all six pages. This is the main Stetson NIL source and most of it is not captured.",
+    "https://gohatters.com/documents/2023/6/30/Stetson_Hatters_Guide2.0.pdf : Stetson Branding Guide, not opened.",
+    "hattersprime.com and hatterscollectivegroup.com : appeared in search results as Stetson-related collectives. Not opened and not mentioned on official pages read. Check status and any official tie.",
+    "https://gohatters.com/sports/2020/9/14/stetson-athletics-donation-requests.aspx : Donation Requests/Promotional Activities page, not opened."
+   ],
+   "not_found": [
+    "Any mention of a collective on official Stetson pages read. Not located in the public sources reviewed as of October 3, 2026.",
+    "NIL text on the Stetson compliance pages for student-athletes, boosters, agents or prospects.",
+    "A named NIL staff member separate from compliance.",
+    "Facility-use rule for NIL shoots (may be in unread policy pages).",
+    "Prohibited categories and international athlete guidance (may be in unread policy pages).",
+    "Street address printed on a page that was read."
+   ]
+  }
+ ]
+}

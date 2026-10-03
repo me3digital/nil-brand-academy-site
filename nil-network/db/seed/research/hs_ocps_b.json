@@ -1,0 +1,1637 @@
+{
+ "researched_on": "2026-10-03",
+ "method_note": "Official athletics sites block the fetch tool, so they were read as raw page text in a browser tab, including menus and two PDFs. OCPS school pages and some PDFs were read through WebFetch, which summarises; contacts taken that way are noted in each source.",
+ "districts": [],
+ "conferences": [],
+ "schools": [
+  {
+   "slug": "lake-nona-high-school-orlando",
+   "name": "Lake Nona High School",
+   "short_name": "Lake Nona",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Orlando",
+   "county": "Orange County",
+   "street_address": "12500 Narcoossee Rd",
+   "postal_code": "32832",
+   "website_url": "https://lakenonahs.ocps.net/",
+   "athletics_url": "https://www.lakenonaathletics.org/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "unspecified": [
+     "Bowling (coed, girls)",
+     "Cross Country (coed)",
+     "Football",
+     "Girls Golf",
+     "Golf",
+     "Cheerleading",
+     "Swim and Dive (coed)",
+     "Girls Volleyball",
+     "Boys Basketball",
+     "Girls Basketball",
+     "Competitive Cheer",
+     "Powerlifting",
+     "Boys Soccer",
+     "Girls Soccer",
+     "Wrestling (boys)",
+     "Baseball",
+     "Girls Beach Volleyball",
+     "Flag Football",
+     "Boys Lacrosse",
+     "Girls Lacrosse",
+     "Weightlifting",
+     "Softball",
+     "Boys Tennis",
+     "Girls Tennis",
+     "Track (coed)",
+     "Boys Volleyball",
+     "Water Polo (girls listed)"
+    ]
+   },
+   "sports_source_id": "s2",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Lake Nona High - Athletics",
+     "url": "https://lakenonahs.ocps.net/athletics",
+     "organization": "Lake Nona High School (OCPS)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Footer gives address and phone. Read through WebFetch."
+    },
+    {
+     "id": "s2",
+     "title": "Lake Nona High School - Lions Official Athletic Website",
+     "url": "https://www.lakenonaathletics.org/",
+     "organization": "Lake Nona High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Home page, Sports menu (Fall, Winter, Spring) and More menu read raw in browser. The school page lakenonahs.ocps.net/251024_2 redirects here."
+    },
+    {
+     "id": "s3",
+     "title": "Athletic Clearance Forms",
+     "url": "https://www.lakenonaathletics.org/page/572ce351-7391-48f8-8637-71d56e4505d7",
+     "organization": "Lake Nona High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser. Undated; refers to 'EL2 - Physical Form 2025-26'."
+    },
+    {
+     "id": "s4",
+     "title": "Lake Nona High - Athlete Clearance",
+     "url": "https://lakenonahs.ocps.net/251019_2",
+     "organization": "Lake Nona High School (OCPS)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch."
+    },
+    {
+     "id": "s5",
+     "title": "2026-2027 Coaches & Tryouts",
+     "url": "https://www.lakenonaathletics.org/page/sport-tryout-dates-2",
+     "organization": "Lake Nona High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser. Names the athletic director."
+    },
+    {
+     "id": "s6",
+     "title": "FHSAA List of Member Schools 2026-27 (dated 8/28/26)",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "Linked as 'LIST OF MEMBER SCHOOLS' from fhsaa.com/sports/2020/1/30/Membership.aspx. PDF text read raw. Entry reads: 'Lake Nona (Orlando)'."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "lakenonahs.ocps.net/athletics",
+     "lakenonahs.ocps.net/251019_2 (Athlete Clearance)",
+     "lakenonahs.ocps.net/49140_4 (Contact)",
+     "lakenonahs.ocps.net/faculty-staff",
+     "lakenonaathletics.org home page, Sports menu and More menu",
+     "lakenonaathletics.org Athletic Clearance Forms page",
+     "lakenonaathletics.org 2026-2027 Coaches & Tryouts page",
+     "FHSAA member list 2026-27"
+    ],
+    "locations_unreachable": [
+     "Athletic Clearance Packet (Google Drive PDF linked from the athletics home page): https://drive.google.com/file/d/1qSju0oOOtID-CcXGdvKLpU6pN74hCs7h/view",
+     "'Become a Sponsor!' Google Form linked from the athletics home page (not opened; forms are not submitted or edited)",
+     "Staff directory document viewer on lakenonahs.ocps.net/faculty-staff did not load"
+    ],
+    "notes": "School-specific NIL policy: Not located in the public sources reviewed as of October 3, 2026. The athletics site menu holds only a clearance packet and a sponsor form."
+   },
+   "school_policy": null,
+   "rules": [],
+   "programs": [
+    {
+     "name": "Lake Nona Athletics sponsor sign-up ('Become a Sponsor!')",
+     "program_type": "sponsorship_sales",
+     "description": "The Lake Nona athletics home page links a Google Form labeled \"Become a Sponsor!\". It is a business sponsor sign-up for the athletic program, not an athlete NIL program.",
+     "url": "https://www.lakenonaathletics.org/",
+     "source_id": "s2",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Lake Nona High School Athletics",
+     "role": "Athletic director. The tryouts page says to contact him when a coach is listed as TBD.",
+     "person_name": "Brandon Joseph",
+     "phone": null,
+     "email": null,
+     "url": "https://www.lakenonaathletics.org/page/sport-tryout-dates-2",
+     "source_id": "s5"
+    },
+    {
+     "office": "Lake Nona High School athletic clearance",
+     "role": "Contact printed on the school's Athlete Clearance page (title not stated there)",
+     "person_name": "Dana Matz",
+     "phone": null,
+     "email": null,
+     "url": "https://lakenonahs.ocps.net/251019_2",
+     "source_id": "s4"
+    },
+    {
+     "office": "Lake Nona High School main office",
+     "role": "School main line and email",
+     "person_name": null,
+     "phone": "407-956-8300",
+     "email": null,
+     "url": "https://lakenonahs.ocps.net/athletics",
+     "source_id": "s1"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "Lake Nona names Brandon Joseph as athletic director on its 2026-2027 Coaches & Tryouts page. Quote: 'please contact Lake Nona Athletic Director, Brandon Joseph at [email on the official page]'.",
+    "Lake Nona says all athletic eligibility forms are digital and points to athleticclearance.fhsaahome.org. Quote: 'Starting with the 2022-23 school year, ALL Athletic Eligibility Forms will be digital.'",
+    "The clearance forms page lists GA04, EL2, EL07V, EL12 and the OCPS Cardiology Report. It does not list Form GA1.",
+    "Lake Nona (Orlando) appears on the FHSAA member list dated 8/28/26.",
+    "No NIL wording was found on any Lake Nona page opened."
+   ],
+   "ambiguities": [
+    "The Athletic Clearance Forms page is undated and mixes a 2022-23 statement with a 2025-26 physical form label.",
+    "Dana Matz's job title is not printed on the clearance page.",
+    "Sports list comes from the athletics site menu, which mixes coed, boys and girls team labels. An item shown only as 'BV' under Winter was left out."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://drive.google.com/file/d/1qSju0oOOtID-CcXGdvKLpU6pN74hCs7h/view : clearance packet PDF could not be opened; check whether it mentions GA1 or NIL.",
+    "Sponsor Google Form linked as 'Become a Sponsor!' on lakenonaathletics.org: check what sponsors receive and whether athlete images are involved."
+   ],
+   "not_found": [
+    "School-specific NIL policy, guidance or FAQ",
+    "Any school instruction on FHSAA Form GA1 or NIL disclosure (clearance pages name EL2, EL3, ECG and NFHS courses only)",
+    "School rule on using the school name, logo or uniform in NIL content",
+    "Media-credential or commercial-photography rule",
+    "Facility-use rule for NIL shoots",
+    "Athletic handbook or athlete code of conduct"
+   ]
+  },
+  {
+   "slug": "timber-creek-high-school-orlando",
+   "name": "Timber Creek High School",
+   "short_name": "Timber Creek",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Orlando",
+   "county": "Orange County",
+   "street_address": "1001 Avalon Park South Blvd",
+   "postal_code": "32828",
+   "website_url": "https://timbercreekhs.ocps.net/",
+   "athletics_url": "https://www.timbercreekathletics.com/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "mens": [
+     "Bowling",
+     "Cross Country",
+     "Football",
+     "Golf",
+     "Swimming",
+     "Basketball",
+     "Soccer",
+     "Wrestling",
+     "Baseball",
+     "Lacrosse",
+     "Powerlifting",
+     "Tennis",
+     "Track",
+     "Volleyball",
+     "Water Polo"
+    ],
+    "womens": [
+     "Bowling",
+     "Cross Country",
+     "Golf",
+     "Swimming",
+     "Volleyball",
+     "Basketball",
+     "Competitive Cheer",
+     "Powerlifting",
+     "Soccer",
+     "Wrestling",
+     "Beach Volleyball",
+     "Flag Football",
+     "Lacrosse",
+     "Softball",
+     "Tennis",
+     "Track",
+     "Water Polo"
+    ]
+   },
+   "sports_source_id": "s1",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Timber Creek High School - Wolves Official Athletic Website",
+     "url": "https://www.timbercreekathletics.com/",
+     "organization": "Timber Creek High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Footer address, Sports menu and all menu links read raw in browser. Competitive Cheer is listed without a gender label; placed under womens by assumption."
+    },
+    {
+     "id": "s2",
+     "title": "2026-2027 Coaches Contact List",
+     "url": "https://www.timbercreekathletics.com/news/2026-2027-coaches-contact-list",
+     "organization": "Timber Creek High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser."
+    },
+    {
+     "id": "s3",
+     "title": "Athletic Clearance 2026-27",
+     "url": "https://www.timbercreekathletics.com/news/athletic-clearance-2026-27",
+     "organization": "Timber Creek High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser."
+    },
+    {
+     "id": "s4",
+     "title": "Timber Creek High - Athletic Clearance",
+     "url": "https://timbercreekhs.ocps.net/athleticclearance",
+     "organization": "Timber Creek High School (OCPS)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch."
+    },
+    {
+     "id": "s5",
+     "title": "Timber Creek Athletics Booster Sponsorships",
+     "url": "https://www.timbercreekathletics.com/news/timber-creek-athletics-booster-sponsorships",
+     "organization": "Timber Creek High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser. Sponsorship details are in an attachment that was not read."
+    },
+    {
+     "id": "s6",
+     "title": "FHSAA List of Member Schools 2026-27 (dated 8/28/26)",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "Linked as 'LIST OF MEMBER SCHOOLS' from fhsaa.com/sports/2020/1/30/Membership.aspx. PDF text read raw. Entry reads: '^ Timber Creek (Orlando)'."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "timbercreekathletics.com home page and full menu (Athletic Trainers, Athletic Boosters, More, Wolves HQ, Forms/Links)",
+     "2026-2027 Coaches Contact List",
+     "Athletic Clearance 2026-27 news page",
+     "timbercreekhs.ocps.net/athleticclearance",
+     "Timber Creek Athletics Booster Sponsorships page",
+     "Athletic Dept Info | Mission Statement page",
+     "Athletic Facilities page",
+     "FHSAA member list 2026-27"
+    ],
+    "locations_unreachable": [
+     "GA4 Form PDF, Transfer Students PDF, Athletic Events Safety Procedures PDF and Athletic Physical FAQs PDF on sportshub2-uploads.vnn-prod.zone (linked under Forms/Links; not opened)",
+     "Booster sponsorship information attached to the sponsorships news page"
+    ],
+    "notes": "School-specific NIL policy: Not located in the public sources reviewed as of October 3, 2026. The Forms/Links menu has GA4, transfer, insurance and NCAA eligibility documents, with no NIL or GA1 item."
+   },
+   "school_policy": null,
+   "rules": [],
+   "programs": [
+    {
+     "name": "Timber Creek Athletic Boosters sponsorships",
+     "program_type": "sponsorship_sales",
+     "description": "Timber Creek's athletics site invites business sponsors through its booster club: \"Interested in a Sponsorship for our Timber Creek Athletic Boosters?\" It is a booster sponsorship, not an athlete NIL program.",
+     "url": "https://www.timbercreekathletics.com/news/timber-creek-athletics-booster-sponsorships",
+     "source_id": "s5",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Timber Creek High School Athletics",
+     "role": "Athletic Director",
+     "person_name": "Mike Weems",
+     "phone": null,
+     "email": null,
+     "url": "https://www.timbercreekathletics.com/news/2026-2027-coaches-contact-list",
+     "source_id": "s2"
+    },
+    {
+     "office": "Timber Creek High School Athletics",
+     "role": "Asst. Athletic Director",
+     "person_name": "Marc Jackson",
+     "phone": null,
+     "email": null,
+     "url": "https://www.timbercreekathletics.com/news/2026-2027-coaches-contact-list",
+     "source_id": "s2"
+    },
+    {
+     "office": "Timber Creek High School Athletics",
+     "role": "Athletic Business Mgr.",
+     "person_name": "Freddie Cintron",
+     "phone": null,
+     "email": null,
+     "url": "https://www.timbercreekathletics.com/news/2026-2027-coaches-contact-list",
+     "source_id": "s2"
+    },
+    {
+     "office": "Timber Creek High School Athletic Trainers",
+     "role": "Head athletic trainer; handles physical and clearance paperwork",
+     "person_name": "Heather Klein",
+     "phone": null,
+     "email": null,
+     "url": "https://www.timbercreekathletics.com/news/2026-2027-coaches-contact-list",
+     "source_id": "s2"
+    },
+    {
+     "office": "Timber Creek Athletic Boosters",
+     "role": "Booster sponsorship questions",
+     "person_name": null,
+     "phone": null,
+     "email": null,
+     "url": "https://www.timbercreekathletics.com/news/timber-creek-athletics-booster-sponsorships",
+     "source_id": "s5"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "Timber Creek lists 'Athletic Director Mike Weems [email on the official page]' on its 2026-2027 Coaches Contact List.",
+    "Timber Creek says: 'ALL student-athletes MUST be cleared on AthleticClearance.com to participate in any sport at Timber Creek.'",
+    "The coaches list ends with: 'ALL physical paperwork MUST be completed on athleticclearance.fhsaa.org prior to participation.' The menu link itself goes to athleticclearance.fhsaahome.org.",
+    "Booster sponsorship contact is [email on the official page].",
+    "Timber Creek (Orlando) appears on the FHSAA member list dated 8/28/26, with a '^' mark printed just before it.",
+    "No NIL wording was found on any Timber Creek page opened."
+   ],
+   "ambiguities": [
+    "On the FHSAA member list a '^' mark sits between 'The Rock (Gainesville)' and 'Timber Creek (Orlando)'. The list says '^' means a school in its application year. It is not clear which school the mark belongs to.",
+    "Three clearance addresses appear on Timber Creek pages: AthleticClearance.com, athleticclearance.fhsaa.org and athleticclearance.fhsaahome.org.",
+    "Several Forms/Links PDFs are dated 2016 to 2024 in their file paths and may be old."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://sportshub2-uploads.vnn-prod.zone/files/sites/316/2024/05/20094818/Transferstudents.pdf : transfer document, not opened.",
+    "Timber Creek booster sponsorship attachment on the sponsorships news page: check sponsor benefits and any use of athlete images.",
+    "FHSAA member list: confirm what the '^' mark next to Timber Creek means."
+   ],
+   "not_found": [
+    "School-specific NIL policy, guidance or FAQ",
+    "Any school instruction on FHSAA Form GA1 or NIL disclosure (clearance pages name EL2, EL3, ECG and NFHS courses only)",
+    "School rule on using the school name, logo or uniform in NIL content",
+    "Media-credential or commercial-photography rule",
+    "Facility-use rule for NIL shoots",
+    "Athletic handbook or athlete code of conduct"
+   ]
+  },
+  {
+   "slug": "ocoee-high-school-ocoee",
+   "name": "Ocoee High School",
+   "short_name": "Ocoee",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Ocoee",
+   "county": "Orange County",
+   "street_address": "1925 Ocoee Crown Point Pkwy",
+   "postal_code": "34761",
+   "website_url": "https://www.ocoeeathletics.com/",
+   "athletics_url": "https://www.ocoeeathletics.com/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "mens": [
+     "Bowling",
+     "Cross Country",
+     "Football",
+     "Golf",
+     "Swimming",
+     "Basketball",
+     "Soccer",
+     "Wrestling",
+     "Baseball",
+     "Lacrosse",
+     "Powerlifting",
+     "Tennis",
+     "Track",
+     "Volleyball"
+    ],
+    "womens": [
+     "Bowling",
+     "Cross Country",
+     "Golf",
+     "Sideline Cheer",
+     "Swimming",
+     "Volleyball",
+     "Basketball",
+     "Weightlifting",
+     "Soccer",
+     "Wrestling",
+     "Flag Football",
+     "Lacrosse",
+     "Softball",
+     "Tennis",
+     "Track"
+    ]
+   },
+   "sports_source_id": "s1",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Ocoee High School - Knights Official Athletic Website",
+     "url": "https://www.ocoeeathletics.com/",
+     "organization": "Ocoee High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Footer address, Sports menu and full menu links read raw in browser. Competitive Cheer, Dance and Stomp And Shake are also listed with no gender label."
+    },
+    {
+     "id": "s2",
+     "title": "Athletic Department Contacts",
+     "url": "https://www.ocoeeathletics.com/page/69458e66-1bb2-4312-97c0-c248b5ca6f89",
+     "organization": "Ocoee High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser."
+    },
+    {
+     "id": "s3",
+     "title": "2025-2026 Clearance Packet",
+     "url": "https://www.ocoeeathletics.com/page/7eb68f9e-448e-4851-9a4a-7658109039f4",
+     "organization": "Ocoee High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Page links one PDF, '2025-26 Athletic Clearance Paperwork.pdf'. Read raw in browser."
+    },
+    {
+     "id": "s4",
+     "title": "Knight Nation Booster Club",
+     "url": "https://www.ocoeeathletics.com/page/knight-nation-booster-club",
+     "organization": "Ocoee High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser."
+    },
+    {
+     "id": "s5",
+     "title": "2026-27 Physical and ECG Packet",
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/05/18/76c078d1-607a-4dec-88fd-379b935158f3.pdf",
+     "organization": "Ocoee High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "PDF text partly extracted in browser. It is the FHSAA physical evaluation form set."
+    },
+    {
+     "id": "s6",
+     "title": "FHSAA List of Member Schools 2026-27 (dated 8/28/26)",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "Linked as 'LIST OF MEMBER SCHOOLS' from fhsaa.com/sports/2020/1/30/Membership.aspx. PDF text read raw. Entry reads: 'Ocoee'."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "ocoeeathletics.com home page and full menu (Knights HQ, Sports Medicine, Athletic Boosters)",
+     "Athletic Department Contacts",
+     "Athletics Mission Statement",
+     "2025-2026 Clearance Packet page",
+     "Knight Nation and Knight Nation Booster Club pages",
+     "Sports Medicine Staff and Sports Medicine Mission Statement pages",
+     "College Signings and record book pages",
+     "2026-27 Physical and ECG Packet PDF (text search)",
+     "FHSAA member list 2026-27"
+    ],
+    "locations_unreachable": [
+     "Corporate Sponsors PDF (image-based flyer, no readable text): https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/07/23/3648f181-d768-40b1-ac09-3edea252da14.pdf",
+     "Booster Membership PDF (image-based): https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/07/23/8db3544c-dc9c-4b90-8755-be4502fc9832.pdf",
+     "GA4 PDF and NCAA & NAIA Eligibility PDF under Knights HQ (not opened)",
+     "ocoeehs.ocps.net (main school site; fetch was not permitted)"
+    ],
+    "notes": "School-specific NIL policy: Not located in the public sources reviewed as of October 3, 2026. The athletics menu has GA4, eligibility, sports medicine and booster items, with no NIL or GA1 item."
+   },
+   "school_policy": null,
+   "rules": [],
+   "programs": [
+    {
+     "name": "Knight Nation Booster Club (corporate sponsors and memberships)",
+     "program_type": "sponsorship_sales",
+     "description": "Ocoee describes the Knight Nation Booster Club as \"an all-sports organization\" that funds teams through members, donors and business sponsors. It is a booster program, not an athlete NIL program.",
+     "url": "https://www.ocoeeathletics.com/page/knight-nation-booster-club",
+     "source_id": "s4",
+     "current": true
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Ocoee High School Athletics",
+     "role": "Athletic Director",
+     "person_name": "Billy Alderman",
+     "phone": null,
+     "email": null,
+     "url": "https://www.ocoeeathletics.com/page/69458e66-1bb2-4312-97c0-c248b5ca6f89",
+     "source_id": "s2"
+    },
+    {
+     "office": "Ocoee High School Athletics",
+     "role": "Assistant Athletic Director",
+     "person_name": "Russell Williams",
+     "phone": null,
+     "email": null,
+     "url": "https://www.ocoeeathletics.com/page/69458e66-1bb2-4312-97c0-c248b5ca6f89",
+     "source_id": "s2"
+    },
+    {
+     "office": "Ocoee High School Athletics",
+     "role": "Assistant Athletic Director",
+     "person_name": "Cathy Edward-Lee",
+     "phone": null,
+     "email": null,
+     "url": "https://www.ocoeeathletics.com/page/69458e66-1bb2-4312-97c0-c248b5ca6f89",
+     "source_id": "s2"
+    },
+    {
+     "office": "Ocoee High School Sports Medicine",
+     "role": "Head Athletic Trainer",
+     "person_name": "Nashali Melendez-Mulero",
+     "phone": null,
+     "email": null,
+     "url": "https://www.ocoeeathletics.com/page/69458e66-1bb2-4312-97c0-c248b5ca6f89",
+     "source_id": "s2"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "Ocoee lists 'Athletic Director Billy Alderman [email on the official page]' on its Athletic Department Contacts page.",
+    "Ocoee's Sports Medicine menu links 'Athleticclearance.com' to https://athleticclearance.fhsaahome.org/ and a '2026-27 Physical and ECG Packet'.",
+    "The Knight Nation Booster Club page says the club helps fund 'equipment, uniforms, facility improvements, team needs, scholarships, and special projects'.",
+    "Ocoee appears on the FHSAA member list dated 8/28/26.",
+    "No NIL wording was found on any Ocoee page opened."
+   ],
+   "ambiguities": [
+    "The main school website URL was not confirmed. The website_url field holds the athletics site.",
+    "The clearance page found by search is labeled 2025-2026, while the menu now links a 2026-27 packet.",
+    "The assistant athletic director's name is printed 'Cathy Edward-Lee' but the email is 'cathy.edwards-lee'."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/07/23/3648f181-d768-40b1-ac09-3edea252da14.pdf : Corporate Sponsors flyer is image-based. Check sponsor benefits and any athlete or logo terms.",
+    "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2025/08/15/45257644-8829-4014-886f-0e56fa94e07f.pdf : 2025-26 clearance paperwork, not read."
+   ],
+   "not_found": [
+    "School-specific NIL policy, guidance or FAQ",
+    "Any school instruction on FHSAA Form GA1 or NIL disclosure (clearance pages name EL2, EL3, ECG and NFHS courses only)",
+    "School rule on using the school name, logo or uniform in NIL content",
+    "Media-credential or commercial-photography rule",
+    "Facility-use rule for NIL shoots",
+    "Athletic handbook or athlete code of conduct",
+    "Main school website page for athletics"
+   ]
+  },
+  {
+   "slug": "wekiva-high-school-apopka",
+   "name": "Wekiva High School",
+   "short_name": "Wekiva",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Apopka",
+   "county": "Orange County",
+   "street_address": "2501 N Hiawassee Rd",
+   "postal_code": "32703",
+   "website_url": "https://wekivahs.ocps.net/",
+   "athletics_url": "https://www.wekivasports.com/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "mens": [
+     "Bowling",
+     "Cross Country",
+     "Football",
+     "Golf",
+     "Swimming",
+     "Basketball",
+     "Soccer",
+     "Wrestling",
+     "Baseball",
+     "Tennis",
+     "Track",
+     "Volleyball",
+     "Water Polo"
+    ],
+    "womens": [
+     "Bowling",
+     "Cross Country",
+     "Golf",
+     "Swimming",
+     "Volleyball",
+     "Basketball",
+     "Powerlifting",
+     "Soccer",
+     "Wrestling",
+     "Beach Volleyball",
+     "Flag Football",
+     "Lacrosse",
+     "Softball",
+     "Tennis",
+     "Track",
+     "Water Polo"
+    ]
+   },
+   "sports_source_id": "s2",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Wekiva High - Athletics Home",
+     "url": "https://wekivahs.ocps.net/athletics-home",
+     "organization": "Wekiva High School (OCPS)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Page body is empty. Footer gives address and phone. Read through WebFetch and raw in browser."
+    },
+    {
+     "id": "s2",
+     "title": "Wekiva High School - Mustangs Official Athletic Website",
+     "url": "https://www.wekivasports.com/",
+     "organization": "Wekiva High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Footer address and Sports menu read raw in browser. Sideline Cheer is also listed. The site has no other menu pages."
+    },
+    {
+     "id": "s3",
+     "title": "Administration - WekivaMustangs.com",
+     "url": "https://www.wekivamustangs.com/Sport/AD",
+     "organization": "Wekiva High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Shows a Hurricane Milton alert from October 2024, so parts may be stale."
+    },
+    {
+     "id": "s4",
+     "title": "Athletic Clearances (Athletic Clearance Information 2025)",
+     "url": "https://www.wekivamustangs.com/Docs/AthleticClearanceInformation2025.pdf",
+     "organization": "Wekiva High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. File name carries 2025."
+    },
+    {
+     "id": "s5",
+     "title": "Non-Traditional & International Students, Transfers (Special Eligibility Situations)",
+     "url": "https://www.wekivamustangs.com/Docs/SpecialEligibilitySituations.pdf",
+     "organization": "Wekiva High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Undated."
+    },
+    {
+     "id": "s6",
+     "title": "FHSAA List of Member Schools 2026-27 (dated 8/28/26)",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "Linked as 'LIST OF MEMBER SCHOOLS' from fhsaa.com/sports/2020/1/30/Membership.aspx. PDF text read raw. Entry reads: 'Wekiva (Apopka)'."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "wekivahs.ocps.net/athletics-home",
+     "wekivasports.com home page and menus",
+     "wekivamustangs.com home page",
+     "wekivamustangs.com/Sport/AD (Administration)",
+     "Athletic Clearance Information 2025 PDF",
+     "Special Eligibility Situations PDF",
+     "FHSAA member list 2026-27"
+    ],
+    "locations_unreachable": [],
+    "notes": "School-specific NIL policy: Not located in the public sources reviewed as of October 3, 2026. Wekiva's clearance and eligibility documents cover physicals, ECG, transfers and non-traditional students only."
+   },
+   "school_policy": null,
+   "rules": [],
+   "programs": [],
+   "contacts": [
+    {
+     "office": "Wekiva High School Athletics",
+     "role": "Athletic Director",
+     "person_name": "Bobby Biaggi",
+     "phone": "(407) 297-4906",
+     "email": null,
+     "url": "https://www.wekivamustangs.com/Sport/AD",
+     "source_id": "s3"
+    },
+    {
+     "office": "Wekiva High School Athletics",
+     "role": "Head Athletic Trainer; clearance paperwork",
+     "person_name": "Madeline Leazard",
+     "phone": null,
+     "email": null,
+     "url": "https://www.wekivamustangs.com/Docs/AthleticClearanceInformation2025.pdf",
+     "source_id": "s4"
+    },
+    {
+     "office": "Wekiva High School Athletics",
+     "role": "Sports Information Director",
+     "person_name": "Mark Bartschi",
+     "phone": null,
+     "email": null,
+     "url": "https://www.wekivamustangs.com/Sport/AD",
+     "source_id": "s3"
+    },
+    {
+     "office": "Wekiva High School main office",
+     "role": "School main line and email",
+     "person_name": null,
+     "phone": "407-297-4900",
+     "email": null,
+     "url": "https://wekivahs.ocps.net/athletics-home",
+     "source_id": "s1"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "Wekiva's athletics pages name Bobby Biaggi as Athletic Director with the email [email on the official page].",
+    "Wekiva's clearance document says all clearances are completed online at https://athleticclearance.fhsaahome.org.",
+    "Wekiva's special eligibility document says: 'If you previously attended another high school during the same school year, Wekiva will need to complete FHSAA Form EL6'.",
+    "Wekiva has two athletics sites: wekivasports.com and wekivamustangs.com.",
+    "Wekiva (Apopka) appears on the FHSAA member list dated 8/28/26.",
+    "No NIL wording was found on any Wekiva page opened."
+   ],
+   "ambiguities": [
+    "Two athletics sites exist. wekivasports.com calls itself the official athletic website but has no staff or forms. wekivamustangs.com holds the staff and forms but shows 2024 and 2025 content. The school site links to neither.",
+    "Contact details come from 2025 documents and may have changed for 2026-27.",
+    "The athletics office phone (407) 297-4906 is printed in the PDFs and was read through a summarising tool."
+   ],
+   "conflicts": [
+    "The school site lists the main phone as 407-297-4900. The athletics PDFs list (407) 297-4906. These are likely different lines."
+   ],
+   "manual_review": [
+    "https://www.wekivamustangs.com/Sport/AD : confirm the athletic director is still current for 2026-27.",
+    "https://www.wekivamustangs.com/ : check for a sponsors or boosters page; the menu was not visible to the reading tool."
+   ],
+   "not_found": [
+    "School-specific NIL policy, guidance or FAQ",
+    "Any school instruction on FHSAA Form GA1 or NIL disclosure (clearance pages name EL2, EL3, ECG and NFHS courses only)",
+    "School rule on using the school name, logo or uniform in NIL content",
+    "Media-credential or commercial-photography rule",
+    "Facility-use rule for NIL shoots",
+    "Athletic handbook or athlete code of conduct",
+    "Sponsorship or booster page"
+   ]
+  },
+  {
+   "slug": "windermere-high-school-windermere",
+   "name": "Windermere High School",
+   "short_name": "Windermere",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Windermere",
+   "county": "Orange County",
+   "street_address": "5523 Winter Garden Vineland Rd",
+   "postal_code": "34786",
+   "website_url": "https://windermerehs.ocps.net/",
+   "athletics_url": "https://www.windermereathletics.com/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "mens": [
+     "Bowling",
+     "Cross Country",
+     "Football",
+     "Golf",
+     "Swimming",
+     "Basketball",
+     "Soccer",
+     "Wrestling",
+     "Baseball",
+     "Lacrosse",
+     "Powerlifting",
+     "Tennis",
+     "Track",
+     "Volleyball",
+     "Water Polo"
+    ],
+    "womens": [
+     "Bowling",
+     "Cross Country",
+     "Golf",
+     "Swimming",
+     "Volleyball",
+     "Basketball",
+     "Powerlifting",
+     "Soccer",
+     "Wrestling",
+     "Beach Volleyball",
+     "Flag Football",
+     "Lacrosse",
+     "Softball",
+     "Tennis",
+     "Track",
+     "Water Polo"
+    ]
+   },
+   "sports_source_id": "s2",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Windermere High - Home",
+     "url": "https://windermerehs.ocps.net/",
+     "organization": "Windermere High School (OCPS)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Footer address, phone and email. Read through WebFetch."
+    },
+    {
+     "id": "s2",
+     "title": "Windermere High School - Wolverines Official Athletic Website",
+     "url": "https://www.windermereathletics.com/",
+     "organization": "Windermere High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Footer address, Sports menu and full menu links read raw in browser. Sideline Cheer, Competitive Cheer and E-Sports are also listed."
+    },
+    {
+     "id": "s3",
+     "title": "Coaches Directory",
+     "url": "https://www.windermereathletics.com/page/wolverines-hq/windermere-coaching-staff",
+     "organization": "Windermere High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser."
+    },
+    {
+     "id": "s4",
+     "title": "Annual Sports Physical Forms",
+     "url": "https://www.windermereathletics.com/page/required-annual-sports-physical-forms",
+     "organization": "Windermere High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser."
+    },
+    {
+     "id": "s5",
+     "title": "Windermere High School Online Athletic Clearance",
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/03/05/dab08a06-c098-455c-a102-0a18ceea255c.pdf",
+     "organization": "Windermere High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": "2026-03-05",
+     "notes": "Read through WebFetch. Instructions select school year 2025-2026. A newer version dated 2026-08-07 is linked in the menu and could not be read."
+    },
+    {
+     "id": "s6",
+     "title": "Windermere High School Department of Athletics Code of Conduct 2021-22 (linked as 'Student-Athlete Handbook')",
+     "url": "https://sportshub2-uploads.vnn-prod.zone/files/sites/2230/2021/07/29150836/WHS-Code-of-Conduct-for-Student-Athletes.pdf",
+     "organization": "Windermere High School Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2021-07-29",
+     "notes": "PDF text read raw in browser. Dated 2021-22, before FHSAA allowed NIL."
+    },
+    {
+     "id": "s7",
+     "title": "Sponsoring Windermere Athletics",
+     "url": "https://www.windermereathletics.com/page/sponsoring-windermere-athletics",
+     "organization": "Windermere High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser. Links '26-27 Sponsorship Forms.pdf', which was not read."
+    },
+    {
+     "id": "s8",
+     "title": "FHSAA List of Member Schools 2026-27 (dated 8/28/26)",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "Linked as 'LIST OF MEMBER SCHOOLS' from fhsaa.com/sports/2020/1/30/Membership.aspx. PDF text read raw. Entry reads: 'Windermere'."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "windermerehs.ocps.net home page",
+     "windermereathletics.com home page and full menu",
+     "Coaches Directory",
+     "Annual Sports Physical Forms",
+     "Online Athletic Clearance instructions PDF (2026-03-05)",
+     "Student-Athlete Handbook / Code of Conduct 2021-22 PDF (full text search)",
+     "Sponsoring Windermere Athletics",
+     "Turf the Field, Letterman Jacket, Sports Medicine Team, Concussion Policy, Lightning Policy, Insurance, Non-Traditional Students and NCAA Information pages (keyword search)",
+     "FHSAA member list 2026-27"
+    ],
+    "locations_unreachable": [
+     "Athletic Clearance Instructions PDF dated 2026-08-07 (image-based): https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/08/07/3acd8fc9-160b-4919-bc14-9ba9d1a53d0e.pdf",
+     "26-27 Sponsorship Forms.pdf linked on the sponsoring page"
+    ],
+    "notes": "School-specific NIL policy: Not located in the public sources reviewed as of October 3, 2026. The only handbook found is a 2021-22 athlete code of conduct with no NIL, sponsorship or logo section."
+   },
+   "school_policy": {
+    "title": "Windermere High School Department of Athletics Code of Conduct 2021-22",
+    "summary": "Windermere's athletics site links this as the Student-Athlete Handbook. It covers attendance, conduct, social media behavior, uniforms and equipment, travel and injuries. It is dated 2021-22 and does not mention NIL, sponsorships or use of the school logo.",
+    "policy_status": "outdated",
+    "source_id": "s6",
+    "adopted_on": null
+   },
+   "rules": [],
+   "programs": [
+    {
+     "name": "Windermere Athletics Boosters sponsorships",
+     "program_type": "sponsorship_sales",
+     "description": "Windermere's athletics site invites community sponsors through the Windermere Athletics Boosters and links a file named \"26-27 Sponsorship Forms.pdf\". It is a booster sponsorship, not an athlete NIL program.",
+     "url": "https://www.windermereathletics.com/page/sponsoring-windermere-athletics",
+     "source_id": "s7",
+     "current": true
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Windermere High School Athletics",
+     "role": "Athletic Director",
+     "person_name": "Jeremy Campbell",
+     "phone": null,
+     "email": null,
+     "url": "https://www.windermereathletics.com/page/wolverines-hq/windermere-coaching-staff",
+     "source_id": "s3"
+    },
+    {
+     "office": "Windermere High School Athletics",
+     "role": "Assistant AD",
+     "person_name": "Deanna Naffziger",
+     "phone": null,
+     "email": null,
+     "url": "https://www.windermereathletics.com/page/wolverines-hq/windermere-coaching-staff",
+     "source_id": "s3"
+    },
+    {
+     "office": "Windermere High School Athletics",
+     "role": "Assistant AD",
+     "person_name": "Mark Griseck",
+     "phone": null,
+     "email": null,
+     "url": "https://www.windermereathletics.com/page/wolverines-hq/windermere-coaching-staff",
+     "source_id": "s3"
+    },
+    {
+     "office": "Windermere High School Sports Medicine",
+     "role": "Clearance questions (email printed in the clearance instructions; name and title not stated)",
+     "person_name": null,
+     "phone": null,
+     "email": null,
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/03/05/dab08a06-c098-455c-a102-0a18ceea255c.pdf",
+     "source_id": "s5"
+    },
+    {
+     "office": "Windermere High School main office",
+     "role": "School main line and email",
+     "person_name": null,
+     "phone": "407-347-0980",
+     "email": null,
+     "url": "https://windermerehs.ocps.net/",
+     "source_id": "s1"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "Windermere lists 'Athletic Director - Jeremy Campbell' with [email on the official page] on its Coaches Directory.",
+    "Windermere says: 'The 2026-2027 clearance is now open. athleticclearance.com is now homecampus.com.'",
+    "Windermere asks families to 'allow 2-3 business days for clearance reviews'.",
+    "The linked Student-Athlete Handbook is the 2021-22 Code of Conduct. It has a Social Media section and a Uniforms/Equipment section but nothing on NIL.",
+    "Windermere appears on the FHSAA member list dated 8/28/26.",
+    "No NIL wording was found on any Windermere page opened."
+   ],
+   "ambiguities": [
+    "The Student-Athlete Handbook is dated 2021-22. It predates FHSAA NIL rules and may not be the version in use.",
+    "The clearance instructions read (dated 2026-03-05) refer to school year 2025-2026 and to AthleticClearance.com. The current page says the platform is now homecampus.com.",
+    "The clearance email [email on the official page] was read through a summarising tool and has no name or title beside it.",
+    "Items 'Unified', 'Swimming' and 'District' in the sports menu were left out because their meaning is unclear."
+   ],
+   "conflicts": [
+    "Clearance platform name differs: the 2026-03-05 PDF says 'Visit AthleticClearance.com', and the Annual Sports Physical Forms page says 'athleticclearance.com is now homecampus.com'."
+   ],
+   "manual_review": [
+    "https://sportshub2-uploads.vnn-prod.zone/files/sites/2230/2021/07/29150836/WHS-Code-of-Conduct-for-Student-Athletes.pdf : confirm whether a newer athlete handbook exists.",
+    "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/08/07/3acd8fc9-160b-4919-bc14-9ba9d1a53d0e.pdf : current clearance instructions, image-based; check for GA1 or NIL wording.",
+    "26-27 Sponsorship Forms.pdf on https://www.windermereathletics.com/page/sponsoring-windermere-athletics : check sponsor benefits and any athlete or logo terms."
+   ],
+   "not_found": [
+    "School-specific NIL policy, guidance or FAQ",
+    "Any school instruction on FHSAA Form GA1 or NIL disclosure (clearance pages name EL2, EL3, ECG and NFHS courses only)",
+    "School rule on using the school name, logo or uniform in NIL content",
+    "Media-credential or commercial-photography rule",
+    "Facility-use rule for NIL shoots",
+    "Current (2024 or later) athletic handbook"
+   ]
+  },
+  {
+   "slug": "colonial-high-school-orlando",
+   "name": "Colonial High School",
+   "short_name": "Colonial",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Orlando",
+   "county": "Orange County",
+   "street_address": "6100 Oleander Dr",
+   "postal_code": "32807",
+   "website_url": "https://www.grenadierathletics.com/",
+   "athletics_url": "https://www.grenadierathletics.com/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "mens": [
+     "Bowling",
+     "Cross Country",
+     "Football",
+     "Golf",
+     "Swimming",
+     "Basketball",
+     "Soccer",
+     "Wrestling",
+     "Baseball",
+     "Lacrosse",
+     "Weightlifting",
+     "Tennis",
+     "Track",
+     "Volleyball",
+     "Water Polo"
+    ],
+    "womens": [
+     "Bowling",
+     "Cross Country",
+     "Golf",
+     "Swimming",
+     "Volleyball",
+     "Basketball",
+     "Weightlifting",
+     "Soccer",
+     "Wrestling",
+     "Flag Football",
+     "Lacrosse",
+     "Softball",
+     "Tennis",
+     "Track",
+     "Water Polo"
+    ]
+   },
+   "sports_source_id": "s1",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Colonial High School - Grenadiers Official Athletic Website",
+     "url": "https://www.grenadierathletics.com/",
+     "organization": "Colonial High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Footer address, Sports menu and full menu links read raw in browser. Competitive Cheer is also listed. Football, Baseball, Softball and Flag Football have no gender label and were placed by usual practice."
+    },
+    {
+     "id": "s2",
+     "title": "Athletic Department Contact",
+     "url": "https://www.grenadierathletics.com/page/athletic-department-contact",
+     "organization": "Colonial High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser."
+    },
+    {
+     "id": "s3",
+     "title": "Athletic Clearance and Information",
+     "url": "https://www.grenadierathletics.com/page/athletic-clearance-and-information",
+     "organization": "Colonial High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser."
+    },
+    {
+     "id": "s4",
+     "title": "Thank you Sponsors!",
+     "url": "https://www.grenadierathletics.com/page/thank-you-sponsors",
+     "organization": "Colonial High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser."
+    },
+    {
+     "id": "s5",
+     "title": "Athletic Facility Locations",
+     "url": "https://www.grenadierathletics.com/page/athletic-facility-locations",
+     "organization": "Colonial High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser. Directions only."
+    },
+    {
+     "id": "s6",
+     "title": "FHSAA List of Member Schools 2026-27 (dated 8/28/26)",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "Linked as 'LIST OF MEMBER SCHOOLS' from fhsaa.com/sports/2020/1/30/Membership.aspx. PDF text read raw. Entry reads: 'Colonial (Orlando)'."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "grenadierathletics.com home page and full menu",
+     "Athletic Department Contact",
+     "Athletic Clearance and Information",
+     "Sponsorships page (empty body)",
+     "Thank you Sponsors! page",
+     "Athletic Facility Locations",
+     "Event Tickets, Coach Directory and Coach Clearance pages",
+     "FHSAA member list 2026-27"
+    ],
+    "locations_unreachable": [
+     "Athletic Clearance PDF (image-based): https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/05/29/ba8e17dc-c1ec-4aa1-9c85-40ee37a9b189.pdf",
+     "Required Forms PDF (image-based): https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/05/29/eba3f595-3058-4b4e-924e-eb901400d9c9.pdf",
+     "Required Courses PDF: https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/05/29/69242133-fec3-49c3-a497-74b20af873dd.pdf",
+     "colonialhs.ocps.net (main school site; fetch was not permitted)"
+    ],
+    "notes": "School-specific NIL policy: Not located in the public sources reviewed as of October 3, 2026. Colonial's clearance page names EL2, EL3 and ECG only."
+   },
+   "school_policy": null,
+   "rules": [],
+   "programs": [
+    {
+     "name": "Colonial Athletics sponsorships",
+     "program_type": "sponsorship_sales",
+     "description": "Colonial's athletics site has a 'Sponsorships' page with no text and a 'Thank you Sponsors!' page that thanks a local business for sponsoring the school. It is school sponsorship, not an athlete NIL program.",
+     "url": "https://www.grenadierathletics.com/page/sponsorships",
+     "source_id": "s4",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Colonial High School Athletics",
+     "role": "Athletic Director",
+     "person_name": "Joseph Teti",
+     "phone": "407-482-6300 ext 6026352",
+     "email": null,
+     "url": "https://www.grenadierathletics.com/page/athletic-department-contact",
+     "source_id": "s2"
+    },
+    {
+     "office": "Colonial High School Athletics",
+     "role": "Athletic Business Manager",
+     "person_name": "Andrew Pitts",
+     "phone": null,
+     "email": null,
+     "url": "https://www.grenadierathletics.com/page/athletic-department-contact",
+     "source_id": "s2"
+    },
+    {
+     "office": "Colonial High School Athletics",
+     "role": "Assistant Athletic Director",
+     "person_name": "Jana Adams",
+     "phone": null,
+     "email": null,
+     "url": "https://www.grenadierathletics.com/page/athletic-department-contact",
+     "source_id": "s2"
+    },
+    {
+     "office": "Colonial High School Athletics",
+     "role": "Athletic Trainer",
+     "person_name": "Sarah Combs",
+     "phone": null,
+     "email": null,
+     "url": "https://www.grenadierathletics.com/page/athletic-department-contact",
+     "source_id": "s2"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "Colonial lists 'Athletic Director Joseph Teti, M. Ed., CMAA' with [email on the official page] and 407-482-6300 ext 6026352.",
+    "Colonial says: 'To participate in any of our athletic programs, an athlete must be cleared through AthleticClearance.com.'",
+    "Colonial says the process 'includes an EL2 (physical), EL3 (student and parent signature section), and an ECG'. Form GA1 is not named.",
+    "Colonial (Orlando) appears on the FHSAA member list dated 8/28/26.",
+    "No NIL wording was found on any Colonial page opened."
+   ],
+   "ambiguities": [
+    "The main school website URL was not confirmed. The website_url field holds the athletics site.",
+    "The Sponsorships page has a title and no body text.",
+    "The Required Forms PDF may list more forms than the clearance page names. It could not be read."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/05/29/eba3f595-3058-4b4e-924e-eb901400d9c9.pdf : Required Forms flyer, image-based; check for GA1 or NIL wording.",
+    "https://www.grenadierathletics.com/page/sponsorships : empty page; check whether a sponsor packet is attached."
+   ],
+   "not_found": [
+    "School-specific NIL policy, guidance or FAQ",
+    "Any school instruction on FHSAA Form GA1 or NIL disclosure (clearance pages name EL2, EL3, ECG and NFHS courses only)",
+    "School rule on using the school name, logo or uniform in NIL content",
+    "Media-credential or commercial-photography rule",
+    "Facility-use rule for NIL shoots",
+    "Athletic handbook or athlete code of conduct",
+    "Main school website page for athletics"
+   ]
+  },
+  {
+   "slug": "maynard-evans-high-school-orlando",
+   "name": "Maynard Evans High School",
+   "short_name": "Evans",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Orlando",
+   "county": "Orange County",
+   "street_address": "4949 Silver Star Rd",
+   "postal_code": "32808",
+   "website_url": "https://evanshs.ocps.net/",
+   "athletics_url": "https://www.evansathletics.com/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "mens": [
+     "Bowling",
+     "Cross Country",
+     "Football",
+     "Swimming",
+     "Basketball",
+     "Soccer",
+     "Wrestling",
+     "Baseball",
+     "Lacrosse",
+     "Tennis",
+     "Track & Field",
+     "Volleyball"
+    ],
+    "womens": [
+     "Cross Country",
+     "Golf",
+     "Swimming",
+     "Volleyball",
+     "Basketball",
+     "Soccer",
+     "Wrestling",
+     "Flag Football",
+     "Lacrosse",
+     "Softball",
+     "Tennis",
+     "Track & Field"
+    ]
+   },
+   "sports_source_id": "s2",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Evans High - Athletics Home",
+     "url": "https://evanshs.ocps.net/athletics-home",
+     "organization": "Evans High School (OCPS)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Page body is empty. Footer gives address, phone and email. Read raw in browser."
+    },
+    {
+     "id": "s2",
+     "title": "Maynard Evans High School - Trojans Official Athletic Website",
+     "url": "https://www.evansathletics.com/",
+     "organization": "Maynard Evans High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Footer address, Sports menu and menu links read raw in browser. Competitive Cheer is also listed. Football, Baseball, Softball, Flag Football and Volleyball (fall) have no gender label and were placed by usual practice."
+    },
+    {
+     "id": "s3",
+     "title": "Athletic Department Information",
+     "url": "https://www.evansathletics.com/page/athletic-department-information",
+     "organization": "Maynard Evans High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser. An unsigned message from the Director of Athletics."
+    },
+    {
+     "id": "s4",
+     "title": "EHS Athletic Clearance Information",
+     "url": "https://www.evansathletics.com/page/ehs-athletic-clearance-information",
+     "organization": "Maynard Evans High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read raw in browser."
+    },
+    {
+     "id": "s5",
+     "title": "FHSAA List of Member Schools 2026-27 (dated 8/28/26)",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "Linked as 'LIST OF MEMBER SCHOOLS' from fhsaa.com/sports/2020/1/30/Membership.aspx. PDF text read raw. Entry reads: 'Evans (Orlando)'."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "evanshs.ocps.net/athletics-home",
+     "evansathletics.com home page and full menu",
+     "Athletic Department Information",
+     "Head Coaches page (no text content)",
+     "EHS Athletic Clearance Information",
+     "FHSAA member list 2026-27"
+    ],
+    "locations_unreachable": [
+     "evanshs.ocps.net/Athletics returned an error to the fetch tool",
+     "Clearance upload directions linked from the clearance page (tinyurl links, not opened)"
+    ],
+    "notes": "School-specific NIL policy: Not located in the public sources reviewed as of October 3, 2026. The athletics site has only department information, coaches and clearance pages."
+   },
+   "school_policy": null,
+   "rules": [],
+   "programs": [],
+   "contacts": [
+    {
+     "office": "Maynard Evans High School Sports Medicine",
+     "role": "Head Athletic Trainer; clearance questions",
+     "person_name": "Christopher McCombs",
+     "phone": "407-522-3422",
+     "email": null,
+     "url": "https://www.evansathletics.com/page/ehs-athletic-clearance-information",
+     "source_id": "s4"
+    },
+    {
+     "office": "Evans High School main office",
+     "role": "School main line and email",
+     "person_name": null,
+     "phone": "407-522-3400",
+     "email": null,
+     "url": "https://evanshs.ocps.net/athletics-home",
+     "source_id": "s1"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "Evans says: 'Athletic Clearance for the 2026-27 school year is open.' and points families to athleticclearance.com.",
+    "Evans says: 'No paper documents will be turned into the athletic department.'",
+    "Evans names 'the Head Athletic Trainer, Mr. Christopher McCombs' as the clearance contact, with phone 407-522-3422.",
+    "The athletic director's name is not printed on the Evans pages opened.",
+    "Evans (Orlando) appears on the FHSAA member list dated 8/28/26.",
+    "No NIL wording was found on any Evans page opened."
+   ],
+   "ambiguities": [
+    "The Athletic Department Information page is a message 'From the Director of Athletics' with no name on it.",
+    "The Head Coaches page showed no readable text.",
+    "The clearance page links an EL2 form labeled 'Physical2025-26' while describing 2026-27 clearance."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://www.evansathletics.com/page/head-coaches : open by hand; staff may be shown as an image.",
+    "https://sites.google.com/view/mehsleadership/home : school leadership site found in search, not opened; may name the athletic director."
+   ],
+   "not_found": [
+    "School-specific NIL policy, guidance or FAQ",
+    "Any school instruction on FHSAA Form GA1 or NIL disclosure (clearance pages name EL2, EL3, ECG and NFHS courses only)",
+    "School rule on using the school name, logo or uniform in NIL content",
+    "Media-credential or commercial-photography rule",
+    "Facility-use rule for NIL shoots",
+    "Athletic director name and contact",
+    "Athletic handbook or athlete code of conduct",
+    "Sponsorship or booster page"
+   ]
+  },
+  {
+   "slug": "oak-ridge-high-school-orlando",
+   "name": "Oak Ridge High School",
+   "short_name": "Oak Ridge",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Orlando",
+   "county": "Orange County",
+   "street_address": "700 W Oak Ridge Rd",
+   "postal_code": "32809",
+   "website_url": "https://oakridgehs.ocps.net/",
+   "athletics_url": "https://www.gooakridgeathletics.com/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "mens": [
+     "Bowling",
+     "Cross Country",
+     "Football",
+     "Golf",
+     "Swimming",
+     "Basketball",
+     "Soccer",
+     "Wrestling",
+     "Baseball",
+     "Powerlifting",
+     "Tennis",
+     "Volleyball"
+    ],
+    "womens": [
+     "Bowling",
+     "Cross Country",
+     "Golf",
+     "Swimming",
+     "Volleyball",
+     "Basketball",
+     "Powerlifting",
+     "Soccer",
+     "Wrestling",
+     "Flag Football",
+     "Lacrosse",
+     "Softball",
+     "Tennis"
+    ]
+   },
+   "sports_source_id": "s2",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Oak Ridge High - Required Forms",
+     "url": "https://oakridgehs.ocps.net/athletics-home",
+     "organization": "Oak Ridge High School (OCPS)",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Clearance instructions for 2025-2026. Footer gives address, phone and email. Read through WebFetch and raw in browser."
+    },
+    {
+     "id": "s2",
+     "title": "Oak Ridge High School - Pioneers Official Athletic Website",
+     "url": "https://www.gooakridgeathletics.com/",
+     "organization": "Oak Ridge High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Footer address and Sports menu read raw in browser. 'Track' is also listed with no gender label. The menu has only Shop, Donate and Tickets links."
+    },
+    {
+     "id": "s3",
+     "title": "Oak Ridge High - Faculty & Staff",
+     "url": "https://oakridgehs.ocps.net/faculty-staff",
+     "organization": "Oak Ridge High School (OCPS)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Lists principals only."
+    },
+    {
+     "id": "s4",
+     "title": "FHSAA List of Member Schools 2026-27 (dated 8/28/26)",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "Linked as 'LIST OF MEMBER SCHOOLS' from fhsaa.com/sports/2020/1/30/Membership.aspx. PDF text read raw. Entry reads: 'Oak Ridge (Orlando)'."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "oakridgehs.ocps.net/athletics-home (Required Forms)",
+     "oakridgehs.ocps.net/faculty-staff",
+     "gooakridgeathletics.com home page and menus",
+     "FHSAA member list 2026-27"
+    ],
+    "locations_unreachable": [
+     "2025 Physical Form PDF and OCPS ECG Form PDF on files.smartsites.parentsquare.com (linked from Required Forms; not opened)"
+    ],
+    "notes": "School-specific NIL policy: Not located in the public sources reviewed as of October 3, 2026. Oak Ridge publishes clearance steps only, and its athletics site has no policy pages."
+   },
+   "school_policy": null,
+   "rules": [],
+   "programs": [],
+   "contacts": [
+    {
+     "office": "Oak Ridge High School main office",
+     "role": "School main line and email. No athletics contact is printed on the pages opened.",
+     "person_name": null,
+     "phone": "407-852-3200",
+     "email": null,
+     "url": "https://oakridgehs.ocps.net/athletics-home",
+     "source_id": "s1"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "Oak Ridge says all student-athletes 'must complete the full clearance process before participating in any sport, including tryouts, conditioning, or camps'.",
+    "Oak Ridge sends uploads to https://www.athleticclearance.com and says students are not eligible 'until fully cleared by the athletic trainer'.",
+    "Oak Ridge requires an ImPACT concussion baseline test in addition to the EL2 physical, ECG report and four NFHS Learn certificates.",
+    "The clearance page is labeled 2025-2026.",
+    "Oak Ridge (Orlando) appears on the FHSAA member list dated 8/28/26.",
+    "No NIL wording was found on any Oak Ridge page opened."
+   ],
+   "ambiguities": [
+    "The Required Forms page is labeled 2025-2026 and may not be updated for 2026-27.",
+    "No athletic director or athletic trainer is named on the pages opened.",
+    "The search result for 'oakridgeathletics.com' is a different Oak Ridge (Wildcats). The Orlando school uses gooakridgeathletics.com."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://oakridgehs.ocps.net/athletics-home : expand each section by hand and confirm no GA1 or NIL item sits inside the collapsed panels.",
+    "https://www.gooakridgeathletics.com/ : confirm there is no staff page."
+   ],
+   "not_found": [
+    "School-specific NIL policy, guidance or FAQ",
+    "Any school instruction on FHSAA Form GA1 or NIL disclosure (clearance pages name EL2, EL3, ECG and NFHS courses only)",
+    "School rule on using the school name, logo or uniform in NIL content",
+    "Media-credential or commercial-photography rule",
+    "Facility-use rule for NIL shoots",
+    "Athletic director name and contact",
+    "Athletic handbook or athlete code of conduct",
+    "Sponsorship or booster page"
+   ]
+  }
+ ]
+}

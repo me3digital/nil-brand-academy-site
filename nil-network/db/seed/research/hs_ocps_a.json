@@ -1,0 +1,1899 @@
+{
+ "researched_on": "2026-10-03",
+ "method_note": "OCPS and school athletics pages block the fetch tool, so pages were read as raw text in a browser tab, and PDFs were read from their text layer with pdf.js. Each athletics site menu was listed from the site's own data, then the relevant pages were opened and keyword-searched.",
+ "districts": [
+  {
+   "slug": "orange-county-public-schools",
+   "name": "Orange County Public Schools",
+   "county": "Orange County",
+   "website_url": "https://www.ocps.net/",
+   "nces_district_id": null,
+   "sources": [
+    {
+     "id": "d1",
+     "title": "Policies Home (School Board Policies index)",
+     "url": "https://www.ocps.net/board-policies",
+     "organization": "Orange County Public Schools",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Index of all School Board policies with PDF links. Read in a browser tab."
+    },
+    {
+     "id": "d2",
+     "title": "Policy JJI Interscholastic Athletics",
+     "url": "https://files.smartsites.parentsquare.com/6888/jji__interscholastic_athletics_11_17_08.pdf",
+     "organization": "The School Board of Orange County, Florida",
+     "source_type": "district_policy",
+     "is_primary": true,
+     "published_on": "2008-11-17",
+     "notes": "Adopted 11/17/08. Pre-dates FHSAA NIL rules. Does not mention NIL."
+    },
+    {
+     "id": "d3",
+     "title": "Policy JJ Middle and High School Co-Curricular/Extracurricular/Athletic/Supplemental Programs",
+     "url": "https://files.smartsites.parentsquare.com/6888/jj_extracurricular_activities_clean_12-12-23.pdf",
+     "organization": "The School Board of Orange County, Florida",
+     "source_type": "district_policy",
+     "is_primary": true,
+     "published_on": "2023-12-12",
+     "notes": "File name carries the date 12-12-23. Does not mention NIL."
+    },
+    {
+     "id": "d4",
+     "title": "Policy KHB Advertising (includes Online Advertising)",
+     "url": "https://files.smartsites.parentsquare.com/6888/khb_advertising_in_schools_9-26-17.pdf",
+     "organization": "The School Board of Orange County, Florida",
+     "source_type": "district_policy",
+     "is_primary": true,
+     "published_on": "2017-09-26",
+     "notes": "Adopted 8/25/09. Revised 4/23/13 and 9/26/17."
+    },
+    {
+     "id": "d5",
+     "title": "Policy KF Use of Facilities and School Board Property",
+     "url": "https://files.smartsites.parentsquare.com/6888/kf_public_use_of_school_board_facilities_clean_version_6-11-19.pdf",
+     "organization": "The School Board of Orange County, Florida",
+     "source_type": "district_policy",
+     "is_primary": true,
+     "published_on": "2019-06-11",
+     "notes": "Adopted 11/17/08. Revised 02/12/13 and 06/11/19. PDF text layer has stray spaces; quotes are shown with normal spacing."
+    },
+    {
+     "id": "d6",
+     "title": "Facilities Home",
+     "url": "https://www.ocps.net/facilities-home",
+     "organization": "Orange County Public Schools",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Links 'Facilities Rental' to https://www.facilitron.com/ocps32801."
+    },
+    {
+     "id": "d7",
+     "title": "Media Relations Home",
+     "url": "https://www.ocps.net/89445_3",
+     "organization": "Orange County Public Schools",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": ""
+    },
+    {
+     "id": "d8",
+     "title": "Advertising Sales Home",
+     "url": "https://www.ocps.net/advertising-sales",
+     "organization": "Orange County Public Schools",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": ""
+    },
+    {
+     "id": "d9",
+     "title": "OCPS Style Guide Home",
+     "url": "https://www.ocps.net/ocpsstyleguide",
+     "organization": "Orange County Public Schools",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Brand colors and logo use for district communications. No rule for outside or student commercial use was found on the page."
+    },
+    {
+     "id": "d10",
+     "title": "Policy JIC Code of Student Conduct (policy document)",
+     "url": "https://files.smartsites.parentsquare.com/6888/260908_policy_jic_code_of_student_conduct_sb.pdf",
+     "organization": "The School Board of Orange County, Florida",
+     "source_type": "district_policy",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Searched for NIL, likeness, amateur. No matches."
+    },
+    {
+     "id": "d11",
+     "title": "Policy JJE Fund-Raising for School Projects and Activities",
+     "url": "https://files.smartsites.parentsquare.com/6888/jje_student_fundraising_activities_06_26_12.pdf",
+     "organization": "The School Board of Orange County, Florida",
+     "source_type": "district_policy",
+     "is_primary": true,
+     "published_on": "2012-06-26",
+     "notes": ""
+    },
+    {
+     "id": "d12",
+     "title": "FHSAA Membership List 2026-27",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "Used only to confirm membership of the eight schools."
+    }
+   ],
+   "rules": [
+    {
+     "topic": "nil-allowed",
+     "scope": "district",
+     "answer": "not_addressed",
+     "summary": "OCPS board policy says all district high schools are FHSAA members and follow FHSAA rules. The policy does not mention NIL.",
+     "conditions": "Policy JJI was adopted in 2008, before FHSAA allowed NIL. It adds no district NIL rule.",
+     "citation": "OCPS School Board Policy JJI, section (1)",
+     "quick_status": "NOT_PUBLICLY_SPECIFIED",
+     "short_answer": "The district policy points to FHSAA rules and says nothing on NIL.",
+     "sources": [
+      {
+       "source_id": "d2",
+       "locator": "Policy JJI (1)",
+       "quote": "All district high schools shall be members of the Florida High School --- Athletics Association, Inc. (FHSAA) and shall be governed by the rules and regulations adopted by FHSAA.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "penalties",
+     "scope": "district",
+     "answer": "yes_with_conditions",
+     "summary": "OCPS says athletes are under all school board rules and the Code of Student Conduct at athletic events and practices. OCPS also says the Board can withhold the privilege of taking part in extracurricular activities.",
+     "conditions": "These are general conduct rules. They are not written about NIL.",
+     "citation": "OCPS School Board Policy JJI (8) and Policy JJ",
+     "quick_status": "DEPENDS",
+     "short_answer": "District conduct rules apply to athletes and can cost you the right to play.",
+     "sources": [
+      {
+       "source_id": "d2",
+       "locator": "Policy JJI (8)",
+       "quote": "All students shall be subject to all school board rules and to the Code of Student Conduct while attending athletic events and practices.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "d3",
+       "locator": "Policy JJ, paragraph (f)",
+       "quote": "Pursuant to Florida law, the Board has the authority to withhold the privilege of participating in extracurricular activities from students.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-facilities",
+     "scope": "district",
+     "answer": "only_with_approval",
+     "summary": "OCPS says school board property cannot be used to advertise or promote a business unless there is a contract for advertising under Policy KHB.",
+     "conditions": "The policy is about advertising on district property in general. It does not mention student NIL deals. Display ads need a written Display Advertising Agreement arranged through the OCPS Marketing and Events Department.",
+     "citation": "OCPS School Board Policy KHB, sections (1) and (2)(c)",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "No business promotion on OCPS property without a district advertising contract.",
+     "sources": [
+      {
+       "source_id": "d4",
+       "locator": "Policy KHB (1)",
+       "quote": "shall not be used for advertising or otherwise promoting the interests of any commercial, religious, political, or other non-district agency or organization except by contractual agreement for “Advertising” as defined in this policy.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "d4",
+       "locator": "Policy KHB (2)(c)(i)",
+       "quote": "Such Display Advertising Agreement shall be provided through and assisted by the Marketing and Events Department.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-facilities",
+     "scope": "district",
+     "answer": "only_with_approval",
+     "summary": "OCPS says the principal or the Chief Facilities Officer may approve outside use of buildings, grounds or equipment through a facility use agreement. Business groups may be charged rent and must show insurance.",
+     "conditions": "The policy does not mention filming, photo shoots or NIL. The district Facilities page links facility rental to Facilitron.",
+     "citation": "OCPS School Board Policy KF",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Using a campus for an outside activity needs approval and a facility use agreement.",
+     "sources": [
+      {
+       "source_id": "d5",
+       "locator": "Policy KF, opening paragraph (spacing normalized)",
+       "quote": "The use of Board Property shall not interfere with the educational program of the district or school.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "d5",
+       "locator": "Policy KF (3) (spacing normalized)",
+       "quote": "may permit the use of Board Property by a civic, religious, business, or community organization for nonschool activities on a specific, temporary, or short-term basis.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "d6",
+       "locator": "Find It Fast links",
+       "quote": "Facilities Rental",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "prohibited-categories",
+     "scope": "district",
+     "answer": "no",
+     "summary": "OCPS says no advertisement on board property may promote alcohol, tobacco, drugs, weapons, gambling and similar content.",
+     "conditions": "This applies to advertising on OCPS property, websites and publications. It is not written as a rule for a student's own NIL deal.",
+     "citation": "OCPS School Board Policy KHB, section (6)(b)",
+     "quick_status": "NO",
+     "short_answer": "Ads on OCPS property cannot promote alcohol, tobacco, drugs, weapons or gambling.",
+     "sources": [
+      {
+       "source_id": "d4",
+       "locator": "Policy KHB (6)(b)",
+       "quote": "No advertisement shall promote or contain references to alcohol, tobacco, drugs, drug paraphernalia, weapons, or lewd, vulgar, obscene, pornographic or illegal materials or activities, gambling, violence, hatred, sexual conduct or sexually explicit material",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-logos-marks",
+     "scope": "district",
+     "answer": "not_addressed",
+     "summary": "The OCPS Style Guide page sets rules for the district logo in district communications. It does not state a rule for students or outside businesses using district or school logos.",
+     "conditions": "No School Board policy on school names, logos or trademarks was found in the policy index. Policy KHB only speaks about product brand names and logos.",
+     "citation": "OCPS Style Guide Home, Logos section",
+     "quick_status": "NOT_PUBLICLY_SPECIFIED",
+     "short_answer": "No public district rule on using school logos in NIL content was found.",
+     "sources": [
+      {
+       "source_id": "d9",
+       "locator": "Logos",
+       "quote": "The logo is mandatory on all external communication pieces created and distributed by the district.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "d4",
+       "locator": "Policy KHB (2)",
+       "quote": "Brand names, trademarks, logos, or tags for product or service identification purposes are not considered advertising.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "OCPS Policies Home index (all policy titles scanned for athletics, advertising, logos, facilities, photographs, fundraising)",
+     "Policy JJI Interscholastic Athletics (full text)",
+     "Policy JJ Extracurricular/Athletic Programs (keyword search and key paragraphs)",
+     "Policy KHB Advertising and Online Advertising (full text)",
+     "Policy KF Use of Facilities and School Board Property (most of text)",
+     "Policy JRD Photographs of Students (school picture contracts only)",
+     "Policy JJE Fund-Raising (opening sections)",
+     "Policy JIC Code of Student Conduct policy document (keyword search)",
+     "Policies KHC, KDA, DJG (keyword search for logo, trademark, likeness, NIL)",
+     "OCPS Style Guide Home",
+     "OCPS Media Relations Home",
+     "OCPS Advertising Sales Home",
+     "OCPS Facilities Home"
+    ],
+    "locations_unreachable": [
+     "https://ocpsathletics.net/ (district athletics site; returned HTTP 401 to the fetch tool and a browser error page)",
+     "https://www.ocps.net/134128_2 (district 'Athletics' menu link; redirects to ocpsathletics.net)",
+     "https://www.facilitron.com/ocps32801 (facility rental portal; not opened)"
+    ],
+    "notes": "District NIL policy or guidance: Not located in the public sources reviewed as of October 3, 2026. The district athletics site could not be opened, so a district athletics handbook, athletics office contact and any district-wide clearance statement could not be checked."
+   },
+   "contacts": [
+    {
+     "office": "OCPS Media Relations",
+     "role": "Media requests about OCPS",
+     "person_name": null,
+     "phone": "407.317.3458",
+     "email": null,
+     "url": "https://www.ocps.net/89445_3",
+     "source_id": "d7"
+    },
+    {
+     "office": "OCPS Sales & Marketing",
+     "role": "Advertising with OCPS",
+     "person_name": null,
+     "phone": "407-317-3294",
+     "email": null,
+     "url": "https://www.ocps.net/advertising-sales",
+     "source_id": "d8"
+    },
+    {
+     "office": "OCPS Facilities",
+     "role": "Facilities department, links to facility rental",
+     "person_name": null,
+     "phone": "407-317-3700",
+     "email": null,
+     "url": "https://www.ocps.net/facilities-home",
+     "source_id": "d6"
+    }
+   ]
+  }
+ ],
+ "conferences": [],
+ "schools": [
+  {
+   "slug": "apopka-high-school-apopka",
+   "name": "Apopka High School",
+   "short_name": "Apopka",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Apopka",
+   "county": "Orange County",
+   "street_address": "555 West Martin St",
+   "postal_code": "32712",
+   "website_url": "https://apopkahs.ocps.net/",
+   "athletics_url": "https://www.bluedartersathletics.com/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "unspecified": [
+     "Bowling (Boys)",
+     "Bowling (Girls)",
+     "Cheerleading (Spirit)",
+     "Cross Country (Boys)",
+     "Cross Country (Girls)",
+     "Football",
+     "Golf (Boys)",
+     "Golf (Girls)",
+     "Swim & Dive (Boys)",
+     "Swim & Dive (Girls)",
+     "Volleyball (Girls)",
+     "Basketball (Boys)",
+     "Basketball (Girls)",
+     "Cheerleading (Competitive)",
+     "Soccer (Boys)",
+     "Soccer (Girls)",
+     "Weightlifting (Girls)",
+     "Wrestling (Boys)",
+     "Wrestling (Girls)",
+     "Baseball",
+     "Beach Volleyball",
+     "Flag Football",
+     "Lacrosse (Boys)",
+     "Lacrosse (Girls)",
+     "Softball",
+     "Tennis (Boys)",
+     "Tennis (Girls)",
+     "Track and Field (Boys)",
+     "Track and Field (Girls)",
+     "Volleyball (Boys)",
+     "Water Polo (Boys)",
+     "Water Polo (Girls)",
+     "Weightlifting (Boys)"
+    ]
+   },
+   "sports_source_id": "s4",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Apopka High School - Blue Darters Official Athletic Website",
+     "url": "https://www.bluedartersathletics.com/",
+     "organization": "Apopka High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "School address shown in site data. The school site address apopkahs.ocps.net/athletics-home redirects here."
+    },
+    {
+     "id": "s2",
+     "title": "Athletic Clearance Instructions",
+     "url": "https://www.bluedartersathletics.com/page/athletic-clearance-instructions",
+     "organization": "Apopka High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Covers the 2026-2027 season."
+    },
+    {
+     "id": "s3",
+     "title": "Athletic Clearance",
+     "url": "https://www.bluedartersathletics.com/page/athletic-clearance",
+     "organization": "Apopka High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": ""
+    },
+    {
+     "id": "s4",
+     "title": "Coaching Staff",
+     "url": "https://www.bluedartersathletics.com/page/coaching-staff",
+     "organization": "Apopka High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Head Coaching Staff 2026-27 Season. Used for the sports list."
+    },
+    {
+     "id": "s9",
+     "title": "FHSAA Membership List 2026-27",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "School name appears on the list."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "Athletics site home and full menu (only three custom pages exist)",
+     "Athletic Clearance Instructions",
+     "Athletic Clearance",
+     "Coaching Staff",
+     "apopkahs.ocps.net/athletics-home (redirects to the athletics site)",
+     "FHSAA Membership List 2026-27"
+    ],
+    "locations_unreachable": [],
+    "notes": "School NIL policy: Not located in the public sources reviewed as of October 3, 2026. The three custom pages were searched for GA1, NIL, likeness, sponsor, media, photograph and handbook with no matches."
+   },
+   "school_policy": null,
+   "rules": [],
+   "programs": [],
+   "contacts": [
+    {
+     "office": "Apopka High School Athletics",
+     "role": "Athletic Director",
+     "person_name": "Jordan Walker",
+     "phone": null,
+     "email": null,
+     "url": "https://www.bluedartersathletics.com/page/athletic-clearance-instructions",
+     "source_id": "s2"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "Yearly online athletic clearance (physical form EL2, ECG form EL1 and four NFHS course certificates). The school's instructions do not mention Form GA1 or NIL.",
+    "recipient": "Apopka High School athletic department through the online clearance site",
+    "deadline_text": "Not stated on the page",
+    "platform_name": "Athletic Clearance",
+    "platform_url": "https://athleticclearance.fhsaahome.org/",
+    "form_name": null,
+    "form_url": null,
+    "source_id": "s3",
+    "quote": "All paperwork is uploaded and checked on the Athletic Clearance website"
+   },
+   "important_claims": [
+    "Athletic Director is Jordan Walker ([email on the official page]), as printed on the Athletic Clearance Instructions page.",
+    "Clearance for 2026-2027 is digital and the page sends families to www.AthleticClearance.com and to athleticclearance.fhsaahome.org.",
+    "No NIL, GA1, sponsorship or media rule appears on the Apopka athletics site.",
+    "Apopka appears on the FHSAA Membership List 2026-27."
+   ],
+   "ambiguities": [
+    "Apopka's 2026-2027 page still names AthleticClearance.com and athleticclearance.fhsaahome.org, while Olympia and Winter Park say the 2026-27 system is Home Campus. Which platform Apopka uses this year should be confirmed.",
+    "The platform team menu also lists Archery, Powerlifting and 'Skiing - Alpine', which are not on the 2026-27 coaching staff page. The coaching staff page was used for the sports list."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://athleticclearance.fhsaahome.org/ : log-in portal, check whether Form GA1 is a signature step for Apopka"
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Rule on using the school name, logo or uniform in NIL content",
+    "Media credential or commercial photography rule",
+    "Facility-use rule for NIL shoots",
+    "Instructions on how Form GA1 is collected",
+    "Athletic handbook or code of conduct",
+    "Athletics office phone number"
+   ]
+  },
+  {
+   "slug": "boone-high-school-orlando",
+   "name": "William R. Boone High School",
+   "short_name": "Boone",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Orlando",
+   "county": "Orange County",
+   "street_address": "1000 E Kaley St",
+   "postal_code": "32806",
+   "website_url": "https://boonehs.ocps.net/",
+   "athletics_url": "https://www.booneathletics.com/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "unspecified": [
+     "Baseball",
+     "Basketball",
+     "Bowling",
+     "Cross Country",
+     "Golf",
+     "Lacrosse",
+     "Powerlifting",
+     "Weightlifting",
+     "Soccer",
+     "Swimming",
+     "Tennis",
+     "Track",
+     "Volleyball",
+     "Water Polo",
+     "Wrestling",
+     "Football",
+     "Beach Volleyball",
+     "Competitive Cheer",
+     "Flag Football",
+     "Sideline Cheer",
+     "Softball"
+    ]
+   },
+   "sports_source_id": "s1",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Boone High School - Braves Official Athletic Website",
+     "url": "https://www.booneathletics.com/",
+     "organization": "Boone High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Address and team menu data. Sports list is taken from the team menu data on the official athletics site. It may include inactive or non-FHSAA teams and should be checked."
+    },
+    {
+     "id": "s2",
+     "title": "Athletic Clearance Directions for 25-26",
+     "url": "https://www.booneathletics.com/news/athletic-clearance-directions-for-25-26",
+     "organization": "Boone High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "News post for the 2025-26 year."
+    },
+    {
+     "id": "s3",
+     "title": "Athletic Clearance Instructions 2025-2026 (PDF)",
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2025/07/26/a6f98326-6041-456a-8fca-0c820a45365e.pdf",
+     "organization": "Boone High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": "2025-07-26",
+     "notes": "Linked from s2. For 2025-26, not the current year."
+    },
+    {
+     "id": "s4",
+     "title": "William R. Boone High School Department of Athletics Social Media Policy 2025-2026 (PDF)",
+     "url": "https://sportshub2-uploads.vnn-prod.zone/files/sites/1651/2018/07/06171411/2025-26-BHS-Social-Media-Policy.pdf",
+     "organization": "Boone High School Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Linked from the page 'Boone Athletics Social Media Policy'. Titled for 2025-2026."
+    },
+    {
+     "id": "s5",
+     "title": "Boone Athletics Social Media Policy (page)",
+     "url": "https://www.booneathletics.com/page/boone-athletics-social-media-policy",
+     "organization": "Boone High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": ""
+    },
+    {
+     "id": "s6",
+     "title": "Boone Athletic Sponsors/Advertising",
+     "url": "https://www.booneathletics.com/page/2023-2024-athletic-department-sponsorship-opportunities",
+     "organization": "Boone High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Page lists 2023-2024 events and dates."
+    },
+    {
+     "id": "s7",
+     "title": "Student-Athlete Code of Conduct (page)",
+     "url": "https://www.booneathletics.com/page/student-athlete-code-of-conduct",
+     "organization": "Boone High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Links a Word file uploaded in 2018 that was not opened."
+    },
+    {
+     "id": "s8",
+     "title": "Boone High - Athletics Home",
+     "url": "https://boonehs.ocps.net/athletics-home",
+     "organization": "Orange County Public Schools",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Shows school address and phone in the footer. The page body is empty."
+    },
+    {
+     "id": "s9",
+     "title": "FHSAA Membership List 2026-27",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "School name appears on the list."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "Athletics site home and page list (22 custom pages)",
+     "Athletic Clearance Directions for 25-26",
+     "Athletic Clearance Instructions 2025-2026 PDF (full text)",
+     "Social Media Policy 2025-2026 PDF (full text)",
+     "Student-Athlete Code of Conduct page",
+     "Parent Communication Information Sheet page",
+     "Boone Athletic Sponsors/Advertising page",
+     "Sponsor: Phabulous Photos page",
+     "boonehs.ocps.net Athletics Home, Staffulty and Extracurricular Activities pages",
+     "FHSAA Membership List 2026-27"
+    ],
+    "locations_unreachable": [
+     "https://sportshub2-uploads.vnn-prod.zone/files/sites/1651/2018/07/07184455/Code-of-conduct.docx (Word file, not opened)"
+    ],
+    "notes": "School NIL policy: Not located in the public sources reviewed as of October 3, 2026. Boone publishes an athletics social media policy and a sponsorship page. Neither mentions NIL."
+   },
+   "school_policy": {
+    "title": "William R. Boone High School Department of Athletics Social Media Policy 2025-2026",
+    "summary": "A one-page policy from the Boone athletic department. It says athletes may use social media, lists banned kinds of posts and lists penalties. It does not mention NIL, sponsors or paid posts.",
+    "policy_status": "published",
+    "source_id": "s4",
+    "adopted_on": null
+   },
+   "rules": [
+    {
+     "topic": "penalties",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Boone says its athletes are not restricted from using social media, but certain posts are banned and can lead to discipline up to losing athletic privileges for a full calendar year.",
+     "conditions": "The policy is titled 2025-2026 and does not mention NIL or paid posts. It applies to any post an athlete makes.",
+     "citation": "Boone Department of Athletics Social Media Policy 2025-2026",
+     "quick_status": "DEPENDS",
+     "short_answer": "You can post, but banned content can cost you your place on the team.",
+     "sources": [
+      {
+       "source_id": "s4",
+       "locator": "Paragraph 3 (spacing normalized)",
+       "quote": "Boone High School student-athletes are not restricted from using any online social network sites or digital platforms",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s4",
+       "locator": "Disciplinary Actions (spacing normalized)",
+       "quote": "Removal of all athletic privileges for full calendar year.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s4",
+       "locator": "Disciplinary Actions (spacing normalized)",
+       "quote": "Severe policy violations may result in OCPS Code of Conduct referral.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "Boone Athletic Sponsors/Advertising",
+     "program_type": "sponsorship_sales",
+     "description": "Boone Athletics says it 'offers a variety of advertising & event sponsorship opportunities' such as stadium banners and scoreboard commercials. This is sponsorship of the school program, not athlete NIL.",
+     "url": "https://www.booneathletics.com/page/2023-2024-athletic-department-sponsorship-opportunities",
+     "source_id": "s6",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Boone Athletics",
+     "role": "Advertising and sponsorship questions",
+     "person_name": null,
+     "phone": null,
+     "email": null,
+     "url": "https://www.booneathletics.com/page/2023-2024-athletic-department-sponsorship-opportunities",
+     "source_id": "s6"
+    },
+    {
+     "office": "Boone High School",
+     "role": "School main phone",
+     "person_name": null,
+     "phone": "407-893-7200",
+     "email": null,
+     "url": "https://boonehs.ocps.net/athletics-home",
+     "source_id": "s8"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "Yearly online athletic clearance (EL2 physical, OCPS Cardiology Report, ECG results, NFHS certificates). The instructions do not mention Form GA1 or NIL.",
+    "recipient": "Boone Athletic Department through the online clearance portal",
+    "deadline_text": "Submissions must be completed 48 hours before the first day of conditioning/tryouts",
+    "platform_name": "Athletic Clearance",
+    "platform_url": "https://athleticclearance.fhsaahome.org/",
+    "form_name": null,
+    "form_url": null,
+    "source_id": "s3",
+    "quote": "Boone H.S. does not use Aktivate or any other platform. Hard copies are not accepted."
+   },
+   "important_claims": [
+    "Boone publishes a 2025-2026 athletics social media policy with penalties up to removal of athletic privileges for a full calendar year.",
+    "The only clearance instructions found are for 2025-26 and name athleticclearance.fhsaahome.org.",
+    "Boone's sponsorship page is dated 2023-2024 and gives [email on the official page] as the contact.",
+    "No athletic director is named on the pages reviewed.",
+    "Boone appears on the FHSAA Membership List 2026-27 as 'Boone (Orlando)'."
+   ],
+   "ambiguities": [
+    "Clearance instructions are for 2025-26. Other OCPS schools say the 2026-27 system is Home Campus, so Boone's platform for this year should be confirmed.",
+    "The social media policy is titled 2025-2026. No 2026-27 version was seen.",
+    "The sponsorship page lists 2023-2024 dates and may be out of date.",
+    "The Student-Athlete Code of Conduct file was uploaded in 2018 (pre-2024) and was not opened. It must not be treated as a current NIL rule.",
+    "Sports list is taken from the team menu data on the official athletics site. It may include inactive or non-FHSAA teams and should be checked."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://sportshub2-uploads.vnn-prod.zone/files/sites/1651/2018/07/07184455/Code-of-conduct.docx : open by hand to check for amateurism or sponsorship wording",
+    "https://www.booneathletics.com/ : confirm the athletic director name, which is not printed on the pages reviewed"
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Rule on using the school name, logo or uniform in NIL content",
+    "Media credential or commercial photography rule",
+    "Facility-use rule for NIL shoots",
+    "Instructions on how Form GA1 is collected",
+    "Athletic director name and athletics office phone",
+    "2026-27 clearance instructions"
+   ]
+  },
+  {
+   "slug": "dr-phillips-high-school-orlando",
+   "name": "Dr. Phillips High School",
+   "short_name": "Dr. Phillips",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Orlando",
+   "county": "Orange County",
+   "street_address": "6500 Turkey Lake Rd",
+   "postal_code": "32819",
+   "website_url": "https://drphillipshs.ocps.net/",
+   "athletics_url": "https://www.drphillipshsathletics.com/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "unspecified": [
+     "Basketball",
+     "Baseball",
+     "Bowling",
+     "Cross Country",
+     "Football",
+     "Golf",
+     "Lacrosse",
+     "Soccer",
+     "Swimming",
+     "Tennis",
+     "Track",
+     "Volleyball",
+     "Water Polo",
+     "Weight Training",
+     "Wrestling",
+     "Flag Football",
+     "Beach Volleyball",
+     "Competitive Cheer",
+     "Softball"
+    ]
+   },
+   "sports_source_id": "s1",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Dr. Phillips High School - Panthers Official Athletic Website",
+     "url": "https://www.drphillipshsathletics.com/",
+     "organization": "Dr. Phillips High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Address and team menu data. Only custom menu item is 'Athletic Clearance', which links to a Google Drive folder. Sports list is taken from the team menu data on the official athletics site. It may include inactive or non-FHSAA teams and should be checked."
+    },
+    {
+     "id": "s2",
+     "title": "Dr. Phillips High - Athletics Home",
+     "url": "https://drphillipshs.ocps.net/athletics-home",
+     "organization": "Orange County Public Schools",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Shows school address and phone in the footer. The page body is empty."
+    },
+    {
+     "id": "s9",
+     "title": "FHSAA Membership List 2026-27",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "School name appears on the list."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "Athletics site home and menu data (no custom pages; one menu link)",
+     "drphillipshs.ocps.net Athletics Home",
+     "FHSAA Membership List 2026-27"
+    ],
+    "locations_unreachable": [
+     "https://drive.google.com/drive/folders/1qH0oK2iJHUbE1FOPtTTuyjkE_EkiwHLw (Athletic Clearance folder on Google Drive, not opened)"
+    ],
+    "notes": "School NIL policy: Not located in the public sources reviewed as of October 3, 2026. The athletics site has no custom pages. Its one menu link, Athletic Clearance, goes to a Google Drive folder that was not opened."
+   },
+   "school_policy": null,
+   "rules": [],
+   "programs": [],
+   "contacts": [
+    {
+     "office": "Dr. Phillips High School",
+     "role": "School main phone",
+     "person_name": null,
+     "phone": "407-355-3200",
+     "email": null,
+     "url": "https://drphillipshs.ocps.net/athletics-home",
+     "source_id": "s2"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "The only athletics menu item is 'Athletic Clearance', linking to a Google Drive folder.",
+    "No athletic director is named on the pages reviewed.",
+    "Dr. Phillips appears on the FHSAA Membership List 2026-27 as 'Dr. Phillips (Orlando)'."
+   ],
+   "ambiguities": [
+    "Sports list is taken from the team menu data on the official athletics site. It may include inactive or non-FHSAA teams and should be checked.",
+    "Clearance platform and forms are inside a Google Drive folder that was not read."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://drive.google.com/drive/folders/1qH0oK2iJHUbE1FOPtTTuyjkE_EkiwHLw : open to see clearance instructions and whether Form GA1 is included"
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Rule on using the school name, logo or uniform in NIL content",
+    "Media credential or commercial photography rule",
+    "Facility-use rule for NIL shoots",
+    "Instructions on how Form GA1 is collected",
+    "Athletic director name and athletics office contact",
+    "Athletic handbook or code of conduct",
+    "Sponsorship page"
+   ]
+  },
+  {
+   "slug": "edgewater-high-school-orlando",
+   "name": "Edgewater High School",
+   "short_name": "Edgewater",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Orlando",
+   "county": "Orange County",
+   "street_address": "3100 Edgewater Drive",
+   "postal_code": "32804",
+   "website_url": "https://edgewaterhs.ocps.net/",
+   "athletics_url": "https://www.edgewaterathletics.com/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "unspecified": [
+     "Baseball",
+     "Bowling",
+     "Basketball",
+     "Cross Country",
+     "Golf",
+     "Lacrosse",
+     "Soccer",
+     "Swimming",
+     "Tennis",
+     "Track",
+     "Volleyball",
+     "Water Polo",
+     "Wrestling",
+     "Competitive Cheer",
+     "Crew",
+     "Flag Football",
+     "Football",
+     "Archery",
+     "Beach Volleyball",
+     "Powerlifting",
+     "Weightlifting",
+     "Sideline Cheer",
+     "Softball"
+    ]
+   },
+   "sports_source_id": "s1",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Athletic Department Info",
+     "url": "https://www.edgewaterathletics.com/page/athletic-department-info",
+     "organization": "Edgewater High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Prints the school address."
+    },
+    {
+     "id": "s2",
+     "title": "Athletic Directory",
+     "url": "https://www.edgewaterathletics.com/page/athletic-directory",
+     "organization": "Edgewater High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Headed '2025-2026 Head Coaches and Start Dates'. Lists administration."
+    },
+    {
+     "id": "s3",
+     "title": "Athletic Clearance for Sports",
+     "url": "https://www.edgewaterathletics.com/page/athletic-clearance-for-sports",
+     "organization": "Edgewater High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Text refers to the 2024-2025 school year but links 2026 FHSAA forms."
+    },
+    {
+     "id": "s4",
+     "title": "Advertising Programs",
+     "url": "https://www.edgewaterathletics.com/page/advertising-programs",
+     "organization": "Edgewater High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Undated. Contains prices, which are not recorded here."
+    },
+    {
+     "id": "s5",
+     "title": "Athletes Code of Conduct",
+     "url": "https://www.edgewaterathletics.com/page/athletes-code-of-conduct",
+     "organization": "Edgewater High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Links a 2021 PDF that would not open."
+    },
+    {
+     "id": "s6",
+     "title": "Edgewater High School - Eagles Official Athletic Website",
+     "url": "https://www.edgewaterathletics.com/",
+     "organization": "Edgewater High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Team menu data. Sports list is taken from the team menu data on the official athletics site. It may include inactive or non-FHSAA teams and should be checked."
+    },
+    {
+     "id": "s7",
+     "title": "Edgewater High - Athletics Home",
+     "url": "https://edgewaterhs.ocps.net/athletics-home",
+     "organization": "Orange County Public Schools",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Links to edgewaterathletics.com."
+    },
+    {
+     "id": "s9",
+     "title": "FHSAA Membership List 2026-27",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "School name appears on the list."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "Athletics site home and full menu (21 items)",
+     "Athletic Directory",
+     "Athletic Department Info",
+     "Athletic Clearance for Sports",
+     "Advertising Programs",
+     "Corporate Sponsors (empty page)",
+     "Athletes Code of Conduct",
+     "Facilities",
+     "1952 Club Information",
+     "Florida High School Athletic Association page",
+     "Spectator Information",
+     "Edgewater Gear",
+     "Edgewater Facts",
+     "edgewaterhs.ocps.net Athletics Home",
+     "FHSAA Membership List 2026-27"
+    ],
+    "locations_unreachable": [
+     "https://vnnsportshub.net/app/uploads/sites/1362/2021/06/Athletic-Code-of-Conduct.pdf (2021 PDF, timed out)"
+    ],
+    "notes": "School NIL policy: Not located in the public sources reviewed as of October 3, 2026. Twelve athletics pages were keyword-searched for GA1, NIL, likeness, photograph, media, credential, logo and uniform. No NIL rule was found."
+   },
+   "school_policy": null,
+   "rules": [],
+   "programs": [
+    {
+     "name": "Edgewater Advertising Programs",
+     "program_type": "sponsorship_sales",
+     "description": "Edgewater's athletic department sells sponsor and advertising packages to businesses and says 'Naming rights can be negotiated with OCPS and Edgewater High School.' This is sponsorship of the school program, not athlete NIL.",
+     "url": "https://www.edgewaterathletics.com/page/advertising-programs",
+     "source_id": "s4",
+     "current": "unknown"
+    },
+    {
+     "name": "1952 Club",
+     "program_type": "sponsorship_sales",
+     "description": "A membership and donation program for Edgewater athletics described on the '1952 Club Information' page.",
+     "url": "https://www.edgewaterathletics.com/page/1952-club-information",
+     "source_id": "s6",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Edgewater High School Athletics",
+     "role": "Director of Athletics",
+     "person_name": "Nick Tomcykoski",
+     "phone": null,
+     "email": null,
+     "url": "https://www.edgewaterathletics.com/page/athletic-directory",
+     "source_id": "s2"
+    },
+    {
+     "office": "Edgewater High School Athletics",
+     "role": "Associate Athletic Director",
+     "person_name": "Scott Stratton",
+     "phone": null,
+     "email": null,
+     "url": "https://www.edgewaterathletics.com/page/athletic-directory",
+     "source_id": "s2"
+    },
+    {
+     "office": "Edgewater High School Athletics",
+     "role": "Athletic clearance questions",
+     "person_name": "Melissa Belcher",
+     "phone": null,
+     "email": null,
+     "url": "https://www.edgewaterathletics.com/page/athletic-clearance-for-sports",
+     "source_id": "s3"
+    },
+    {
+     "office": "Edgewater High School",
+     "role": "School main phone",
+     "person_name": null,
+     "phone": "407-835-4900",
+     "email": null,
+     "url": "https://edgewaterhs.ocps.net/athletics-home",
+     "source_id": "s7"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "Online athletic clearance. The page lists required uploads: EL2 Sports Physical, OCPS Cardiology Report, EL1, 'GA4 Recruiting Affidavit' and ECG results. Form GA1 and NIL are not mentioned.",
+    "recipient": "Edgewater athletic department through the online clearance site",
+    "deadline_text": "Not stated on the page",
+    "platform_name": "Athletic Clearance",
+    "platform_url": "https://athleticclearance.fhsaahome.org/",
+    "form_name": null,
+    "form_url": null,
+    "source_id": "s3",
+    "quote": "All paperwork is submitted electronically. Begin by creating an account at Athletic Clearance registration ."
+   },
+   "important_claims": [
+    "Director of Athletics is Nick Tomcykoski, as printed on the Athletic Directory page headed 2025-2026.",
+    "The clearance page lists a 'GA4 Recruiting Affidavit' among required uploads and does not list GA1.",
+    "The Advertising Programs page says naming rights can be negotiated with OCPS and Edgewater High School.",
+    "The Athletes Code of Conduct page says every athlete and parent signs the code when filling out athletic clearance.",
+    "Edgewater appears on the FHSAA Membership List 2026-27 as 'Edgewater (Orlando)'."
+   ],
+   "ambiguities": [
+    "The Athletic Directory is headed 2025-2026, so staff names may have changed for 2026-27.",
+    "The clearance page text says 2024-2025 while linking forms dated 2026. The platform for 2026-27 should be confirmed, since other OCPS schools now name Home Campus.",
+    "The Advertising Programs page names 'Josh Vandergrift' as the naming rights contact with no title, and he is not on the Athletic Directory. He is not recorded as a contact.",
+    "The Athletic Code of Conduct PDF is from 2021 (pre-2024) and could not be opened. It must not be treated as a current NIL rule.",
+    "The Athletes Code of Conduct page calls FHSAA the 'Florida High School Activities Association'.",
+    "Sports list is taken from the team menu data on the official athletics site. It may include inactive or non-FHSAA teams and should be checked."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://vnnsportshub.net/app/uploads/sites/1362/2021/06/Athletic-Code-of-Conduct.pdf : open by hand to check for amateurism, sponsorship or uniform wording",
+    "https://www.edgewaterathletics.com/page/athletic-directory : confirm 2026-27 staff"
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Rule on using the school name, logo or uniform in NIL content",
+    "Media credential or commercial photography rule",
+    "Facility-use rule for NIL shoots",
+    "Instructions on how Form GA1 is collected",
+    "Athletics office phone number"
+   ]
+  },
+  {
+   "slug": "jones-high-school-orlando",
+   "name": "Jones High School",
+   "short_name": "Jones",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Orlando",
+   "county": "Orange County",
+   "street_address": "801 S Rio Grande Ave",
+   "postal_code": "32805",
+   "website_url": "https://joneshs.ocps.net/",
+   "athletics_url": "https://www.joneshighathletics.com/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "unspecified": [
+     "Volleyball",
+     "Football",
+     "Baseball",
+     "Bowling",
+     "Basketball",
+     "Cross Country",
+     "Golf",
+     "Lacrosse",
+     "Powerlifting",
+     "Soccer",
+     "Swimming",
+     "Tennis",
+     "Track",
+     "Wrestling",
+     "Competitive Cheer",
+     "Sideline Cheer",
+     "Flag Football",
+     "Softball"
+    ]
+   },
+   "sports_source_id": "s1",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Jones High School - Tigers Official Athletic Website",
+     "url": "https://www.joneshighathletics.com/",
+     "organization": "Jones High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Address and team menu data. No custom pages or menu links were present. Sports list is taken from the team menu data on the official athletics site. It may include inactive or non-FHSAA teams and should be checked."
+    },
+    {
+     "id": "s2",
+     "title": "Jones High - Athletics Home",
+     "url": "https://joneshs.ocps.net/athletics-home",
+     "organization": "Orange County Public Schools",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Shows school address and phone in the footer. The page body is empty."
+    },
+    {
+     "id": "s9",
+     "title": "FHSAA Membership List 2026-27",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "School name appears on the list."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "Athletics site home and menu data (no custom pages)",
+     "joneshs.ocps.net Athletics Home",
+     "FHSAA Membership List 2026-27"
+    ],
+    "locations_unreachable": [
+     "https://joneshs.ocps.net/226015_2 (school site 'Athletics' link, would not load in the reader)",
+     "https://joneshighathletics.com/athletic-philosphy/ (older page seen in search results, not opened)"
+    ],
+    "notes": "School NIL policy: Not located in the public sources reviewed as of October 3, 2026. The athletics site publishes schedules only, with no clearance, staff or policy pages."
+   },
+   "school_policy": null,
+   "rules": [],
+   "programs": [],
+   "contacts": [
+    {
+     "office": "Jones High School",
+     "role": "School main phone",
+     "person_name": null,
+     "phone": "407-835-2300",
+     "email": null,
+     "url": "https://joneshs.ocps.net/athletics-home",
+     "source_id": "s2"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "The Jones athletics site has no custom pages for clearance, staff, sponsors or policies.",
+    "No athletic director is named on the pages reviewed.",
+    "Jones appears on the FHSAA Membership List 2026-27 as 'Jones (Orlando)'."
+   ],
+   "ambiguities": [
+    "Sports list is taken from the team menu data on the official athletics site. It may include inactive or non-FHSAA teams and should be checked."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://joneshs.ocps.net/226015_2 : open by hand to see where the school site 'Athletics' link goes",
+    "https://www.joneshighathletics.com/ : confirm athletic director and clearance instructions by phone or in person"
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Rule on using the school name, logo or uniform in NIL content",
+    "Media credential or commercial photography rule",
+    "Facility-use rule for NIL shoots",
+    "Instructions on how Form GA1 is collected",
+    "Athletic director name and athletics office contact",
+    "Athletic clearance instructions",
+    "Athletic handbook or code of conduct",
+    "Sponsorship page"
+   ]
+  },
+  {
+   "slug": "olympia-high-school-orlando",
+   "name": "Olympia High School",
+   "short_name": "Olympia",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Orlando",
+   "county": "Orange County",
+   "street_address": "4301 S Apopka Vineland Rd",
+   "postal_code": "32835",
+   "website_url": "https://olympiahs.ocps.net/",
+   "athletics_url": "https://www.olympiahighschoolathletics.com/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "unspecified": [
+     "Football",
+     "Volleyball",
+     "Baseball",
+     "Bowling",
+     "Basketball",
+     "Cross Country",
+     "Lacrosse",
+     "Soccer",
+     "Swimming",
+     "Tennis",
+     "Track",
+     "Water Polo",
+     "Weight Training",
+     "Wrestling",
+     "Competitive Cheer",
+     "Flag Football",
+     "Archery",
+     "Beach Volleyball",
+     "Golf",
+     "Softball",
+     "Sideline Cheer"
+    ]
+   },
+   "sports_source_id": "s1",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Olympia High School - Titans Official Athletic Website",
+     "url": "https://www.olympiahighschoolathletics.com/",
+     "organization": "Olympia High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Address, team menu data and 31 menu links. Sports list is taken from the team menu data on the official athletics site. It may include inactive or non-FHSAA teams and should be checked."
+    },
+    {
+     "id": "s2",
+     "title": "Athletic Participation Requirements 2026-2027",
+     "url": "https://www.olympiahighschoolathletics.com/page/f0d2f59a-1fd4-4f73-b813-897c005bb937",
+     "organization": "Olympia High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": ""
+    },
+    {
+     "id": "s3",
+     "title": "Olympia High School - Athletic Participation Requirements (PDF)",
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/08/19/6f151ab3-7f8d-4d81-b395-5dc13ff980f3.pdf",
+     "organization": "Olympia High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": "2026-08-19",
+     "notes": "Searched for GA1, GA4, affidavit, likeness, amateur. Only the clearance platform steps matched."
+    },
+    {
+     "id": "s4",
+     "title": "Olympia High - Athletics Home",
+     "url": "https://olympiahs.ocps.net/athletics-home",
+     "organization": "Orange County Public Schools",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Shows school address and phone in the footer. The page body is empty."
+    },
+    {
+     "id": "s9",
+     "title": "FHSAA Membership List 2026-27",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "School name appears on the list."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "Athletics site home and full menu (31 items)",
+     "Athletic Participation Requirements 2026-2027 page",
+     "Athletic Participation Requirements PDF (opening text and keyword search)",
+     "olympiahs.ocps.net Athletics Home",
+     "FHSAA Membership List 2026-27"
+    ],
+    "locations_unreachable": [
+     "https://sites-assets.playonsharedprod.playonsports.com/photos/2026/06/17/5e560de4-2988-48a9-87f6-9ef914874335.png (Olympia Coaches List, an image that could not be read as text)",
+     "https://sportshub1-uploads.vnn-prod.zone/10434/files/2017/04/1a77427149f1831e-Sportsmanship-Policies.pdf (2017 Sportsmanship Policy, not opened)"
+    ],
+    "notes": "School NIL policy: Not located in the public sources reviewed as of October 3, 2026. The menu has clearance forms, a 2017 sportsmanship policy and NCAA links, with no NIL item."
+   },
+   "school_policy": null,
+   "rules": [],
+   "programs": [],
+   "contacts": [
+    {
+     "office": "Olympia High School Athletics",
+     "role": "Questions about athletic participation requirements and clearance",
+     "person_name": "Mrs. Harrell",
+     "phone": null,
+     "email": null,
+     "url": "https://www.olympiahighschoolathletics.com/page/f0d2f59a-1fd4-4f73-b813-897c005bb937",
+     "source_id": "s2"
+    },
+    {
+     "office": "Olympia High School",
+     "role": "School main phone",
+     "person_name": null,
+     "phone": "407-905-6400",
+     "email": null,
+     "url": "https://olympiahs.ocps.net/athletics-home",
+     "source_id": "s4"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "Yearly online athletic clearance (EL2 physical, EL1 ECG form, ImPACT test, NFHS certificates). The requirements document does not mention Form GA1 or NIL.",
+    "recipient": "Olympia High School athletics through Home Campus",
+    "deadline_text": "Please allow 3 business days for your child's Athletic Clearance profile to be reviewed after submission.",
+    "platform_name": "Home Campus",
+    "platform_url": "https://fhsaa.homecampus.com",
+    "form_name": null,
+    "form_url": null,
+    "source_id": "s3",
+    "quote": "Step 1: Go to https://fhsaa.homecampus.com Step 2: Select Florida Step 3: Select Go to 2026-27 school year"
+   },
+   "important_claims": [
+    "Olympia's 2026-2027 clearance runs on Home Campus (fhsaa.homecampus.com).",
+    "Clearance questions go to Mrs. Harrell ([email on the official page]).",
+    "The menu carries a GA4 form link dated 2017 labelled 'Non-Traditional Student Participation (GA4)'.",
+    "No athletic director is named in readable text on the pages reviewed.",
+    "Olympia appears on the FHSAA Membership List 2026-27 as 'Olympia (Orlando)'."
+   ],
+   "ambiguities": [
+    "The page quote says 3 business days and the PDF says 2-3 business days for clearance review.",
+    "Several menu documents date from 2016 and 2017 (NCAA sheets, Sportsmanship Policy, GA4 form) and are outdated.",
+    "Sports list is taken from the team menu data on the official athletics site. It may include inactive or non-FHSAA teams and should be checked."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://sites-assets.playonsharedprod.playonsports.com/photos/2026/06/17/5e560de4-2988-48a9-87f6-9ef914874335.png : coaches list image, read by eye for the athletic director name",
+    "https://sportshub1-uploads.vnn-prod.zone/10434/files/2017/04/1a77427149f1831e-Sportsmanship-Policies.pdf : 2017 policy, check only for background"
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Rule on using the school name, logo or uniform in NIL content",
+    "Media credential or commercial photography rule",
+    "Facility-use rule for NIL shoots",
+    "Instructions on how Form GA1 is collected",
+    "Athletic director name in readable text",
+    "Sponsorship page"
+   ]
+  },
+  {
+   "slug": "west-orange-high-school-winter-garden",
+   "name": "West Orange High School",
+   "short_name": "West Orange",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Winter Garden",
+   "county": "Orange County",
+   "street_address": "1625 Beulah Rd",
+   "postal_code": "34787",
+   "website_url": "https://westorangehs.ocps.net/",
+   "athletics_url": "https://www.westorangeathletics.com/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "unspecified": [
+     "Bowling (Boys)",
+     "Bowling (Girls)",
+     "Cross Country (Boys)",
+     "Cross Country (Girls)",
+     "Dance",
+     "Football",
+     "Golf (Boys)",
+     "Golf (Girls)",
+     "Special Olympics",
+     "Spirit Cheer",
+     "Swimming (Boys)",
+     "Swimming (Girls)",
+     "Unified Sports",
+     "Volleyball (Girls)",
+     "Basketball (Boys)",
+     "Basketball (Girls)",
+     "Competitive Cheer",
+     "Soccer (Boys)",
+     "Soccer (Girls)",
+     "Weightlifting (Girls)",
+     "Wrestling (Boys)",
+     "Wrestling (Girls)",
+     "Baseball",
+     "Beach Volleyball",
+     "Flag Football",
+     "Lacrosse (Boys)",
+     "Lacrosse (Girls)",
+     "Softball",
+     "Tennis (Boys)",
+     "Tennis (Girls)",
+     "Track & Field (Boys)",
+     "Track & Field (Girls)",
+     "Volleyball (Boys)",
+     "Water Polo (Boys)",
+     "Water Polo (Girls)",
+     "Weightlifting (Boys)"
+    ]
+   },
+   "sports_source_id": "s2",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "West Orange High School - Warriors Official Athletic Website",
+     "url": "https://www.westorangeathletics.com/",
+     "organization": "West Orange High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Address and 13 menu links."
+    },
+    {
+     "id": "s2",
+     "title": "West Orange Athletics Directory 2026-2027",
+     "url": "https://www.westorangeathletics.com/page/west-orange-athletics-directory-2026-2027",
+     "organization": "West Orange High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Used for staff and the sports list."
+    },
+    {
+     "id": "s3",
+     "title": "West Orange High - Athletics Home",
+     "url": "https://westorangehs.ocps.net/athletics-home",
+     "organization": "Orange County Public Schools",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Points families to the athletics website for clearance information."
+    },
+    {
+     "id": "s9",
+     "title": "FHSAA Membership List 2026-27",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "School name appears on the list."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "Athletics site home and full menu (13 items)",
+     "West Orange Athletics Directory 2026-2027",
+     "westorangehs.ocps.net Athletics Home",
+     "FHSAA Membership List 2026-27"
+    ],
+    "locations_unreachable": [
+     "https://drive.google.com/file/d/1hyyqkM2DJvOAacI_JmmAGpfnwm2DC7CL/view (Athletic Clearance Instructions on Google Drive, not opened)",
+     "https://acrobat.adobe.com/id/urn:aaid:sc:US:5f641f1b-3ff5-40a9-9b95-8e0d080bf262 (2026-27 Corporate-Business Sponsorship document on Adobe, not opened)",
+     "https://drive.google.com/file/d/14xZj991jAX4Xq8_Yd7I2Yt9ZRJIlfNY4/view (Athletic Department Directory 25-26 on Google Drive, not opened)"
+    ],
+    "notes": "School NIL policy: Not located in the public sources reviewed as of October 3, 2026. Clearance instructions and the sponsorship packet are hosted on Google Drive and Adobe and were not read."
+   },
+   "school_policy": null,
+   "rules": [],
+   "programs": [
+    {
+     "name": "2026-27 Corporate-Business Sponsorship",
+     "program_type": "sponsorship_sales",
+     "description": "The athletics site menu has a 'Become a Sponsor' section linking a document titled '2026-27 Corporate-Business Sponsorship'. The document was not opened. This is sponsorship of the school program, not athlete NIL.",
+     "url": "https://acrobat.adobe.com/id/urn:aaid:sc:US:5f641f1b-3ff5-40a9-9b95-8e0d080bf262",
+     "source_id": "s1",
+     "current": true
+    }
+   ],
+   "contacts": [
+    {
+     "office": "West Orange High School Athletics",
+     "role": "Athletic Director",
+     "person_name": "Todd LaNeave",
+     "phone": null,
+     "email": null,
+     "url": "https://www.westorangeathletics.com/page/west-orange-athletics-directory-2026-2027",
+     "source_id": "s2"
+    },
+    {
+     "office": "West Orange High School Athletics",
+     "role": "Asst Athletic Director",
+     "person_name": "Mandi Brown",
+     "phone": null,
+     "email": null,
+     "url": "https://www.westorangeathletics.com/page/west-orange-athletics-directory-2026-2027",
+     "source_id": "s2"
+    },
+    {
+     "office": "West Orange High School Athletics",
+     "role": "Athletics Business Mgr",
+     "person_name": "Scott Howell",
+     "phone": null,
+     "email": null,
+     "url": "https://www.westorangeathletics.com/page/west-orange-athletics-directory-2026-2027",
+     "source_id": "s2"
+    },
+    {
+     "office": "West Orange High School",
+     "role": "School main phone",
+     "person_name": null,
+     "phone": "407-905-2400",
+     "email": null,
+     "url": "https://westorangehs.ocps.net/athletics-home",
+     "source_id": "s3"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "Online athletic clearance. The menu links instructions on Google Drive, the EL2 packet, the ECG form and the clearance website. The instructions were not read, so GA1 handling is unknown.",
+    "recipient": "West Orange High School athletics through the online clearance site",
+    "deadline_text": "Not seen",
+    "platform_name": "Athletic Clearance",
+    "platform_url": "https://athleticclearance.fhsaahome.org/",
+    "form_name": null,
+    "form_url": null,
+    "source_id": "s3",
+    "quote": "For all things athletic related including athletic clearance information, please visit: West Orange Athletic Website"
+   },
+   "important_claims": [
+    "Athletic Director is Todd LaNeave, as printed on the 2026-2027 athletics directory.",
+    "The menu item 'Athletic Clearance Website' links to athleticclearance.fhsaahome.org.",
+    "A 2026-27 Corporate-Business Sponsorship document exists but was not read.",
+    "West Orange appears on the FHSAA Membership List 2026-27 as 'West Orange (Winter Garden)'."
+   ],
+   "ambiguities": [
+    "The menu links athleticclearance.fhsaahome.org while Olympia and Winter Park say 2026-27 clearance is on Home Campus. The platform should be confirmed in the Google Drive instructions.",
+    "The directory lists Dance, Special Olympics and Unified Sports beside FHSAA sports."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://drive.google.com/file/d/1hyyqkM2DJvOAacI_JmmAGpfnwm2DC7CL/view : read clearance instructions, check for Form GA1",
+    "https://acrobat.adobe.com/id/urn:aaid:sc:US:5f641f1b-3ff5-40a9-9b95-8e0d080bf262 : read sponsorship terms, check for any athlete appearance or logo terms"
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Rule on using the school name, logo or uniform in NIL content",
+    "Media credential or commercial photography rule",
+    "Facility-use rule for NIL shoots",
+    "Instructions on how Form GA1 is collected",
+    "Athletic handbook or code of conduct",
+    "Athletics office phone number"
+   ]
+  },
+  {
+   "slug": "winter-park-high-school-winter-park",
+   "name": "Winter Park High School",
+   "short_name": "Winter Park",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Winter Park",
+   "county": "Orange County",
+   "street_address": "2100 Summerfield Rd",
+   "postal_code": "32792",
+   "website_url": "https://winterparkhs.ocps.net/",
+   "athletics_url": "https://www.winterparkathletics.org/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "orange-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "unspecified": [
+     "Football",
+     "Volleyball",
+     "Lacrosse",
+     "Baseball",
+     "Basketball",
+     "Bowling",
+     "Cross Country",
+     "Golf",
+     "Powerlifting",
+     "Weightlifting",
+     "Soccer",
+     "Swimming",
+     "Tennis",
+     "Track",
+     "Water Polo",
+     "Wrestling",
+     "Beach Volleyball",
+     "Competitive Cheer",
+     "Flag Football",
+     "Softball"
+    ]
+   },
+   "sports_source_id": "s1",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Winter Park High School - Wildcats Official Athletic Website",
+     "url": "https://www.winterparkathletics.org/",
+     "organization": "Winter Park High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Address, team menu data and 23 menu links, including one labelled 'NIL'. Sports list is taken from the team menu data on the official athletics site. It may include inactive or non-FHSAA teams and should be checked."
+    },
+    {
+     "id": "s2",
+     "title": "FHSAA Eligibility And Compliance",
+     "url": "https://www.winterparkathletics.org/page/fhsaa-eligibility-and-compliance-1",
+     "organization": "Winter Park High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Undated list of eligibility points with FHSAA bylaw numbers."
+    },
+    {
+     "id": "s3",
+     "title": "GA1 Affidavit of Amateurism (copy hosted for the Winter Park athletics site)",
+     "url": "https://sportshub2-uploads.vnn-prod.zone/files/sites/68/2024/08/22190831/GA1_Affidavit_of_Amateurism_81624-1.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": "2024-08-16",
+     "notes": "Target of the 'NIL' menu item. File name carries 81624 and an upload path of 2024/08/22. The file itself was not opened."
+    },
+    {
+     "id": "s4",
+     "title": "Submit Physical & ECG Information HERE",
+     "url": "https://www.winterparkathletics.org/page/submit-physical-ecg-information-here",
+     "organization": "Winter Park High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": ""
+    },
+    {
+     "id": "s5",
+     "title": "26-27 WPHS Online Physical Instructions July 2026 (PDF)",
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/06/10/ca3de11b-50ef-422e-b2c6-4c4eef0d6616.pdf",
+     "organization": "Winter Park High School Athletic Training Program",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": "2026-06-10",
+     "notes": "Searched for GA1, GA4, affidavit, likeness, amateur. Only platform steps matched."
+    },
+    {
+     "id": "s6",
+     "title": "Winter Park Head Coaches",
+     "url": "https://www.winterparkathletics.org/page/winter-park-head-coaches",
+     "organization": "Winter Park High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": ""
+    },
+    {
+     "id": "s7",
+     "title": "Required FHSAA Forms",
+     "url": "https://www.winterparkathletics.org/page/required-fhsaa-forms",
+     "organization": "Winter Park High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": ""
+    },
+    {
+     "id": "s8",
+     "title": "Sports Tryout Information 26 - 27",
+     "url": "https://www.winterparkathletics.org/page/sports-tryout-information-26-27",
+     "organization": "Winter Park High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": ""
+    },
+    {
+     "id": "s9",
+     "title": "FHSAA Membership List 2026-27",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "School name appears on the list."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": true,
+    "locations_checked": [
+     "Athletics site home and full menu (23 items)",
+     "'NIL' menu item (link target recorded)",
+     "FHSAA Eligibility And Compliance",
+     "Required FHSAA Forms",
+     "Submit Physical & ECG Information HERE",
+     "26-27 WPHS Online Physical Instructions PDF (opening text and keyword search)",
+     "Winter Park Head Coaches",
+     "Sports Tryout Information 26 - 27",
+     "winterparkhs.ocps.net/athletics-home (404 page)",
+     "FHSAA Membership List 2026-27"
+    ],
+    "locations_unreachable": [
+     "https://sportshub2-uploads.vnn-prod.zone/files/sites/68/2024/08/22190831/GA1_Affidavit_of_Amateurism_81624-1.pdf (linked from the NIL menu item; link recorded but file not opened)"
+    ],
+    "notes": "Winter Park is the only school of the eight with a menu item labelled NIL. It links to a copy of FHSAA Form GA1 and adds no school rules. A school-written NIL policy: Not located in the public sources reviewed as of October 3, 2026."
+   },
+   "school_policy": {
+    "title": "'NIL' menu item on winterparkathletics.org (links to FHSAA Form GA1)",
+    "summary": "The Winter Park athletics site has a menu item named NIL under 'More'. It opens a hosted copy of the FHSAA GA1 Affidavit of Amateurism dated August 2024. The site gives no school-written NIL guidance beside it.",
+    "policy_status": "unconfirmed",
+    "source_id": "s1",
+    "adopted_on": null
+   },
+   "rules": [
+    {
+     "topic": "nil-education",
+     "scope": "institution",
+     "answer": "not_addressed",
+     "summary": "Winter Park's athletics site has a menu item called NIL. It opens a copy of FHSAA Form GA1 (Affidavit of Amateurism). The site adds no NIL rules of its own.",
+     "conditions": "School-specific part: the school posts the form under an NIL label. The copy is the August 2024 version and may not be the current FHSAA form.",
+     "citation": "winterparkathletics.org menu, More > NIL",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "The school's NIL link is the FHSAA GA1 form, with no extra school guidance.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Site menu, 'More' group; link target https://sportshub2-uploads.vnn-prod.zone/files/sites/68/2024/08/22190831/GA1_Affidavit_of_Amateurism_81624-1.pdf",
+       "quote": "NIL",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "pay-for-play",
+     "scope": "institution",
+     "answer": "no",
+     "summary": "Winter Park's eligibility page says an athlete must be an amateur and must not accept money, gifts or donations for participating in a sport.",
+     "conditions": "This restates FHSAA Bylaw 9.9 on an undated school page. It does not mention NIL and may pre-date the 2024 FHSAA NIL change.",
+     "citation": "Winter Park FHSAA Eligibility And Compliance page, item 9",
+     "quick_status": "NO",
+     "short_answer": "The school page says no money or gifts for playing a sport.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "Item 9",
+       "quote": "Must be an amateur. This means you must not accept money, gifts, or donations for participating in a sport. (FHSAA Bylaw 9.9)",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [],
+   "contacts": [
+    {
+     "office": "Winter Park High School Athletics",
+     "role": "Athletic Director",
+     "person_name": "Charles Battaglini",
+     "phone": null,
+     "email": null,
+     "url": "https://www.winterparkathletics.org/page/winter-park-head-coaches",
+     "source_id": "s6"
+    },
+    {
+     "office": "Winter Park High School Athletic Training Program",
+     "role": "Director of Athletic Training Services, handles online physical and clearance submissions",
+     "person_name": "Elaine M. Judy",
+     "phone": "407-622-3217",
+     "email": null,
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/06/10/ca3de11b-50ef-422e-b2c6-4c4eef0d6616.pdf",
+     "source_id": "s5"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "Yearly online clearance (EL2 physical, OCPS Cardiology Report, NFHS certificates) on Home Campus. Separately, the site posts Form GA1 under an 'NIL' menu item. The pages do not say how or when GA1 must be turned in.",
+    "recipient": "Winter Park High School Athletic Training Program through Home Campus",
+    "deadline_text": "It takes up to 2 school days to process paperwork, sometimes longer at the beginning of the season. Same day clearance is not possible.",
+    "platform_name": "Home Campus",
+    "platform_url": "https://www.homecampus.com/login",
+    "form_name": "GA1 Affidavit of Amateurism (posted under the NIL menu item)",
+    "form_url": "https://sportshub2-uploads.vnn-prod.zone/files/sites/68/2024/08/22190831/GA1_Affidavit_of_Amateurism_81624-1.pdf",
+    "source_id": "s5",
+    "quote": "1. Go to https://www.homecampus.com/login o New site so everyone must make a new account."
+   },
+   "important_claims": [
+    "The athletics site has a menu item labelled 'NIL' that links to GA1_Affidavit_of_Amateurism_81624-1.pdf.",
+    "The eligibility page says athletes must not accept money, gifts or donations for participating in a sport, citing FHSAA Bylaw 9.9.",
+    "2026-27 clearance is on Home Campus, described as a new site where everyone must make a new account.",
+    "Athletic Director is Charles Battaglini, as printed on the Winter Park Head Coaches page.",
+    "Winter Park appears on the FHSAA Membership List 2026-27."
+   ],
+   "ambiguities": [
+    "The GA1 copy is the 8/16/24 version. FHSAA may have revised the form since, so the school copy could be outdated.",
+    "The eligibility page is undated and its amateur wording does not mention the NIL exception. It should not be shown as the school's full position on NIL.",
+    "The pages do not say whether GA1 is collected through Home Campus or handed in another way.",
+    "winterparkhs.ocps.net/athletics-home returns a 404 page, so the school site profile could not be cross-checked there.",
+    "Sports list is taken from the team menu data on the official athletics site. It may include inactive or non-FHSAA teams and should be checked."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://sportshub2-uploads.vnn-prod.zone/files/sites/68/2024/08/22190831/GA1_Affidavit_of_Amateurism_81624-1.pdf : open to confirm the form version and whether the school added any cover text",
+    "https://www.homecampus.com/login : log-in portal, check whether GA1 is a signature step"
+   ],
+   "not_found": [
+    "School-written NIL policy or FAQ",
+    "Rule on using the school name, logo or uniform in NIL content",
+    "Media credential or commercial photography rule",
+    "Facility-use rule for NIL shoots",
+    "Athletic handbook or code of conduct",
+    "Sponsorship page"
+   ]
+  }
+ ]
+}
