@@ -1,0 +1,28 @@
+{
+  "name": "nil-intelligence-network",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "NIL Brand Academy NIL Intelligence Network. Static site generated from the NIL Intelligence database. Served at nilbrandacademy.com/nil/.",
+  "scripts": {
+    "build": "astro build && node scripts/write-redirects.mjs",
+    "build:launch": "NIL_STAGING=0 astro build && NIL_STAGING=0 node scripts/write-redirects.mjs",
+    "dev": "astro dev",
+    "seed:sql": "node scripts/seed.mjs",
+    "check:db": "node scripts/check-db.mjs",
+    "qa": "node scripts/audit.mjs",
+    "db:migrate": "node scripts/migrate.mjs --seed",
+    "db:validate": "node scripts/validate-db.mjs",
+    "check:security": "node scripts/check-security.mjs"
+  },
+  "dependencies": {
+    "@electric-sql/pglite": "^0.5.8",
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource/lato": "^5.3.0",
+    "astro": "^7.3.5",
+    "pg": "^8.23.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
