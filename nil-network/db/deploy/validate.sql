@@ -34,12 +34,15 @@ with t as (
   union all select 'hash:change_log', md5(string_agg(changed_on::text || '|' || change_type || '|' || summary, '~' order by changed_on, summary collate "C")) from rule_change_log
   union all select 'trust:' || trust_state, count(*)::text from rule_versions group by trust_state
   union all select 'gate:' || path, index_status || ' ' || seo_status || ' class=' || value_class || ' rules=' || rule_count || ' review=' || rules_needing_review || ' topics=' || topics_answered || ' nil=' || nil_items || ' sup=' || supporting_items || ' scen=' || scenarios_answered
-      || ' checks=' || concat_ws('', chk_governing_body::int, chk_rules_established::int, chk_sources_attached::int, chk_rules_traceable::int, chk_school_info_checked::int, chk_school_specific_value::int, chk_contact_checked::int, chk_scenarios_answered::int, chk_title_meta::int, chk_canonical::int, chk_internal_links::int, chk_no_open_conflict::int, chk_human_review::int, chk_editorial_approval::int) from v_page_quality_gate
+      || ' checks=' || concat_ws('', chk_governing_body::int, chk_rules_established::int, chk_sources_attached::int, chk_rules_traceable::int, chk_school_info_checked::int, chk_school_specific_value::int, chk_contact_checked::int, chk_scenarios_answered::int, chk_title_meta::int, chk_canonical::int, chk_internal_links::int, chk_no_open_conflict::int, chk_no_critical_source_gap::int, chk_human_review::int, chk_editorial_approval::int) from v_page_quality_gate
   union all select 'rows:school_contacts', count(*)::text from school_contacts
   union all select 'rows:nil_programs', count(*)::text from nil_programs
   union all select 'rows:school_nil_policies', count(*)::text from school_nil_policies
   union all select 'rows:school_review_notes', count(*)::text from school_review_notes
   union all select 'rows:school_districts', count(*)::text from school_districts
+  union all select 'rows:source_access_issues', count(*)::text from source_access_issues
+  union all select 'rows:source_access_pages', count(*)::text from source_access_pages
+  union all select 'access:' || class || ':' || status, count(*)::text from source_access_issues group by class, status
   union all select 'human:rule_versions_marked_human_review', count(*)::text from rule_versions where review_method = 'human_review'
   union all select 'human:pages_marked_approved', count(*)::text from pages where human_approved
   union all select 'seo:' || seo_status, count(*)::text from v_page_quality_gate group by seo_status
