@@ -1,0 +1,995 @@
+{
+ "triaged_on": "2026-10-04",
+ "documents": [
+  {
+   "title": "FAU Student-Athlete Handbook 2026-27",
+   "organization": "Florida Atlantic University Athletics",
+   "url": "https://fausports.com/documents/2026/7/1/SA_H_26-27_remediated.pdf",
+   "owners": [
+    "florida-atlantic-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Flagged for a manual check of page 31 wording and bullet layout.",
+   "retry": "Opened in my own Chrome tab and read with pdf.js from the public file link shown on the document page. Read the full NIL section on page 31 and searched all 45 pages for NIL, Opendorse, INFLCR, Teamworks, NIL Go, disclosure and collective.",
+   "status": "opened_now",
+   "class": "A",
+   "claim_affected": "All FAU handbook rules (NIL allowed, disclosure, marks, facilities, gear, agents, staff involvement, international).",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Wording matches the research file. The NIL section is half a page on page 31 and does not name the disclosure platform or a deadline. The only other NIL mentions are a media rule on page 37 and an Opendorse branding tip on page 39."
+  },
+  {
+   "title": "FAU Agent/Advisor Registration Application",
+   "organization": "Florida Atlantic University Compliance Office",
+   "url": "https://fausports.com/documents/2023/7/17/Agent-Advisor_Registration_Application__1_.pdf",
+   "owners": [
+    "florida-atlantic-university"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Not opened in the first pass.",
+   "retry": "Opened in my own Chrome tab and read with pdf.js from the public file link shown on the document page. Read all 5 pages.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "FAU agents rule: who receives agent and NIL service provider registrations.",
+   "other_support": "FAU Agents page (s3) names the same person.",
+   "risk": "medium",
+   "finding": "The form covers athlete agents, financial advisors, marketing reps and 'Name/Image/Likeness Professional Service Provider'. It says to return it to John Stephenson, Compliance Office, who is not on the current staff directory. It also says an NIL representation contract may not run past the athlete's time in a college athletic program."
+  },
+  {
+   "title": "NIL in Paradise collective website",
+   "organization": "NIL in Paradise / TheLinkU",
+   "url": "https://www.nilinparadise.com/",
+   "owners": [
+    "florida-atlantic-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Collective status was not confirmed.",
+   "retry": "Opened in my own Chrome tab.",
+   "status": "opened_now",
+   "class": "D",
+   "claim_affected": "FAU collectives rule and the 'NIL in Paradise' program status.",
+   "other_support": "FAU 'NIL in Paradise' page (s6) is still live and links to TheLinkU.",
+   "risk": "low",
+   "finding": "The address now redirects to a TheLinkU donation page for Florida Atlantic University with monthly membership tiers. The page says funds are used to engage student athletes in NIL opportunities. It is a third-party page and carries no date."
+  },
+  {
+   "title": "FAU Athletics Staff Directory",
+   "organization": "Florida Atlantic University Athletics",
+   "url": "https://fausports.com/staff-directory",
+   "owners": [
+    "florida-atlantic-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Read through a summariser only. Phones and titles needed a manual check.",
+   "retry": "Opened in my own Chrome tab and read raw page text.",
+   "status": "opened_now",
+   "class": "C",
+   "claim_affected": "FAU compliance, licensing and Playfly contacts.",
+   "other_support": "FAU Compliance page (s4).",
+   "risk": "none",
+   "finding": "No NIL content. Compliance staff, phones and emails match the research file. It also lists J.R. Kidd, Assistant Director of Compliance. John Stephenson is not listed. No staff title contains NIL."
+  },
+  {
+   "title": "FAU Student-Athlete Handbook 2024-25",
+   "organization": "Florida Atlantic University Athletics",
+   "url": "https://fausports.com/documents/download/2024/8/9/Student-Athlete_Handbook_24-25.docx.pdf",
+   "owners": [
+    "florida-atlantic-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "WebFetch was blocked by robots.txt on the download path.",
+   "retry": "Did not use the blocked download path. Opened in my own Chrome tab and read with pdf.js from the public file link shown on the document page. Read the NIL section on page 31.",
+   "status": "opened_now",
+   "class": "E",
+   "claim_affected": null,
+   "other_support": "FAU Student-Athlete Handbook 2026-27 (s2).",
+   "risk": "none",
+   "finding": "Superseded edition. Its NIL section uses the same 'FAU's Disclosure platform' wording with no platform name, and it has the 'FAU Institutional Staff Members MAY NOT' list that the 2026-27 edition dropped."
+  },
+  {
+   "title": "FAU Compliance Office staff directory entry",
+   "organization": "Florida Atlantic University Athletics",
+   "url": "https://fausports.com/staff-directory/compliance-office/1879",
+   "owners": [
+    "florida-atlantic-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Page showed no information.",
+   "retry": "Opened in my own Chrome tab and read raw page text.",
+   "status": "opened_now",
+   "class": "C",
+   "claim_affected": null,
+   "other_support": "FAU Compliance page (s4) gives the same office email.",
+   "risk": "none",
+   "finding": "No NIL content. The page shows only the office email [email on the official page] and the words 'No information available.'"
+  },
+  {
+   "title": "FIU 2026-2027 Student-Athlete Handbook",
+   "organization": "FIU Athletics",
+   "url": "https://fiusports.com/documents/2026/8/24/Student_Handbook_2026-2027.pdf",
+   "owners": [
+    "florida-international-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Flagged for a manual check of pages 98 to 101.",
+   "retry": "Opened in my own Chrome tab and read with pdf.js from the public file link shown on the document page. Read pages 98 to 101 in full and searched all 108 pages for NIL, INFLCR, NIL Go, agent, collective and international.",
+   "status": "opened_now",
+   "class": "A",
+   "claim_affected": "FIU disclosure, deal review, prohibited categories, contract length, agents and team activities rules.",
+   "other_support": "FIU Policy 910.001 (s3) for the policy text it repeats.",
+   "risk": "none",
+   "finding": "Wording matches the research file. The handbook names the INFLCR app for disclosure before signing, a $10,000 second review, a 10 day fix window, six banned categories and a contract length limit, then restates the national NIL Go steps. The agents section says registration forms are on fiusports.com under the Athletics Compliance tab."
+  },
+  {
+   "title": "FIU Policy 910.001 Student-Athlete Name, Image, and Likeness (PDF)",
+   "organization": "Florida International University",
+   "url": "https://policies.fiu.edu/files/910.001",
+   "owners": [
+    "florida-international-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Flagged to confirm revision history and the rescinded procedure page.",
+   "retry": "Opened in my own Chrome tab and read with pdf.js from the public file link shown on the document page. Read all 4 pages. Also read the policy library page and the library's A to Z listing.",
+   "status": "opened_now",
+   "class": "A",
+   "claim_affected": "All FIU rules that cite Policy 910.001, and whether a newer version exists.",
+   "other_support": "FIU 2026-2027 Student-Athlete Handbook (s2) repeats the policy statement.",
+   "risk": "low",
+   "finding": "History confirmed: effective July 1, 2021, last revised May 8, 2023, reviewed with no updates February 9, 2024. The FIU policy library lists only this one NIL policy, so no newer version was located. The policy still cites the old Florida NIL law and the NCAA interim policy."
+  },
+  {
+   "title": "FIU Procedure 910.001a Student-Athlete Name, Image, and Likeness",
+   "organization": "Florida International University",
+   "url": "https://policies.fiu.edu/files/910.001a",
+   "owners": [
+    "florida-international-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Marked temporarily rescinded. No text published.",
+   "retry": "Read page 4 of the policy PDF, which is the procedure page. Checked the library listing and tried the matching file address in my own Chrome tab.",
+   "status": "not_found_404",
+   "class": "E",
+   "claim_affected": "FIU disclosure and deal review steps.",
+   "other_support": "FIU 2026-2027 Student-Athlete Handbook (s2) carries the working steps.",
+   "risk": "low",
+   "finding": "No procedure text is published. Page 4 of the policy PDF says the procedure dated August 16, 2022 was temporarily rescinded after the Florida NIL law changed on February 16, 2023, pending a revised procedure. That page shows a last revision date of March 15, 2023. No replacement procedure is listed in the policy library."
+  },
+  {
+   "title": "The Blueprint Collective website",
+   "organization": "The Blueprint Collective",
+   "url": "https://www.blueprintnil.com/",
+   "owners": [
+    "florida-international-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Collective status was not confirmed.",
+   "retry": "Opened in my own Chrome tab.",
+   "status": "opened_now",
+   "class": "D",
+   "claim_affected": "FIU collective program status.",
+   "other_support": "FIU 2023 news release (s7).",
+   "risk": "low",
+   "finding": "The site loads and its page title still calls it the official NIL collective of FIU. The home page shows almost no text and no date, so current activity is not confirmed. No current FIU page naming the collective was found."
+  },
+  {
+   "title": "The Panther Exchange (INFLCR)",
+   "organization": "FIU Athletics / Teamworks Influencer",
+   "url": "https://fiusports.com/exchange",
+   "owners": [
+    "florida-international-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Needed a check that the exchange is still active.",
+   "retry": "Opened in my own Chrome tab. Did not log in or register.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "FIU Panther Exchange program status.",
+   "other_support": "FIU 2023 news release (s6).",
+   "risk": "none",
+   "finding": "The FIU address still redirects to the Influencer exchange page titled 'The Panther Exchange'. The public page is live and shows a count of FIU athletes available. Details sit behind a registration that was not used."
+  },
+  {
+   "title": "Kevin D. Kendrick staff directory page",
+   "organization": "FIU Athletics",
+   "url": "https://fiusports.com/staff-directory/kevin-d-kendrick/1481",
+   "owners": [
+    "florida-international-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "WebFetch was rate limited.",
+   "retry": "Opened in my own Chrome tab and read raw page text.",
+   "status": "opened_now",
+   "class": "C",
+   "claim_affected": "FIU compliance contact title.",
+   "other_support": "FIU Compliance page (s1).",
+   "risk": "none",
+   "finding": "The page title reads 'Dr. Kevin D. Kendrick - Senior Associate AD, Compliance & Deputy Title IX Coordinator'. His bio lists Name, Image, and Likeness among his areas. It states no NIL rule."
+  },
+  {
+   "title": "FIU agent and financial planner registration forms",
+   "organization": "FIU Athletics Compliance Office",
+   "url": null,
+   "owners": [
+    "florida-international-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Not located under the Athletics Compliance tab.",
+   "retry": "Read the FIU Compliance page in my own Chrome tab and listed every link on it. Read the handbook sentence that points to the forms.",
+   "status": "still_inaccessible",
+   "class": "B",
+   "claim_affected": "FIU agents rule: how an agent registers.",
+   "other_support": "FIU 2026-2027 Student-Athlete Handbook (s2) states the registration requirement.",
+   "risk": "low",
+   "finding": "Not located. The handbook says the forms are on fiusports.com under the Athletics Compliance tab, but the Compliance page shows no form or agent link. The page lists the office email and phone only."
+  },
+  {
+   "title": "UNF Name, Image, Likeness Reference Guide (image)",
+   "organization": "University of North Florida Athletics",
+   "url": "https://unfospreys.com/sports/2023/11/30/nil-fact-sheet-2025-26",
+   "owners": [
+    "university-of-north-florida"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Text is inside an image and was read by eye.",
+   "retry": "Opened the image file in my own Chrome tab at full width and read all three screens of it.",
+   "status": "opened_now",
+   "class": "A",
+   "claim_affected": "All UNF rules that cite the Reference Guide.",
+   "other_support": "UNF Policy 5.0110P and the 2026-27 Student-Athlete Handbook now support the same rules in text.",
+   "risk": "none",
+   "finding": "Every quote in the research file matches the image. The guide prints no date. The 'on call' line sits under 'Impermissible for Institutions', so it limits what UNF may allow, not a separate athlete rule."
+  },
+  {
+   "title": "2026-27 UNF Student-Athlete Handbook",
+   "organization": "University of North Florida Athletics",
+   "url": "https://www.unf.edu/athletics/student-handbook/",
+   "owners": [
+    "university-of-north-florida"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Not opened in the first pass.",
+   "retry": "Opened in my own Chrome tab. Read the index and scanned all eight handbook pages. Read the Name, Image, Likeness and Agents parts in full.",
+   "status": "opened_now",
+   "class": "A",
+   "claim_affected": "UNF logos, uniforms, facilities, agents, international athletes and disclosure rules.",
+   "other_support": null,
+   "risk": "medium",
+   "finding": "The handbook has an NIL section on its NCAA Eligibility and Participation page. It adds rules the one page guide lacks: no UNF logos, marks or uniforms without written permission through an NIL Logo Request workflow, agents must also register with the UNF Compliance Office, and F-1 athletes need guidance and approval before any NIL activity."
+  },
+  {
+   "title": "North Florida Athletics Launches Osprey Boosters (news release)",
+   "organization": "University of North Florida Athletics",
+   "url": "https://unfospreys.com/news/2025/10/22/unf-athletics-launches-osprey-boosters-a-new-era-of-donor-engagement-and-impact",
+   "owners": [
+    "university-of-north-florida"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Read through a summariser only.",
+   "retry": "Opened in my own Chrome tab and read raw page text.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "Osprey Boosters Talent Fund program description.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Talent Fund wording confirmed in raw text. Each program has an Operating Fund and a Talent Fund, and the Talent Fund supports scholarship enhancements and revenue-sharing. The release states no rule for athletes."
+  },
+  {
+   "title": "UNF Brand Guidelines / licensing page",
+   "organization": "University of North Florida",
+   "url": "https://www.unf.edu/brand/athletics.html",
+   "owners": [
+    "university-of-north-florida"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Not opened in the first pass.",
+   "retry": "Opened www.unf.edu/brand/ and its Athletics page in my own Chrome tab and searched the text for NIL, likeness, licensing and student-athlete.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "Who approves use of UNF athletics logos.",
+   "other_support": "UNF Policy 5.0110P and the Student-Athlete Handbook name the NIL logo request route.",
+   "risk": "low",
+   "finding": "No NIL content. The Athletics brand page says athletics marks may be allowed in some cases with approval from the Athletics Department. It names no licensing office and no NIL process."
+  }
+ ],
+ "school_updates": {
+  "florida-atlantic-university": {
+   "sources": [
+    {
+     "id": "t1",
+     "title": "Donors - Florida Atlantic University Athletics",
+     "url": "https://fausports.com/sports/2023/7/17/donors",
+     "organization": "Florida Atlantic University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2023-07-17",
+     "notes": "Raw page text read in a browser. Compliance sub-page for donors. Date taken from the URL. No printed date. Likely written before the House settlement."
+    },
+    {
+     "id": "t2",
+     "title": "Agent/Advisor Registration Application (PDF)",
+     "url": "https://fausports.com/documents/2023/7/17/Agent-Advisor_Registration_Application__1_.pdf",
+     "organization": "Florida Atlantic University Compliance Office",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": "2023-07-17",
+     "notes": "PDF text read in a browser, 5 pages. Stray spaces from extraction removed in quotes. Date taken from the URL."
+    },
+    {
+     "id": "t3",
+     "title": "Staff Directory - Florida Atlantic University Athletics",
+     "url": "https://fausports.com/staff-directory",
+     "organization": "Florida Atlantic University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Raw page text read in a browser on 2026-10-04. Same page as s1, now read directly."
+    },
+    {
+     "id": "t4",
+     "title": "TheLinkU donation page for Florida Atlantic University",
+     "url": "https://www.thelinku.com/donate/FAU",
+     "organization": "TheLinkU",
+     "source_type": "secondary_reporting",
+     "is_primary": false,
+     "published_on": null,
+     "notes": "Third-party page. nilinparadise.com redirects here. Discovery only."
+    },
+    {
+     "id": "t5",
+     "title": "Student-Athlete Handbook 2026-27 - Florida Atlantic University Athletics",
+     "url": "https://fausports.com/documents/2026/7/1/SA_H_26-27_remediated.pdf",
+     "organization": "Florida Atlantic University Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2026-07-01",
+     "notes": "Same document as s2, re-read in full on 2026-10-04. Stray spaces from extraction removed in quotes."
+    }
+   ],
+   "rules": [
+    {
+     "topic": "disclosure-required",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "An FAU compliance page for donors says athletes must disclose all NIL activities through Opendorse. The 2026-27 handbook says only 'FAU's Disclosure platform'.",
+     "conditions": "The donors page has a 2023 URL date and no printed date. No FAU page read gives a deadline. Check that Opendorse is still FAU's platform.",
+     "citation": "FAU Compliance, Donors page, NIL Education",
+     "quick_status": "YES",
+     "short_answer": "FAU's donor page names Opendorse for disclosure.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "NIL Education",
+       "quote": "Student-athletes must disclose all NIL activities via Opendorse",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t5",
+       "locator": "Name, Image, Likeness (NIL), handbook page 31",
+       "quote": "Student-athletes disclose all NIL activity through FAU’s Disclosure platform",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "boosters",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FAU tells boosters they can support athletes through NIL on the Opendorse marketplace. FAU says boosters may not contact recruits and NIL may not depend on performance or playing at FAU.",
+     "conditions": "The donors page has a 2023 URL date and no printed date.",
+     "citation": "FAU Compliance, Donors page",
+     "quick_status": "DEPENDS",
+     "short_answer": "Boosters may do NIL deals, but not with recruits.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Ways to Support",
+       "quote": "Visit Opendorse.com/fau-owls to support a student-athlete directly",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t1",
+       "locator": "NIL Education",
+       "quote": "Boosters may NOT contact, visit or tweet recruits",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t1",
+       "locator": "NIL Education",
+       "quote": "Student-athletes NIL opportunities may not be conditioned on performance or playing at FAU",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "agents",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FAU's registration form covers NIL service providers as well as agents. It says to return the form to the Compliance Office before contact with an athlete.",
+     "conditions": "The form names John Stephenson, who is not on the current staff directory. The form has a 2023 URL date.",
+     "citation": "FAU Agent/Advisor Registration Application",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "NIL service providers register with FAU Compliance.",
+     "sources": [
+      {
+       "source_id": "t2",
+       "locator": "Registration (Check All That Apply)",
+       "quote": "Name/Image/Likeness Professional Service Provider",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t2",
+       "locator": "Return Completed Application To",
+       "quote": "Attention: John Stephenson, Compliance Office",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "contract-length",
+     "scope": "institution",
+     "answer": "no",
+     "summary": "FAU's agent registration form says a contract to represent an athlete for NIL may not last past the athlete's time in a college athletic program.",
+     "conditions": "This is about representation contracts. It is on the agent form, not in the handbook. It mirrors older Florida law wording.",
+     "citation": "FAU Agent/Advisor Registration Application, certification",
+     "quick_status": "NO",
+     "short_answer": "Agent NIL contracts end when your college career ends.",
+     "sources": [
+      {
+       "source_id": "t2",
+       "locator": "Applicant certification",
+       "quote": "The duration of a contract for representation of a student-athlete for NIL activities may not extend beyond their participation in an athletic program at a postsecondary educational institution.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "nil-education",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "FAU's handbook says staff may educate athletes, boosters and prospects about NIL.",
+     "conditions": "From the list headed 'FAU Institutional Staff Members MAY'.",
+     "citation": "FAU Student-Athlete Handbook 2026-27, NIL section",
+     "quick_status": "YES",
+     "short_answer": "FAU staff may teach NIL.",
+     "sources": [
+      {
+       "source_id": "t5",
+       "locator": "Name, Image, Likeness (NIL), handbook page 31",
+       "quote": "Educate student-athletes, boosters and prospective student-athletes",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [],
+   "contacts": [
+    {
+     "office": "FAU Athletics Compliance Office",
+     "role": "Assistant Director of Compliance",
+     "person_name": "J.R. Kidd",
+     "phone": "561-297-4547",
+     "email": null,
+     "url": "https://fausports.com/staff-directory",
+     "source_id": "t3"
+    }
+   ],
+   "corrections": [
+    "disclosure-required rule and disclosure_workflow: the platform is named on an official FAU page. The Donors compliance page says 'Student-athletes must disclose all NIL activities via Opendorse'. Update platform_name to Opendorse with a note that the page is undated (2023 URL) and the 2026-27 handbook does not name it. Remove 'Name of FAU's NIL disclosure platform' from not_found. A deadline is still not found.",
+    "agents rule: the registration form was opened. Both the Agents page and the form name John Stephenson (form prints [email on the official page]). He is not on the current staff directory, which lists Garrett Franskousky, Aliana Bennazar and J.R. Kidd. Keep the general office email as the contact and keep the outdated flag.",
+    "collectives rule and 'NIL in Paradise' program: nilinparadise.com now redirects to a TheLinkU donation page for FAU. FAU's own 'NIL in Paradise' page is still live and links to TheLinkU. Status stays unconfirmed by a current FAU statement, but the TheLinkU program entry should not be treated as ended.",
+    "Ambiguity 'Compliance staff phone numbers and the street address come from a WebFetch summary' can be cleared. Phones, emails, titles and the 777 Glades Rd address were confirmed in raw text.",
+    "school-staff-involvement rule: the 'MAY' list has four bullets. The third, 'Educate student-athletes, boosters and prospective student-athletes', was not quoted. Wording of the other handbook quotes is confirmed.",
+    "not_found 'Booster guidance on NIL' should be removed. The Donors page has a short NIL section for boosters."
+   ],
+   "policy_status": "published",
+   "policy_note": "The 2026-27 handbook NIL section was re-read and is unchanged. No stand-alone FAU NIL policy or regulation was located in the public sources reviewed as of October 4, 2026.",
+   "newer_guidance_found": false,
+   "notes": [
+    "Platform: Opendorse is named for disclosure only on the undated Donors page. The handbook also calls Opendorse a personal branding tool. A person should confirm it is still the disclosure platform for 2026-27.",
+    "Deadline: no FAU page read states a disclosure deadline.",
+    "Agent contact: the only named recipient is John Stephenson on two 2023 documents. Treat as likely outdated.",
+    "Handbook page 37 says media contact not arranged by the Communications Office is not allowed unless it is part of NIL obligations, and asks athletes to tell their communication officer even then.",
+    "FAU pages checked for a formal policy: fau.edu/regulations index, fau.edu/policies index and the university Trademark Guidelines page. None showed an NIL item by title. The regulation chapter PDFs were not opened.",
+    "The Compliance sub-pages for Student-Athletes, Coaches and Staff, and Recruits contain no NIL text."
+   ]
+  },
+  "florida-international-university": {
+   "sources": [
+    {
+     "id": "t1",
+     "title": "FIU Policy 910.001 Student-Athlete Name, Image, and Likeness",
+     "url": "https://policies.fiu.edu/files/910.001",
+     "organization": "Florida International University",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2023-05-08",
+     "notes": "Same document as s3, re-read in full on 2026-10-04 (4 pages). Page 4 is the Procedure 910.001a rescission notice."
+    },
+    {
+     "id": "t2",
+     "title": "FIU 2026-2027 Student-Athlete Handbook",
+     "url": "https://fiusports.com/documents/2026/8/24/Student_Handbook_2026-2027.pdf",
+     "organization": "FIU Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2026-08-24",
+     "notes": "Same document as s2, pages 98 to 101 re-read in full on 2026-10-04."
+    },
+    {
+     "id": "t3",
+     "title": "The Panther Exchange (Influencer)",
+     "url": "https://app.inflcr.com/exchange/florida-international-university",
+     "organization": "Teamworks Influencer for FIU Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "fiusports.com/exchange redirects here. Public landing page read in a browser. Not logged in."
+    },
+    {
+     "id": "t4",
+     "title": "Dr. Kevin D. Kendrick staff page",
+     "url": "https://fiusports.com/staff-directory/kevin-d-kendrick/1481",
+     "organization": "FIU Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Raw page text read in a browser."
+    },
+    {
+     "id": "t5",
+     "title": "The Blueprint Collective website",
+     "url": "https://www.blueprintnil.com/",
+     "organization": "The Blueprint Collective",
+     "source_type": "secondary_reporting",
+     "is_primary": false,
+     "published_on": null,
+     "notes": "Third-party site. Discovery only."
+    }
+   ],
+   "rules": [
+    {
+     "topic": "deal-terms",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FIU says NIL pay must match the market value of the use of the athlete's NIL.",
+     "conditions": "This wording comes from the older Florida NIL law. The policy was last revised in May 2023. The 2026-2027 handbook repeats it.",
+     "citation": "FIU Policy 910.001, Policy Statement",
+     "quick_status": "DEPENDS",
+     "short_answer": "Pay must match market value.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy Statement",
+       "quote": "must be commensurate with the market value of the authorized use of the student-athlete’s NIL",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-logos-marks",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "FIU's handbook says FIU property, including logos and symbols, may not be used with an NIL opportunity without approval.",
+     "conditions": "Adds to the existing rule. The handbook does not repeat who approves here. The policy names the two offices.",
+     "citation": "FIU 2026-2027 Student-Athlete Handbook, NIL section",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "No FIU logos or symbols without approval.",
+     "sources": [
+      {
+       "source_id": "t2",
+       "locator": "Student-Athlete Employment/Name, Image & Likeness (NIL), handbook page 99",
+       "quote": "may not be used in conjunction with a student-athlete’s name, image, and likeness opportunity without approval",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "agents",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FIU says a meeting with a registered agent can be arranged if it is on campus with a compliance staff member present. FIU says the registration forms are on its athletics site.",
+     "conditions": "The forms were not located on the Compliance page. The same section still has an older rule against agreeing to agent representation for marketing athletic ability, which does not mention NIL.",
+     "citation": "FIU 2026-2027 Student-Athlete Handbook, Agents and Financial Advisors",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Agent meetings are on campus with compliance present.",
+     "sources": [
+      {
+       "source_id": "t2",
+       "locator": "Agents and Financial Advisors, handbook page 101",
+       "quote": "this can be arranged provided the meeting takes place on campus and a member of the ACO is present",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t2",
+       "locator": "Agents and Financial Advisors, handbook page 101",
+       "quote": "The agent/financial planner’s registration forms are available at www.FIUsports.com under the Athletics Compliance tab.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "team-activities",
+     "scope": "institution",
+     "answer": "no",
+     "summary": "FIU's handbook lists what counts as official team activities, including practices, competition and travel, class, study hall, community service, team promotional events and compliance meetings.",
+     "conditions": "The handbook list differs from the list in Policy 910.001.",
+     "citation": "FIU 2026-2027 Student-Athlete Handbook, NIL section",
+     "quick_status": "NO",
+     "short_answer": "NIL cannot clash with team or class time.",
+     "sources": [
+      {
+       "source_id": "t2",
+       "locator": "Student-Athlete Employment/Name, Image & Likeness (NIL), handbook page 99",
+       "quote": "Mandatory class attendance",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t2",
+       "locator": "Student-Athlete Employment/Name, Image & Likeness (NIL), handbook page 99",
+       "quote": "Academic study hall",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "The Panther Exchange (INFLCR)",
+     "program_type": "marketplace",
+     "description": "The live exchange page invites businesses to \"Connect and work with athletes from Florida International University.\"",
+     "url": "https://fiusports.com/exchange",
+     "source_id": "t3",
+     "current": true
+    }
+   ],
+   "contacts": [],
+   "corrections": [
+    "team-activities rule: the examples in the summary (study hall, team promotional events, compliance meetings) come from the handbook, not from Policy 910.001 Definitions as cited. The policy list is practice, strength and conditioning, competitions, film study, skill instruction, compliance meetings, host activities, recruiting, fundraising and promotional activities, community service, team travel, media activities and team building. Cite the handbook for the examples or reword.",
+    "Panther Exchange program: change current from 'unknown' to true. The FIU address still redirects to a live exchange page.",
+    "Ambiguity on Procedure 910.001a: confirmed. No procedure text is published and no replacement is in the policy library. The rescission page carries its own last revision date of March 15, 2023 and refers to the procedure dated August 16, 2022.",
+    "Kevin D. Kendrick: the staff page title reads 'Senior Associate AD, Compliance & Deputy Title IX Coordinator' and styles him 'Dr.'. The Compliance page reads 'Senior Associate Athletic Director/Compliance & Title IX Deputy Coordinator'. Both are official. Pick one.",
+    "Policy scope not recorded: 'This policy applies to all current and prospective intercollegiate student-athletes.'"
+   ],
+   "policy_status": "published",
+   "policy_note": "Policy 910.001 is the only NIL policy in FIU's policy library and was last revised May 8, 2023. Procedure 910.001a remains rescinded with no text published. The 2026-2027 handbook carries the working steps.",
+   "newer_guidance_found": false,
+   "notes": [
+    "No newer version of Policy 910.001 was located in the public sources reviewed as of October 4, 2026. The policy still cites Section 1006.74, Board of Governors Regulation 6.022 and the NCAA interim NIL policy.",
+    "The handbook is the newer document (August 2026). It names the INFLCR app and also restates the national NIL Go steps with old 2025 dates. A person should confirm whether FIU still wants disclosure in INFLCR as well as NIL Go.",
+    "The handbook agents section says an athlete may not agree to be represented by an agent 'in the marketing of your athletic ability or reputation' until after the last contest. It does not carve out NIL agents. Flag as unclear.",
+    "Agent registration forms were not located on the FIU Compliance page.",
+    "The Blueprint Collective site still loads and calls itself the official NIL collective of FIU. No current FIU page naming it was found. Keep status unknown.",
+    "The FIU Athletics Brand Guide 2024-25 PDF linked from the athletics site is image-only. Its text could not be read with pdf.js. A person should check it for NIL or logo approval wording: https://fiusports.com/documents/2024/12/19/FIU_Athletics_Brand_Guide_2024-25.pdf"
+   ]
+  },
+  "university-of-north-florida": {
+   "sources": [
+    {
+     "id": "t1",
+     "title": "Policy 5.0110P Intercollegiate Athletes - Name, Image and Likeness",
+     "url": "https://www.unf.edu/regulations-policies/05-studentaffairs/5-0110P.html",
+     "organization": "University of North Florida",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2026-01-20",
+     "notes": "Raw page text read in a browser. Effective Date 10/25/21. Revised Date 01/20/26. Policy Status: Minor/Technical Revision. Responsible: Office of the President / Athletics."
+    },
+    {
+     "id": "t2",
+     "title": "2026-27 UNF Student-Athlete Handbook, NCAA Eligibility and Participation",
+     "url": "https://www.unf.edu/athletics/student-handbook/NCAA-eligibility-and-participation.html",
+     "organization": "University of North Florida Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Raw page text read in a browser. The handbook index is titled '2026-27 UNF Student-Athlete Handbook'. NIL text is under 'Name, Image, Likeness' and 'Agents'."
+    },
+    {
+     "id": "t3",
+     "title": "UNF Brand, Athletics",
+     "url": "https://www.unf.edu/brand/athletics.html",
+     "organization": "University of North Florida",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Raw page text read in a browser. No NIL text."
+    },
+    {
+     "id": "t4",
+     "title": "NIL Reference Guide image",
+     "url": "https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/unfospreys.com/images/2025/11/3/NIL_Reference_Guide.png",
+     "organization": "University of North Florida Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2025-11-03",
+     "notes": "Same image as s2, viewed again at full width on 2026-10-04. All quotes confirmed. No printed date."
+    }
+   ],
+   "rules": [
+    {
+     "topic": "nil-allowed",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "UNF's policy says athletes may earn NIL pay without it affecting eligibility or their athletic aid.",
+     "conditions": null,
+     "citation": "UNF Policy 5.0110P, Statement of Policy",
+     "quick_status": "YES",
+     "short_answer": "Yes, UNF policy allows NIL.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "II. Statement of Policy",
+       "quote": "Student-athletes may earn compensation for their name, image, and likeness without affecting their athletic eligibility or grant-in-aid.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "pay-for-play",
+     "scope": "institution",
+     "answer": "no",
+     "summary": "UNF's handbook says NIL pay may not be given for athletic performance or for attending UNF.",
+     "conditions": "School-specific part: it is in UNF's own handbook.",
+     "citation": "2026-27 UNF Student-Athlete Handbook, Name, Image, Likeness",
+     "quick_status": "NO",
+     "short_answer": "No pay for playing or for enrolling.",
+     "sources": [
+      {
+       "source_id": "t2",
+       "locator": "Name, Image, Likeness",
+       "quote": "Compensation may not be provided in exchange for athletic performance or attendance at the University of North Florida.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "disclosure-required",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "UNF's policy says athletes must report all NIL deals, paid, unpaid or in-kind, as the NCAA or the College Sports Commission directs. The handbook says to disclose as the Compliance Office instructs.",
+     "conditions": "School-specific part: UNF counts unpaid and in-kind deals and makes the athlete responsible for timely reporting. No deadline is given in UNF's own words.",
+     "citation": "UNF Policy 5.0110P and 2026-27 Student-Athlete Handbook",
+     "quick_status": "YES",
+     "short_answer": "Report every deal, even unpaid ones.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "II. Statement of Policy",
+       "quote": "Student-athletes must report all NIL deals (including paid, unpaid or in-kind) in compliance with NCAA bylaws and as directed by the NCAA and/or the College Sports Commission.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t2",
+       "locator": "Name, Image, Likeness",
+       "quote": "Student-athletes are obligated to disclose any NIL agreements as instructed by the Compliance Office.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "uniform-in-content",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "UNF says athletes may not use UNF uniforms in NIL unless they get written permission first through the NIL Logo Request workflow.",
+     "conditions": null,
+     "citation": "UNF Policy 5.0110P and 2026-27 Student-Athlete Handbook",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "No UNF uniform in NIL without written permission.",
+     "sources": [
+      {
+       "source_id": "t2",
+       "locator": "Name, Image, Likeness",
+       "quote": "Student-athletes may NOT use UNF logos, marks or uniforms, unless prior written permission has been received through the NIL Logo Request workflow, located in the Compliance software.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t1",
+       "locator": "II. Statement of Policy",
+       "quote": "approval to use University or athletic department related marks and logos, including all aspects of the uniform",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-logos-marks",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "UNF says athletes need written permission before using UNF logos or marks. The request goes through the NIL Logo Request workflow in the compliance software.",
+     "conditions": "This names the route the one page guide left out.",
+     "citation": "UNF Policy 5.0110P and 2026-27 Student-Athlete Handbook",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Ask through the NIL Logo Request workflow first.",
+     "sources": [
+      {
+       "source_id": "t2",
+       "locator": "Name, Image, Likeness",
+       "quote": "Student-athletes may NOT use UNF logos, marks or uniforms, unless prior written permission has been received through the NIL Logo Request workflow, located in the Compliance software.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t1",
+       "locator": "II. Statement of Policy",
+       "quote": "Submissions seeking such permission should be submitted through respective workflow requests available to student-athletes through the athletics compliance software platform.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-facilities",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "UNF says campus facilities or grounds need written authorization for NIL. UNF says location agreements, liability waivers, insurance and rental fees may apply.",
+     "conditions": null,
+     "citation": "UNF Policy 5.0110P and 2026-27 Student-Athlete Handbook",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Get approval first. Fees and waivers may apply.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "II. Statement of Policy",
+       "quote": "the use of campus facilities or grounds for NIL activities requires written authorization from UNF and may require guidance on location agreements, waivers of liability, liability insurance requirements and applicable rental fees",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t2",
+       "locator": "Name, Image, Likeness",
+       "quote": "The use of athletic department facilities will require approval in advance through the NIL Facility Request workflow in the Compliance software.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "team-activities",
+     "scope": "institution",
+     "answer": "no",
+     "summary": "UNF's policy says no class time and no team activity may be missed for NIL.",
+     "conditions": null,
+     "citation": "UNF Policy 5.0110P, Statement of Policy",
+     "quick_status": "NO",
+     "short_answer": "Do not miss class or team time for NIL.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "II. Statement of Policy",
+       "quote": "Therefore, no class time nor team activity will be missed for any NIL activities.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t2",
+       "locator": "Name, Image, Likeness",
+       "quote": "You may not miss class time or team activities for NIL opportunities or obligations.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "prohibited-categories",
+     "scope": "institution",
+     "answer": "no",
+     "summary": "UNF's policy bans NIL agreements with gambling and sports wagering, alcohol, tobacco, marijuana, controlled substances, CBD, adult entertainment, and vendors tied to NCAA banned substances.",
+     "conditions": "Same list as the one page guide, now in the formal policy.",
+     "citation": "UNF Policy 5.0110P, Statement of Policy",
+     "quick_status": "NO",
+     "short_answer": "UNF bans NIL deals in a set list of categories.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "II. Statement of Policy",
+       "quote": "student-athletes will not be permitted to enter into NIL agreements with gambling/sports wagering, alcohol, tobacco, marijuana, controlled substances, CBD, adult entertainment, or vendors associated with NCAA banned substances",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "agents",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "UNF says agents must register with the State of Florida and with the UNF Compliance Office before contacting any athlete. Athletes are told to send any agent who contacts them to the Compliance Office.",
+     "conditions": "The one page guide mentions only state registration.",
+     "citation": "UNF Policy 5.0110P and 2026-27 Student-Athlete Handbook, Agents",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Agents register with Florida and with UNF Compliance.",
+     "sources": [
+      {
+       "source_id": "t2",
+       "locator": "Agents",
+       "quote": "Agents must register with the State of Florida and the UNF Compliance Office before corresponding with any student-athlete.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t1",
+       "locator": "II. Statement of Policy",
+       "quote": "An athlete agent representing a student-athlete must satisfy the requirements of section 468.453, Florida Statutes.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "international-athletes",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "UNF's handbook says athletes on an F-1 visa should get guidance and approval before any NIL activity.",
+     "conditions": "Stronger than the guide, which says to consult counsel and the International Center.",
+     "citation": "2026-27 UNF Student-Athlete Handbook and UNF Policy 5.0110P",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "F-1 athletes need guidance and approval first.",
+     "sources": [
+      {
+       "source_id": "t2",
+       "locator": "Name, Image, Likeness",
+       "quote": "International student-athletes who are attending UNF on an F-1 visa should seek guidance and approval BEFORE engaging in any NIL activity.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t1",
+       "locator": "IV. Potential Issues for Certain Student-Athletes",
+       "quote": "International student-athletes are advised that NIL agreements may impact their immigration status",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "nil-education",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "UNF's policy says the athletic department will offer at least two workshops of five hours each on financial literacy, life skills and entrepreneurship before graduation.",
+     "conditions": null,
+     "citation": "UNF Policy 5.0110P, Educational Workshops",
+     "quick_status": "YES",
+     "short_answer": "UNF offers two NIL-related workshops.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "III. Educational Workshops Associated with NIL Opportunities",
+       "quote": "The UNF Athletic Department will offer student-athletes at least two financial literacy, life skills, and entrepreneurship workshops for a minimum of five hours each before graduation.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "penalties",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "UNF's policy says athlete violations of the NIL policy go through the Student Code of Conduct.",
+     "conditions": null,
+     "citation": "UNF Policy 5.0110P, Potential Issues",
+     "quick_status": "DEPENDS",
+     "short_answer": "Violations go through the Student Code of Conduct.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "IV. Potential Issues for Certain Student-Athletes",
+       "quote": "Student-athlete violations of this Policy are processed through the Student Code of Conduct.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [],
+   "contacts": [],
+   "corrections": [
+    "school_policy and policy_search: a longer formal policy exists. UNF Policy 5.0110P 'Intercollegiate Athletes - Name, Image and Likeness' (effective 10/25/21, revised 01/20/26) should be the school policy. The one page Reference Guide is a summary of it.",
+    "not_found 'Uniform or team-issued gear rule for NIL content' should be removed. Both the policy and the handbook cover uniforms.",
+    "not_found 'A UNF licensing office contact or NIL logo approval form': the route is the NIL Logo Request workflow in the compliance software. No public form or named licensing office was found.",
+    "team-activities rule: the 'on call' sentence is in the guide's list 'Impermissible for Institutions Under NCAA Rules' ('Allow SA to promote their NIL activity while on call for required athletically related activities'). It limits what the school may allow. Reword the summary.",
+    "agents rule: add that agents must also register with the UNF Compliance Office before contacting an athlete (handbook).",
+    "international-athletes rule: the handbook asks F-1 athletes to seek guidance and approval before any NIL activity. Consider changing the answer to only_with_approval.",
+    "Ambiguity 'unclear if deals must also be entered in Teamworks': logo and facility requests go through workflows in the compliance software (the Compliance Corner page names Teamworks Compliance & Recruiting). Deal reporting is through NIL Go per the guide and 'as directed by the NCAA and/or the College Sports Commission' per the policy.",
+    "s7 Osprey Boosters release: Talent Fund wording is confirmed in raw text. The read_method caveat can be cleared.",
+    "s3 quote 'Any student-athletes requesting to use university facilities can do so through the NIL Facility Request workflow on Teamworks Compliance & Recruiting.' is confirmed in raw text. read_method can change from extraction to raw_text.",
+    "All Reference Guide quotes were checked against the image and match."
+   ],
+   "policy_status": "published",
+   "policy_note": "UNF has a formal university policy, 5.0110P, revised January 20, 2026, plus an NIL section in the 2026-27 Student-Athlete Handbook.",
+   "newer_guidance_found": true,
+   "notes": [
+    "Policy 5.0110P still cites Fla. Stat. 1006.74 and Board of Governors Regulation 6.022 as its basis, and the handbook opens with 'The state of Florida law permits'. A person should check these against current state law wording.",
+    "The policy says Pell Grant or need based aid 'could be impacted' by NIL pay and sends questions to One-Stop. It also says NIL may have tax implications.",
+    "The policy says the University and its employees, including coaches, are not liable for damage to an athlete's NIL earning ability from routine athletics decisions.",
+    "The handbook says NIL is expected to 'align with UNF values' and that education comes from the Student-Athlete Center for Excellence.",
+    "The Reference Guide image has no printed date. The 2025-11-03 date is from the file path only.",
+    "The handbook Boosters/Osprey Club page has no NIL text. No UNF collective was named on any page read."
+   ]
+  }
+ }
+}

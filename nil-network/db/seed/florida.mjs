@@ -737,7 +737,12 @@ schoolPolicies.forEach((p) => { p.covers_nil = true; });
 // Notes for the human review checklist. Never rendered on a public page.
 export const reviewNotes = [];
 export const districtSearches = [];
-applyPilot({ governingBodies, districts, sources, rules, institutions, policySearches, schoolPolicies, nilPrograms, contacts, pages, marketAreas, reviewNotes, districtSearches });
+export const accessDocs = [];
+applyPilot({ governingBodies, districts, sources, rules, institutions, policySearches, schoolPolicies, nilPrograms, contacts, pages, marketAreas, reviewNotes, districtSearches, accessDocs, conflicts });
+// Correction, October 4, 2026: the first pass did not open the Seminole County board policy manual and reported no district NIL policy.
+changeLog.push({ rule: 'scps-nil-allowed', changed_on: '2026-10-04', change_type: 'correction', source: 'scps-t1',
+  summary: 'We located Seminole County School Board Policy 2431.06, Name, Image, and Likeness (NIL) in Athletics, revised January 20, 2026. Our earlier pages said no district NIL policy had been located.' });
+{ const p = pages.find((x) => x.inst === 'seminole-high-school-sanford'); if (p) p.meta_description = 'NIL rules for Seminole High School athletes in Sanford, Florida: what FHSAA allows, Form GA1, the Seminole County school board NIL policy, and who to ask.'; }
 changeLog.push({ gb: 'ncaa', rule: 'ncaa-school-payments', changed_on: '2026-10-03', change_type: 'clarified', source: 'csc-faq',
   summary: 'We added the College Sports Commission\'s statement that schools outside the ACC, Big Ten, Big 12, Pac-12 and SEC choose each year whether to opt in to revenue sharing, and that NIL Go reporting applies either way.' });
 { const slugs = rules.map((r) => r.slug); const dup = slugs.filter((x, i) => slugs.indexOf(x) !== i); if (dup.length) throw new Error('duplicate rule slugs: ' + dup.join(', ')); }

@@ -79,13 +79,13 @@ export function buildSeedSql() {
     }));
     r.sources.forEach((s) => add(ins('rule_version_sources', {
       rule_version_id: rv, source_id: id('sources', s.src), locator: s.locator, quote: s.quote,
-      quote_check: s.check, checked_on: CHECKED_ON, checked_by: CHECKED_BY })));
+      quote_check: s.check, checked_on: r.checked_on || CHECKED_ON, checked_by: CHECKED_BY })));
     if (r.disclosure) add(ins('disclosure_requirements', { rule_version_id: rv, ...r.disclosure }));
     (r.prohibited || []).forEach(([slug, wording]) => add(ins('rule_version_prohibited_categories', {
       rule_version_id: rv, prohibited_category_id: id('prohibited_categories', slug), wording })));
     add(ins('verification_events', {
       entity_type: 'rule_version', entity_id: rv, status: r.trust, method: r.method === 'visual_source_check' ? 'desk_review' : 'automated_fetch',
-      verified_on: CHECKED_ON, verified_by: CHECKED_BY, notes: r.method === 'visual_source_check' ? 'Read on screen from the official document by Claude. Not a human review.' : r.method === 'raw_source_text' ? 'Full page text read from the official site by Claude. Not a human review.' : 'Machine-extracted only.' }));
+      verified_on: r.checked_on || CHECKED_ON, verified_by: CHECKED_BY, notes: r.method === 'visual_source_check' ? 'Read on screen from the official document by Claude. Not a human review.' : r.method === 'raw_source_text' ? 'Full page text read from the official site by Claude. Not a human review.' : 'Machine-extracted only.' }));
   });
 
   F.policySearches.forEach((p) => add(ins('policy_searches', {
@@ -103,6 +103,16 @@ export function buildSeedSql() {
   (F.districtSearches || []).forEach((p) => add(ins('policy_searches', {
     district_id: id('school_districts', p.district), public_policy_found: p.public_policy_found, search_date: p.search_date,
     locations_checked: p.locations_checked, locations_unreachable: p.locations_unreachable, searched_by: CHECKED_BY, notes: p.notes })));
+  (F.accessDocs || []).forEach((d, i) => {
+    const key = `${i + 1}`;
+    add(ins('source_access_issues', { title: String(d.title).replace(/\s+/g, ' ').trim(), organization: d.organization, url: d.url, class: d.class, status: d.status, risk: d.risk || 'low', occurrences: d.occurrences || 1,
+      claim_affected: d.claim_affected, other_support: d.other_support, why_unopened: d.why_unopened, retry: d.retry, finding: d.finding, triaged_on: '2026-10-04' }));
+    for (const o of d.owners || []) {
+      const isDistrict = F.districts.some((x) => x.slug === o); const isInst = F.institutions.some((x) => x.slug === o);
+      if (!isDistrict && !isInst) throw new Error('access doc owner not found: ' + o);
+      add(ins('source_access_pages', { issue_id: raw(`(select max(id) from source_access_issues)`), institution_id: isInst ? instId(o) : null, district_id: isDistrict ? id('school_districts', o) : null }));
+    }
+  });
   (F.reviewNotes || []).forEach((n) => add(ins('school_review_notes', {
     institution_id: instId(n.inst), district_id: id('school_districts', n.district), governing_body_id: id('governing_bodies', n.gb), kind: n.kind, body: n.body })));
 

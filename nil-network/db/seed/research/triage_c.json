@@ -1,0 +1,1033 @@
+{
+ "triaged_on": "2026-10-04",
+ "documents": [
+  {
+   "title": "Name, Image, and Likeness Policy v.5",
+   "organization": "Stetson University (NAVEX One policy library)",
+   "url": "https://stetsonuniversity.navexone.com/content/docview/?docid=303&public=true",
+   "owners": [
+    "stetson-university"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Embedded Word viewer would not render reliably and robots.txt blocked the fetch tool. Only about one of six pages was read.",
+   "retry": "Opened the public viewer in my own Chrome tab. The Word viewer is a cross-origin frame, so text is not in the DOM and scroll input did not reach it. Made the public viewer frame tall with page styling so all pages rendered, then read every page by eye from screenshots. No login, no download, no access control bypassed.",
+   "status": "opened_now",
+   "class": "A",
+   "claim_affected": "All Stetson NIL rules: disclosure recipient, deadline and threshold, agents, marks, facilities, prohibited deals, international athletes, penalties.",
+   "other_support": null,
+   "risk": "low",
+   "finding": "All six pages read in full (visual). Athletes must report non-school NIL deals of $600 or more to NIL GO within five business days. The policy covers agents, marks, sponsor conflicts, facilities, international athletes and withholding of services for late disclosure. It does not address boosters, uniforms or product categories."
+  },
+  {
+   "title": "Stetson University Hatters Official Brand Identity Usage and Style Guide v2.0 (PDF)",
+   "organization": "Stetson University Athletics",
+   "url": "https://gohatters.com/documents/2023/6/30/Stetson_Hatters_Guide2.0.pdf",
+   "owners": [
+    "stetson-university"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Not opened in the first pass.",
+   "retry": "Read the PDF text with pdf.js from a gohatters.com page (40 pages, file hosted on the site's CDN). Read pages 1 to 4 and keyword searched all pages.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "Stetson school-logos-marks rule (the NIL policy points to the Branding and Style Guides).",
+   "other_support": "Stetson NIL Policy v.5, Policy paragraph 3",
+   "risk": "low",
+   "finding": "No NIL or student-athlete text. It says the logos are Stetson property and use without consent is prohibited. It names Learfield Licensing for vendor and license requests, which predates the 2026 Affinity Licensing announcement."
+  },
+  {
+   "title": "hattersprime.com and hatterscollectivegroup.com",
+   "organization": "Hatters Collective Group, LLC (third party)",
+   "url": "https://hatterscollectivegroup.com/",
+   "owners": [
+    "stetson-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Seen in search results only, not opened.",
+   "retry": "Opened both home pages in my own Chrome tab and read the page text.",
+   "status": "opened_now",
+   "class": "D",
+   "claim_affected": "Whether a Stetson-related collective exists (programs list).",
+   "other_support": null,
+   "risk": "low",
+   "finding": "Both sites load. Hatters Collective Group calls itself an NIL collective for Stetson athletes, footer dated 2025. Hatters Prime is a paid fan content platform. Neither is named on the official Stetson pages read, so no official tie is confirmed."
+  },
+  {
+   "title": "Stetson Athletics Donation Requests & Promotional Activities Approval",
+   "organization": "Stetson University Athletics",
+   "url": "https://gohatters.com/sports/2020/9/14/stetson-athletics-donation-requests.aspx",
+   "owners": [
+    "stetson-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Not opened in the first pass.",
+   "retry": "Opened in my own Chrome tab and read the full page text.",
+   "status": "opened_now",
+   "class": "F",
+   "claim_affected": null,
+   "other_support": null,
+   "risk": "none",
+   "finding": "No NIL content. The page covers charity donation and memorabilia requests. It links a 2021 Promotional Activity Approval Form PDF that was not opened."
+  },
+  {
+   "title": "FGCU opts into NCAA settlement, will share revenue with athletes",
+   "organization": "Gulfshore Business",
+   "url": "https://www.gulfshorebusiness.com/gb_daily/fgcu-opts-into-ncaa-settlement-will-share-revenue-with-athletes/",
+   "owners": [
+    "florida-gulf-coast-university"
+   ],
+   "occurrences": 2,
+   "why_unopened": "HTTP 429 to the fetch tool.",
+   "retry": "Opened in my own Chrome tab. The site returned its 404 page for this URL.",
+   "status": "not_found_404",
+   "class": "D",
+   "claim_affected": "FGCU House settlement opt-in (school-payments).",
+   "other_support": "None official. WINK News (June 25, 2025, secondary) quotes the athletic director in an interview and links no FGCU release.",
+   "risk": "medium",
+   "finding": "Not opened. Secondary source only."
+  },
+  {
+   "title": "Boosters, Alumni & Fans (Compliance)",
+   "organization": "FGCU Athletics",
+   "url": "https://fgcuathletics.com/sports/2014/8/28/boosterscompliance.aspx",
+   "owners": [
+    "florida-gulf-coast-university"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Not opened in the first pass.",
+   "retry": "Read the full page text in my own Chrome tab.",
+   "status": "opened_now",
+   "class": "F",
+   "claim_affected": null,
+   "other_support": null,
+   "risk": "none",
+   "finding": "No NIL content. It defines a booster and covers occasional meals."
+  },
+  {
+   "title": "Agents (Compliance)",
+   "organization": "FGCU Athletics",
+   "url": "https://fgcuathletics.com/sports/2014/8/28/complianceagents.aspx",
+   "owners": [
+    "florida-gulf-coast-university"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Not opened in the first pass.",
+   "retry": "Read the full page text in my own Chrome tab.",
+   "status": "opened_now",
+   "class": "E",
+   "claim_affected": "FGCU agents rule (context only).",
+   "other_support": "FGCU Name, Image, Likeness page",
+   "risk": "low",
+   "finding": "No NIL content. Undated page with a 2014 URL. It says agents who want contact with FGCU athletes about professional sports representation must first register with the Compliance Office."
+  },
+  {
+   "title": "A Path For Sustained Success (PDF)",
+   "organization": "FGCU Athletics",
+   "url": "https://fgcuathletics.com/documents/2024/9/13/A_Path_For_Sustained_Success.pdf",
+   "owners": [
+    "florida-gulf-coast-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Not opened in the first pass.",
+   "retry": "Read all 5 pages with pdf.js from an fgcuathletics.com page.",
+   "status": "opened_now",
+   "class": "F",
+   "claim_affected": null,
+   "other_support": null,
+   "risk": "none",
+   "finding": "No NIL content. Mission, vision, values and five broad goals such as fully funding scholarships. No mention of revenue sharing."
+  },
+  {
+   "title": "swflflightcrew.com (SWFL Flight Crew collective site)",
+   "organization": "SWFL Flight Crew (third party)",
+   "url": "https://swflflightcrew.com/",
+   "owners": [
+    "florida-gulf-coast-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Not opened in the first pass.",
+   "retry": "Opened in my own Chrome tab. The domain does not resolve (DNS NXDOMAIN).",
+   "status": "still_inaccessible",
+   "class": "D",
+   "claim_affected": "Whether SWFL Flight Crew is still active (programs list).",
+   "other_support": "FGCU 2023 release announcing the collective",
+   "risk": "medium",
+   "finding": "Not opened. The domain no longer resolves. Do not show the collective as current."
+  },
+  {
+   "title": "NIL Suggested Question Checklist (PDF)",
+   "organization": "Florida A&M University Office of Compliance and Ethics",
+   "url": "https://www.famu.edu/administration/compliance-and-ethics/pdfs/NIL%20Suggested%20Question%20Checklist.pdf",
+   "owners": [
+    "florida-am-university"
+   ],
+   "occurrences": 2,
+   "why_unopened": "File existed but its text could not be read with the tools used.",
+   "retry": "Read all 3 pages with pdf.js from the famu.edu compliance page.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "FAMU disclosure-required and nil-education rules.",
+   "other_support": "FAMU Athletics Compliance page (famu.edu)",
+   "risk": "low",
+   "finding": "A list of 15 questions for athletes to ask a company before an NIL deal. It says the athlete is obligated to report the deal to FAMU. It is undated and does not mention the House settlement or NIL Go."
+  },
+  {
+   "title": "Rattlers Local Exchange",
+   "organization": "Teamworks Influencer (INFLCR), for Florida A&M Athletics",
+   "url": "https://dash.inflcr.com/exchange/florida-am-university",
+   "owners": [
+    "florida-am-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Status not confirmed in the first pass.",
+   "retry": "Opened in my own Chrome tab. It redirects to app.inflcr.com and loads.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "Rattlers Local Exchange program status.",
+   "other_support": "famuathletics.com site menu link",
+   "risk": "low",
+   "finding": "The exchange page is live on October 4, 2026 and shows 330 athletes available. Viewing athletes needs registration, which was not done."
+  },
+  {
+   "title": "famuathletics.com news (2025 and 2026 statements on House settlement, revenue sharing, NIL Go, collective)",
+   "organization": "Florida A&M Athletics",
+   "url": "https://famuathletics.com/",
+   "owners": [
+    "florida-am-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Listed for a manual check.",
+   "retry": "Searched the site's own news archive for Name, Image; revenue sharing; House Settlement; collective; NIL Go; Local Exchange; student-athlete handbook. Read the two relevant releases.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "FAMU school-payments and policy currency.",
+   "other_support": "SWAC 2025 Spring Meetings Recap",
+   "risk": "medium",
+   "finding": "Two official items found. A June 8, 2025 statement from the athletic director on the House settlement gives no rules. A July 9, 2026 release says a fundraising tour aims to raise funds for revenue sharing and scholarships. No NIL Go, collective or handbook text found."
+  },
+  {
+   "title": "B-CU Department of Athletics Brand Identity Guidelines (Athletics Style Guide 2025-26, PDF)",
+   "organization": "Bethune-Cookman University Athletics",
+   "url": "https://bcuathletics.com/documents/2024/12/5/BCU_Style_Guide_2025_26.pdf",
+   "owners": [
+    "bethune-cookman-university"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Blocked to the fetch tool.",
+   "retry": "Read the PDF text with pdf.js from a bcuathletics.com page (36 pages, file hosted on the site's CDN). Read page 35 in full and keyword searched all pages.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "B-CU school-logos-marks rule (none recorded before).",
+   "other_support": null,
+   "risk": "low",
+   "finding": "No NIL text. It says any commercial use of the B-CU name or trademarks needs advance permission from the University through a contract or trademark license agreement, and artwork approval for each design."
+  },
+  {
+   "title": "hailmaroongold.com (Hail Maroon and Gold Collective site)",
+   "organization": "Student Athlete NIL (SANIL), third party",
+   "url": "https://hailmaroongold.com",
+   "owners": [
+    "bethune-cookman-university"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Domain did not resolve on 2026-10-03.",
+   "retry": "Opened hailmaroongold.com and www.hailmaroongold.com in my own Chrome tab. Neither resolves (DNS error). Searched the bcuathletics.com news archive: no collective news after August 1, 2024.",
+   "status": "still_inaccessible",
+   "class": "D",
+   "claim_affected": "Whether the Hail Maroon and Gold Collective still operates (programs list).",
+   "other_support": "B-CU August 1, 2024 release announcing the collective",
+   "risk": "medium",
+   "finding": "Not opened. The collective's site does not resolve. The athletics menu link is also written without https, so it does not work. Do not show the collective as current."
+  },
+  {
+   "title": "Bethune-Cookman University NIL and Fan Shop (Influxer)",
+   "organization": "Influxer (licensed vendor)",
+   "url": "https://influxermerch.com/colleges/bethune-cookman-university/sports",
+   "owners": [
+    "bethune-cookman-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Store page not opened in the first pass.",
+   "retry": "Opened in my own Chrome tab. It redirects to www.influxermerch.com/colleges/bethune-cookman-university and loads.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "NIL Merchandise (Influxer) program status.",
+   "other_support": "B-CU July 22, 2024 release on the Influxer partnership",
+   "risk": "low",
+   "finding": "The store is live on October 4, 2026 and lists B-CU athletes by sport. It is a shop, not a policy."
+  },
+  {
+   "title": "B-CU student-athlete handbook (existence unconfirmed)",
+   "organization": "Bethune-Cookman University Athletics",
+   "url": null,
+   "owners": [
+    "bethune-cookman-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Not found online.",
+   "retry": "Web searches and the bcuathletics.com news archive (handbook, Name, Image, SANIL, NIL Go). Checked the Compliance page and site menu links. Nothing located.",
+   "status": "not_retried",
+   "class": "A",
+   "claim_affected": "Any B-CU NIL rule. No B-CU NIL policy has been located, so a handbook section would be the only institution source.",
+   "other_support": null,
+   "risk": "medium",
+   "finding": "Not located in the public sources reviewed as of October 4, 2026. It is not confirmed that a public handbook exists."
+  },
+  {
+   "title": "Name, Image and Likeness (JU Athletics, 2022 page)",
+   "organization": "Jacksonville University Athletics",
+   "url": "https://judolphins.com/sports/2022/5/9/name-image-and-likeness.aspx",
+   "owners": [
+    "jacksonville-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Readable, but flagged to confirm with JU whether it is still current. No outreach is allowed in this phase.",
+   "retry": "Re-read the page text in my own Chrome tab and searched it for House, revenue, NIL Go, Teamworks, clearinghouse, 2025, 2026 and any update note. Searched the judolphins.com news archive and the compliance pages.",
+   "status": "opened_now",
+   "class": "E",
+   "claim_affected": "Every JU rule in the database comes from this page.",
+   "other_support": null,
+   "risk": "high",
+   "finding": "Unchanged 2022 text. No mention of the House settlement, revenue sharing, NIL Go or a 2025 or 2026 date. No newer JU NIL guidance was located, so its current status stays unconfirmed."
+  },
+  {
+   "title": "Jacksonville University and UNF Join House v. NCAA Settlement",
+   "organization": "Here Jacksonville",
+   "url": "https://www.herejacksonville.com/ju-unf-ncaa-settlement/",
+   "owners": [
+    "jacksonville-university"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Would not open.",
+   "retry": "Fetch tool failed on robots.txt. In my own Chrome tab the URL redirects to herejacksonville.com/lander, an empty parked page.",
+   "status": "still_inaccessible",
+   "class": "D",
+   "claim_affected": "JU House settlement opt-in (school-payments).",
+   "other_support": "None official. A secondary tracker lists JU as opted in.",
+   "risk": "medium",
+   "finding": "Not opened. Secondary source only."
+  },
+  {
+   "title": "JU Office of Marketing and Communications brand or logo approval page",
+   "organization": "Jacksonville University",
+   "url": null,
+   "owners": [
+    "jacksonville-university"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Not located on ju.edu.",
+   "retry": "Checked the judolphins.com menu. Its 'Brand Guide' link points to an off-site Wix page (moretti3mj.wixsite.com/website). The fetch tool needed a permission that was not answered, so that page was not read.",
+   "status": "still_inaccessible",
+   "class": "B",
+   "claim_affected": "JU school-logos-marks rule (approval process detail).",
+   "other_support": "JU 2022 NIL page (written approval from the Office of Marketing and Communications)",
+   "risk": "low",
+   "finding": "Not opened."
+  }
+ ],
+ "school_updates": {
+  "stetson-university": {
+   "sources": [
+    {
+     "id": "t1",
+     "title": "Name, Image, and Likeness Policy v.5 (Public), all six pages",
+     "url": "https://stetsonuniversity.navexone.com/content/docview/?docid=303&public=true",
+     "organization": "Stetson University (policy library on NAVEX One)",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2025-09-16",
+     "notes": "Read by eye from screenshots of the public viewer on 2026-10-04, pages 1 to 6 in full. Status shown: Published. Effective Date September 16, 2025. Responsible Executive: Director of Athletics. Responsible Office: Athletics Compliance. Same document as research source s1."
+    },
+    {
+     "id": "t2",
+     "title": "Stetson University Hatters Official Brand Identity Usage and Style Guide v2.0",
+     "url": "https://gohatters.com/documents/2023/6/30/Stetson_Hatters_Guide2.0.pdf",
+     "organization": "Stetson University Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2023-06-30",
+     "notes": "Date is from the URL. Raw PDF text. No NIL text. Names Learfield Licensing, which predates the 2026 Affinity Licensing announcement."
+    }
+   ],
+   "rules": [
+    {
+     "topic": "pay-for-play",
+     "scope": "institution",
+     "answer": "no",
+     "summary": "Stetson's policy says an athlete may use their NIL to promote business activities as long as the athlete gets no pay in exchange for athletics participation or achievements.",
+     "conditions": "The policy was last revised September 16, 2025. Stetson later announced it opts in to the House settlement from 2026-27. The policy text was not changed to mention direct school payments.",
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, Policy",
+     "quick_status": "NO",
+     "short_answer": "No pay for playing or for results.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy, paragraph 1 (page 2)",
+       "quote": "so long as the student-athlete does not receive any compensation in exchange for their athletics participation or achievements",
+       "read_method": "visual"
+      }
+     ]
+    },
+    {
+     "topic": "nil-allowed",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Stetson's policy says an athlete may use their name, image and likeness to promote athletic and non-athletic business activities. It gives products, services, camps and clinics, and personal appearances as examples.",
+     "conditions": null,
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, Policy",
+     "quick_status": "YES",
+     "short_answer": "Yes, for real business activities.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy, paragraph 1 (page 2)",
+       "quote": "may use their name, image, and likeness (“NIL”) to promote their athletically and non-athletically related business activities (e.g., products, services, camps & clinics, personal appearances)",
+       "read_method": "visual"
+      },
+      {
+       "source_id": "t1",
+       "locator": "Policy, paragraph 2 (page 2)",
+       "quote": "Earning compensation from their NIL itself will not affect a student-athletes grant-in-aid or athletic eligibility.",
+       "read_method": "visual"
+      }
+     ]
+    },
+    {
+     "topic": "deal-terms",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Stetson's policy says NIL pay must be for a valid business purpose. It says rates and terms must match what similar people with similar NIL value are paid.",
+     "conditions": null,
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, Policy",
+     "quick_status": "DEPENDS",
+     "short_answer": "Pay must match a real business purpose and market rates.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy, paragraph 1 (page 2)",
+       "quote": "such compensation is for a valid business purpose with compensation at rates and terms commensurate with compensation paid to similarly situated individuals with comparable name, image and likeness value",
+       "read_method": "visual"
+      }
+     ]
+    },
+    {
+     "topic": "school-name-reference",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Stetson's policy says an athlete's business promotion may mention their role in college sports and may mention Stetson University. If they do, they must add a disclaimer that the views or services are theirs alone.",
+     "conditions": null,
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, Policy",
+     "quick_status": "DEPENDS",
+     "short_answer": "Yes, with an 'opinions are my own' style disclaimer.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy, paragraph 3 (page 2)",
+       "quote": "A student-athlete’s promotion of a business activity may include a reference to the student-athlete’s involvement in intercollegiate athletics and a reference to Stetson University.",
+       "read_method": "visual"
+      },
+      {
+       "source_id": "t1",
+       "locator": "Policy, paragraph 4 (page 2)",
+       "quote": "they must include a disclaimer that the views expressed or services provided are theirs alone and not those of Stetson University or Stetson University Athletics",
+       "read_method": "visual"
+      }
+     ]
+    },
+    {
+     "topic": "school-logos-marks",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Stetson's policy says any use of Stetson's name, marks or symbols must follow Stetson Athletics' Branding and Style Guides. The 2023 athletics brand guide says use of the logos without consent is prohibited.",
+     "conditions": "The policy does not name who gives consent to an athlete. The 2023 guide names Learfield Licensing for vendor requests. Stetson announced Affinity Licensing as its licensing agency from July 1, 2026, so the guide is outdated on that point. The policy does not mention uniforms.",
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, Policy; Stetson Hatters Brand Identity Guide v2.0",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Follow the Branding and Style Guides. Get consent first.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy, paragraph 3 (page 2)",
+       "quote": "Any use of Stetson’s name, marks, or symbols must be in accordance with Stetson Athletics’ Branding and Style Guides.",
+       "read_method": "visual"
+      },
+      {
+       "source_id": "t2",
+       "locator": "Introduction (page 3)",
+       "quote": "All logos included within this guide are property of Stetson University. Any use without consent is strictly prohibited.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "prohibited-categories",
+     "scope": "institution",
+     "answer": "no",
+     "summary": "Stetson's policy says athletes cannot sign a deal that ties the university name or marks to products or services that compete with Stetson Athletics' exclusive sponsors. It also says athletes should not sign deals that break NCAA rules, Stetson policies or the law, or that reflect badly on Stetson.",
+     "conditions": "The policy does not list product categories such as gambling, alcohol or tobacco.",
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, Policy",
+     "quick_status": "NO",
+     "short_answer": "No deals that pair Stetson's name or marks with a rival of an exclusive sponsor.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy, paragraph 5 (page 2)",
+       "quote": "Student-athletes cannot enter into a contract or transaction that associates the university name and/or marks with products or services that are competitive to Stetson’s Athletics exclusive sponsors in conflict with a university contract (e.g. Coca-Cola, Nike).",
+       "read_method": "visual"
+      },
+      {
+       "source_id": "t1",
+       "locator": "Policy, paragraph 5 (page 2)",
+       "quote": "student-athletes should not enter into contract or transactions that violate NCAA legislation, Stetson University policies, Federal or State Laws; or reflect negatively on Stetson University and/or the Stetson University Athletics program.",
+       "read_method": "visual"
+      }
+     ]
+    },
+    {
+     "topic": "school-payments",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Stetson's policy says the university, or an entity it owns, controls, funds or operates, may sign a written license or endorsement agreement for an athlete's NIL. It excludes agreements that pay for broadcast rights to games.",
+     "conditions": null,
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, Policy (page 3)",
+     "quick_status": "DEPENDS",
+     "short_answer": "Stetson may sign NIL license or endorsement deals with athletes.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy, item a (page 3)",
+       "quote": "Enter into a written license and/or endorsement agreement for the use of a student-athlete’s name, image or likeness, or other rights, other than a license or agreement that authorizes payment for the right to use a student-athlete’s name, image or likeness for a broadcast",
+       "read_method": "visual"
+      }
+     ]
+    },
+    {
+     "topic": "disclosure-required",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "Stetson's policy says an athlete must disclose NIL contracts or transactions to NIL GO. Deals from non-school payors worth $600 or more in total must be reported, with written documentation, within five business days of signing.",
+     "conditions": "The $600 total counts multiple deals or payments from the same or substantially the same third party, including affiliates. Athletes also attest on NIL GO registration that all such deals will be reported.",
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, Policy (page 3) and Procedures (page 5)",
+     "quick_status": "YES",
+     "short_answer": "Report to NIL GO within five business days. $600 total is the threshold.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy (page 3)",
+       "quote": "related to the use of their name, image, or likeness must disclose the contract or transaction to NIL GO.",
+       "read_method": "visual"
+      },
+      {
+       "source_id": "t1",
+       "locator": "Policy (page 3)",
+       "quote": "with a total value of $600 or more to the designated name, image and likeness clearinghouse for review.",
+       "read_method": "visual"
+      },
+      {
+       "source_id": "t1",
+       "locator": "Policy, bullet 2 (page 3)",
+       "quote": "A student-athlete shall submit written documentation to NIL GO within five business days of execution of a noninstitutional name, image or likeness contract or agreement to payment terms.",
+       "read_method": "visual"
+      },
+      {
+       "source_id": "t1",
+       "locator": "Policy (page 3)",
+       "quote": "such activities must be reported if the aggregate value is $600 or more during the student-athlete’s period of eligibility.",
+       "read_method": "visual"
+      }
+     ]
+    },
+    {
+     "topic": "deal-review",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "Stetson's policy says NIL GO will review the proposed contract or transaction for compliance with NCAA rules.",
+     "conditions": null,
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, Procedures (page 5)",
+     "quick_status": "YES",
+     "short_answer": "NIL GO reviews the deal.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Procedures, paragraph 1 (page 5)",
+       "quote": "NIL GO will review the proposed contract or transaction for compliance with NCAA rules.",
+       "read_method": "visual"
+      }
+     ]
+    },
+    {
+     "topic": "penalties",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Stetson's policy says an athlete who misses the five business day deadline should get a reasonable time to disclose. After that, Stetson should withhold institutional assistance and services until the athlete discloses.",
+     "conditions": "The policy does not define 'reasonable amount of time' and lists no other penalties.",
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, Policy (pages 3 to 4)",
+     "quick_status": "DEPENDS",
+     "short_answer": "Late disclosure can lead to Stetson withholding help and services.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy (page 4)",
+       "quote": "After the reasonable time to cure the failure to disclose has lapsed, Stetson University should withhold institutional assistance and services until the student-athlete discloses the relevant NIL activities.",
+       "read_method": "visual"
+      }
+     ]
+    },
+    {
+     "topic": "agents",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "Stetson's policy says all Stetson athletes are entitled, and advised, to get professional representation by an athlete agent or attorney to secure pay for the use of their NIL.",
+     "conditions": "The policy does not state agent registration or licensing requirements. It says a service provider may help move payments only if the business using the NIL is the source of the money.",
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, Policy (page 4)",
+     "quick_status": "YES",
+     "short_answer": "Yes. Stetson advises getting an agent or attorney for NIL.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy (page 4)",
+       "quote": "All student-athletes at Stetson University are entitled, and advised, to obtain professional representation by an athlete agent or attorney engaged for the purpose of securing compensation for the use of their NIL.",
+       "read_method": "visual"
+      },
+      {
+       "source_id": "t1",
+       "locator": "Policy (page 4)",
+       "quote": "provided the entity that will use the student- athlete’s name, image and likeness rights for the promotion or endorsement of its goods or services provided to the general public for profit is the originating source of the compensation",
+       "read_method": "visual"
+      }
+     ]
+    },
+    {
+     "topic": "nil-education",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "Stetson's policy says the university will give annual financial literacy, life skills and entrepreneurship workshops for athletes, with at least five hours of content.",
+     "conditions": null,
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, Policy (page 4)",
+     "quick_status": "YES",
+     "short_answer": "Yearly workshops, at least five hours.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy (page 4)",
+       "quote": "Stetson University will provide annual financial literacy, life skills, and entrepreneurship workshops for student-athletes.",
+       "read_method": "visual"
+      },
+      {
+       "source_id": "t1",
+       "locator": "Policy (page 4)",
+       "quote": "The workshops will provide a minimum of five hours of content",
+       "read_method": "visual"
+      }
+     ]
+    },
+    {
+     "topic": "school-facilities",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "Stetson's policy says use of Stetson University facilities needs prior approval through the University's Facility Use Agreement process and proof of insurance.",
+     "conditions": null,
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, Policy (page 4)",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Get a Facility Use Agreement and show insurance first.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy (page 4)",
+       "quote": "The use of Stetson University facilities is subject to prior approval through the University’s Facility Use Agreement process and requires proof of appropriate insurance.",
+       "read_method": "visual"
+      }
+     ]
+    },
+    {
+     "topic": "international-athletes",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "Stetson's policy says international athletes usually cannot do paid NIL work while in the United States. It says they must consult the Stetson WORLD office before any paid NIL activity. It says they may do NIL work from their home country during vacation periods, with pay going to a home country bank account, and should submit it to NIL GO.",
+     "conditions": "The policy asks athletes to document that they are abroad with an I-94 travel history, flight itinerary and port of entry stamp.",
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, International Students (pages 4 to 5)",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Talk to the WORLD office first. Paid NIL in the US on a student visa is not allowed.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "International Students (page 4)",
+       "quote": "International student-athletes must consult with the WORLD office prior to engaging in any paid NIL activities",
+       "read_method": "visual"
+      },
+      {
+       "source_id": "t1",
+       "locator": "International Students (page 5)",
+       "quote": "it remains impermissible to engage in NIL activities while in the US on a student visa.",
+       "read_method": "visual"
+      },
+      {
+       "source_id": "t1",
+       "locator": "International Students (page 5)",
+       "quote": "During vacation periods, international student-athletes may engage in NIL activities from their home country",
+       "read_method": "visual"
+      },
+      {
+       "source_id": "t1",
+       "locator": "International Students (page 5)",
+       "quote": "All NIL activities should be submitted to NIL GO.",
+       "read_method": "visual"
+      }
+     ]
+    },
+    {
+     "topic": "deal-terms",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Stetson's policy warns that Pell Grant or need based aid could be affected by NIL pay and sends questions to the Office of Student Financial Planning. It says earned income must be reported on the athlete's tax return.",
+     "conditions": null,
+     "citation": "Stetson Name, Image, and Likeness Policy v.5, Procedures (page 5)",
+     "quick_status": "DEPENDS",
+     "short_answer": "NIL pay can affect need based aid and is taxable income.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Procedures (page 5)",
+       "quote": "Pell Grant or need based financial aid could be impacted based on compensation from Name, Image and Likeness.",
+       "read_method": "visual"
+      },
+      {
+       "source_id": "t1",
+       "locator": "Procedures (page 5)",
+       "quote": "Earned income will need to be reported on the student-athlete’s annual tax return.",
+       "read_method": "visual"
+      }
+     ]
+    }
+   ],
+   "programs": [],
+   "contacts": [],
+   "corrections": [
+    "disclosure-required: the quote ended at 'NIL'. The full sentence ends 'to NIL GO.' Add the $600 total threshold and the five business day deadline. Replace the rule with the new one.",
+    "disclosure_workflow: recipient is NIL GO. deadline_text should be 'within five business days of execution of a noninstitutional name, image or likeness contract or agreement to payment terms'. Threshold is a total value of $600 or more. Written documentation must be submitted to NIL GO.",
+    "school-logos-marks: change from not_addressed. The policy says use of Stetson's name, marks or symbols must follow the Branding and Style Guides.",
+    "ambiguities: remove 'Only about one page of the six page NIL policy was read'. All six pages are now read.",
+    "not_found: remove facility-use, prohibited categories and international athlete items. The policy covers all three.",
+    "school_policy.summary: the policy also covers agents, marks, sponsor conflicts, facilities, workshops, international athletes and late disclosure.",
+    "contract-length and school-staff-involvement rules are confirmed as recorded (page 3, items a and b)."
+   ],
+   "policy_status": "published",
+   "policy_note": "Stetson's NIL Policy v.5, effective September 16, 2025, was read in full and names NIL GO, a $600 threshold and a five business day deadline.",
+   "newer_guidance_found": true,
+   "notes": [
+    "Pages read in full: 1, 2, 3, 4, 5 and 6. All text was read by eye from screenshots (read_method visual), so a human should spot check quotes against the viewer. Quotes keep the on-screen wording, including 'student- athlete’s' and 'a student-athletes grant-in-aid'.",
+    "The Purpose section still says the policy ensures compliance with 'current NCAA interim policies and Florida state legislation', and the Policy section cites Section 1006.74, Florida Statute. The policy does not use the words House settlement or revenue sharing.",
+    "The policy bars pay 'in exchange for their athletics participation or achievements'. Stetson's December 18, 2025 release says it opts in to the House settlement from 2026-27. The policy text has not been revised since September 16, 2025.",
+    "Not addressed in the policy: boosters (only 'associated entities or individuals' in the $600 reporting sentence), collectives, uniforms, team-issued gear, product categories such as gambling or alcohol, and any penalty beyond withholding institutional assistance and services.",
+    "Policy History table: September 16, 2025 Revised (Athletics Director). September 6, 2024 Revised to include updated NCAA legislation on disclosure timelines and professional service providers. November 1, 2023 Revised for international student-athletes. March 17, 2023 Revised for prospective student-athletes and Florida law. February 15, 2022 Initial Approval (VP Operations).",
+    "Frequency of Review: the policy says it is reviewed every three years, or sooner when conference, NCAA, Florida or federal rules change.",
+    "The policy links NIL GO, the WORLD office, the Office of Student Financial Planning, the exclusive sponsors list and the Branding and Style Guides. Link targets could not be read from the viewer.",
+    "Hatters Collective Group (hatterscollectivegroup.com) and Hatters Prime (hattersprime.com) are live third party sites. No official Stetson page read names them."
+   ]
+  },
+  "florida-gulf-coast-university": {
+   "sources": [
+    {
+     "id": "t1",
+     "title": "Boosters, Alumni & Fans (Compliance)",
+     "url": "https://fgcuathletics.com/sports/2014/8/28/boosterscompliance.aspx",
+     "organization": "FGCU Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Raw page text. No NIL text."
+    },
+    {
+     "id": "t2",
+     "title": "Agents (Compliance)",
+     "url": "https://fgcuathletics.com/sports/2014/8/28/complianceagents.aspx",
+     "organization": "FGCU Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Raw page text. Undated, 2014 URL. About professional sports agents, not NIL."
+    },
+    {
+     "id": "t3",
+     "title": "A Path For Sustained Success (PDF)",
+     "url": "https://fgcuathletics.com/documents/2024/9/13/A_Path_For_Sustained_Success.pdf",
+     "organization": "FGCU Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2024-09-13",
+     "notes": "Date is from the URL. Raw PDF text, 5 pages. No NIL or revenue sharing text."
+    }
+   ],
+   "rules": [],
+   "programs": [],
+   "contacts": [],
+   "corrections": [
+    "programs: SWFL Flight Crew should stay current 'unknown' and should not be shown as active. Its site swflflightcrew.com no longer resolves.",
+    "manual_review: boosters page, agents page and A Path For Sustained Success PDF are now read. None has NIL content."
+   ],
+   "policy_status": "outdated",
+   "policy_note": "FGCU's NIL page is unchanged and still names ARMS and a ban on school payments. No newer official FGCU NIL guidance was located in the public sources reviewed as of October 4, 2026.",
+   "newer_guidance_found": false,
+   "notes": [
+    "Checked today: FGCU NIL page (no House, revenue, NIL Go, Teamworks, 2025 or 2026 text), Compliance hub, Current Student-Athletes, Coaches & Administrators, Parents, Boosters, Agents, Academics & Student-Athlete Development page, A Path For Sustained Success PDF, and web searches of fgcuathletics.com and fgcu.edu.",
+    "No 2025-26 or 2026-27 student-athlete handbook and no fgcu.edu NIL regulation or policy was located.",
+    "The only official post-2025 items remain the April 22, 2025 article and the May 19, 2025 Teamworks release already in the research file. Both predate July 2025.",
+    "FGCU's House settlement opt-in appears only in secondary reporting (WINK News, June 25, 2025, an interview with the athletic director). No official FGCU release was located.",
+    "Do not treat the 2021 NIL page as current. Its status is not confirmed either way."
+   ]
+  },
+  "jacksonville-university": {
+   "sources": [],
+   "rules": [],
+   "programs": [],
+   "contacts": [],
+   "corrections": [],
+   "policy_status": "outdated",
+   "policy_note": "JU's only NIL guidance is still the 2022 page, and no newer official JU NIL guidance was located in the public sources reviewed as of October 4, 2026.",
+   "newer_guidance_found": false,
+   "notes": [
+    "Checked today: JU NIL page (unchanged, no House, revenue, NIL Go, 2025 or 2026 text), Compliance hub, Current Student-Athletes, Boosters & Fans, and the judolphins.com news archive for Name, Image; revenue sharing; House settlement; NIL Go; settlement; INFLCR; collective.",
+    "The news archive returned no 2025 or 2026 story about NIL, the House settlement or revenue sharing.",
+    "No JU student-athlete handbook for 2025-26 or 2026-27 was located on judolphins.com or by web search.",
+    "JU's House settlement opt-in appears only in secondary sources. The Here Jacksonville article now redirects to a parked page.",
+    "The judolphins.com menu has a 'Brand Guide' link to an off-site Wix page (moretti3mj.wixsite.com/website). It was not read.",
+    "A 7/1/2026 judolphins.com story is titled 'Unisun Sports Commences, Kicking Off 2026-27 Season'. JU's conference listing may need a check. It was not read for this task."
+   ]
+  },
+  "florida-am-university": {
+   "sources": [
+    {
+     "id": "t1",
+     "title": "NIL Suggested Question Checklist (PDF)",
+     "url": "https://www.famu.edu/administration/compliance-and-ethics/pdfs/NIL%20Suggested%20Question%20Checklist.pdf",
+     "organization": "Florida A&M University Office of Compliance and Ethics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Raw PDF text, 3 pages, read 2026-10-04. Titled 'Student-Athlete Guidance'. No printed date. Same file as research source s2."
+    },
+    {
+     "id": "t2",
+     "title": "FAMU Statement on House Settlement",
+     "url": "https://famuathletics.com/news/2025/6/8/general-famu-statement-on-house-settlement.aspx",
+     "organization": "Florida A&M Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2025-06-08",
+     "notes": "Raw page text. Statement from the Vice President and Director of Athletics. Links to an NCAA page for more information. No rules."
+    },
+    {
+     "id": "t3",
+     "title": "FAMU Athletics Launches Multi-City 'Strike Tour' Fundraising Tour",
+     "url": "https://famuathletics.com/news/2026/7/9/general-famu-athletics-launches-multi-city-strike-tour-fundraising-tour.aspx",
+     "organization": "Florida A&M Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2026-07-09",
+     "notes": "Raw page text."
+    },
+    {
+     "id": "t4",
+     "title": "The Rattlers Local Exchange",
+     "url": "https://dash.inflcr.com/exchange/florida-am-university",
+     "organization": "Teamworks Influencer (INFLCR)",
+     "source_type": "official_webpage",
+     "is_primary": false,
+     "published_on": null,
+     "notes": "Third party platform page linked from the famuathletics.com menu. Live on 2026-10-04. Redirects to app.inflcr.com."
+    }
+   ],
+   "rules": [
+    {
+     "topic": "disclosure-required",
+     "scope": "institution",
+     "answer": "yes",
+     "summary": "FAMU's NIL question checklist tells athletes to make clear to a company that the athlete is obligated to report the deal to FAMU.",
+     "conditions": "The checklist is undated and does not name a system, form or deadline. It does not mention NIL Go.",
+     "citation": "FAMU NIL Suggested Question Checklist, question VII",
+     "quick_status": "YES",
+     "short_answer": "Report the deal to FAMU.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Question VII (page 2)",
+       "quote": "Clarify that you are obligated to report the deal to FAMU and you and the company are responsible for ensuring ongoing compliance.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "agents",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "FAMU's NIL question checklist suggests having any NIL agreement reviewed by an attorney who understands NIL agreements before signing.",
+     "conditions": "This is advice, not a rule. The checklist does not cover agent registration.",
+     "citation": "FAMU NIL Suggested Question Checklist, question X",
+     "quick_status": "YES",
+     "short_answer": "FAMU suggests a lawyer review before signing.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Question X (pages 2 to 3)",
+       "quote": "Consider having any agreement of this kind reviewed by an attorney who understands NIL agreements.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-payments",
+     "scope": "institution",
+     "answer": "not_addressed",
+     "summary": "FAMU Athletics said in July 2026 that a fundraising tour aims to raise funds for revenue sharing and scholarships for FAMU athletes. FAMU has not published how revenue sharing works.",
+     "conditions": "Neither release says FAMU opted in, names NIL Go or states any athlete rule.",
+     "citation": "FAMU Athletics release, July 9, 2026",
+     "quick_status": "NOT_PUBLICLY_SPECIFIED",
+     "short_answer": "FAMU is raising funds for revenue sharing. Details are not published.",
+     "sources": [
+      {
+       "source_id": "t3",
+       "locator": "Paragraph 1",
+       "quote": "The goal of the tour is to raise funds for revenue sharing and scholarships to benefit FAMU student-athletes.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t2",
+       "locator": "Statement",
+       "quote": "The approval of the NCAA House Settlement represents a significant change in how we must navigate our responsibilities and opportunities within college athletics.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "Rattlers Local Exchange",
+     "program_type": "marketplace",
+     "description": "The exchange page is live and says 'Connect and work with athletes from Florida A&M University'. It showed 330 athletes available on October 4, 2026.",
+     "url": "https://dash.inflcr.com/exchange/florida-am-university",
+     "source_id": "t4",
+     "current": true
+    }
+   ],
+   "contacts": [],
+   "corrections": [
+    "not_found: 'A FAMU statement of its own that it opted in to the House settlement or revenue sharing' is partly outdated. FAMU published a June 8, 2025 statement on the House settlement and a July 9, 2026 release that names revenue sharing. Neither uses the words opt in.",
+    "programs: Rattlers Local Exchange current should change from 'unknown' to true. The page loads and lists athletes.",
+    "sources s2: the checklist text is now read. Remove it from locations_unreachable and manual_review."
+   ],
+   "policy_status": "unconfirmed",
+   "policy_note": "FAMU's famu.edu NIL guidance is still undated and does not mention the House settlement or NIL Go. No newer official FAMU NIL rules were located in the public sources reviewed as of October 4, 2026.",
+   "newer_guidance_found": false,
+   "notes": [
+    "newer_guidance_found is false for NIL rules or guidance. Two newer official statements do exist (June 8, 2025 on the House settlement, July 9, 2026 naming revenue sharing), but they contain no rules for athletes.",
+    "Checked today: famu.edu Athletics Compliance page (no House, revenue, NIL Go, INFLCR, Teamworks, 2025 or 2026 text), the checklist PDF, the famuathletics.com news archive (Name, Image; revenue sharing; House Settlement; collective; NIL Go; Local Exchange; student-athlete handbook) and the site menu.",
+    "No FAMU student-athlete handbook for 2025-26 or 2026-27, NIL regulation, collective or NIL Go statement was located.",
+    "PDF text extraction split some words in headings (for example 'GU IDANCE'). The quotes used were checked to be clean sentences.",
+    "The PDF file's author field reads 'Rica Calhoun'. This is file metadata, not a printed byline, so it is not recorded as a contact."
+   ]
+  },
+  "bethune-cookman-university": {
+   "sources": [
+    {
+     "id": "t1",
+     "title": "Bethune-Cookman University Department of Athletics Brand Identity Guidelines (Athletics Style Guide 2025-26)",
+     "url": "https://bcuathletics.com/documents/2024/12/5/BCU_Style_Guide_2025_26.pdf",
+     "organization": "Bethune-Cookman University Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2024-12-05",
+     "notes": "Date is from the URL. Raw PDF text, 36 pages. Page 35 read in full, all pages keyword searched. No NIL text."
+    },
+    {
+     "id": "t2",
+     "title": "B-CU Athletics Partners with Influxer for Co-Branded Merchandise",
+     "url": "https://bcuathletics.com/news/2024/7/22/general-b-cu-athletics-partners-with-influxer-for-co-branded-merchandise.aspx",
+     "organization": "Bethune-Cookman University Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2024-07-22",
+     "notes": "Raw page text. Pre-House settlement release."
+    },
+    {
+     "id": "t3",
+     "title": "Bethune-Cookman University NIL and Fan Shop",
+     "url": "https://influxermerch.com/colleges/bethune-cookman-university/sports",
+     "organization": "Influxer",
+     "source_type": "official_webpage",
+     "is_primary": false,
+     "published_on": null,
+     "notes": "Third party store linked from the bcuathletics.com menu as 'NIL Merchandise'. Live on 2026-10-04."
+    }
+   ],
+   "rules": [
+    {
+     "topic": "school-logos-marks",
+     "scope": "institution",
+     "answer": "only_with_approval",
+     "summary": "B-CU's athletics brand guide says any commercial use of the Bethune-Cookman name or trademarks needs advance permission from the University through a contract or trademark license agreement. It also requires artwork approval for each new design.",
+     "conditions": "This is a general trademark rule. The guide does not mention NIL or athlete deals. It sends licensing questions to the Senior Associate AD for Administration.",
+     "citation": "B-CU Athletics Brand Identity Guidelines, Licensing (page 35)",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Get University permission and a license before any commercial use of B-CU marks.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Licensing (page 35)",
+       "quote": "Any commercial use of Bethune-Cookman University’s name or trademarks requires advanced permission from the University via a contract or trademark license agreement.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t1",
+       "locator": "Trademarks and Registered Marks (page 35)",
+       "quote": "The logos and wordmarks are the official marks of Bethune-Cookman University, and only those with permission to use the marks may do so.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "NIL Merchandise (Influxer)",
+     "program_type": "licensing",
+     "description": "B-CU Athletics announced the Influxer partnership on July 22, 2024 and called Influxer 'an officially licensed vendor'. The store page is live and lists B-CU athletes.",
+     "url": "https://influxermerch.com/colleges/bethune-cookman-university/sports",
+     "source_id": "t2",
+     "current": true
+    },
+    {
+     "name": "Hail Maroon and Gold Collective",
+     "program_type": "collective",
+     "description": "Announced by B-CU Athletics on August 1, 2024. Its website hailmaroongold.com did not resolve on October 3 or October 4, 2026, and no later B-CU news about it was located.",
+     "url": "https://bcuathletics.com/news/2024/8/1/general-hail-maroon-and-gold-collective-unveiled.aspx",
+     "source_id": "s4",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "B-CU Athletics Administration",
+     "role": "Licensing applications and list of current licensees (Senior Associate AD for Administration, as named in the brand guide)",
+     "person_name": null,
+     "phone": null,
+     "email": null,
+     "url": "https://bcuathletics.com/documents/2024/12/5/BCU_Style_Guide_2025_26.pdf",
+     "source_id": "t1"
+    }
+   ],
+   "corrections": [
+    "programs: NIL Merchandise (Influxer) current should change from 'unknown' to true. The store page loads and lists athletes.",
+    "programs: Hail Maroon and Gold Collective should stay 'unknown' and should not be shown as active. Its domain does not resolve and the athletics menu link is broken.",
+    "locations_unreachable: the Athletics Style Guide is now read. Remove it."
+   ],
+   "policy_status": "none_found",
+   "policy_note": "A Bethune-Cookman NIL policy, handbook section or NIL compliance guidance: Not located in the public sources reviewed as of October 4, 2026.",
+   "newer_guidance_found": false,
+   "notes": [
+    "Checked today: bcuathletics.com Compliance page and site menu, the news archive (Name, Image; revenue sharing; House settlement; collective; SANIL; handbook; NIL Go; Influxer), the Athletics Style Guide PDF, hailmaroongold.com (both forms), the Influxer store and web searches of cookman.edu and bcuathletics.com.",
+    "The news archive has no story on revenue sharing or the House settlement, and no NIL story after August 1, 2024.",
+    "Hail Maroon and Gold Collective status: unknown. The collective's own site is offline. The source_id on that program entry points to the 2024 release in the research file (s4), not to a new source.",
+    "The brand guide names two staff for artwork approval (Scott Sommer and Bryce Hoynoski). They are not recorded as contacts because their current roles were not checked in the staff directory.",
+    "The 2024 Influxer release quotes staff names from 2024. Current leadership was not checked."
+   ]
+  }
+ }
+}

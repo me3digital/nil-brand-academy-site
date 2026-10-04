@@ -5,12 +5,16 @@
 // Trust states are assigned from how each source was read and how current it is. Nothing here records a human review.
 import fs from 'node:fs';
 import path from 'node:path';
+import { mergeTriage, TRIAGED_ON } from './pilot-triage.mjs';
 
 // Resolved from the project root (the bundler moves this module during a build).
 const DIR = path.join(process.env.NIL_ROOT || process.cwd(), 'db/seed/research');
 const load = (f) => JSON.parse(fs.readFileSync(path.join(DIR, f), 'utf8'));
-const FILES = ['colleges_a.json', 'colleges_b.json', 'colleges_c.json', 'colleges_d.json', 'hs_ocps_a.json', 'hs_ocps_b.json'];
-const AS_OF = 'October 3, 2026';
+const FILES = ['colleges_a.json', 'colleges_b.json', 'colleges_c.json', 'colleges_d.json', 'hs_ocps_a.json', 'hs_ocps_b.json', 'hs_scps_a.json', 'hs_scps_b.json'];
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+const asOf = (iso) => { const [y, m, d] = iso.split('-').map(Number); return `${MONTHS[m - 1]} ${d}, ${y}`; };
+let AS_OF = 'October 3, 2026'; let CUR = '2026-10-03';
+const setDate = (iso) => { CUR = iso; AS_OF = asOf(iso); };
 const HOUSE = '2025-07-01';           // House settlement rules took effect; older college pages are not treated as current
 
 // Short keys used in rule and source slugs.
@@ -32,6 +36,8 @@ const NAME = {
   'university-of-miami': { short_name: 'Miami' },
   'boone-high-school-orlando': { name: 'Boone High School' },
   'maynard-evans-high-school-orlando': { name: 'Evans High School' },
+  'hagerty-high-school-oviedo': { name: 'Hagerty High School' },
+  'crooms-academy-of-information-technology-sanford': { short_name: 'Crooms Academy' },
 };
 // Other names people type into Find My School. Abbreviations and common short forms only.
 const ALIASES = {
@@ -43,6 +49,7 @@ const ALIASES = {
   'university-of-north-florida': ['UNF', 'North Florida'], 'florida-gulf-coast-university': ['FGCU', 'Florida Gulf Coast'], 'stetson-university': ['Stetson'],
   'boone-high-school-orlando': ['William R. Boone High School'], 'maynard-evans-high-school-orlando': ['Maynard Evans High School'],
   'dr-phillips-high-school-orlando': ['Dr Phillips', 'Doctor Phillips'],
+  'hagerty-high-school-oviedo': ['Paul J. Hagerty High School'], 'crooms-academy-of-information-technology-sanford': ['Crooms', 'Crooms AoIT'],
 };
 const PRIVATE = new Set(['university-of-miami', 'bethune-cookman-university', 'jacksonville-university', 'stetson-university']);
 
@@ -56,9 +63,11 @@ const DROP = {
 };
 // School rules that come from a general policy that never mentions NIL or athlete deals. They are shown, but do not count as NIL-specific value.
 const GENERAL = new Set(['university-of-central-florida:school-logos-marks', 'boone-high-school-orlando:penalties',
-  'orange-county-public-schools:penalties', 'orange-county-public-schools:school-facilities']);
+  'orange-county-public-schools:penalties', 'orange-county-public-schools:school-facilities',
+  'bethune-cookman-university:school-logos-marks', 'lake-mary-high-school-lake-mary:penalties',
+  'seminole-county-public-schools:school-facilities', 'seminole-county-public-schools:school-name-reference']);
 // Rules that rest on a document that could only be read in part.
-const PARTIAL = { 'stetson-university': 'Only about one of the six pages of Stetson\'s NIL policy could be read. The rule may be incomplete.' };
+const PARTIAL = {};
 
 const RANK = { no: 4, only_with_approval: 3, yes_with_conditions: 2, yes: 1, not_addressed: 0 };
 const QUICK = { yes: 'YES', yes_with_conditions: 'DEPENDS', only_with_approval: 'CHECK_FIRST', no: 'NO', not_addressed: 'NOT_PUBLICLY_SPECIFIED' };
@@ -66,11 +75,12 @@ const SOURCE_TYPES = new Set(['statute', 'regulation', 'bylaw', 'board_document'
 const isDate = (d) => typeof d === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(d);
 const tidy = (t) => (typeof t === 'string' ? t.replace(/\s+/g, ' ').trim() : t);
 // Research-process remarks are for the review notes, not for the public page.
-const publicText = (t) => tidy(String(t).replace(/Read through a summarising tool\.\s*/g, '').replace(/Confirm wording[^.]*by hand\.\s*/g, '').replace(/Closest topic match\.\s*/g, '')
+const publicText = (t) => tidy(String(t).replace(/ by emailing \[email on the official page\]/g, ' through the address on the official page').replace(/\[email on the official page\]/g, 'the address on the official page').replace(/Read through a summarising tool\.\s*/g, '').replace(/Confirm wording[^.]*by hand\.\s*/g, '').replace(/Closest topic match\.\s*/g, '')
   .replace(/School-specific( part)?:\s*(\w)/g, (m, a, c) => 'What the school adds: ' + c));
 const noneIfNull = (t) => (t && !/^none$/i.test(t) && publicText(t) ? publicText(t) : null);
 
-const SPORT_FIX = [[/\s*\([^)]*\)\s*/g, ' '], [/^(?:boys|girls)\s+/i, ''], [/&/g, 'and'],
+const SPORT_FIX = [[/\s*\([^)]*\)\s*/g, ' '], [/^(?:boys|girls)\s+/i, ''], [/\s*-?\s*(?:boys|girls)$/i, ''], [/&/g, 'and'],
+  [/^(?:fastpitch softball|softball fast pitch)$/i, 'Softball'], [/^volleyball beach$/i, 'Beach Volleyball'], [/^waterpolo$/i, 'Water Polo'], [/^(?:cheer|sideline cheerleading)$/i, 'Cheerleading'],
   [/^track$/i, 'Track and Field'], [/^swim and dive$/i, 'Swimming and Diving'], [/^(?:sideline|spirit) cheer$/i, 'Cheerleading'], [/^competitive cheer$/i, 'Competitive Cheerleading']];
 const NOT_SPORTS = /special olympics|unified|^district$|^dance$/i;
 const sportName = (n) => { let s = n; for (const [re, to] of SPORT_FIX) s = s.replace(re, to).trim(); return s.replace(/\s+/g, ' '); };
@@ -88,8 +98,41 @@ const scopeOfContact = (c) => {
 };
 const CONTACT_ORDER = { nil: 1, compliance: 2, athletics: 3, licensing: 4, international: 5, general: 9 };
 
+// Corrections from the main session's own raw-text check of the Seminole County group B pages on October 4, 2026.
+// That group's research came through a summarising tool, so names and facts were re-read in the browser before use.
+function fixups(loaded) {
+  const all = loaded.flatMap((d) => d.schools || []);
+  const S = (slug) => all.find((x) => x.slug === slug);
+  const member = 'FHSAA Membership List 2026-27, dated August 28, 2026 (school found on the list)';
+  for (const slug of ['oviedo-high-school-oviedo', 'hagerty-high-school-oviedo', 'winter-springs-high-school-winter-springs', 'crooms-academy-of-information-technology-sanford']) {
+    const s = S(slug); if (!s) continue;
+    s.policy_search.locations_checked.push(member);
+    s.policy_search.locations_unreachable = (s.policy_search.locations_unreachable || []).filter((u) => !/membership|member list|homecampus/i.test(u));
+  }
+  const ov = S('oviedo-high-school-oviedo');
+  if (ov) {   // the school's Staff page lists Sarah Reilly as Athletic Director; the name first recorded was not on the page it was cited to
+    ov.contacts = ov.contacts.filter((c) => !c.person_name);
+    ov.contacts.unshift({ office: 'Oviedo High School Athletics', role: 'Athletic Director', person_name: 'Sarah Reilly', phone: null, url: 'https://www.oviedo.scps.k12.fl.us/staff', source_id: ov.profile_source_id });
+    ov.ambiguities.push('The athletic director first recorded for Oviedo was wrong. The school Staff page read on October 4, 2026 lists Sarah Reilly as Athletic Director.');
+  }
+  const cr = S('crooms-academy-of-information-technology-sanford');
+  if (cr) {   // named staff were not found in the page text on re-read, so only the department line is kept
+    cr.contacts = [{ office: 'Crooms Academy Athletic Department', role: 'Athletics office', person_name: null, phone: '407-320-5760', url: 'https://www.cait.scps.k12.fl.us/forms-clearance', source_id: cr.contacts[0]?.source_id || cr.profile_source_id }];
+    cr.ambiguities.push('Named athletics staff recorded through a summarising tool were not found in the page text on re-read, so only the department phone line is shown.');
+    cr.ambiguities.push('The FHSAA 2026-27 member list marks Crooms (Sanford) with "#", which the list defines as a school in its second year of provisional membership.');
+  }
+  const hg = S('hagerty-high-school-oviedo');
+  if (hg) {
+    hg.sports = { unspecified: ['Bowling', 'Cross Country', 'Football', 'Golf', 'Swimming', 'Volleyball', 'Weightlifting', 'Competitive Cheer', 'Soccer', 'Basketball', 'Wrestling', 'Baseball', 'Softball', 'Tennis', 'Water Polo', 'Beach Volleyball', 'Lacrosse', 'Track and Field', 'Flag Football'] };
+    hg.policy_search.locations_checked.push('Hagerty Athletic Program Offerings 2026-2027 (PDF, read in full)', 'Hagerty Online Sports Physical Submission directions 2026-2027 (PDF, read in full; names athleticclearance.com; no mention of Form GA1 or NIL)');
+    hg.policy_search.locations_unreachable = (hg.policy_search.locations_unreachable || []).filter((u) => !/offerings|physical submission|directions/i.test(u));
+    hg.policy_search.notes = 'School-specific NIL policy: Not located in the public sources reviewed as of October 4, 2026. The 2026-27 clearance directions name athleticclearance.com and do not mention Form GA1 or NIL.';
+  }
+}
+
 export function applyPilot(F) {
   const { governingBodies, districts, sources, rules, institutions, policySearches, schoolPolicies, nilPrograms, contacts, pages, marketAreas, reviewNotes } = F;
+  F.accessDocs = F.accessDocs || []; F.conflicts = F.conflicts || [];
   const haveSource = new Set(sources.map((s) => s.slug));
   const haveRule = new Set(rules.map((r) => r.slug));
   const note = (owner, kind, body) => { if (body) reviewNotes.push({ ...owner, kind, body: tidy(body) }); };
@@ -120,23 +163,26 @@ export function applyPilot(F) {
     const made = [];
     for (const [topic, group] of byTopic) {
       const lead = group.reduce((a, b) => (RANK[b.answer] > RANK[a.answer] ? b : a), group[0]);
-      const srcs = group.flatMap((r) => r.sources.map((x) => ({ src: srcMap[x.source_id].slug, locator: tidy(x.locator) || 'Page text', quote: x.quote, check: 'machine_raw_text', published_on: srcMap[x.source_id].published_on })));
+      const srcs = group.flatMap((r) => r.sources.map((x) => ({ src: srcMap[x.source_id].slug, locator: tidy(x.locator) || 'Page text', quote: x.quote, check: x.read_method === 'visual' ? 'visual_source_check' : 'machine_raw_text', published_on: srcMap[x.source_id].published_on })));
       const dated = srcs.map((s) => s.published_on);
       const allDatedOld = dated.every(Boolean) && dated.every((d) => d < HOUSE);
       const citesPolicy = ctx.policySource && group.some((r) => r.sources.some((x) => x.source_id === ctx.policySource));
-      const stale = applies === 'college' && !scope.gb && lead.answer !== 'not_addressed'
-        && ((ctx.policyStatus !== 'published' && allDatedOld) || (['outdated', 'unconfirmed'].includes(ctx.policyStatus) && citesPolicy));
+      // Not treated as current: a college rule with no source dated after the July 2025 rule changes, unless the school has a
+      // current published NIL policy. General (non-NIL) policies such as trademark rules are exempt.
+      const anyCurrent = dated.some((d) => d && d >= HOUSE);
+      const stale = applies === 'college' && !scope.gb && lead.answer !== 'not_addressed' && !GENERAL.has(`${ownerSlug}:${topic}`)
+        && ((ctx.policyStatus !== 'published' && (allDatedOld || (['outdated', 'unconfirmed'].includes(ctx.policyStatus) && !anyCurrent))) || (['outdated', 'unconfirmed'].includes(ctx.policyStatus) && citesPolicy));
       const partial = PARTIAL[ownerSlug] && citesPolicy;
       const conditions = [...new Set(group.map((r) => noneIfNull(r.conditions)).filter(Boolean))].join(' ');
       let slug = `${key}-${topic}`; let i = 2; while (haveRule.has(slug)) slug = `${key}-${topic}-${i++}`;
       haveRule.add(slug);
       const rule = { slug, topic, scope, applies, answer: lead.answer,
-        summary: group.map((r) => tidy(r.summary)).join(' '),
+        summary: [...new Set(group.map((r) => publicText(r.summary)))].join(' '),
         conditions: conditions || null, citation: [...new Set(group.map((r) => tidy(r.citation)))].join('; '),
         sources: srcs.map(({ published_on, ...s }) => s),
-        method: 'raw_source_text', status: 'researched',
+        method: srcs.some((x) => x.check === 'visual_source_check') ? 'visual_source_check' : 'raw_source_text', status: 'researched',
         quick_status: lead.quick_status || QUICK[lead.answer], short_answer: tidy(lead.short_answer) || null,
-        nil_specific: !GENERAL.has(`${ownerSlug}:${topic}`) };
+        nil_specific: !GENERAL.has(`${ownerSlug}:${topic}`), checked_on: CUR };
       if (lead.answer === 'not_addressed') {
         rule.trust = 'PUBLIC_POLICY_NOT_LOCATED'; rule.quick_status = 'NOT_PUBLICLY_SPECIFIED';
         rule.review_note = `Not located in the public sources reviewed as of ${AS_OF}.`;
@@ -155,8 +201,13 @@ export function applyPilot(F) {
 
   const orlando = marketAreas.find((m) => m.slug === 'orlando-metro');
 
-  for (const file of FILES) {
-    const data = load(file);
+  const loaded = FILES.map(load);
+  fixups(loaded);
+  const triage = mergeTriage(loaded, load);
+  F.accessDocs.push(...triage.docs);
+  F.triageUpdates = triage.updates;
+  for (const data of loaded) {
+    setDate(data.researched_on);
 
     for (const c of data.conferences || []) {
       if (!governingBodies.find((g) => g.slug === c.slug)) governingBodies.push({ slug: c.slug, name: c.name, short_name: c.short_name, body_type: 'conference', website_url: c.website_url, description: tidy(c.notes) || 'Athletic conference.' });
@@ -205,7 +256,8 @@ export function applyPilot(F) {
       const ps = s.policy_search || {};
       const psIdx = policySearches.findIndex((p) => p.inst === s.slug);
       const nilPolicyFound = !!ps.public_policy_found && !(isHS);   // no pilot high school publishes NIL guidance of its own
-      const psRow = { inst: s.slug, public_policy_found: nilPolicyFound, search_date: data.researched_on,
+      setDate(s.researched_on || data.researched_on);
+      const psRow = { inst: s.slug, public_policy_found: nilPolicyFound, search_date: s.researched_on || data.researched_on,
         locations_checked: (ps.locations_checked || []).map(tidy), locations_unreachable: (ps.locations_unreachable || []).map(tidy), notes: tidy(ps.notes) };
       if (psIdx > -1) policySearches[psIdx] = psRow; else policySearches.push(psRow);
 
@@ -239,7 +291,7 @@ export function applyPilot(F) {
               ...(isWP && src(pol?.source_id) ? [{ src: src(pol.source_id), locator: 'Site menu, More, NIL', quote: null, check: 'machine_raw_text' }] : [])],
             method: 'raw_source_text', status: 'researched', trust: 'PUBLIC_POLICY_NOT_LOCATED', quick_status: 'NOT_PUBLICLY_SPECIFIED',
             short_answer: 'The school\'s public pages do not say how to hand in Form GA1. Ask the athletic department.',
-            review_note: `A school-specific Form GA1 process was not located in the public sources reviewed as of ${AS_OF}.`, nil_specific: true });
+            review_note: `A school-specific Form GA1 process was not located in the public sources reviewed as of ${AS_OF}.`, nil_specific: true, checked_on: CUR });
         }
       }
       // colleges: say plainly when no school statement on direct payments was located
@@ -252,7 +304,7 @@ export function applyPilot(F) {
           sources: [{ src: src(s.profile_source_id) || map[s.sources[0].id].slug, locator: 'Pages listed under "Where we looked"', quote: null, check: 'machine_raw_text' }],
           method: 'raw_source_text', status: 'researched', trust: 'PUBLIC_POLICY_NOT_LOCATED', quick_status: 'NOT_PUBLICLY_SPECIFIED',
           short_answer: `${short} has not said publicly whether it pays athletes directly.`,
-          review_note: `Not located in the public sources reviewed as of ${AS_OF}.`, nil_specific: true });
+          review_note: `Not located in the public sources reviewed as of ${AS_OF}.`, nil_specific: true, checked_on: CUR });
       }
 
       // programs: colleges only. High school booster and sponsor programs are not NIL and stay off the page.
@@ -287,15 +339,48 @@ export function applyPilot(F) {
         'prohibited-categories': 'banned categories', 'school-payments': 'school payments', 'international-athletes': 'international athletes', 'boosters': 'boosters', 'deal-review': 'deal review' };
       const facts = Object.keys(FACT).filter((t) => verifiedTopics.includes(t)).slice(0, 3).map((t) => FACT[t]);
       const meta = isHS
-        ? `NIL rules for ${name} athletes in ${s.city}, Florida: what FHSAA allows, Form GA1, Orange County Public Schools rules, and who to ask at the school.`
+        ? (s.district_slug === 'seminole-county-public-schools'
+          ? `NIL rules for ${name} athletes in ${s.city}, Florida: what FHSAA allows, Form GA1, the Seminole County school board NIL policy, and who to ask.`
+          : `NIL rules for ${name} athletes in ${s.city}, Florida: what FHSAA allows, Form GA1, Orange County Public Schools rules, and who to ask at the school.`)
         : facts.length
           ? [3, 2, 1].map((k) => `NIL rules for ${name} athletes: ${facts.slice(0, k).join(', ')}, NIL Go reporting and Florida law, with official sources.`).find((m) => m.length <= 165)
           : `NIL rules for ${name} athletes: what Florida law, the NCAA and NIL Go require, and what ${short} has and has not published, with sources.`;
       const path = `/nil/florida/${dir}/${s.slug}/`;
       if (!pages.find((p) => p.path === path)) pages.push({ path, page_type: isHS ? 'high_school_hub' : 'college_hub', state: 'FL', inst: s.slug,
-        title: isHS ? [`${name} (${s.city}, FL) NIL Rules | NIL Brand Academy`, `${name} (${s.city}) NIL Rules | NIL Brand Academy`].find((t) => t.length <= 70) : `${name} NIL Rules | NIL Brand Academy`, h1: `${name} NIL rules`, meta_description: meta });
+        title: isHS ? [`${name} (${s.city}, FL) NIL Rules | NIL Brand Academy`, `${name} (${s.city}) NIL Rules | NIL Brand Academy`, `${name} NIL Rules | NIL Brand Academy`, `${short} NIL Rules | NIL Brand Academy`].find((t) => t.length <= 70) : `${name} NIL Rules | NIL Brand Academy`, h1: `${name} NIL rules`, meta_description: meta });
 
-      if (orlando && (s.county === 'Orange County' || s.slug === 'university-of-central-florida') && !orlando.institutions.includes(s.slug)) orlando.institutions.push(s.slug);
+      if (orlando && (s.county === 'Orange County' || s.county === 'Seminole County' || s.slug === 'university-of-central-florida') && !orlando.institutions.includes(s.slug)) orlando.institutions.push(s.slug);
     }
+  }
+
+  // ---- Seminole County Public Schools: district documents opened on October 4, 2026
+  const du = triage.updates['seminole-county-public-schools'];
+  if (du) {
+    const slug = 'seminole-county-public-schools';
+    const map = addSources('scps', du.sources);
+    const old = rules.findIndex((r) => r.slug === 'scps-facilities'); if (old > -1) rules.splice(old, 1);
+    const list = du.rules.filter((r) => r.topic !== 'penalties');
+    const pen = du.rules.find((r) => r.topic === 'penalties'); const nil = list.find((r) => r.topic === 'nil-allowed');
+    if (pen && nil) { nil.summary = `${nil.summary} The Board adds that failing to follow these rules may affect an athlete's amateur status.`; nil.sources.push(...pen.sources); }
+    setDate(TRIAGED_ON);
+    addRules(slug, 'scps', list, map, { district: slug }, 'high_school', { owner: { district: slug } });
+    F.districtSearches.push({ district: slug, public_policy_found: true, search_date: TRIAGED_ON,
+      locations_checked: ['SCPS Board Policy 2431.06, Name, Image, and Likeness (NIL) in Athletics (revised January 20, 2026)', 'SCPS Board Policy 2431, Interscholastic Athletics', 'SCPS Board Policy 9700.01, Advertising and Commercial Activities', 'SCPS Board Policy 7510 and the Facilities Use Handbook', 'SCPS Student Conduct and Discipline Code 2026-2027'],
+      locations_unreachable: ['Administrative Procedure 9700.01, General Advertising Guidelines (not opened)'], notes: tidy(du.policy_note) });
+    (du.notes || []).forEach((t) => note({ district: slug }, 'ambiguity', t));
+    const shs = policySearches.find((p) => p.inst === 'seminole-high-school-sanford');
+    if (shs) Object.assign(shs, { search_date: TRIAGED_ON, locations_unreachable: [],
+      locations_checked: [...shs.locations_checked, 'SCPS Board Policy 2431.06, Name, Image, and Likeness (NIL) in Athletics (opened October 4, 2026)', 'SCPS Board Policy 9700.01, Advertising and Commercial Activities (opened October 4, 2026)', 'SCPS Student Conduct and Discipline Code 2026-2027 (opened October 4, 2026)', 'SCPS Policy 7510 and Facilities Use Handbook (opened October 4, 2026)'],
+      notes: 'No school-specific NIL policy was located for Seminole High School. Its district, Seminole County Public Schools, publishes Board Policy 2431.06 on NIL in athletics.' });
+  }
+  F.conflicts.push({ rule: 'fsu-agents', severity: 'medium', opened_on: TRIAGED_ON, summary: 'FSU\'s Compliance web page makes telling the Compliance Office a condition before an athlete first contacts an agent. FSU\'s agent procedures revised February 2026 say only that it "is advised". The page shows the newer document and notes the difference.' });
+
+  // ---- Seminole County schools researched October 4: documents that would not open, one entry each
+  for (const data of loaded) for (const s of data.schools || []) {
+    if (s.district_slug !== 'seminole-county-public-schools' || s.slug === 'seminole-high-school-sanford') continue;
+    for (const u of policySearches.find((p) => p.inst === s.slug)?.locations_unreachable || [])
+      F.accessDocs.push({ title: u, organization: s.name, url: null, owners: [s.slug], occurrences: 1, why_unopened: 'Would not open with the research tools on October 4, 2026.', retry: 'Not retried.', status: 'not_retried',
+        class: /handbook|code of conduct/i.test(u) ? 'B' : /booster|sponsor|facilitron|rental|ticket/i.test(u) ? 'F' : 'D', claim_affected: /handbook|code of conduct/i.test(u) ? 'Whether the school has an athlete conduct, sponsorship or logo rule.' : null,
+        other_support: 'FHSAA Bylaw 9.10 and SCPS Board Policy 2431.06 set the controlling rules.', risk: 'low', finding: null });
   }
 }

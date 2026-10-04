@@ -1,80 +1,45 @@
 -- NIL Intelligence Network update, part 01: migrations.
 begin;
 
--- ===== 0006_pilot_gate.sql
--- Phase 3, Florida pilot. Four changes:
---   1. School-specific value now needs NIL-specific substance from the school or district. A contact alone never satisfies it.
---   2. A page that passes every automated check is SEO_ELIGIBLE_HUMAN_REVIEW_PENDING. Only a person can move it further.
---   3. Thin-content class (A to D) per page. Classes C and D stay noindex whatever else passes.
---   4. Guards so that an automated process can never record a human review or an editorial approval.
+-- ===== 0007_source_access.sql
+-- Phase 3B. Source-access triage and the critical-source rule.
+--   One row per unique document that could not be opened during research, classified once, mapped to every page it affects.
+--   A page with an unread class A (critical primary) source cannot be class A (strong) and cannot be SEO-eligible.
 
-alter table institutions add column search_aliases text[];
--- false = the rule comes from a general policy that never mentions NIL or athlete deals (a facility-use or conduct policy)
-alter table rule_versions add column nil_specific boolean not null default true;
--- false = a published school document that does not cover NIL (a social media policy, an old code of conduct)
-alter table school_nil_policies add column covers_nil boolean not null default true;
-alter table nil_programs add column is_current boolean;          -- null = status not confirmed
-alter table school_contacts add column contact_scope text not null default 'general'
-  check (contact_scope in ('nil','compliance','athletics','licensing','international','general'));
-
--- Notes for the human review checklist. Never rendered on a public page.
-create table school_review_notes (
-  id                serial primary key,
-  institution_id    int references institutions(id) on delete cascade,
-  district_id       int references school_districts(id),
-  governing_body_id int references governing_bodies(id),
-  kind              text not null check (kind in ('claim','ambiguity','conflict','manual_review','not_found','left_off_page')),
-  body              text not null,
-  resolved          boolean not null default false,
-  resolved_by       text,
-  resolved_on       date
+create table source_access_issues (
+  id            serial primary key,
+  title         text not null,
+  organization  text,
+  url           text,
+  class         text not null check (class in ('A','B','C','D','E','F')),
+  status        text not null check (status in ('opened_now','still_inaccessible','login_required','not_found_404','not_retried')),
+  risk          text not null check (risk in ('high','medium','low','none')),
+  occurrences   int not null default 1,          -- how many times research ran into it, across all pages
+  claim_affected text,
+  other_support text,
+  why_unopened  text,
+  retry         text,
+  finding       text,
+  triaged_on    date not null,
+  resolved      boolean not null default false,  -- set by a person once the document has been read
+  resolved_by   text,
+  resolved_on   date
 );
-alter table school_review_notes enable row level security;
+create table source_access_pages (
+  issue_id       int not null references source_access_issues(id) on delete cascade,
+  institution_id int references institutions(id) on delete cascade,
+  district_id    int references school_districts(id),
+  check (institution_id is not null or district_id is not null)
+);
+alter table source_access_issues enable row level security;
+alter table source_access_pages enable row level security;
 do $$ begin
   if exists (select 1 from pg_roles where rolname = 'anon') then
-    revoke all on school_review_notes from anon, authenticated;
-    revoke all on sequence school_review_notes_id_seq from anon, authenticated;
+    revoke all on source_access_issues, source_access_pages from anon, authenticated;
+    revoke all on sequence source_access_issues_id_seq from anon, authenticated;
   end if;
 end $$;
 
--- 4. Human-only fields. The name recorded must be a person's.
-create or replace function is_automated_actor(p text) returns boolean language sql immutable as $$
-  select coalesce(trim(p), '') = '' or p ~* '(claude|automat|script|bot\M|system|pipeline|seed|gpt|\mai\M|agent)';
-$$;
-alter table rule_versions add constraint human_review_needs_a_person
-  check (review_method <> 'human_review' or (last_verified_on is not null and not is_automated_actor(verified_by)));
-alter table pages add constraint approval_needs_a_person
-  check (not human_approved or (approved_on is not null and not is_automated_actor(approved_by)));
-
-create or replace function record_human_review(p_rule_slug text, p_reviewer text, p_note text default null, p_on date default current_date)
-returns int language plpgsql as $$
-declare v_id int; n int;
-begin
-  if is_automated_actor(p_reviewer) then raise exception 'a human reviewer name is required; automated processes cannot record a human review'; end if;
-  select v.id into v_id from rule_versions v join rules r on r.id = v.rule_id where r.slug = p_rule_slug and v.is_current;
-  if v_id is null then raise exception 'no current version for rule %', p_rule_slug; end if;
-  update rule_versions set review_method = 'human_review', last_verified_on = p_on, verified_by = p_reviewer, verification_status = 'verified' where id = v_id;
-  insert into verification_events (entity_type, entity_id, status, method, verified_on, verified_by, notes)
-    values ('rule_version', v_id, 'human_reviewed', 'second_checker', p_on, p_reviewer, p_note);
-  select count(distinct p.id) into n from v_institution_rules ir join pages p on p.institution_id = ir.institution_id where ir.rule_version_id = v_id;
-  return n;
-end $$;
-
-create or replace function approve_page(p_path text, p_approver text, p_on date default current_date)
-returns text language plpgsql as $$
-declare st text;
-begin
-  if is_automated_actor(p_approver) then raise exception 'a human approver name is required; automated processes cannot approve a page'; end if;
-  update pages set human_approved = true, approved_by = p_approver, approved_on = p_on where path = p_path;
-  if not found then raise exception 'no page at %', p_path; end if;
-  select seo_status into st from v_page_quality_gate where path = p_path;
-  return coalesce(st, 'not a school hub');
-end $$;
-revoke all on function record_human_review(text, text, text, date) from public;
-revoke all on function approve_page(text, text, date) from public;
-revoke all on function is_automated_actor(text) from public;
-
--- The gate.
 drop view v_review_queue;
 drop view v_page_quality_gate;
 create view v_page_quality_gate as
@@ -118,7 +83,14 @@ agg as (
     (select max(ir.v_last) from ir where ir.institution_id = i.id) as last_verified_on,
     (select count(*) from ir where ir.institution_id = i.id and (ir.review_method <> 'human_review' or ir.v_last is null)) as rules_without_human_review,
     exists (select 1 from conflicts cf join ir on ir.rule_id = cf.rule_id
-            where ir.institution_id = i.id and cf.status = 'open' and cf.severity = 'high') as open_high_conflict
+            where ir.institution_id = i.id and cf.status = 'open' and cf.severity = 'high') as open_high_conflict,
+    -- a controlling primary source that is known to exist but has not been read (class A, still unread)
+    (select count(*) from source_access_issues sa join source_access_pages sp on sp.issue_id = sa.id
+       where sa.class = 'A' and sa.status <> 'opened_now' and not sa.resolved
+         and (sp.institution_id = i.id or (sp.district_id is not null and sp.district_id = i.district_id))) as critical_sources_unread,
+    (select count(*) from source_access_issues sa join source_access_pages sp on sp.issue_id = sa.id
+       where sa.class = 'B' and sa.status <> 'opened_now' and not sa.resolved
+         and (sp.institution_id = i.id or (sp.district_id is not null and sp.district_id = i.district_id))) as important_sources_unread
   from institutions i
 ),
 pts as (
@@ -153,11 +125,12 @@ chk as (
       and exists (select 1 from pages dp where dp.state_id = i.state_id
                   and dp.page_type = case t.institution_type when 'college' then 'college_directory' else 'high_school_directory' end)) as chk_internal_links,
     (not t.open_high_conflict)                                as chk_no_open_conflict,
+    (t.critical_sources_unread = 0)                           as chk_no_critical_source_gap,
     (t.rule_count > 0 and t.rules_without_human_review = 0)   as chk_human_review,
     (p.human_approved and p.approved_by is not null)          as chk_editorial_approval,
     case
       when not t.school_research_documented or not t.athletics_contact_found then 'D'
-      when t.nil_items >= 3 and (t.school_policy_published or t.disclosure_workflow_found) then 'A'
+      when t.nil_items >= 3 and (t.school_policy_published or t.disclosure_workflow_found) and t.critical_sources_unread = 0 then 'A'
       when t.nil_items >= 1 and t.nil_items + t.supporting_items >= 3 then 'B'
       else 'C' end as value_class
   from pages p
@@ -171,21 +144,21 @@ select c.*,
   c.chk_human_review as chk_last_verified,
   (c.chk_governing_body and c.chk_current_status and c.chk_rules_verified and c.chk_sources_attached and c.chk_rules_traceable
     and c.chk_matrix_populated and c.chk_school_info_checked and c.chk_school_specific_value and c.chk_contact_checked
-    and c.chk_scenarios_answered and c.chk_title_meta and c.chk_canonical and c.chk_internal_links and c.chk_no_open_conflict
+    and c.chk_scenarios_answered and c.chk_title_meta and c.chk_canonical and c.chk_internal_links and c.chk_no_open_conflict and c.chk_no_critical_source_gap
     and c.value_class in ('A','B') and c.index_override is null) as automated_pass,
   case c.value_class when 'A' then 'Strong school-specific value' when 'B' then 'Moderate school-specific value'
     when 'C' then 'State-rule-dominant / thin' else 'Incomplete' end as value_class_label,
   case
     when not (c.chk_governing_body and c.chk_current_status and c.chk_rules_verified and c.chk_sources_attached and c.chk_rules_traceable
       and c.chk_matrix_populated and c.chk_school_info_checked and c.chk_school_specific_value and c.chk_contact_checked
-      and c.chk_scenarios_answered and c.chk_title_meta and c.chk_canonical and c.chk_internal_links and c.chk_no_open_conflict
+      and c.chk_scenarios_answered and c.chk_title_meta and c.chk_canonical and c.chk_internal_links and c.chk_no_open_conflict and c.chk_no_critical_source_gap
       and c.value_class in ('A','B') and c.index_override is null) then 'NOT_ELIGIBLE'
     when c.chk_human_review and c.chk_editorial_approval then 'APPROVED_TO_INDEX'
     else 'SEO_ELIGIBLE_HUMAN_REVIEW_PENDING' end as seo_status,
   case
     when (c.chk_governing_body and c.chk_current_status and c.chk_rules_verified and c.chk_sources_attached and c.chk_rules_traceable
       and c.chk_matrix_populated and c.chk_school_info_checked and c.chk_school_specific_value and c.chk_contact_checked
-      and c.chk_scenarios_answered and c.chk_title_meta and c.chk_canonical and c.chk_internal_links and c.chk_no_open_conflict
+      and c.chk_scenarios_answered and c.chk_title_meta and c.chk_canonical and c.chk_internal_links and c.chk_no_open_conflict and c.chk_no_critical_source_gap
       and c.value_class in ('A','B') and c.index_override is null)
       and c.chk_human_review and c.chk_editorial_approval then 'index' else 'noindex' end as index_status
 from chk c;
@@ -204,14 +177,7 @@ left join school_districts d on d.id = r.district_id and r.scope_type = 'distric
 left join institutions i on i.id = r.institution_id and r.scope_type = 'institution'
 where r.status = 'active';
 alter view v_review_queue set (security_invoker = true);
-do $$ begin
-  if exists (select 1 from pg_roles where rolname = 'anon') then
-    revoke all on function record_human_review(text, text, text, date) from anon, authenticated;
-    revoke all on function approve_page(text, text, date) from anon, authenticated;
-    revoke all on function is_automated_actor(text) from anon, authenticated;
-  end if;
-end $$;
 
-insert into schema_migrations (name) values ('0006_pilot_gate.sql');
+insert into schema_migrations (name) values ('0007_source_access.sql');
 commit;
 select 'part 01 applied' as result;

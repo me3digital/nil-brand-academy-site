@@ -1,0 +1,1346 @@
+{
+ "triaged_on": "2026-10-04",
+ "documents": [
+  {
+   "title": "OCPS Athletics district site (ocpsathletics.net)",
+   "organization": "Orange County Public Schools",
+   "url": "https://ocpsathletics.net/",
+   "owners": [
+    "orange-county-public-schools"
+   ],
+   "occurrences": 2,
+   "why_unopened": "HTTP 401 to the fetch tool and a browser error page. The ocps.net Athletics menu link (https://www.ocps.net/134128_2) redirects here and is counted in this entry.",
+   "retry": "One plain fetch today returned only the home page welcome text with no links. One plain load in my own Chrome tab gave a browser error page. Stopped there as instructed. No workaround tried.",
+   "status": "still_inaccessible",
+   "class": "A",
+   "claim_affected": "OCPS district page: whether a district athletics handbook, paperwork list or district statement on NIL, Form GA1, sponsorship or logo use exists. Would apply to all 16 Orange County high school pages.",
+   "other_support": "OCPS board policies JJI, JJ, KHB and KF were read in the first pass and do not mention NIL. Nothing replaces the athletics site itself.",
+   "risk": "high",
+   "finding": "Not read. The welcome text seen says the site holds athletic paperwork, schedules, academic standings and staff listings. No NIL wording in that text. Subpages unread."
+  },
+  {
+   "title": "OCPS facility rental portal (Facilitron)",
+   "organization": "Facilitron for Orange County Public Schools",
+   "url": "https://www.facilitron.com/ocps32801",
+   "owners": [
+    "orange-county-public-schools"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Not opened in the first pass.",
+   "retry": "Not retried. Third-party booking portal. The rule is in Policy KF, already read.",
+   "status": "not_retried",
+   "class": "C",
+   "claim_affected": "OCPS facility-use rule (school-facilities).",
+   "other_support": "OCPS Policy KF and the OCPS Facilities Home page.",
+   "risk": "low",
+   "finding": "Not read."
+  },
+  {
+   "title": "FHSAA athletic clearance portal",
+   "organization": "FHSAA / Home Campus",
+   "url": "https://athleticclearance.fhsaahome.org/",
+   "owners": [
+    "apopka-high-school-apopka"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Log-in portal.",
+   "retry": "Not retried. Needs an account.",
+   "status": "login_required",
+   "class": "D",
+   "claim_affected": "Whether Form GA1 is a signature step in online clearance at Apopka.",
+   "other_support": null,
+   "risk": "low",
+   "finding": "Not read. Behind a login."
+  },
+  {
+   "title": "Boone Student-Athlete Code of Conduct (Word file, uploaded 2018)",
+   "organization": "William R. Boone High School Athletics",
+   "url": "https://sportshub2-uploads.vnn-prod.zone/files/sites/1651/2018/07/07184455/Code-of-conduct.docx",
+   "owners": [
+    "boone-high-school-orlando"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Word file, not opened.",
+   "retry": "Read the file text in my own Chrome tab from the same origin (document.xml of the .docx). Full body read, about 2,500 characters.",
+   "status": "opened_now",
+   "class": "E",
+   "claim_affected": "Boone page: whether the code of conduct has amateurism, sponsorship or uniform rules.",
+   "other_support": "Boone 2025-26 Social Media Policy (s4) is the current conduct document.",
+   "risk": "none",
+   "finding": "No NIL content. It covers eligibility, attendance, drugs, alcohol, tobacco, suspensions, sportsmanship, hazing and returning equipment. No mention of amateur status, sponsors, logos or social media."
+  },
+  {
+   "title": "Boone athletics home page (athletic director name)",
+   "organization": "William R. Boone High School Athletics",
+   "url": "https://www.booneathletics.com/",
+   "owners": [
+    "boone-high-school-orlando"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Not a blocked document. Flagged to confirm the athletic director name.",
+   "retry": "Not retried. Contact check only.",
+   "status": "not_retried",
+   "class": "D",
+   "claim_affected": "Boone athletic director contact.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Not an NIL source."
+  },
+  {
+   "title": "Dr. Phillips Athletics Clearance Documents (Google Drive folder)",
+   "organization": "Dr. Phillips High School Athletics",
+   "url": "https://drive.google.com/drive/folders/1qH0oK2iJHUbE1FOPtTTuyjkE_EkiwHLw",
+   "owners": [
+    "dr-phillips-high-school-orlando"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Google Drive folder, not opened.",
+   "retry": "Opened in my own Chrome tab. A request sent without any sign-in cookies also returned the folder, so it is public. Listed the 9 files and read the Athletic Clearance Checklist text.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "Dr. Phillips page: how Form GA1 is collected and which clearance platform is used.",
+   "other_support": null,
+   "risk": "low",
+   "finding": "No NIL content. The folder holds 9 files: two homeschool forms, GA4, EL12, off-season conditioning release, physical form, EL1 ECG, ECG exception form and a checklist. There is no GA1 file. The checklist lists EL2, EL1, four NFHS courses and a baseline concussion test."
+  },
+  {
+   "title": "Edgewater Athletic Code of Conduct (PDF, 2021)",
+   "organization": "Edgewater High School Athletics",
+   "url": "https://vnnsportshub.net/app/uploads/sites/1362/2021/06/Athletic-Code-of-Conduct.pdf",
+   "owners": [
+    "edgewater-high-school-orlando"
+   ],
+   "occurrences": 2,
+   "why_unopened": "2021 PDF, timed out.",
+   "retry": "Tried twice from my own Chrome tab (same-origin pdf.js, then a plain fetch). The vnnsportshub.net host did not answer and timed out both times. The Athletes Code of Conduct web page links only this copy.",
+   "status": "still_inaccessible",
+   "class": "E",
+   "claim_affected": "Edgewater page: whether the 2021 code has amateurism, sponsorship or uniform wording.",
+   "other_support": "The Athletes Code of Conduct web page (s5) was re-read today and has no NIL, sponsor, logo or uniform wording.",
+   "risk": "low",
+   "finding": "Not read. It is dated 2021, before FHSAA allowed NIL, so it cannot state a current NIL rule."
+  },
+  {
+   "title": "Edgewater Athletic Directory page",
+   "organization": "Edgewater High School Athletics",
+   "url": "https://www.edgewaterathletics.com/page/athletic-directory",
+   "owners": [
+    "edgewater-high-school-orlando"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Not blocked. Flagged to confirm 2026-27 staff.",
+   "retry": "Not retried. Contact check only.",
+   "status": "not_retried",
+   "class": "D",
+   "claim_affected": "Edgewater staff contacts.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Not an NIL source."
+  },
+  {
+   "title": "Jones school site 'Athletics' link",
+   "organization": "Jones High School",
+   "url": "https://joneshs.ocps.net/226015_2",
+   "owners": [
+    "jones-high-school-orlando"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Would not load in the reader.",
+   "retry": "Opened in my own Chrome tab.",
+   "status": "opened_now",
+   "class": "F",
+   "claim_affected": "None.",
+   "other_support": "Jones athletics site (s1).",
+   "risk": "none",
+   "finding": "No NIL content. The link only redirects to https://www.joneshighathletics.com/, which was already reviewed."
+  },
+  {
+   "title": "Jones Athletic Philosophy page",
+   "organization": "Jones High School Athletics",
+   "url": "https://joneshighathletics.com/athletic-philosphy/",
+   "owners": [
+    "jones-high-school-orlando"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Older page seen in search results, not opened.",
+   "retry": "Opened in my own Chrome tab.",
+   "status": "not_found_404",
+   "class": "F",
+   "claim_affected": "None.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "The page no longer exists. The site shows its Not Found page."
+  },
+  {
+   "title": "Jones athletics home page (athletic director and clearance)",
+   "organization": "Jones High School Athletics",
+   "url": "https://www.joneshighathletics.com/",
+   "owners": [
+    "jones-high-school-orlando"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Not blocked. First-pass note suggested confirming by phone or in person.",
+   "retry": "Not retried. Phone or in-person checks are outside this public-source review and were not done.",
+   "status": "not_retried",
+   "class": "D",
+   "claim_affected": "Jones athletic director contact and clearance steps.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Not an NIL source."
+  },
+  {
+   "title": "Olympia Coaches List (image)",
+   "organization": "Olympia High School Athletics",
+   "url": "https://sites-assets.playonsharedprod.playonsports.com/photos/2026/06/17/5e560de4-2988-48a9-87f6-9ef914874335.png",
+   "owners": [
+    "olympia-high-school-orlando"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Image, could not be read as text.",
+   "retry": "Not retried. Image file with staff names only.",
+   "status": "not_retried",
+   "class": "D",
+   "claim_affected": "Olympia athletic director name.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Not an NIL source."
+  },
+  {
+   "title": "Olympia Sportsmanship Policies (PDF, 2017)",
+   "organization": "Olympia High School Athletics",
+   "url": "https://sportshub1-uploads.vnn-prod.zone/10434/files/2017/04/1a77427149f1831e-Sportsmanship-Policies.pdf",
+   "owners": [
+    "olympia-high-school-orlando"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Not opened.",
+   "retry": "Tried once in my own Chrome tab. The sportshub1 host gave a browser error page and a fetch failed.",
+   "status": "still_inaccessible",
+   "class": "E",
+   "claim_affected": "None on current guidance. Background only.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Not read. It is a 2017 sportsmanship document, before FHSAA allowed NIL."
+  },
+  {
+   "title": "West Orange 2026-2027 Athletic Clearance Instructions (Google Drive)",
+   "organization": "West Orange High School Athletics",
+   "url": "https://drive.google.com/file/d/1hyyqkM2DJvOAacI_JmmAGpfnwm2DC7CL/view",
+   "owners": [
+    "west-orange-high-school-winter-garden"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Google Drive file, not opened.",
+   "retry": "Opened in my own Chrome tab and read the 2-page text. A request sent without any sign-in cookies also returned the file, so it is public.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "West Orange page: how Form GA1 is collected and which clearance platform is used in 2026-27.",
+   "other_support": null,
+   "risk": "low",
+   "finding": "No NIL content and no mention of Form GA1. It says 2026-27 clearance is digital at AthleticClearance.com and needs the EL2 physical, the EL1 ECG form and four NFHS courses. It names the athletic trainers and the athletic director."
+  },
+  {
+   "title": "West Orange 2026-27 Corporate-Business Sponsorship (Adobe cloud PDF)",
+   "organization": "West Orange High School Athletics",
+   "url": "https://acrobat.adobe.com/id/urn:aaid:sc:US:5f641f1b-3ff5-40a9-9b95-8e0d080bf262",
+   "owners": [
+    "west-orange-high-school-winter-garden"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Adobe cloud document, not opened.",
+   "retry": "Opened in my own Chrome tab without signing in. The viewer does not expose text, so both pages were read by eye from screenshots.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "West Orange page: whether school sponsorships include athlete appearances, athlete images or logo terms.",
+   "other_support": null,
+   "risk": "low",
+   "finding": "No NIL content. Silver, Gold and Platinum levels give the business sponsor banners at school athletic sites, all-sports passes, and at higher levels football parking and reserved seats. Page 2 is an order form. Nothing about athletes, athlete images or use of the school logo by sponsors."
+  },
+  {
+   "title": "West Orange Head Coaches 2025-26 (Google Drive PDF)",
+   "organization": "West Orange High School Athletics",
+   "url": "https://drive.google.com/file/d/14xZj991jAX4Xq8_Yd7I2Yt9ZRJIlfNY4/view",
+   "owners": [
+    "west-orange-high-school-winter-garden"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Google Drive file, not opened.",
+   "retry": "Confirmed it is public and titled West Orange Head Coaches 2025-26.pdf. Body not read: it is a staff list for last year.",
+   "status": "not_retried",
+   "class": "D",
+   "claim_affected": "West Orange staff contacts.",
+   "other_support": "West Orange Athletics Directory 2026-2027 page (s2).",
+   "risk": "none",
+   "finding": "Not an NIL source. Last year staff list."
+  },
+  {
+   "title": "GA1 Affidavit of Amateurism copy on the Winter Park athletics site",
+   "organization": "FHSAA form hosted by Winter Park High School Athletics",
+   "url": "https://sportshub2-uploads.vnn-prod.zone/files/sites/68/2024/08/22190831/GA1_Affidavit_of_Amateurism_81624-1.pdf",
+   "owners": [
+    "winter-park-high-school-winter-park"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Link recorded but file not opened.",
+   "retry": "Opened in my own Chrome tab and read the text with pdf.js from the same origin. 3 pages read.",
+   "status": "opened_now",
+   "class": "C",
+   "claim_affected": "Winter Park page: the NIL menu item and whether the school added its own text.",
+   "other_support": "The current FHSAA Form GA1 on fhsaa.com, already in the database as the statewide source.",
+   "risk": "low",
+   "finding": "It is the standard FHSAA Form GA1, each page marked Revised 08/24. Winter Park added no cover text or school rule. A reviewer should check that the FHSAA has not issued a newer GA1 than this hosted copy."
+  },
+  {
+   "title": "Home Campus log-in portal",
+   "organization": "Home Campus",
+   "url": "https://www.homecampus.com/login",
+   "owners": [
+    "winter-park-high-school-winter-park"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Log-in portal.",
+   "retry": "Not retried. Needs an account.",
+   "status": "login_required",
+   "class": "D",
+   "claim_affected": "Whether Form GA1 is a signature step in online clearance at Winter Park.",
+   "other_support": null,
+   "risk": "low",
+   "finding": "Not read. Behind a login."
+  },
+  {
+   "title": "Lake Nona 2026-2027 Athletic Clearance Packet (Google Drive PDF)",
+   "organization": "Lake Nona High School Athletics",
+   "url": "https://drive.google.com/file/d/1qSju0oOOtID-CcXGdvKLpU6pN74hCs7h/view",
+   "owners": [
+    "lake-nona-high-school-orlando"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Google Drive PDF could not be opened.",
+   "retry": "Opened in my own Chrome tab. A request sent without any sign-in cookies also returned the file, so it is public. All 14 pages read as text and searched.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "Lake Nona page: whether the clearance packet mentions GA1 or NIL.",
+   "other_support": null,
+   "risk": "low",
+   "finding": "No NIL content. No hits for NIL, likeness, amateur, GA1, sponsor, logo, commercial or social media in 14 pages. Page 1 says to register at athleticclearance.fhsaahome.org and lists the digital forms to sign."
+  },
+  {
+   "title": "Lake Nona 'Become a Sponsor!' Google Form",
+   "organization": "Lake Nona High School Athletics",
+   "url": null,
+   "owners": [
+    "lake-nona-high-school-orlando"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Not opened. Forms are not submitted or edited.",
+   "retry": "Not retried. It is an input form for businesses, not a rule document.",
+   "status": "not_retried",
+   "class": "D",
+   "claim_affected": "Lake Nona page: what sponsors receive.",
+   "other_support": null,
+   "risk": "low",
+   "finding": "Not read."
+  },
+  {
+   "title": "Lake Nona faculty and staff directory viewer",
+   "organization": "Lake Nona High School",
+   "url": "https://lakenonahs.ocps.net/faculty-staff",
+   "owners": [
+    "lake-nona-high-school-orlando"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Document viewer did not load.",
+   "retry": "Not retried. Staff list only.",
+   "status": "not_retried",
+   "class": "D",
+   "claim_affected": "Lake Nona staff contacts.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Not an NIL source."
+  },
+  {
+   "title": "Timber Creek Transfer Students notice (PDF, 2024)",
+   "organization": "Timber Creek High School Athletics",
+   "url": "https://sportshub2-uploads.vnn-prod.zone/files/sites/316/2024/05/20094818/Transferstudents.pdf",
+   "owners": [
+    "timber-creek-high-school-orlando"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Not opened.",
+   "retry": "Opened in my own Chrome tab and read the text with pdf.js from the same origin. 1 page.",
+   "status": "opened_now",
+   "class": "F",
+   "claim_affected": "None.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "No NIL content. It tells first-time transfer athletes to complete FHSAA Form GA4."
+  },
+  {
+   "title": "Timber Creek GA4 form, Athletic Events Safety Procedures and Athletic Physical FAQs (PDFs)",
+   "organization": "Timber Creek High School Athletics",
+   "url": null,
+   "owners": [
+    "timber-creek-high-school-orlando"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Linked under Forms/Links, not opened.",
+   "retry": "Not retried. Recruiting affidavit, safety and physical documents.",
+   "status": "not_retried",
+   "class": "F",
+   "claim_affected": "None.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Not read. None of these is an NIL, sponsorship or logo document."
+  },
+  {
+   "title": "Timber Creek Athletics Booster Sponsorships attachment",
+   "organization": "Timber Creek Athletic Boosters",
+   "url": "https://www.timbercreekathletics.com/news/timber-creek-athletics-booster-sponsorships",
+   "owners": [
+    "timber-creek-high-school-orlando"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Attachment on the news page could not be opened.",
+   "retry": "Opened the news page in my own Chrome tab. It shows two sentences and a booster email address. No attachment link or document is present in the page today.",
+   "status": "still_inaccessible",
+   "class": "D",
+   "claim_affected": "Timber Creek page: sponsor benefits and any use of athlete images.",
+   "other_support": null,
+   "risk": "low",
+   "finding": "Not read. The page text itself has no sponsor terms and no NIL wording."
+  },
+  {
+   "title": "FHSAA member list '^' mark beside Timber Creek",
+   "organization": "FHSAA",
+   "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+   "owners": [
+    "timber-creek-high-school-orlando"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Not a blocked document. A layout question in a list already read.",
+   "retry": "Not retried.",
+   "status": "not_retried",
+   "class": "F",
+   "claim_affected": "Timber Creek FHSAA membership note only.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Not an NIL source."
+  },
+  {
+   "title": "Ocoee 2026-27 Corporate Sponsorship Packet (PDF)",
+   "organization": "Ocoee High School Athletics and Knight Nation Booster Club",
+   "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/07/23/3648f181-d768-40b1-ac09-3edea252da14.pdf",
+   "owners": [
+    "ocoee-high-school-ocoee"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Reported as image-based with no readable text.",
+   "retry": "Opened in my own Chrome tab and read the text with pdf.js from the same origin. The file does have a text layer. All 3 pages read.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "Ocoee page: sponsor benefits and any athlete or logo terms.",
+   "other_support": null,
+   "risk": "low",
+   "finding": "No NIL rule. It lists five sponsor levels with banners, announcements, company logos on fields, scoreboard and selected equipment, and social media promotion by the school. A business can pay to sponsor the Athlete of the Month award. Nothing covers paying athletes, athlete endorsements or sponsor use of the school logo."
+  },
+  {
+   "title": "Ocoee Knight Nation Booster Membership 2026-27 (PDF)",
+   "organization": "Knight Nation Booster Club",
+   "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/07/23/8db3544c-dc9c-4b90-8755-be4502fc9832.pdf",
+   "owners": [
+    "ocoee-high-school-ocoee"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Reported as image-based.",
+   "retry": "Opened in my own Chrome tab and read the text with pdf.js from the same origin. 2 pages read.",
+   "status": "opened_now",
+   "class": "F",
+   "claim_affected": "None.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "No NIL content. It lists booster membership levels and what members get (season tickets, shirts, parking)."
+  },
+  {
+   "title": "Ocoee Athletic Clearance Instructions 2025-26 (PDF)",
+   "organization": "Ocoee High School Athletics",
+   "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2025/08/15/45257644-8829-4014-886f-0e56fa94e07f.pdf",
+   "owners": [
+    "ocoee-high-school-ocoee"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Not read.",
+   "retry": "Opened in my own Chrome tab and read the text with pdf.js from the same origin. 8 pages searched.",
+   "status": "opened_now",
+   "class": "E",
+   "claim_affected": "Ocoee page: clearance steps and Form GA1.",
+   "other_support": "Ocoee 2026-27 Physical and ECG Packet (s5).",
+   "risk": "none",
+   "finding": "No NIL content. No hits for NIL, likeness, amateur, GA1, sponsor or logo. It is last year instructions for AthleticClearance.com."
+  },
+  {
+   "title": "Ocoee GA4 PDF and NCAA & NAIA Eligibility PDF",
+   "organization": "Ocoee High School Athletics",
+   "url": null,
+   "owners": [
+    "ocoee-high-school-ocoee"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Under Knights HQ, not opened.",
+   "retry": "Not retried.",
+   "status": "not_retried",
+   "class": "F",
+   "claim_affected": "None.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Not read. Recruiting affidavit and college eligibility handouts."
+  },
+  {
+   "title": "Ocoee High main school site",
+   "organization": "Ocoee High School",
+   "url": "https://ocoeehs.ocps.net",
+   "owners": [
+    "ocoee-high-school-ocoee"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Fetch was not permitted.",
+   "retry": "Not retried. Profile check only.",
+   "status": "not_retried",
+   "class": "D",
+   "claim_affected": "Ocoee school website URL.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Not an NIL source."
+  },
+  {
+   "title": "Wekiva athletics pages (administration page and home page)",
+   "organization": "Wekiva High School Athletics",
+   "url": "https://www.wekivamustangs.com/Sport/AD",
+   "owners": [
+    "wekiva-high-school-apopka"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Not blocked. Flagged to confirm the athletic director and to look for a sponsors page.",
+   "retry": "Not retried. Contact and menu checks only.",
+   "status": "not_retried",
+   "class": "D",
+   "claim_affected": "Wekiva contact and sponsorship page.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Not an NIL source."
+  },
+  {
+   "title": "Windermere Code of Conduct for Student-Athletes 2021-22 (PDF)",
+   "organization": "Windermere High School Athletics",
+   "url": "https://sportshub2-uploads.vnn-prod.zone/files/sites/2230/2021/07/29150836/WHS-Code-of-Conduct-for-Student-Athletes.pdf",
+   "owners": [
+    "windermere-high-school-windermere"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Already read in the first pass. Flagged to check for a newer handbook.",
+   "retry": "Opened in my own Chrome tab and read the text with pdf.js from the same origin. Full text searched.",
+   "status": "opened_now",
+   "class": "E",
+   "claim_affected": "Windermere page: the outdated handbook entry.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "No NIL content. Hits are only a social media conduct section and a rule on returning uniforms and equipment. The file is headed 2021 - 22. No newer handbook was found."
+  },
+  {
+   "title": "Windermere Online Athletic Clearance instructions dated 2026-08-07 (PDF)",
+   "organization": "Windermere High School Athletics",
+   "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/08/07/3acd8fc9-160b-4919-bc14-9ba9d1a53d0e.pdf",
+   "owners": [
+    "windermere-high-school-windermere"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Reported as image-based.",
+   "retry": "Opened in my own Chrome tab and read the text with pdf.js from the same origin. The file does have a text layer. 2 pages read.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "Windermere page: clearance platform and Form GA1.",
+   "other_support": null,
+   "risk": "low",
+   "finding": "No NIL content and no mention of Form GA1. It says clearance for school year 2026 - 2027 is at homecampus.com/login and lists the EL2 physical and ECG uploads."
+  },
+  {
+   "title": "Windermere 26-27 Sponsorship Forms (PDF)",
+   "organization": "Windermere Athletics Boosters",
+   "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/08/17/ae359a18-2f3f-401d-9767-67d895310fac.pdf",
+   "owners": [
+    "windermere-high-school-windermere"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Linked on the sponsoring page, not opened.",
+   "retry": "Found the link on the public sponsoring page. Opened in my own Chrome tab and read the text with pdf.js from the same origin. 2 pages read.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "Windermere page: sponsor benefits and any athlete or logo terms.",
+   "other_support": null,
+   "risk": "low",
+   "finding": "No NIL rule. Sponsor levels give banners, announcements, promotion on the Windermere Athletics Facebook and Instagram pages and apparel. Sponsors send their own business logo for the banner. Nothing about athletes, athlete images or sponsor use of the school logo."
+  },
+  {
+   "title": "Colonial Athletic Clearance flyer (PDF)",
+   "organization": "Colonial High School Athletics",
+   "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/05/29/ba8e17dc-c1ec-4aa1-9c85-40ee37a9b189.pdf",
+   "owners": [
+    "colonial-high-school-orlando"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Reported as image-based.",
+   "retry": "Opened in my own Chrome tab and read the text with pdf.js from the same origin. The file has a text layer. 2 pages read.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "Colonial page: clearance steps and Form GA1.",
+   "other_support": null,
+   "risk": "low",
+   "finding": "No NIL content and no mention of Form GA1. It lists a 2.0 GPA, EL1 ECG screening, EL2 physical and NFHS video certificates."
+  },
+  {
+   "title": "Colonial Required Forms flyer (PDF)",
+   "organization": "Colonial High School Athletics",
+   "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/05/29/eba3f595-3058-4b4e-924e-eb901400d9c9.pdf",
+   "owners": [
+    "colonial-high-school-orlando"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Reported as image-based.",
+   "retry": "Opened in my own Chrome tab and read the text with pdf.js from the same origin. 4 pages read.",
+   "status": "opened_now",
+   "class": "F",
+   "claim_affected": "Colonial page: whether more forms are listed than the clearance page names.",
+   "other_support": "Colonial Athletic Clearance flyer.",
+   "risk": "none",
+   "finding": "No NIL content. It shows how to fill in the EL2 and EL1 forms and which ECG results are accepted. GA1 is not listed."
+  },
+  {
+   "title": "Colonial Required Courses flyer (PDF)",
+   "organization": "Colonial High School Athletics",
+   "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/05/29/69242133-fec3-49c3-a497-74b20af873dd.pdf",
+   "owners": [
+    "colonial-high-school-orlando"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Could not be opened.",
+   "retry": "Opened in my own Chrome tab and read the text with pdf.js from the same origin. 2 pages read.",
+   "status": "opened_now",
+   "class": "F",
+   "claim_affected": "None.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "No NIL content. It explains the yearly NFHS video courses."
+  },
+  {
+   "title": "Colonial Sponsorships page",
+   "organization": "Colonial High School Athletics",
+   "url": "https://www.grenadierathletics.com/page/sponsorships",
+   "owners": [
+    "colonial-high-school-orlando"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Empty page in the first pass.",
+   "retry": "Not retried.",
+   "status": "not_retried",
+   "class": "D",
+   "claim_affected": "Colonial page: sponsor packet.",
+   "other_support": "Colonial Thank you Sponsors page (s4).",
+   "risk": "none",
+   "finding": "Not read again. It had a title and no body text."
+  },
+  {
+   "title": "Colonial High main school site",
+   "organization": "Colonial High School",
+   "url": "https://colonialhs.ocps.net",
+   "owners": [
+    "colonial-high-school-orlando"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Fetch was not permitted.",
+   "retry": "Not retried. Profile check only.",
+   "status": "not_retried",
+   "class": "D",
+   "claim_affected": "Colonial school website URL.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Not an NIL source."
+  },
+  {
+   "title": "Evans head coaches page, school leadership Google Site and school site Athletics page",
+   "organization": "Maynard Evans High School",
+   "url": "https://www.evansathletics.com/page/head-coaches",
+   "owners": [
+    "maynard-evans-high-school-orlando"
+   ],
+   "occurrences": 3,
+   "why_unopened": "Head coaches page showed no text. Leadership site (https://sites.google.com/view/mehsleadership/home) not opened. evanshs.ocps.net/Athletics returned an error.",
+   "retry": "Not retried. Staff and contact checks only.",
+   "status": "not_retried",
+   "class": "D",
+   "claim_affected": "Evans athletic director name.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Not an NIL source."
+  },
+  {
+   "title": "Evans clearance upload directions (tinyurl links)",
+   "organization": "Maynard Evans High School Athletics",
+   "url": null,
+   "owners": [
+    "maynard-evans-high-school-orlando"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Shortened links, not opened.",
+   "retry": "Not retried. Shortened links hide the destination.",
+   "status": "not_retried",
+   "class": "D",
+   "claim_affected": "Evans page: clearance steps and Form GA1.",
+   "other_support": "Evans EHS Athletic Clearance Information page (s4).",
+   "risk": "low",
+   "finding": "Not read."
+  },
+  {
+   "title": "Oak Ridge athletics home collapsed panels and athletics site staff page",
+   "organization": "Oak Ridge High School",
+   "url": "https://oakridgehs.ocps.net/athletics-home",
+   "owners": [
+    "oak-ridge-high-school-orlando"
+   ],
+   "occurrences": 2,
+   "why_unopened": "Not blocked. Flagged to expand the panels by hand and to confirm there is no staff page.",
+   "retry": "Not retried.",
+   "status": "not_retried",
+   "class": "D",
+   "claim_affected": "Oak Ridge page: whether GA1 or NIL sits inside a collapsed panel.",
+   "other_support": "The Required Forms page text (s1) was read in the first pass.",
+   "risk": "low",
+   "finding": "Not read again."
+  },
+  {
+   "title": "Oak Ridge 2025 Physical Form and OCPS ECG Form (PDFs)",
+   "organization": "Oak Ridge High School",
+   "url": null,
+   "owners": [
+    "oak-ridge-high-school-orlando"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Linked from Required Forms, not opened.",
+   "retry": "Not retried. Medical forms.",
+   "status": "not_retried",
+   "class": "F",
+   "claim_affected": "None.",
+   "other_support": null,
+   "risk": "none",
+   "finding": "Not read. Medical forms do not carry NIL rules."
+  },
+  {
+   "title": "SCPS Board Policy Manual: Policy 2431.06 Name, Image, and Likeness (NIL) in Athletics",
+   "organization": "School Board of Seminole County (Neola policy manual)",
+   "url": "https://go.neola.com/semi-fl/policy/policy-manual/po2431.06",
+   "owners": [
+    "seminole-high-school-sanford"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Board policy manual (individual policies) could not be opened.",
+   "retry": "Opened the public policy manual in my own Chrome tab and read the policy page text in full. Also read Policy 2431 Interscholastic Athletics and Policy 9700.01 Advertising and Commercial Activities.",
+   "status": "opened_now",
+   "class": "A",
+   "claim_affected": "Seminole High School page and the Seminole County district record: whether the district has a published NIL policy.",
+   "other_support": null,
+   "risk": "high",
+   "finding": "The district has a board policy named Name, Image, and Likeness (NIL) in Athletics, revised January 20, 2026. It says the Board recognizes the right of high school athletes to use and benefit from their NIL. It says athletes must still follow Florida law, State Board rules, Board policies and FHSAA bylaws, and that failing to do so may affect amateur status."
+  },
+  {
+   "title": "SCPS Board Policy 9700.01 Advertising and Commercial Activities",
+   "organization": "School Board of Seminole County (Neola policy manual)",
+   "url": "https://go.neola.com/semi-fl/policy/policy-manual/po9700.01",
+   "owners": [
+    "seminole-high-school-sanford"
+   ],
+   "occurrences": 0,
+   "why_unopened": "Part of the board policy manual that could not be opened. Counted under the manual entry.",
+   "retry": "Opened in my own Chrome tab and read in full.",
+   "status": "opened_now",
+   "class": "A",
+   "claim_affected": "Seminole High School page: use of the district name, students and facilities in commercial advertising, and what school sponsors may receive.",
+   "other_support": null,
+   "risk": "medium",
+   "finding": "The Board says its name, students, staff members and District facilities shall not be used for commercial advertising without approval of the Board or its designee. Schools may recognize business sponsors with temporary signage at athletic facilities. The policy does not mention NIL or student-athletes by name."
+  },
+  {
+   "title": "SCPS Student Conduct and Discipline Code 2026-2027",
+   "organization": "Seminole County Public Schools",
+   "url": "https://files.smartsites.parentsquare.com/6662/2026-2027_student_conduct_and_discipline_code.pdf",
+   "owners": [
+    "seminole-high-school-sanford"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Could not be opened.",
+   "retry": "Followed the public link from the SCPS Policies & Procedures page to the 2026-27 PDF. Opened in my own Chrome tab and read the text with pdf.js from the same origin. All 59 pages searched. An older file name found by search returned 403.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "Seminole High School page: any conduct-code rule on NIL, amateurism or athlete conduct.",
+   "other_support": "SCPS Policy 2431.06 is the district NIL statement.",
+   "risk": "low",
+   "finding": "No NIL content. Zero hits for NIL, likeness, amateur, FHSAA or logo in 59 pages. Board approved 7/28/2026. It covers general student discipline and says extracurricular participation can be limited for discipline."
+  },
+  {
+   "title": "SCPS Policy 7510 Use of District Facilities and Facilities Use Handbook (Rev. 05-2024)",
+   "organization": "Seminole County Public Schools",
+   "url": "https://go.neola.com/semi-fl/policy/policy-manual/po7510",
+   "owners": [
+    "seminole-high-school-sanford"
+   ],
+   "occurrences": 1,
+   "why_unopened": "Could not be opened.",
+   "retry": "Opened Policy 7510 in my own Chrome tab and searched it. Read the 11-page handbook with pdf.js from https://files.smartsites.parentsquare.com/6662/scps_2024_facilities_use_handbook_rev_05-2024.pdf.",
+   "status": "opened_now",
+   "class": "B",
+   "claim_affected": "Seminole High School page: facility-use rule for NIL shoots.",
+   "other_support": null,
+   "risk": "low",
+   "finding": "No NIL content and no rule on commercial filming or photography. Outside use of district facilities is requested online through Facilitron and follows Policy 7510. Non-government community users are Category IV and pay facility use, utility and personnel fees."
+  }
+ ],
+ "school_updates": {
+  "seminole-county-public-schools": {
+   "sources": [
+    {
+     "id": "t1",
+     "title": "2431.06 - Name, Image, and Likeness (NIL) in Athletics",
+     "url": "https://go.neola.com/semi-fl/policy/policy-manual/po2431.06",
+     "organization": "School Board of Seminole County",
+     "source_type": "district_policy",
+     "is_primary": true,
+     "published_on": "2026-01-20",
+     "notes": "Page header reads ADOPTED October 30, 2018 REVISED January 20, 2026."
+    },
+    {
+     "id": "t2",
+     "title": "9700.01 - Advertising and Commercial Activities",
+     "url": "https://go.neola.com/semi-fl/policy/policy-manual/po9700.01",
+     "organization": "School Board of Seminole County",
+     "source_type": "district_policy",
+     "is_primary": true,
+     "published_on": "2026-03-10",
+     "notes": "Header reads REVISED March 10, 2026. Footer reads Revised 6/20/23, Technical Correction 3/10/26."
+    },
+    {
+     "id": "t3",
+     "title": "2431 - Interscholastic Athletics",
+     "url": "https://go.neola.com/semi-fl/policy/policy-manual/po2431",
+     "organization": "School Board of Seminole County",
+     "source_type": "district_policy",
+     "is_primary": true,
+     "published_on": "2026-01-20",
+     "notes": "Header reads REVISED January 20, 2026."
+    },
+    {
+     "id": "t4",
+     "title": "7510 - Use of District Facilities",
+     "url": "https://go.neola.com/semi-fl/policy/policy-manual/po7510",
+     "organization": "School Board of Seminole County",
+     "source_type": "district_policy",
+     "is_primary": true,
+     "published_on": "2023-11-14",
+     "notes": "Header reads ADOPTED October 30, 2018 REVISED November 14, 2023."
+    },
+    {
+     "id": "t5",
+     "title": "SCPS Facilities Use Handbook 2024 (Rev. 05-2024)",
+     "url": "https://files.smartsites.parentsquare.com/6662/scps_2024_facilities_use_handbook_rev_05-2024.pdf",
+     "organization": "Seminole County Public Schools",
+     "source_type": "district_policy",
+     "is_primary": true,
+     "published_on": "2024-05-01",
+     "notes": "11 pages. Linked from the SCPS Facility Requests/Rental page. Month known, day not printed."
+    },
+    {
+     "id": "t6",
+     "title": "Student Conduct and Discipline Code 2026-2027",
+     "url": "https://files.smartsites.parentsquare.com/6662/2026-2027_student_conduct_and_discipline_code.pdf",
+     "organization": "Seminole County Public Schools",
+     "source_type": "district_policy",
+     "is_primary": true,
+     "published_on": "2026-07-28",
+     "notes": "59 pages. School Board Approved on 7/28/2026. Searched and found no NIL wording."
+    },
+    {
+     "id": "t7",
+     "title": "Facility Requests/Rental",
+     "url": "https://www.scps.k12.fl.us/85956_3",
+     "organization": "Seminole County Public Schools",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Links Facilitron, the Facility Use Handbook and Policy 7510."
+    }
+   ],
+   "rules": [
+    {
+     "topic": "nil-allowed",
+     "scope": "district",
+     "answer": "yes_with_conditions",
+     "summary": "The Seminole County School Board says it recognizes the right of high school athletes to use and benefit from their name, image and likeness. It says athletes must still follow Florida law, State Board of Education rules, Board policies and FHSAA bylaws.",
+     "conditions": "The policy is one paragraph. It sets no district process, form, contact or approval step. The detail comes from FHSAA rules.",
+     "citation": "SCPS Board Policy 2431.06",
+     "quick_status": "YES",
+     "short_answer": "Yes. The district recognizes NIL, within FHSAA and Board rules.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy 2431.06, first sentence",
+       "quote": "The School Board recognizes the rights of high school student-athletes to use and benefit from their name, image, and likeness (NIL) in various activities.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t1",
+       "locator": "Policy 2431.06",
+       "quote": "Likewise, student athletes must comply with all applicable bylaws of the Florida High School Athletics Association (FHSAA).",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "penalties",
+     "scope": "district",
+     "answer": "yes_with_conditions",
+     "summary": "The Seminole County School Board says that failing to follow these laws, rules and regulations may affect an athlete's amateur status.",
+     "conditions": null,
+     "citation": "SCPS Board Policy 2431.06",
+     "quick_status": "DEPENDS",
+     "short_answer": "Breaking the rules can put amateur status at risk.",
+     "sources": [
+      {
+       "source_id": "t1",
+       "locator": "Policy 2431.06, last sentence",
+       "quote": "Failure to adhere to any of these laws, rules, and/or regulations may, among other things, impact the amateur status of a student athlete.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-name-reference",
+     "scope": "district",
+     "answer": "only_with_approval",
+     "summary": "The Seminole County School Board says its name, students, staff and District facilities shall not be used for commercial advertising or to promote an outside organization without approval of the Board or its designee.",
+     "conditions": "This is a general advertising policy. It does not mention NIL or student-athletes by name. How it applies to an athlete's own NIL deal is not stated.",
+     "citation": "SCPS Board Policy 9700.01",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Using the district name, students or facilities in an ad needs Board approval.",
+     "sources": [
+      {
+       "source_id": "t2",
+       "locator": "Policy 9700.01",
+       "quote": "its name, students, staff members, and District facilities shall not be used for any commercial advertising",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-facilities",
+     "scope": "district",
+     "answer": "only_with_approval",
+     "summary": "The Seminole County School Board says District facilities shall not be used for commercial advertising without Board approval. Outside use of facilities is requested online through Facilitron under Policy 7510, and non-government community users pay fees.",
+     "conditions": "Neither document has a rule on commercial filming or photo shoots. NIL is not mentioned.",
+     "citation": "SCPS Board Policy 9700.01, Policy 7510 and Facilities Use Handbook",
+     "quick_status": "CHECK_FIRST",
+     "short_answer": "Ask first. Outside use goes through a rental request.",
+     "sources": [
+      {
+       "source_id": "t2",
+       "locator": "Policy 9700.01",
+       "quote": "without the approval of the Board or its designee",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t5",
+       "locator": "General Information",
+       "quote": "shall be used in accordance with Board Policy (po7510) and district procedures",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "t4",
+       "locator": "Category IV",
+       "quote": "All Category IV users shall pay Facility Use and Utility fees.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-logos-marks",
+     "scope": "district",
+     "answer": "not_addressed",
+     "summary": "The Seminole County advertising policy talks about company logos shown in schools. It does not state a rule for athletes or businesses using a school or district logo.",
+     "conditions": null,
+     "citation": "SCPS Board Policy 9700.01",
+     "quick_status": "NOT_PUBLICLY_SPECIFIED",
+     "short_answer": "Not stated in the policies read.",
+     "sources": [
+      {
+       "source_id": "t2",
+       "locator": "Policy 9700.01, definition of advertising",
+       "quote": "Brand names, trademarks, logos or tags for product or service identification purposes are not considered advertising.",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "School business sponsorship and advertising",
+     "program_type": "sponsorship_sales",
+     "description": "SCPS policy says schools \"may recognize businesses and other community groups providing assistance or financial support\", including temporary signage at athletic facilities.",
+     "url": "https://go.neola.com/semi-fl/policy/policy-manual/po9700.01",
+     "source_id": "t2",
+     "current": true
+    }
+   ],
+   "contacts": [],
+   "corrections": [
+    "Any district or school record that says a Seminole County Public Schools NIL policy was not located should change. Board Policy 2431.06, Name, Image, and Likeness (NIL) in Athletics, is published and was revised January 20, 2026.",
+    "The Seminole research record was not in the p3 folder, so its existing rules could not be compared line by line. A reviewer should check them against sources t1 to t6."
+   ],
+   "policy_status": "published",
+   "policy_note": "SCPS Board Policy 2431.06 is a short published district NIL policy that recognizes NIL and points athletes to FHSAA bylaws and Board policies.",
+   "newer_guidance_found": true,
+   "notes": [
+    "District slug is assumed to be seminole-county-public-schools. These rules have scope district and apply to every SCPS high school, not only Seminole High School.",
+    "Policy 2431 Interscholastic Athletics (t3) was read. It says: \"All high schools shall be members of the FHSAA and governed by its rules and regulations.\" It has no NIL wording of its own.",
+    "Policy 9700.01 refers to General Advertising Guidelines in AP 9700.01. That administrative procedure was not opened.",
+    "The policy header shows an adopted date of October 30, 2018 for every policy in the manual. Use the revised date, January 20, 2026, for the NIL policy.",
+    "The Student Conduct and Discipline Code 2026-2027 has no NIL, amateurism, logo or FHSAA wording."
+   ]
+  },
+  "seminole-high-school-sanford": {
+   "sources": [],
+   "rules": [],
+   "programs": [],
+   "contacts": [],
+   "corrections": [
+    "The three documents listed as unreachable for Seminole High School were all opened on 2026-10-04. Remove them from locations_unreachable and inherit the district rules recorded under seminole-county-public-schools."
+   ],
+   "policy_status": "unchanged",
+   "policy_note": "No school-level document was opened. The new findings are district policies and sit under seminole-county-public-schools.",
+   "newer_guidance_found": true,
+   "notes": [
+    "Seminole High School is covered by SCPS Board Policy 2431.06 (NIL in Athletics) and Policy 9700.01 (Advertising and Commercial Activities)."
+   ]
+  },
+  "orange-county-public-schools": {
+   "sources": [],
+   "rules": [],
+   "programs": [],
+   "contacts": [],
+   "corrections": [],
+   "policy_status": "unchanged",
+   "policy_note": "District NIL policy: Not located in the public sources reviewed as of October 4, 2026. The district athletics site is still unread.",
+   "newer_guidance_found": false,
+   "notes": [
+    "ocpsathletics.net still does not open in a browser. A plain fetch returned only the welcome text. A person should open it by hand and look for a district athletics handbook or paperwork page."
+   ]
+  },
+  "ocoee-high-school-ocoee": {
+   "sources": [
+    {
+     "id": "t1",
+     "title": "2026-27 Corporate Sponsorship Packet",
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/07/23/3648f181-d768-40b1-ac09-3edea252da14.pdf",
+     "organization": "Ocoee High School Athletics and Knight Nation Booster Club",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "3 pages. Has a text layer."
+    },
+    {
+     "id": "t2",
+     "title": "Knight Nation All Sports Booster Membership 2026-27",
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/07/23/8db3544c-dc9c-4b90-8755-be4502fc9832.pdf",
+     "organization": "Knight Nation Booster Club",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "2 pages."
+    },
+    {
+     "id": "t3",
+     "title": "Ocoee High School Athletic Clearance Instructions (2025-26)",
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2025/08/15/45257644-8829-4014-886f-0e56fa94e07f.pdf",
+     "organization": "Ocoee High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "8 pages. Last year. Names AthleticClearance.com."
+    }
+   ],
+   "rules": [],
+   "programs": [
+    {
+     "name": "Ocoee Athletics corporate sponsorship (Knight Nation Booster Club)",
+     "program_type": "sponsorship_sales",
+     "description": "Ocoee says \"Sponsorship proceeds directly support athletic teams, student-athletes, equipment, facilities, and program growth.\" Businesses get banners, announcements and logo placement. This is school sponsorship, not athlete NIL.",
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/07/23/3648f181-d768-40b1-ac09-3edea252da14.pdf",
+     "source_id": "t1",
+     "current": true
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Ocoee High School Athletics",
+     "role": "Sponsorship questions",
+     "person_name": "Russell Williams",
+     "phone": "407-905-3000 Ext. 6112681",
+     "email": null,
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/07/23/3648f181-d768-40b1-ac09-3edea252da14.pdf",
+     "source_id": "t1"
+    }
+   ],
+   "corrections": [
+    "The Corporate Sponsors and Booster Membership PDFs are not image-only. Both have readable text and were read. Remove them from locations_unreachable."
+   ],
+   "policy_status": "unchanged",
+   "policy_note": "School NIL policy: Not located in the public sources reviewed as of October 4, 2026.",
+   "newer_guidance_found": false,
+   "notes": [
+    "The packet offers an \"ATHLETE OF THE MONTH - $500\" item: \"Sponsor the male and female Athlete of the Month\". It is a business sponsoring a school award. It does not say athletes are paid or appear in ads. A reviewer may want to keep it out of NIL guidance.",
+    "Russell Williams' job title is not printed in the packet. The packet prints dollar amounts for sponsor levels. Do not publish prices."
+   ]
+  },
+  "windermere-high-school-windermere": {
+   "sources": [
+    {
+     "id": "t1",
+     "title": "2026-2027 Athletics Sponsorship Form (26-27 Sponsorship Forms.pdf)",
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/08/17/ae359a18-2f3f-401d-9767-67d895310fac.pdf",
+     "organization": "Windermere Athletics Boosters",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "2 pages."
+    },
+    {
+     "id": "t2",
+     "title": "Windermere High School Online Athletic Clearance (file dated 2026-08-07)",
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/08/07/3acd8fc9-160b-4919-bc14-9ba9d1a53d0e.pdf",
+     "organization": "Windermere High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "2 pages. Has a text layer."
+    }
+   ],
+   "rules": [],
+   "programs": [
+    {
+     "name": "Windermere Athletics Boosters sponsorship",
+     "program_type": "sponsorship_sales",
+     "description": "The booster form says a sponsor \"will be promoted on the Windermere Athletics Facebook and Instagram pages\" and gets banners and announcements. This is school sponsorship, not athlete NIL.",
+     "url": "https://sites-assets.playonsharedprod.playonsports.com/file-attachments/2026/08/17/ae359a18-2f3f-401d-9767-67d895310fac.pdf",
+     "source_id": "t1",
+     "current": true
+    }
+   ],
+   "contacts": [],
+   "corrections": [
+    "The ambiguity that the clearance instructions refer to 2025-2026 and AthleticClearance.com can be closed. The 2026-08-07 instructions say \"Visit homecampus.com/login\" and \"School Year: 2026 - 2027\".",
+    "The 2026-08-07 clearance PDF is not image-only. It has readable text. Remove it and the sponsorship form from locations_unreachable."
+   ],
+   "policy_status": "unchanged",
+   "policy_note": "The only handbook is still the 2021-22 Code of Conduct, which is outdated and has no NIL wording.",
+   "newer_guidance_found": false,
+   "notes": [
+    "The current clearance instructions do not mention Form GA1 or NIL."
+   ]
+  },
+  "west-orange-high-school-winter-garden": {
+   "sources": [
+    {
+     "id": "t1",
+     "title": "2026-2027 Athletic Clearance Instructions (WOHS Athletic Physical Clearance Instructions)",
+     "url": "https://drive.google.com/file/d/1hyyqkM2DJvOAacI_JmmAGpfnwm2DC7CL/view",
+     "organization": "West Orange High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "2 pages on Google Drive. Public without sign-in."
+    },
+    {
+     "id": "t2",
+     "title": "2026-27 Corporate-Business Sponsorship",
+     "url": "https://acrobat.adobe.com/id/urn:aaid:sc:US:5f641f1b-3ff5-40a9-9b95-8e0d080bf262",
+     "organization": "West Orange High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "2 pages on Adobe cloud. Public without sign-in. Read by eye from the screen, not as copied text."
+    }
+   ],
+   "rules": [],
+   "programs": [
+    {
+     "name": "West Orange Athletics Corporate/Business Sponsorship",
+     "program_type": "sponsorship_sales",
+     "description": "West Orange offers Silver, Gold and Platinum business sponsorships with a \"Full Color 3 x 5 Sponsor Banner\" at school athletic sites and all-sports passes. This is school sponsorship, not athlete NIL.",
+     "url": "https://acrobat.adobe.com/id/urn:aaid:sc:US:5f641f1b-3ff5-40a9-9b95-8e0d080bf262",
+     "source_id": "t2",
+     "current": true
+    }
+   ],
+   "contacts": [
+    {
+     "office": "West Orange High School Athletics",
+     "role": "Athletic Director, named as a contact for clearance questions",
+     "person_name": "Todd LaNeave",
+     "phone": null,
+     "email": null,
+     "url": "https://drive.google.com/file/d/1hyyqkM2DJvOAacI_JmmAGpfnwm2DC7CL/view",
+     "source_id": "t1"
+    }
+   ],
+   "corrections": [
+    "The clearance platform ambiguity can be closed for 2026-27. The instructions say \"Visit www.AthleticClearance.com and choose your state.\" They do not name Home Campus."
+   ],
+   "policy_status": "unchanged",
+   "policy_note": "School NIL policy: Not located in the public sources reviewed as of October 4, 2026.",
+   "newer_guidance_found": false,
+   "notes": [
+    "The clearance instructions do not mention Form GA1 or NIL.",
+    "The sponsorship quote was read from a screenshot. A person should confirm the wording before it is shown as a verbatim quote.",
+    "Check the athletic director name against the 2026-27 directory page (s2) before using it."
+   ]
+  },
+  "dr-phillips-high-school-orlando": {
+   "sources": [
+    {
+     "id": "t1",
+     "title": "Athletics Clearance Documents (Google Drive folder) and Athletic Clearance Requirement Check List",
+     "url": "https://drive.google.com/drive/folders/1qH0oK2iJHUbE1FOPtTTuyjkE_EkiwHLw",
+     "organization": "Dr. Phillips High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Public folder with 9 files. The checklist is a Word file inside it."
+    }
+   ],
+   "rules": [],
+   "programs": [],
+   "contacts": [],
+   "corrections": [
+    "The ambiguity that the clearance folder was not read can be closed. The folder has no Form GA1 file and the checklist does not list GA1."
+   ],
+   "policy_status": "unchanged",
+   "policy_note": "School NIL policy: Not located in the public sources reviewed as of October 4, 2026.",
+   "newer_guidance_found": false,
+   "notes": [
+    "Checklist items: \"FHSAA EL2 Physical Form (most current form 2/26)\", EL1 form, four NFHS courses and a baseline concussion exam. Uploads go to a shortened link, Tinyurl.com/FHSAA2026-27, which was not followed."
+   ]
+  },
+  "lake-nona-high-school-orlando": {
+   "sources": [
+    {
+     "id": "t1",
+     "title": "Lake Nona High School Athletic Clearance Packet 2026-2027",
+     "url": "https://drive.google.com/file/d/1qSju0oOOtID-CcXGdvKLpU6pN74hCs7h/view",
+     "organization": "Lake Nona High School Athletics",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "14 pages on Google Drive. Public without sign-in."
+    }
+   ],
+   "rules": [],
+   "programs": [],
+   "contacts": [],
+   "corrections": [
+    "Remove the clearance packet from locations_unreachable. It was read in full and has no GA1 or NIL wording."
+   ],
+   "policy_status": "unchanged",
+   "policy_note": "School NIL policy: Not located in the public sources reviewed as of October 4, 2026.",
+   "newer_guidance_found": false,
+   "notes": [
+    "The packet says to register at \"https://athleticclearance.fhsaahome.org/\" for 2026-2027."
+   ]
+  },
+  "winter-park-high-school-winter-park": {
+   "sources": [],
+   "rules": [],
+   "programs": [],
+   "contacts": [],
+   "corrections": [
+    "The hosted GA1 copy (s3) was opened. Each page is marked \"Revised 08/24\" and the school added no cover text. The existing rule that the site adds no NIL rules of its own is confirmed."
+   ],
+   "policy_status": "unchanged",
+   "policy_note": "The NIL menu item is only the standard FHSAA Form GA1, Revised 08/24.",
+   "newer_guidance_found": false,
+   "notes": [
+    "Check whether FHSAA has issued a newer GA1 than the 08/24 copy hosted by the school."
+   ]
+  },
+  "boone-high-school-orlando": {
+   "sources": [],
+   "rules": [],
+   "programs": [],
+   "contacts": [],
+   "corrections": [
+    "The 2018 Student-Athlete Code of Conduct file was opened. It has no amateurism, sponsorship, logo or social media wording. The ambiguity can be reworded to say it was read and has no NIL content."
+   ],
+   "policy_status": "unchanged",
+   "policy_note": "The current school document is still the 2025-26 Social Media Policy.",
+   "newer_guidance_found": false,
+   "notes": []
+  },
+  "colonial-high-school-orlando": {
+   "sources": [],
+   "rules": [],
+   "programs": [],
+   "contacts": [],
+   "corrections": [
+    "The Athletic Clearance, Required Forms and Required Courses PDFs have readable text and were read. None lists Form GA1 or mentions NIL. Remove them from locations_unreachable and close the Required Forms ambiguity."
+   ],
+   "policy_status": "unchanged",
+   "policy_note": "School NIL policy: Not located in the public sources reviewed as of October 4, 2026.",
+   "newer_guidance_found": false,
+   "notes": [
+    "The flyers print the contact email [email on the official page] with no name or title beside it."
+   ]
+  },
+  "jones-high-school-orlando": {
+   "sources": [],
+   "rules": [],
+   "programs": [],
+   "contacts": [],
+   "corrections": [
+    "The school site Athletics link (joneshs.ocps.net/226015_2) redirects to joneshighathletics.com. The older athletic-philosphy page returns Not Found."
+   ],
+   "policy_status": "unchanged",
+   "policy_note": "School NIL policy: Not located in the public sources reviewed as of October 4, 2026.",
+   "newer_guidance_found": false,
+   "notes": []
+  },
+  "timber-creek-high-school-orlando": {
+   "sources": [],
+   "rules": [],
+   "programs": [],
+   "contacts": [],
+   "corrections": [],
+   "policy_status": "unchanged",
+   "policy_note": "School NIL policy: Not located in the public sources reviewed as of October 4, 2026.",
+   "newer_guidance_found": false,
+   "notes": [
+    "The booster sponsorship news page shows no attachment today, only the booster email address [email on the official page]."
+   ]
+  },
+  "edgewater-high-school-orlando": {
+   "sources": [],
+   "rules": [],
+   "programs": [],
+   "contacts": [],
+   "corrections": [],
+   "policy_status": "unchanged",
+   "policy_note": "The 2021 Athletic Code of Conduct PDF still times out. It predates FHSAA NIL rules.",
+   "newer_guidance_found": false,
+   "notes": [
+    "A person could try the PDF by hand, for background only."
+   ]
+  }
+ }
+}

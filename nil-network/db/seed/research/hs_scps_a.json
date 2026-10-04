@@ -1,0 +1,1114 @@
+{
+ "researched_on": "2026-10-04",
+ "method_note": "School and athletics pages were read as raw text in a browser tab, and PDFs were read from their text layer with pdf.js. Each page and document was keyword-searched for NIL, likeness, GA1, sponsor, amateur, logo, uniform and media. No forms were submitted and no log-in pages were entered.",
+ "districts": [],
+ "conferences": [],
+ "schools": [
+  {
+   "slug": "lake-brantley-high-school-altamonte-springs",
+   "name": "Lake Brantley High School",
+   "short_name": "Lake Brantley",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Altamonte Springs",
+   "county": "Seminole County",
+   "street_address": "991 Sand Lake Road",
+   "postal_code": "32714",
+   "website_url": "https://www.lakebrantley.com/",
+   "athletics_url": "https://lbhsathletics.us/",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "seminole-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "unspecified": [
+     "Bowling (Boys)",
+     "Bowling (Girls)",
+     "Cheerleading (Sideline)",
+     "Cross Country (Boys)",
+     "Cross Country (Girls)",
+     "Football",
+     "Golf (Boys)",
+     "Golf (Girls)",
+     "Swimming (Boys)",
+     "Swimming (Girls)",
+     "Volleyball (Girls)",
+     "Basketball (Girls)",
+     "Basketball (Boys)",
+     "Cheerleading (Competitive)",
+     "Soccer (Boys)",
+     "Soccer (Girls)",
+     "Wrestling (Girls)",
+     "Wrestling (Boys)",
+     "Weightlifting (Girls)",
+     "Baseball",
+     "Flag Football (Girls)",
+     "Lacrosse (Boys)",
+     "Lacrosse (Girls)",
+     "Softball",
+     "Tennis (Girls)",
+     "Tennis (Boys)",
+     "Beach Volleyball (Girls)",
+     "Volleyball (Boys)",
+     "Track and Field (Boys)",
+     "Track and Field (Girls)",
+     "Water Polo (Boys)",
+     "Water Polo (Girls)",
+     "Weightlifting (Boys)"
+    ]
+   },
+   "sports_source_id": "s2",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Lake Brantley High School - Staff Home",
+     "url": "https://www.lakebrantley.com/staff-home",
+     "organization": "Lake Brantley High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "School address and phone in the page footer. Lists the Athletic Director with email. The Athletics menu link on this site redirects to lbhsathletics.us."
+    },
+    {
+     "id": "s2",
+     "title": "Lake Brantley High School - Official Athletics Website",
+     "url": "https://lbhsathletics.us/",
+     "organization": "Lake Brantley High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Team menu used for the sports list. Menu links to clearance, handbook, contracts, rentals and boosters."
+    },
+    {
+     "id": "s3",
+     "title": "Staff Directory",
+     "url": "https://lbhsathletics.us/staff-directory",
+     "organization": "Lake Brantley High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Menu label still reads 'Coaches and Staff for 2024-2025'."
+    },
+    {
+     "id": "s4",
+     "title": "Athlete Eligibility",
+     "url": "https://lbhsathletics.us/news/2024/12/2/general-athlete-eligibility.aspx",
+     "organization": "Lake Brantley High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2024-12-02",
+     "notes": "Date taken from the page address. Summarises FHSAA bylaws. Does not mention NIL."
+    },
+    {
+     "id": "s5",
+     "title": "Lake Brantley High School 2022-2023 Athlete Handbook",
+     "url": "https://dbukjj6eu5tsf.cloudfront.net/sidearm.sites/lakebrantleyhsfl.sidearmsports.com/documents/2024/12/2/Athletes-Handbook-22-23.pdf",
+     "organization": "Lake Brantley High School Athletics",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "12 pages. Linked from the athletics site menu as 'Athletic Student Handbook'. Dated 2022-2023, before FHSAA allowed NIL. No match for NIL, likeness or GA1. PDF text layer has stray spaces."
+    },
+    {
+     "id": "s6",
+     "title": "Athletic Clearance Website info - 2025 (Athletic Clearance Info Package)",
+     "url": "https://www.canva.com/design/DAHC0TmL4nc/IT0vMHbHzKVGBkks_RnkuQ/view",
+     "organization": "Lake Brantley High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Hosted on Canva and linked from the athletics site menu. Title carries the year 2025. No match for NIL, likeness or GA1."
+    },
+    {
+     "id": "s7",
+     "title": "Student Athlete Contract, Parent Athletic Contract, Student Code of Conduct, Coaches Code of Conduct, About Us",
+     "url": "https://lbhsathletics.us/news/2024/12/2/general-student-athlete-contract.aspx",
+     "organization": "Lake Brantley High School Athletics",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": "2024-12-02",
+     "notes": "Five short pages posted the same day. All were keyword-searched. None mention NIL, likeness, GA1, logo or uniform rules."
+    },
+    {
+     "id": "s8",
+     "title": "Lake Brantley HS Athletic Boosters - Corporate Sponsor Home",
+     "url": "https://www.lbhsboosters.com/corporatesponsors",
+     "organization": "Lake Brantley High School Athletic Boosters",
+     "source_type": "official_webpage",
+     "is_primary": false,
+     "published_on": null,
+     "notes": "Booster club site, linked from the athletics site menu as 'LBHS ATHLETIC BOOSTERS'. Not a school-run page."
+    },
+    {
+     "id": "s9",
+     "title": "FHSAA Membership List 2026-27",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "School name appears on the list. Read from the PDF text layer."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "lbhsathletics.us home page and full menu",
+     "Athlete Eligibility page",
+     "Athlete Handbook 2022-2023 (PDF)",
+     "Student Athlete Contract",
+     "Parent Athletic Contract",
+     "Student Code of Conduct (athletics)",
+     "Coaches Code of Conduct",
+     "About Us",
+     "Staff Directory",
+     "Athletic Clearance Info Package (Canva)",
+     "lakebrantley.com Staff Home",
+     "LBHS Athletic Boosters corporate sponsor page",
+     "FHSAA Membership List 2026-27"
+    ],
+    "locations_unreachable": [
+     "https://www.lakebrantleyathletics.com/ (older athletics address found in search, returned a 403 error)",
+     "ECG Screening Clearance Form on Canva (not opened)"
+    ],
+    "notes": "School NIL policy: Not located in the public sources reviewed as of October 4, 2026. Every page listed was searched for NIL, likeness, GA1, sponsor, amateur, logo, uniform and media. District (SCPS) board policies were not reviewed in this file. The district record is kept separately."
+   },
+   "school_policy": null,
+   "rules": [
+    {
+     "topic": "school-facilities",
+     "scope": "institution",
+     "answer": "not_addressed",
+     "summary": "The Lake Brantley athletics site has a 'Rentals' menu link that goes to the school's Facilitron rental page. The site states no rule about filming or NIL shoots on campus.",
+     "conditions": "Only a link was found. No school text on commercial use of facilities was located.",
+     "citation": "lbhsathletics.us menu, 'Rentals' link",
+     "quick_status": "NOT_PUBLICLY_SPECIFIED",
+     "short_answer": "Facility rentals go through Facilitron. Nothing is said about NIL shoots.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "Site menu link to https://www.facilitron.com/lbhs32714",
+       "quote": "Rentals",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "Lake Brantley Athletic Boosters Corporate Partner Program",
+     "program_type": "sponsorship_sales",
+     "description": "The booster club says local businesses can 'invest in our student-athletes through the Lake Brantley Athletic Boosters Corporate Partner Program'. This is business sponsorship of the athletic program, not athlete NIL.",
+     "url": "https://www.lbhsboosters.com/corporatesponsors",
+     "source_id": "s8",
+     "current": true
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Lake Brantley High School Athletic Department",
+     "role": "Athletic Director",
+     "person_name": "Eric Entrekin",
+     "phone": "407-746-3450",
+     "email": null,
+     "url": "https://lbhsathletics.us/staff-directory",
+     "source_id": "s3"
+    },
+    {
+     "office": "Lake Brantley High School Athletic Department",
+     "role": "Assistant Athletic Director",
+     "person_name": "Tyson Burgos",
+     "phone": null,
+     "email": null,
+     "url": "https://lbhsathletics.us/staff-directory",
+     "source_id": "s3"
+    },
+    {
+     "office": "Lake Brantley High School Athletic Department",
+     "role": "Assistant Athletic Director and Head Baseball Coach",
+     "person_name": "Eddie Doyle",
+     "phone": null,
+     "email": null,
+     "url": "https://lbhsathletics.us/staff-directory",
+     "source_id": "s3"
+    },
+    {
+     "office": "Lake Brantley High School Athletic Department",
+     "role": "Athletic Secretary",
+     "person_name": "Denise Leshinger",
+     "phone": null,
+     "email": null,
+     "url": "https://lbhsathletics.us/staff-directory",
+     "source_id": "s3"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "Yearly online athletic clearance (EL2 physical, ECG form, insurance card, guardian ID, birth certificate, four NFHS certificates). The school's instructions do not mention Form GA1 or NIL.",
+    "recipient": "Lake Brantley High School athletic department through the online clearance site",
+    "deadline_text": "Not stated. The package says a student cannot condition, practice or compete without clearance.",
+    "platform_name": "Athletic Clearance",
+    "platform_url": "https://athleticclearance.com/",
+    "form_name": null,
+    "form_url": null,
+    "source_id": "s6",
+    "quote": "hand delivered documents will not be accepted"
+   },
+   "important_claims": [
+    "Athletic Director is Eric Entrekin ([email on the official page], 407-746-3450). Name and phone are on the athletics staff directory. The email is on the school Staff Home page.",
+    "The athletics site links clearance to athleticclearance.com. The linked info package is titled 2025, so the 2026-27 platform should be confirmed (Lake Mary's 2026-27 directions use Home Campus).",
+    "No NIL, GA1 or likeness wording appears on the Lake Brantley athletics site, handbook, contracts or clearance package.",
+    "The only handbook posted is dated 2022-2023.",
+    "Lake Brantley (Altamonte Springs) appears on the FHSAA Membership List 2026-27."
+   ],
+   "ambiguities": [
+    "The Athlete Handbook on the site is the 2022-2023 edition. It pre-dates FHSAA NIL rules and is not presented here as current. Its social media section holds athletes to SCPS citizenship standards but does not mention NIL.",
+    "The Athlete Eligibility page (posted 2024-12-02) says athletes 'MUST be an amateur' and 'must not accept money, gift or a donation for participating in a sport'. It cites FHSAA By-Law 9.9 and does not mention NIL. It reads like older pre-NIL wording and was not recorded as a school rule.",
+    "The clearance info package is titled 2025 and gives a 2023-2024 example. It may not reflect the 2026-27 process.",
+    "The Staff Directory menu label still says 2024-2025.",
+    "The staff directory prints a mobile-style number for one assistant athletic director. It was left out."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://athleticclearance.com/ : log-in portal. Check whether Form GA1 is a signature step for Lake Brantley and whether the school moved to Home Campus for 2026-27.",
+    "https://www.facilitron.com/lbhs32714 : rental terms were not opened. Check for commercial filming terms.",
+    "SCPS district policies on logos, advertising and facility use should be checked in the district record."
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Instructions on how Form GA1 is collected",
+    "Rule on using the school name, logo or uniform in NIL content",
+    "Media credential or commercial photography rule",
+    "Current (2026-27) athletic handbook",
+    "Facility-use rule for NIL shoots",
+    "School-run sponsorship page (only the booster club page was found)"
+   ]
+  },
+  {
+   "slug": "lake-howell-high-school-winter-park",
+   "name": "Lake Howell High School",
+   "short_name": "Lake Howell",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Winter Park",
+   "county": "Seminole County",
+   "street_address": "4200 Dike Rd",
+   "postal_code": "32792",
+   "website_url": "https://www.lakehowell.scps.k12.fl.us/",
+   "athletics_url": "https://www.lakehowell.scps.k12.fl.us/athletics-home",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "seminole-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "unspecified": [
+     "Baseball",
+     "Basketball (Boys)",
+     "Basketball (Girls)",
+     "Bowling (Boys & Girls)",
+     "Cheer (Competitive)",
+     "Cross Country (Boys & Girls)",
+     "Flag Football (Girls)",
+     "Football",
+     "Golf (Boys & Girls)",
+     "Lacrosse (Boys)",
+     "Lacrosse (Girls)",
+     "Soccer (Boys)",
+     "Soccer (Girls)",
+     "Softball - Fast Pitch",
+     "Swimming",
+     "Tennis (Boys & Girls)",
+     "Track & Field",
+     "Volleyball (Boys)",
+     "Volleyball (Girls)",
+     "Volleyball (Beach)",
+     "Waterpolo (Boys & Girls)",
+     "Weightlifting (Boys)",
+     "Weightlifting (Girls)",
+     "Wrestling (boys & girls)"
+    ]
+   },
+   "sports_source_id": "s3",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Lake Howell High School - Athletics Main",
+     "url": "https://www.lakehowell.scps.k12.fl.us/athletics-home",
+     "organization": "Lake Howell High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "School address and phone are in the page footer. Links to staff, teams, physical paperwork and sponsors."
+    },
+    {
+     "id": "s2",
+     "title": "Lake Howell High School - Athletic Staff",
+     "url": "https://www.lakehowell.scps.k12.fl.us/athletic-staff",
+     "organization": "Lake Howell High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": ""
+    },
+    {
+     "id": "s3",
+     "title": "Lake Howell High School - Sports Teams and Coaches",
+     "url": "https://www.lakehowell.scps.k12.fl.us/teams",
+     "organization": "Lake Howell High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Used for the sports list."
+    },
+    {
+     "id": "s4",
+     "title": "Lake Howell High School - Physical Paperwork",
+     "url": "https://www.lakehowell.scps.k12.fl.us/137681_2",
+     "organization": "Lake Howell High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Covers the 26-27 school year. Links the clearance packet and forms."
+    },
+    {
+     "id": "s5",
+     "title": "Lake Howell Athletics - Online Sports Physical Packet (2026-2027)",
+     "url": "https://files.smartsites.parentsquare.com/6703/2026-2027_athletic_clearance_packet.pdf",
+     "organization": "Lake Howell High School",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "13 pages. Lists EL2, GA4 (transfer students only), ECG form and NFHS courses. No match for NIL, likeness or GA1. PDF text layer has stray spaces in the year."
+    },
+    {
+     "id": "s6",
+     "title": "FHSAA Compliance Form Only (GA4 affidavit, 2025-2026 file)",
+     "url": "https://files.smartsites.parentsquare.com/6703/2025-2026_athletic_clearance_compliance.pdf",
+     "organization": "Lake Howell High School",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "3 pages. This is FHSAA Form GA4, not GA1. No match for NIL or likeness."
+    },
+    {
+     "id": "s7",
+     "title": "Lake Howell High School - Athletic Sponsorship",
+     "url": "https://www.lakehowell.scps.k12.fl.us/athleticsponsors",
+     "organization": "Lake Howell High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Lists current business sponsors and invites new ones."
+    },
+    {
+     "id": "s8",
+     "title": "Lake Howell High School - College Bound Athletes",
+     "url": "https://www.lakehowell.scps.k12.fl.us/college-bound-athletes",
+     "organization": "Lake Howell High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "NCAA and NAIA eligibility links only. No NIL content."
+    },
+    {
+     "id": "s9",
+     "title": "FHSAA Membership List 2026-27",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "School name appears on the list. Read from the PDF text layer."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "Athletics Main",
+     "Athletic Staff",
+     "Sports Teams and Coaches",
+     "Physical Paperwork",
+     "Online Sports Physical Packet 2026-2027 (PDF)",
+     "FHSAA Compliance Form Only (PDF)",
+     "Athletic Sponsorship",
+     "Athletic Tickets",
+     "College Bound Athletes",
+     "Athletic Hall of Fame",
+     "FHSAA Membership List 2026-27"
+    ],
+    "locations_unreachable": [
+     "SCPS Athletics Events page (/274235_2, redirects off the school site and did not load in the page fetch)"
+    ],
+    "notes": "School NIL policy: Not located in the public sources reviewed as of October 4, 2026. No athletic handbook or code of conduct was linked from the Lake Howell athletics pages. Pages and PDFs were searched for NIL, likeness, GA1, sponsor, amateur, logo, uniform and media. District (SCPS) board policies were not reviewed in this file. The district record is kept separately."
+   },
+   "school_policy": null,
+   "rules": [],
+   "programs": [
+    {
+     "name": "Lake Howell Athletic Sponsorship",
+     "program_type": "sponsorship_sales",
+     "description": "The school page invites businesses to sponsor athletics and says 'If you would like to discuss being an Athletic Sponsor, please reach out to me', signed by the Athletic Director. This is business sponsorship of the athletic program, not athlete NIL.",
+     "url": "https://www.lakehowell.scps.k12.fl.us/athleticsponsors",
+     "source_id": "s7",
+     "current": true
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Lake Howell High School Athletic Office",
+     "role": "Athletic Director",
+     "person_name": "Dr. Scott Leman",
+     "phone": "407-746-9057",
+     "email": null,
+     "url": "https://www.lakehowell.scps.k12.fl.us/athletic-staff",
+     "source_id": "s2"
+    },
+    {
+     "office": "Lake Howell High School Athletic Office",
+     "role": "Athletic Secretary. Handles questions on the physical packet.",
+     "person_name": "Cynthia Judski",
+     "phone": "407-746-9011",
+     "email": null,
+     "url": "https://www.lakehowell.scps.k12.fl.us/athletic-staff",
+     "source_id": "s2"
+    },
+    {
+     "office": "Lake Howell High School Athletic Office",
+     "role": "Assistant Athletic Director",
+     "person_name": "Troy Marimon",
+     "phone": null,
+     "email": null,
+     "url": "https://www.lakehowell.scps.k12.fl.us/athletic-staff",
+     "source_id": "s2"
+    },
+    {
+     "office": "Lake Howell High School Athletic Office",
+     "role": "Assistant Athletic Director",
+     "person_name": "Lenlee Klusman",
+     "phone": null,
+     "email": null,
+     "url": "https://www.lakehowell.scps.k12.fl.us/athletic-staff",
+     "source_id": "s2"
+    },
+    {
+     "office": "Lake Howell High School Athletic Office",
+     "role": "Assistant Athletic Director",
+     "person_name": "Shariena Sakelariou",
+     "phone": null,
+     "email": null,
+     "url": "https://www.lakehowell.scps.k12.fl.us/athletic-staff",
+     "source_id": "s2"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "Yearly online athletic clearance (EL2 physical, birth certificate, parent ID, ECG form, four video certificates, and GA4 for transfer students only). The packet does not mention Form GA1 or NIL.",
+    "recipient": "Lake Howell High School athletic office through the online clearance site",
+    "deadline_text": "It takes up to five business days for paperwork to be approved so plan accordingly!",
+    "platform_name": "Athletic Clearance",
+    "platform_url": "https://athleticclearance.com/",
+    "form_name": "Online Sports Physical Packet",
+    "form_url": "https://files.smartsites.parentsquare.com/6703/2026-2027_athletic_clearance_packet.pdf",
+    "source_id": "s5",
+    "quote": "ALL athletes will need to create an online account at athleticclearance.com to be eligible to participate"
+   },
+   "important_claims": [
+    "Athletic Director is Dr. Scott Leman, 407-746-9057, as printed on the Athletic Staff page.",
+    "The 2026-2027 packet tells athletes to use athleticclearance.com. The packet lists GA4 for transfer students but not GA1.",
+    "The school runs its own Athletic Sponsorship page for businesses. It does not mention athlete NIL.",
+    "No NIL, GA1 or likeness wording appears on the Lake Howell athletics pages or clearance packet.",
+    "Lake Howell (Winter Park) appears on the FHSAA Membership List 2026-27."
+   ],
+   "ambiguities": [
+    "Two emails are printed for the Athletic Director: [email on the official page] (Athletic Staff page) and [email on the official page] (Athletic Sponsorship page).",
+    "Two emails are printed for the Athletic Secretary: [email on the official page] (Athletic Staff page) and [email on the official page] (Physical Paperwork page).",
+    "Three people are listed under Assistant Athletic Director with no contact details. The page layout makes it possible that not all three hold that title.",
+    "Two of the form files on the Physical Paperwork page carry 2025-2026 in the file name.",
+    "Other SCPS schools (Lake Mary, and a link on Lyman's page) point to Home Campus for 2026-27 while this packet names athleticclearance.com."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://athleticclearance.com/ : log-in portal. Check whether Form GA1 is a signature step for Lake Howell.",
+    "Confirm which Athletic Director email is current before publishing one.",
+    "SCPS district policies on logos, advertising and facility use should be checked in the district record."
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Instructions on how Form GA1 is collected",
+    "Rule on using the school name, logo or uniform in NIL content",
+    "Media credential or commercial photography rule",
+    "Athletic handbook or athlete code of conduct",
+    "Facility rental or facility-use link on the athletics pages",
+    "Facility-use rule for NIL shoots"
+   ]
+  },
+  {
+   "slug": "lake-mary-high-school-lake-mary",
+   "name": "Lake Mary High School",
+   "short_name": "Lake Mary",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Lake Mary",
+   "county": "Seminole County",
+   "street_address": "655 Longwood Lake Mary Rd.",
+   "postal_code": "32746",
+   "website_url": "https://www.lakemaryhs.scps.k12.fl.us/",
+   "athletics_url": "https://www.lakemaryhs.scps.k12.fl.us/athletics",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "seminole-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "unspecified": [
+     "Aquatics",
+     "Bowling",
+     "Cheerleading",
+     "Cross Country",
+     "Football",
+     "Golf - Boys",
+     "Golf - Girls",
+     "Volleyball - Girls",
+     "Basketball - Boys",
+     "Basketball - Girls",
+     "Soccer - Boys",
+     "Soccer - Girls",
+     "Weightlifting - Girls",
+     "Wrestling - Boys",
+     "Wrestling - Girls",
+     "Baseball",
+     "Softball",
+     "Flag Football - Girls",
+     "Lacrosse - Boys",
+     "Lacrosse - Girls",
+     "Tennis",
+     "Track & Field",
+     "Volleyball - Beach",
+     "Volleyball - Boys",
+     "Waterpolo",
+     "Weightlifting - Boys"
+    ]
+   },
+   "sports_source_id": "s3",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Lake Mary High School - Athletic Resources",
+     "url": "https://www.lakemaryhs.scps.k12.fl.us/athletic-resources",
+     "organization": "Lake Mary High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "School address and phone are in the page footer. Links the handbook, clearance FAQs, boosters and sponsorship."
+    },
+    {
+     "id": "s2",
+     "title": "Lake Mary High School - Eligibility Requirements & Forms",
+     "url": "https://www.lakemaryhs.scps.k12.fl.us/eligibility-requirements-forms",
+     "organization": "Lake Mary High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Document list shows the handbook dated 2025-03-06 and the 2026-27 clearance directions dated 2026-08-17."
+    },
+    {
+     "id": "s3",
+     "title": "Lake Mary High School - Fall Sports, Winter Sports, Spring Sports",
+     "url": "https://www.lakemaryhs.scps.k12.fl.us/fall-sports",
+     "organization": "Lake Mary High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Three pages (/fall-sports, /winter-sports, /spring-sports). Used for the sports list."
+    },
+    {
+     "id": "s4",
+     "title": "Lake Mary High School Home of the Rams Athletic Handbook",
+     "url": "https://files.smartsites.parentsquare.com/6673/lake-mary-athletic-handbook.pdf",
+     "organization": "Lake Mary High School",
+     "source_type": "institution_policy",
+     "is_primary": true,
+     "published_on": "2025-03-06",
+     "notes": "8 pages. No year is printed on the cover. Date is the upload date shown on the school's document list. No match for NIL, likeness or GA1."
+    },
+    {
+     "id": "s5",
+     "title": "2026-27 Lake Mary Athletics Online Sports Physical Clearance Directions",
+     "url": "https://files.smartsites.parentsquare.com/6673/2026-27_lake_mary_athletics_online_sports_physical_clearance_directions.pdf",
+     "organization": "Lake Mary High School",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": "2026-08-17",
+     "notes": "3 pages. Names Home Campus as the platform. No match for NIL, likeness or GA1. PDF text layer has stray spaces."
+    },
+    {
+     "id": "s6",
+     "title": "Online Athletic Clearance FAQs",
+     "url": "https://files.smartsites.parentsquare.com/6673/online_athletic_clearance_faqs.pdf",
+     "organization": "Lake Mary High School",
+     "source_type": "official_faq",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "2 pages. No match for NIL, likeness or GA1."
+    },
+    {
+     "id": "s7",
+     "title": "Lake Mary High School Athletics packet (FHSAA Preparticipation Physical Evaluation Form)",
+     "url": "https://files.smartsites.parentsquare.com/6673/athletic_packet_merged_2024_revised.pdf",
+     "organization": "Lake Mary High School",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "9 pages. File name carries 2024. No match for NIL, likeness or GA1."
+    },
+    {
+     "id": "s8",
+     "title": "Lake Mary High School - Administration",
+     "url": "https://www.lakemaryhs.scps.k12.fl.us/administration",
+     "organization": "Lake Mary High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Names the Athletic Director with phone."
+    },
+    {
+     "id": "s9",
+     "title": "LMHS Boosters - Sponsors",
+     "url": "https://www.lakemaryboosters.com/sponsors",
+     "organization": "Lake Mary Athletic Boosters",
+     "source_type": "official_webpage",
+     "is_primary": false,
+     "published_on": null,
+     "notes": "Booster club site, linked from the school's athletics pages. Not a school-run page. Heading on the page reads '2025 2026 SEASON'."
+    },
+    {
+     "id": "s10",
+     "title": "Lake Mary High School - Home",
+     "url": "https://www.lakemaryhs.scps.k12.fl.us/",
+     "organization": "Lake Mary High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Has a 'Facility Rental' link to https://www.facilitron.com/lmhs32746."
+    },
+    {
+     "id": "s11",
+     "title": "FHSAA Membership List 2026-27",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "School name appears on the list. Read from the PDF text layer."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "Athletics Home",
+     "Athletic Resources",
+     "Eligibility Requirements & Forms",
+     "Fall, Winter and Spring Sports pages",
+     "Lake Mary Athletic Handbook (PDF)",
+     "2026-27 Online Sports Physical Clearance Directions (PDF)",
+     "Online Athletic Clearance FAQs (PDF)",
+     "Athletic packet 2024 revised (PDF)",
+     "Administration page",
+     "School home page",
+     "Lake Mary Athletic Boosters home and sponsors pages",
+     "FHSAA Membership List 2026-27"
+    ],
+    "locations_unreachable": [
+     "https://ramnationathletics.com/ (found in search as 'LAKE MARY HIGH SCHOOL ATHLETICS', did not load)",
+     "https://lakemaryboosters.com/corporate-sponsorship-opportunities/ (the school's 'Sponsorship Opportunities' link, returns 404)",
+     "Lake Mary boosters page on the school site (/boosters, redirects off site)",
+     "'Contact Our Coaches' Google Doc (not opened)"
+    ],
+    "notes": "School NIL policy: Not located in the public sources reviewed as of October 4, 2026. The athletic handbook has a social media section but no NIL, sponsorship, logo or uniform rule. All pages and PDFs were searched for NIL, likeness, GA1, sponsor, amateur, logo, uniform and media. District (SCPS) board policies were not reviewed in this file. The district record is kept separately."
+   },
+   "school_policy": null,
+   "rules": [
+    {
+     "topic": "penalties",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Lake Mary's athletic handbook says athletes are held to SCPS citizenship standards for how they use social media. It lists unsportsmanlike or demeaning posts as prohibited.",
+     "conditions": "This is a general conduct rule. It is not written about NIL or paid posts. The handbook has no printed year.",
+     "citation": "Lake Mary Athletic Handbook, 'Guidelines for Athletic Departments Social Media and Communication'",
+     "quick_status": "DEPENDS",
+     "short_answer": "Social media posts by athletes fall under school conduct standards.",
+     "sources": [
+      {
+       "source_id": "s4",
+       "locator": "Page 6, Social Media and Communication",
+       "quote": "will be held accountable according to the citizenship standards for participation in school sponsored extra-curricular activities established by the school board of Seminole County Public Schools.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s4",
+       "locator": "Page 6, Social Media and Communication",
+       "quote": "Posting photos, videos, or commentary that is unsportsmanlike, derogatory, or demeaning toward any other individual or entity.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "penalties",
+     "scope": "institution",
+     "answer": "yes_with_conditions",
+     "summary": "Lake Mary says athletes must follow the SCPS Citizenship Policy and represent the school in a positive light on and off campus, or risk losing the privilege to play.",
+     "conditions": "General conduct wording on the eligibility page. It does not mention NIL.",
+     "citation": "Lake Mary Eligibility Requirements & Forms page",
+     "quick_status": "DEPENDS",
+     "short_answer": "Playing is a privilege that depends on conduct on and off campus.",
+     "sources": [
+      {
+       "source_id": "s2",
+       "locator": "Eligibility Requirements",
+       "quote": "All student athletes are subject to and must adhere to the SCPS Citizenship Policy.",
+       "read_method": "raw_text"
+      },
+      {
+       "source_id": "s2",
+       "locator": "Eligibility Requirements",
+       "quote": "all athletes must represent their school and sport in a positive light on and off campus or risk the chance of losing this privilege.",
+       "read_method": "raw_text"
+      }
+     ]
+    },
+    {
+     "topic": "school-facilities",
+     "scope": "institution",
+     "answer": "not_addressed",
+     "summary": "The Lake Mary school site has a 'Facility Rental' link that goes to the school's Facilitron rental page. The site states no rule about filming or NIL shoots on campus.",
+     "conditions": "Only a link was found. No school text on commercial use of facilities was located.",
+     "citation": "lakemaryhs.scps.k12.fl.us home page, 'Facility Rental' link",
+     "quick_status": "NOT_PUBLICLY_SPECIFIED",
+     "short_answer": "Facility rentals go through Facilitron. Nothing is said about NIL shoots.",
+     "sources": [
+      {
+       "source_id": "s10",
+       "locator": "Home page link to https://www.facilitron.com/lmhs32746",
+       "quote": "Facility Rental",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "Lake Mary Athletic Boosters Corporate Sponsorship",
+     "program_type": "sponsorship_sales",
+     "description": "The booster club invites businesses to 'PARTNER WITH THE RAMS' through stadium signage and website recognition. This is business sponsorship of the athletic program, not athlete NIL.",
+     "url": "https://www.lakemaryboosters.com/sponsors",
+     "source_id": "s9",
+     "current": true
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Lake Mary High School Athletic Department",
+     "role": "Athletic Director",
+     "person_name": "Rick Weyers",
+     "phone": "(407) 320-9693",
+     "email": null,
+     "url": "https://www.lakemaryhs.scps.k12.fl.us/administration",
+     "source_id": "s8"
+    },
+    {
+     "office": "Lake Mary High School Athletic Department",
+     "role": "Clearance questions. The page gives no job title.",
+     "person_name": "Adriana Negron",
+     "phone": "407-320-9557",
+     "email": null,
+     "url": "https://www.lakemaryhs.scps.k12.fl.us/eligibility-requirements-forms",
+     "source_id": "s2"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "Yearly online athletic clearance (FHSAA EL2 physical, FHSAA EL1 cardiac clearance, insurance card, parent ID, birth certificate, NFHS course certificates). The 2026-27 directions do not mention Form GA1 or NIL.",
+    "recipient": "Lake Mary High School athletic department through the online clearance site",
+    "deadline_text": "All requirements listed above must be met prior to tryouts/participation.",
+    "platform_name": "Home Campus",
+    "platform_url": "https://www.homecampus.com/",
+    "form_name": "2026-27 Lake Mary Athletics Online Sports Physical Clearance Directions",
+    "form_url": "https://files.smartsites.parentsquare.com/6673/2026-27_lake_mary_athletics_online_sports_physical_clearance_directions.pdf",
+    "source_id": "s5",
+    "quote": "ALL SPORTS PHYSICALS AND ATHLETIC CLEARANCE DOCUMENTS IN SEMINOLE COUNTY WILL BE SUBMITTED ONLINE FOR CLEARANCE TO PARTICIPATE IN ATHLETICS."
+   },
+   "important_claims": [
+    "Athletic Director is Rick Weyers, (407) 320-9693, as printed on the school Administration page.",
+    "The 2026-27 clearance directions (dated 2026-08-17 on the school's document list) send families to www.homecampus.com.",
+    "The athletic handbook holds athletes to SCPS citizenship standards for social media. It does not mention NIL.",
+    "No NIL, GA1 or likeness wording appears on the Lake Mary athletics pages, handbook, FAQs or clearance directions.",
+    "Lake Mary appears on the FHSAA Membership List 2026-27."
+   ],
+   "ambiguities": [
+    "The athletic handbook has no printed year. The school's document list shows 2025-03-06, which may be an upload date only.",
+    "The 2026-27 directions print [email on the official page] for fee waiver requests. That domain differs from the scps.k12.fl.us addresses used elsewhere, so it was not recorded as the Athletic Director email.",
+    "Adriana Negron is named as the email contact for clearance questions but no job title is given.",
+    "The booster sponsors page is headed '2025 2026 SEASON'.",
+    "The athletic packet file is labelled 2024 revised and may be an older form set."
+   ],
+   "conflicts": [
+    "Clearance platform: the Eligibility Requirements & Forms page text says clearance is done through athleticclearance.com, while the 2026-27 directions PDF on the same page says to visit www.homecampus.com."
+   ],
+   "manual_review": [
+    "https://www.homecampus.com/ : log-in portal. Check whether Form GA1 is a signature step for Lake Mary.",
+    "https://ramnationathletics.com/ : did not load. Check whether it is an official athletics site with extra policy pages.",
+    "https://www.facilitron.com/lmhs32746 : rental terms were not opened. Check for commercial filming terms.",
+    "SCPS district policies on logos, advertising and facility use should be checked in the district record."
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Instructions on how Form GA1 is collected",
+    "Rule on using the school name, logo or uniform in NIL content",
+    "Media credential or commercial photography rule",
+    "Facility-use rule for NIL shoots",
+    "School-run sponsorship page (only the booster club page was found)",
+    "Athletic Director email on a school page"
+   ]
+  },
+  {
+   "slug": "lyman-high-school-longwood",
+   "name": "Lyman High School",
+   "short_name": "Lyman",
+   "institution_type": "high_school",
+   "sector": "public",
+   "city": "Longwood",
+   "county": "Seminole County",
+   "street_address": "865 S. Ronald Reagan Blvd",
+   "postal_code": "32750",
+   "website_url": "https://www.lyman.scps.k12.fl.us/",
+   "athletics_url": "https://www.lyman.scps.k12.fl.us/athletics-home",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "seminole-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "sports": {
+    "unspecified": [
+     "Football",
+     "Sideline Cheer",
+     "Cross Country",
+     "Swimming",
+     "Volleyball (Girls)",
+     "Golf (Boys)",
+     "Golf (Girls)",
+     "Bowling",
+     "Soccer (Boys)",
+     "Soccer (Girls)",
+     "Competitive Cheer",
+     "Basketball (Boys)",
+     "Basketball (Girls)",
+     "Wrestling",
+     "Weightlifting",
+     "Softball",
+     "Baseball",
+     "Tennis",
+     "Track and Field",
+     "Boys Weightlifting",
+     "Lacrosse (Boys)",
+     "Lacrosse (Girls)",
+     "Water Polo",
+     "Flag Football (Girls)",
+     "Volleyball (Boys)",
+     "Beach Volleyball (Girls)"
+    ]
+   },
+   "sports_source_id": "s2",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Lyman High School - Athletics Home",
+     "url": "https://www.lyman.scps.k12.fl.us/athletics-home",
+     "organization": "Lyman High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "School address and phone are in the page footer. Lists athletic staff and links to forms, facility rentals and boosters."
+    },
+    {
+     "id": "s2",
+     "title": "Lyman High School - Coaches and Contact Information",
+     "url": "https://www.lyman.scps.k12.fl.us/coachesandcontact",
+     "organization": "Lyman High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Used for the sports list."
+    },
+    {
+     "id": "s3",
+     "title": "Lyman High School - Forms & Eligibility",
+     "url": "https://www.lyman.scps.k12.fl.us/athletics-forms",
+     "organization": "Lyman High School",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Links: Athletic Clearance (homecampus.com/login), Required Athletics Paperwork (updated July 2026), EL2, ECG form, GA4."
+    },
+    {
+     "id": "s4",
+     "title": "Lyman High School Athletics Online Physical Athletic Clearance Information (Required Athletics Paperwork)",
+     "url": "https://files.smartsites.parentsquare.com/6665/athletic_clearance_process_1.pdf",
+     "organization": "Lyman High School",
+     "source_type": "form",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "2 pages. Page label says 'Updated July 2026'. Names athleticclearance.com. No match for NIL, likeness or GA1."
+    },
+    {
+     "id": "s5",
+     "title": "Lyman HS Boosters - Sponsorships",
+     "url": "https://sites.google.com/view/lymanhsboosters/sponsorships",
+     "organization": "Lyman High School Boosters",
+     "source_type": "official_webpage",
+     "is_primary": false,
+     "published_on": null,
+     "notes": "Booster club Google Site, linked from the school's Athletics Home page. Not a school-run page. The sponsorship form on the page was not opened."
+    },
+    {
+     "id": "s6",
+     "title": "FHSAA Membership List 2026-27",
+     "url": "https://s3.amazonaws.com/fhsaa.org/documents/2026/8/28/Membership_List_2026_27_8_28_26.pdf",
+     "organization": "Florida High School Athletic Association",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": "2026-08-28",
+     "notes": "School name appears on the list. Read from the PDF text layer."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "Athletics Home",
+     "Coaches and Contact Information",
+     "Forms & Eligibility",
+     "Required Athletics Paperwork / Athletic Clearance Information (PDF)",
+     "Lyman HS Boosters home and Sponsorships pages",
+     "FHSAA Membership List 2026-27"
+    ],
+    "locations_unreachable": [
+     "Athletic Programs page (/teams, not opened)",
+     "SCPS Athletics Events page (/274238_2, district page, not opened)"
+    ],
+    "notes": "School NIL policy: Not located in the public sources reviewed as of October 4, 2026. No athletic handbook or code of conduct was linked from the Lyman athletics pages. Pages and the clearance PDF were searched for NIL, likeness and GA1. District (SCPS) board policies were not reviewed in this file. The district record is kept separately."
+   },
+   "school_policy": null,
+   "rules": [
+    {
+     "topic": "school-facilities",
+     "scope": "institution",
+     "answer": "not_addressed",
+     "summary": "Lyman's Athletics Home page links 'Facility Rentals' to the school's Facilitron rental page. The page states no rule about filming or NIL shoots on campus.",
+     "conditions": "Only a link and one line of text were found. No school text on commercial use of facilities was located.",
+     "citation": "Lyman Athletics Home, Helpful Links",
+     "quick_status": "NOT_PUBLICLY_SPECIFIED",
+     "short_answer": "Facility rentals go through Facilitron. Nothing is said about NIL shoots.",
+     "sources": [
+      {
+       "source_id": "s1",
+       "locator": "Helpful Links, link to https://www.facilitron.com/lhs32750",
+       "quote": "Facility Rentals Community spaces available for rental",
+       "read_method": "raw_text"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "Lyman Athletic Booster Sponsorships",
+     "program_type": "sponsorship_sales",
+     "description": "The booster club page says 'Use the form below to complete your sponsorship application and remit payment' and lists 2026-2027 booster sponsors. This is business sponsorship of the athletic program, not athlete NIL.",
+     "url": "https://sites.google.com/view/lymanhsboosters/sponsorships",
+     "source_id": "s5",
+     "current": true
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Lyman High School Athletics",
+     "role": "Athletic Director",
+     "person_name": "Weston Below",
+     "phone": "(407) 746-2218",
+     "email": null,
+     "url": "https://www.lyman.scps.k12.fl.us/athletics-home",
+     "source_id": "s1"
+    },
+    {
+     "office": "Lyman High School Athletics",
+     "role": "Assistant Athletic Director",
+     "person_name": "Robert Drake",
+     "phone": "(407) 746-2299",
+     "email": null,
+     "url": "https://www.lyman.scps.k12.fl.us/athletics-home",
+     "source_id": "s1"
+    },
+    {
+     "office": "Lyman High School Athletics",
+     "role": "Assistant Athletic Director",
+     "person_name": "Chris Canale",
+     "phone": "(407) 746-2102",
+     "email": null,
+     "url": "https://www.lyman.scps.k12.fl.us/athletics-home",
+     "source_id": "s1"
+    },
+    {
+     "office": "Lyman High School Athletics",
+     "role": "Athletic Secretary",
+     "person_name": "Karen Bennet",
+     "phone": null,
+     "email": null,
+     "url": "https://www.lyman.scps.k12.fl.us/athletics-home",
+     "source_id": "s1"
+    }
+   ],
+   "disclosure_workflow": {
+    "what": "Yearly online athletic clearance. The page lists the EL2 physical, the ECG clearance form and GA4 for students who did not start 9th grade at Lyman. It does not mention Form GA1 or NIL.",
+    "recipient": "Lyman High School athletics through the online clearance site",
+    "deadline_text": "Make sure you are cleared to play before tryouts being.",
+    "platform_name": "Athletic Clearance (the page's clearance button links to Home Campus)",
+    "platform_url": "https://www.homecampus.com/login",
+    "form_name": "Required Athletics Paperwork",
+    "form_url": "https://files.smartsites.parentsquare.com/6665/athletic_clearance_process_1.pdf",
+    "source_id": "s3",
+    "quote": "All athletes must have a completed profile on athleticclearance.com with a \"cleared\" status before they can condition, tryout, or participate with any team"
+   },
+   "important_claims": [
+    "Athletic Director is Weston Below, [email on the official page], (407) 746-2218, as printed on the Athletics Home page.",
+    "The Forms & Eligibility page text names athleticclearance.com, but its 'Athletic Clearance' link opens www.homecampus.com/login.",
+    "The page lists Form GA4 for transfer students. It does not list Form GA1.",
+    "No NIL, GA1 or likeness wording appears on the Lyman athletics pages or clearance paperwork.",
+    "Lyman (Longwood) appears on the FHSAA Membership List 2026-27."
+   ],
+   "ambiguities": [
+    "The Athletic Secretary's name is printed as 'Karen Bennet' while the email is [email on the official page]. The spelling should be confirmed.",
+    "The clearance deadline line is quoted as printed, including the typo 'tryouts being'.",
+    "The sports list has both 'Weightlifting' (winter) and 'Boys Weightlifting' (spring). The winter entry is likely girls weightlifting but the page does not say so.",
+    "The GA4 file linked is dated 07/2023 in its file name."
+   ],
+   "conflicts": [
+    "Clearance platform: the Forms & Eligibility text and the 'Updated July 2026' paperwork PDF both name athleticclearance.com, while the page's 'Athletic Clearance' link goes to https://www.homecampus.com/login."
+   ],
+   "manual_review": [
+    "https://www.homecampus.com/login : log-in portal. Check whether Form GA1 is a signature step for Lyman and which platform is live for 2026-27.",
+    "https://www.facilitron.com/lhs32750 : rental terms were not opened. Check for commercial filming terms.",
+    "SCPS district policies on logos, advertising and facility use should be checked in the district record."
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Instructions on how Form GA1 is collected",
+    "Rule on using the school name, logo or uniform in NIL content",
+    "Media credential or commercial photography rule",
+    "Athletic handbook or athlete code of conduct",
+    "Facility-use rule for NIL shoots",
+    "School-run sponsorship page (only the booster club page was found)"
+   ]
+  }
+ ]
+}

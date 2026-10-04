@@ -1,0 +1,725 @@
+{
+ "researched_on": "2026-10-04",
+ "method_note": "Official URLs were found with WebSearch and read with WebFetch, which summarises pages, so every quote is marked extraction. Direct raw fetching of scps.k12.fl.us was blocked by the network proxy, and linked PDFs and the FHSAA member list could not be opened; no browser workaround was used.",
+ "districts": [],
+ "conferences": [],
+ "schools": [
+  {
+   "institution_type": "high_school",
+   "sector": "public",
+   "county": "Seminole County",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "seminole-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "school_policy": null,
+   "rules": [
+    {
+     "topic": "school-facilities",
+     "scope": "institution",
+     "answer": "not_addressed",
+     "summary": "Oviedo High School says on-campus athletic facilities are rented through Facilitron. The page does not mention NIL, filming or photo shoots.",
+     "conditions": "School-specific process only: the rental platform. No NIL rule is stated.",
+     "citation": "Oviedo High School Athletics, Facilities page",
+     "quick_status": "NOT_PUBLICLY_SPECIFIED",
+     "short_answer": "The school points facility rentals to Facilitron. NIL shoots are not addressed.",
+     "sources": [
+      {
+       "source_id": "s4",
+       "locator": "Rental information",
+       "quote": "To rent any of our on campus facilities, please visit: Facilitron",
+       "read_method": "extraction"
+      }
+     ]
+    }
+   ],
+   "programs": [
+    {
+     "name": "Oviedo High School Athletic Booster Club athletic sponsorships",
+     "program_type": "sponsorship_sales",
+     "description": "Oviedo High School's Support the Lions page says the school \"is seeking support from the community\" for its athletic programs and links a \"2024-25 OHSABC Athletic Sponsorship Form\". It is a business sponsorship for the athletic program, not an athlete NIL program.",
+     "url": "https://www.oviedo.scps.k12.fl.us/support-the-lions",
+     "source_id": "s5",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Oviedo High School Athletics",
+     "role": "Athletic Director; named as the contact for athletic sponsorships and donations",
+     "person_name": "Jen Darty",
+     "phone": null,
+     "email": null,
+     "url": "https://www.oviedo.scps.k12.fl.us/support-the-lions",
+     "source_id": "s5"
+    },
+    {
+     "office": "Oviedo High School (main office)",
+     "role": "General school phone printed on athletics pages",
+     "person_name": null,
+     "phone": "407-320-4050",
+     "email": null,
+     "url": "https://www.oviedo.scps.k12.fl.us/athletics-home",
+     "source_id": "s1"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "Oviedo uses Athletic Clearance (athleticclearance.com) for athlete clearance and the page names EL2 and EL1 forms; NIL and Form GA1 are not mentioned in the text read.",
+    "Athletic Director is named as Jen Darty on the Support the Lions page, which also links a 2024-25 sponsorship form. Confirm she is still in the role.",
+    "Facility rentals go through Facilitron (facilitron.com/ohs32765).",
+    "Sports list was taken from the athletics menu through a summarising tool."
+   ],
+   "ambiguities": [
+    "FHSAA membership was not confirmed against the FHSAA 2026-27 member list. The list PDF is blocked by robots.txt for the fetch tool and the directory widget could not be opened. The division value rests only on the school's own pages, which use FHSAA forms and eligibility rules.",
+    "The Support the Lions page links a '2024-25' sponsorship form, so the athletic director name and sponsorship details on it may be out of date.",
+    "The Athletics Home banner refers to clearance for the 2025-26 school year, while the Tryout page refers to 2026-27.",
+    "The summarising tool said 22 teams were listed but returned 21 names. The Support the Lions page says the school has 'thirty-three athletic programs'. The sports list may be incomplete (for example baseball, boys golf and girls volleyball did not appear).",
+    "All pages were read through a summarising tool, so quotes are marked extraction."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://files.smartsites.parentsquare.com/6694/2025-26_ohs_athletics_-_online_sports_physical_clearance_directions_2.pdf : clearance directions; check whether Form GA1 or NIL is mentioned.",
+    "FHSAA List of Member Schools 2026-27, linked from https://fhsaa.com/sports/2020/1/30/Membership.aspx: open by hand and confirm the school's entry.",
+    "https://www.oviedo.scps.k12.fl.us/athletics-home : open the Athletic Teams menu by hand to confirm the full sports list.",
+    "https://www.oviedoboosters.org/ : booster club sponsorship details, not opened."
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Form GA1 handling at the school",
+    "Athletic handbook or code of conduct on the athletics pages",
+    "Rules on use of school name, logo or uniform in athlete content",
+    "Media credential, filming or commercial photography rules",
+    "Athletic director email or direct phone",
+    "Confirmation on the FHSAA 2026-27 member list"
+   ],
+   "slug": "oviedo-high-school-oviedo",
+   "name": "Oviedo High School",
+   "short_name": "Oviedo",
+   "city": "Oviedo",
+   "street_address": "601 King Street",
+   "postal_code": "32765",
+   "website_url": "https://www.oviedo.scps.k12.fl.us/",
+   "athletics_url": "https://www.oviedo.scps.k12.fl.us/athletics-home",
+   "sports": {
+    "unspecified": [
+     "Beach Volleyball",
+     "Bowling",
+     "Boys Basketball",
+     "Boys Lacrosse",
+     "Boys Soccer",
+     "Boys Volleyball",
+     "Boys Weightlifting",
+     "Cheerleading",
+     "Cross Country",
+     "Football",
+     "Girls Basketball",
+     "Girls Golf",
+     "Girls Lacrosse",
+     "Girls Soccer",
+     "Girls Weightlifting",
+     "Softball",
+     "Swimming & Diving",
+     "Tennis",
+     "Track & Field",
+     "Water Polo",
+     "Wrestling"
+    ]
+   },
+   "sports_source_id": "s1",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Oviedo High School - Athletics Home",
+     "url": "https://www.oviedo.scps.k12.fl.us/athletics-home",
+     "organization": "Oviedo High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch (summarising tool). Footer gives address and phone. Athletics menu and team list taken from this page. Banner text still refers to the 2025-26 school year."
+    },
+    {
+     "id": "s2",
+     "title": "Oviedo High School - Eligibility & Clearance",
+     "url": "https://www.oviedo.scps.k12.fl.us/athletics-eligibility",
+     "organization": "Oviedo High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Names Athletic Clearance (athleticclearance.com), EL2 physical form and EL1 ECG form. No mention of NIL or Form GA1 reported."
+    },
+    {
+     "id": "s3",
+     "title": "Oviedo High School - Tryout Information",
+     "url": "https://www.oviedo.scps.k12.fl.us/tryouts",
+     "organization": "Oviedo High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Refers to clearance for the 2026-27 school year."
+    },
+    {
+     "id": "s4",
+     "title": "Oviedo High School - Facilities",
+     "url": "https://www.oviedo.scps.k12.fl.us/athletics-facilities",
+     "organization": "Oviedo High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Lists facilities and links Facilitron (https://www.facilitron.com/ohs32765) for rentals."
+    },
+    {
+     "id": "s5",
+     "title": "Oviedo High School - Support the Lions",
+     "url": "https://www.oviedo.scps.k12.fl.us/support-the-lions",
+     "organization": "Oviedo High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Names the athletic director and links a '2024-25 OHSABC Athletic Sponsorship Form', so parts of the page may be out of date."
+    },
+    {
+     "id": "s6",
+     "title": "Oviedo High School - Game Day Information",
+     "url": "https://www.oviedo.scps.k12.fl.us/athletics-ticket-info",
+     "organization": "Oviedo High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Prohibited items list. No media, photography or filming rules reported."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "oviedo.scps.k12.fl.us/athletics-home (Athletics Home and athletics menu)",
+     "oviedo.scps.k12.fl.us/athletics-eligibility (Eligibility & Clearance)",
+     "oviedo.scps.k12.fl.us/tryouts (Tryout Information)",
+     "oviedo.scps.k12.fl.us/athletics-facilities (Facilities)",
+     "oviedo.scps.k12.fl.us/support-the-lions (Support the Lions)",
+     "oviedo.scps.k12.fl.us/athletics-ticket-info (Game Day Information)",
+     "oviedo.scps.k12.fl.us/athletics/staff.stml (old staff URL; showed the Athletics Home page with no staff list)",
+     "Web search for Seminole County Public Schools NIL policy (no official SCPS result returned)"
+    ],
+    "locations_unreachable": [
+     "Athletic Clearance Instructions PDF (https://files.smartsites.parentsquare.com/6694/2025-26_ohs_athletics_-_online_sports_physical_clearance_directions_2.pdf): fetch permission prompt was not answered, so it was not opened.",
+     "FHSAA List of Member Schools 2026-27 PDF (https://fhsaa.com/documents/2026/8/28//Membership_List_2026_27_8_28_26.pdf?id=8026): fetch refused, URL is disallowed by robots.txt. Not retried by other means.",
+     "FHSAA member directory widget (https://fhsaa.homecampus.com/widget/school/directory): fetch permission prompt was not answered, so it was not opened.",
+     "Oviedo Boosters site (https://www.oviedoboosters.org/) and the '2024-25 OHSABC Athletic Sponsorship Form': not opened."
+    ],
+    "notes": "School-specific NIL policy: Not located in the public sources reviewed as of October 4, 2026. The clearance page names Athletic Clearance, the EL2 physical and the EL1 ECG form. It does not mention NIL or Form GA1 in the text read."
+   }
+  },
+  {
+   "institution_type": "high_school",
+   "sector": "public",
+   "county": "Seminole County",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "seminole-county-public-schools",
+   "nces_id": "120171005736",
+   "profile_source_id": "s1",
+   "school_policy": null,
+   "rules": [],
+   "programs": [],
+   "contacts": [
+    {
+     "office": "Hagerty High School Athletics",
+     "role": "Athletic Director",
+     "person_name": "Jacob Colquhoun",
+     "phone": "407-871-0790",
+     "email": null,
+     "url": "https://www.hagertyhigh.scps.k12.fl.us/athletics-staff",
+     "source_id": "s3"
+    },
+    {
+     "office": "Hagerty High School Athletics",
+     "role": "Athletics secretary",
+     "person_name": "Laurie Kurtz",
+     "phone": "407-871-0982",
+     "email": null,
+     "url": "https://www.hagertyhigh.scps.k12.fl.us/athletics-staff",
+     "source_id": "s3"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "Athletic Director is listed as Jacob Colquhoun, 407-871-0790, [email on the official page] on the Athletics Staff page.",
+    "The athletics page links a '26-27 Online Sports Physical Submission' document and an 'EL2 Sports Physical and ECG' form; NIL and Form GA1 are not mentioned in the page text read.",
+    "The clearance platform is not named in the page text read. It is likely in the directions PDF, which was not opened.",
+    "Sports list is empty because the Sports Offerings document did not load."
+   ],
+   "ambiguities": [
+    "FHSAA membership was not confirmed against the FHSAA 2026-27 member list. The list PDF is blocked by robots.txt for the fetch tool and the directory widget could not be opened. The division value rests only on the school's own pages, which use FHSAA forms and eligibility rules.",
+    "The official site prints the school name as 'Hagerty High School'. The full name 'Paul J. Hagerty High School' comes from the task assignment and was not seen on the pages read.",
+    "NCES ID comes from a search result title, not from an opened page.",
+    "All pages were read through a summarising tool."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://files.smartsites.parentsquare.com/6722/hhs_athletics_-_online_sports_physical_submission_directions_2026-2027.pdf : clearance directions; check the platform and whether Form GA1 or NIL is mentioned.",
+    "https://files.smartsites.parentsquare.com/6722/hhs_sports_offerings_2026-2027docx.pdf : sports offered in 2026-27.",
+    "https://files.smartsites.parentsquare.com/6722/athletic_facilities_information__directions.pdf : facilities information.",
+    "https://www.hagertyathleticboosters.org/ : booster club site; check for sponsorship sales.",
+    "FHSAA List of Member Schools 2026-27, linked from https://fhsaa.com/sports/2020/1/30/Membership.aspx: open by hand and confirm the school's entry."
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Form GA1 handling at the school",
+    "Athletic handbook or code of conduct on the athletics pages",
+    "Rules on use of school name, logo or uniform in athlete content",
+    "Facility-use, filming or commercial photography rules",
+    "Sponsorship page on the school site (only a link to the booster club site)",
+    "List of sports offered (document did not load)",
+    "Confirmation on the FHSAA 2026-27 member list"
+   ],
+   "slug": "hagerty-high-school-oviedo",
+   "name": "Paul J. Hagerty High School",
+   "short_name": "Hagerty",
+   "city": "Oviedo",
+   "street_address": "3225 Lockwood Blvd.",
+   "postal_code": "32765",
+   "website_url": "https://www.hagertyhigh.scps.k12.fl.us/",
+   "athletics_url": "https://www.hagertyhigh.scps.k12.fl.us/athletics-home",
+   "sports": {
+    "unspecified": []
+   },
+   "sports_source_id": "s2",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Hagerty High School - Home",
+     "url": "https://www.hagertyhigh.scps.k12.fl.us/",
+     "organization": "Hagerty High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. The site prints the name as 'Hagerty High School'. Footer gives address and phone."
+    },
+    {
+     "id": "s2",
+     "title": "Hagerty High School - Athletics Home",
+     "url": "https://www.hagertyhigh.scps.k12.fl.us/athletics-home",
+     "organization": "Hagerty High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Link list only: staff, Sports Offerings 2026-2027 PDF, Booster Club, '26-27 Online Sports Physical Submission' PDF, 'EL2 Sports Physical and ECG' PDF, facilities PDF. No NIL mention reported."
+    },
+    {
+     "id": "s3",
+     "title": "Hagerty High School - Athletics Staff",
+     "url": "https://www.hagertyhigh.scps.k12.fl.us/athletics-staff",
+     "organization": "Hagerty High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Names athletic director, assistant athletic directors and secretary with emails and phones."
+    },
+    {
+     "id": "s4",
+     "title": "Hagerty High School - Sports Offerings",
+     "url": "https://www.hagertyhigh.scps.k12.fl.us/sports-offerings",
+     "organization": "Hagerty High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Page holds an embedded document viewer that did not load through WebFetch. Sports list not read."
+    },
+    {
+     "id": "s5",
+     "title": "Search for Public Schools - HAGERTY HIGH SCHOOL (120171005736)",
+     "url": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?Search=1&DistrictID=1201710&SchoolPageNum=2&ID=120171005736",
+     "organization": "National Center for Education Statistics",
+     "source_type": "government_database",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Seen as a search result title only; the page itself was not opened. The NCES ID is taken from that title."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "hagertyhigh.scps.k12.fl.us (home page and navigation)",
+     "hagertyhigh.scps.k12.fl.us/athletics-home (Athletics Home link list)",
+     "hagertyhigh.scps.k12.fl.us/athletics-staff (Athletics Staff)",
+     "hagertyhigh.scps.k12.fl.us/sports-offerings (document viewer did not load)",
+     "Web search for Seminole County Public Schools NIL policy (no official SCPS result returned)"
+    ],
+    "locations_unreachable": [
+     "26-27 Online Sports Physical Submission directions PDF (https://files.smartsites.parentsquare.com/6722/hhs_athletics_-_online_sports_physical_submission_directions_2026-2027.pdf): fetch permission prompt was not answered, so it was not opened.",
+     "Sports Offerings 2026-2027 PDF (https://files.smartsites.parentsquare.com/6722/hhs_sports_offerings_2026-2027docx.pdf): not opened; the page viewer did not load.",
+     "Athletic Facilities Information & Directions PDF (https://files.smartsites.parentsquare.com/6722/athletic_facilities_information__directions.pdf): not opened.",
+     "Hagerty Athletic Boosters site (https://www.hagertyathleticboosters.org/): not opened.",
+     "FHSAA List of Member Schools 2026-27 PDF (https://fhsaa.com/documents/2026/8/28//Membership_List_2026_27_8_28_26.pdf?id=8026): fetch refused, URL is disallowed by robots.txt. Not retried by other means.",
+     "FHSAA member directory widget (https://fhsaa.homecampus.com/widget/school/directory): fetch permission prompt was not answered, so it was not opened."
+    ],
+    "notes": "School-specific NIL policy: Not located in the public sources reviewed as of October 4, 2026. The athletics page is a list of links. The clearance directions PDF could not be opened, so the clearance platform and any Form GA1 handling are not confirmed."
+   }
+  },
+  {
+   "institution_type": "high_school",
+   "sector": "public",
+   "county": "Seminole County",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "seminole-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "school_policy": null,
+   "rules": [],
+   "programs": [
+    {
+     "name": "WSHS athletics sponsorship program ('Support Bear Athletics Now!')",
+     "program_type": "sponsorship_sales",
+     "description": "The Winter Springs High School Sponsors page lists business sponsors at Platinum, Gold, Silver and Bronze levels and links \"Support Bear Athletics Now!\" to a 2024-25 sponsorship program PDF. It is a business sponsorship for the athletic program, not an athlete NIL program.",
+     "url": "https://www.winterspringshs.scps.k12.fl.us/athletics-sponsors",
+     "source_id": "s4",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Winter Springs High School Athletics",
+     "role": "Athletics office; reached through the school phone printed on athletics pages. Two official pages name different athletic directors, so no person is recorded here.",
+     "person_name": null,
+     "phone": "407-320-8750",
+     "email": null,
+     "url": "https://www.winterspringshs.scps.k12.fl.us/coaches",
+     "source_id": "s3"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "Winter Springs says clearance paperwork is submitted online through the Athletic Clearance website (athleticclearance.com); NIL and Form GA1 are not mentioned in the text read.",
+    "Two official pages disagree on who the athletic director is (Scott Gomrad on the Director's Message page; Mike Bradley on the Coaches page).",
+    "The Sponsors page links a 2024-25 sponsorship program document, so it may be out of date.",
+    "The athletics home page says the school has 33 sports teams; the sports list here comes from the Coaches page."
+   ],
+   "ambiguities": [
+    "FHSAA membership was not confirmed against the FHSAA 2026-27 member list. The list PDF is blocked by robots.txt for the fetch tool and the directory widget could not be opened. The division value rests only on the school's own pages, which use FHSAA forms and eligibility rules.",
+    "The pages read for Winter Springs did not themselves mention FHSAA in the text returned, so the division value is the least supported of the four schools.",
+    "The Sponsors page links a '2024-25' sponsorship PDF. Sponsor names and levels may be out of date.",
+    "The Coaches page and Director's Message are undated.",
+    "All pages were read through a summarising tool, so quotes are marked extraction."
+   ],
+   "conflicts": [
+    "Athletic director: the Director's Message page is signed by Scott Gomrad as 'Director of Athletics', but the Coaches page lists Mike Bradley as Athletic Director and Scott Gomrad as Assistant Athletic Director."
+   ],
+   "manual_review": [
+    "https://www.winterspringshs.scps.k12.fl.us/athletics-home : open the 'WSHS Athletic Clearance Directions' PDF and check whether Form GA1 or NIL is mentioned.",
+    "https://www.winterspringshs.scps.k12.fl.us/coaches and /athletics-directors-message : settle who the current athletic director is.",
+    "https://files.smartsites.parentsquare.com/6721/2024-25_wshs_sponsorship_program_campaign_for_our_kids_.pdf : sponsorship program terms.",
+    "FHSAA List of Member Schools 2026-27, linked from https://fhsaa.com/sports/2020/1/30/Membership.aspx: open by hand and confirm the school's entry."
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Form GA1 handling at the school",
+    "Athletic handbook or code of conduct on the athletics pages",
+    "Rules on use of school name, logo or uniform in athlete content",
+    "Facility-use, rental, filming or commercial photography rules (Facilities page shows names and photos only)",
+    "A single confirmed athletic director name",
+    "Confirmation on the FHSAA 2026-27 member list"
+   ],
+   "slug": "winter-springs-high-school-winter-springs",
+   "name": "Winter Springs High School",
+   "short_name": "Winter Springs",
+   "city": "Winter Springs",
+   "street_address": "130 Tuskawilla Road",
+   "postal_code": "32708",
+   "website_url": "https://www.winterspringshs.scps.k12.fl.us/",
+   "athletics_url": "https://www.winterspringshs.scps.k12.fl.us/athletics-home",
+   "sports": {
+    "unspecified": [
+     "Football",
+     "Girls Volleyball",
+     "Bowling",
+     "Swimming",
+     "Cross Country",
+     "Cheerleading (fall, competitive, spring)",
+     "Golf",
+     "Boys Basketball",
+     "Girls Basketball",
+     "Boys Soccer",
+     "Girls Soccer",
+     "Wrestling",
+     "Girls Weightlifting",
+     "Baseball",
+     "Fastpitch Softball",
+     "Tennis",
+     "Track",
+     "Girls Lacrosse",
+     "Boys Lacrosse",
+     "Water Polo",
+     "Boys Weightlifting",
+     "Boys Volleyball",
+     "Girls Flag Football",
+     "Girls Beach Volleyball"
+    ]
+   },
+   "sports_source_id": "s3",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Winter Springs High School - Athletics Home",
+     "url": "https://www.winterspringshs.scps.k12.fl.us/athletics-home",
+     "organization": "Winter Springs High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Clearance text, athletics menu, footer address and phone. No NIL or Form GA1 mention reported."
+    },
+    {
+     "id": "s2",
+     "title": "Winter Springs High School - Director's Message",
+     "url": "https://www.winterspringshs.scps.k12.fl.us/athletics-directors-message",
+     "organization": "Winter Springs High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Undated message signed by Scott Gomrad as Director of Athletics."
+    },
+    {
+     "id": "s3",
+     "title": "Winter Springs High School - Coaches",
+     "url": "https://www.winterspringshs.scps.k12.fl.us/coaches",
+     "organization": "Winter Springs High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Lists coaches by sport and season and athletics administration. Undated."
+    },
+    {
+     "id": "s4",
+     "title": "Winter Springs High School - Sponsors",
+     "url": "https://www.winterspringshs.scps.k12.fl.us/athletics-sponsors",
+     "organization": "Winter Springs High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Lists business sponsors at Platinum, Gold, Silver and Bronze levels and links a 2024-25 sponsorship program PDF."
+    },
+    {
+     "id": "s5",
+     "title": "Winter Springs High School - Facilities",
+     "url": "https://www.winterspringshs.scps.k12.fl.us/athletics-facilities",
+     "organization": "Winter Springs High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Facility names and photos only."
+    },
+    {
+     "id": "s6",
+     "title": "Winter Springs High School - Winter (sports)",
+     "url": "https://www.winterspringshs.scps.k12.fl.us/winter-sports",
+     "organization": "Winter Springs High School (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Team menu by season; Beach Volleyball - Girls listed under spring."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "winterspringshs.scps.k12.fl.us/athletics-home (Athletics Home and athletics menu)",
+     "winterspringshs.scps.k12.fl.us/athletics-directors-message (Director's Message)",
+     "winterspringshs.scps.k12.fl.us/coaches (Coaches)",
+     "winterspringshs.scps.k12.fl.us/athletics-sponsors (Sponsors)",
+     "winterspringshs.scps.k12.fl.us/athletics-facilities (Facilities)",
+     "winterspringshs.scps.k12.fl.us/winter-sports (team menu)",
+     "Web search for Seminole County Public Schools NIL policy (no official SCPS result returned)"
+    ],
+    "locations_unreachable": [
+     "'WSHS Athletic Clearance Directions' PDF linked from Athletics Home: not opened (link URL not captured).",
+     "2024-25 WSHS Sponsorship Program PDF (https://files.smartsites.parentsquare.com/6721/2024-25_wshs_sponsorship_program_campaign_for_our_kids_.pdf): not opened.",
+     "FHSAA List of Member Schools 2026-27 PDF (https://fhsaa.com/documents/2026/8/28//Membership_List_2026_27_8_28_26.pdf?id=8026): fetch refused, URL is disallowed by robots.txt. Not retried by other means.",
+     "FHSAA member directory widget (https://fhsaa.homecampus.com/widget/school/directory): fetch permission prompt was not answered, so it was not opened."
+    ],
+    "notes": "School-specific NIL policy: Not located in the public sources reviewed as of October 4, 2026. The athletics home page describes clearance through the Athletic Clearance website. It does not mention NIL or Form GA1 in the text read."
+   }
+  },
+  {
+   "institution_type": "high_school",
+   "sector": "public",
+   "county": "Seminole County",
+   "athletics_brand": null,
+   "division": "FHSAA member school",
+   "conference_slug": null,
+   "district_slug": "seminole-county-public-schools",
+   "nces_id": null,
+   "profile_source_id": "s1",
+   "school_policy": null,
+   "rules": [],
+   "programs": [
+    {
+     "name": "Crooms Academy banner sports sponsors",
+     "program_type": "sponsorship_sales",
+     "description": "The Crooms Academy Banner Sports Programs page says \"The Athletic Department is looking for Banner sponsors for the upcoming school year.\" It is a business banner sponsorship for the athletic program, not an athlete NIL program.",
+     "url": "https://www.cait.scps.k12.fl.us/banner-sports-programs",
+     "source_id": "s5",
+     "current": "unknown"
+    }
+   ],
+   "contacts": [
+    {
+     "office": "Crooms Academy Athletic Department",
+     "role": "Athletic Director",
+     "person_name": "Michael DiNapoli",
+     "phone": "407-320-5723",
+     "email": null,
+     "url": "https://www.cait.scps.k12.fl.us/forms-clearance",
+     "source_id": "s3"
+    },
+    {
+     "office": "Crooms Academy Athletic Department",
+     "role": "Assistant Athletic Director",
+     "person_name": "Valerie Richards",
+     "phone": "407-320-5760",
+     "email": null,
+     "url": "https://www.cait.scps.k12.fl.us/forms-clearance",
+     "source_id": "s3"
+    },
+    {
+     "office": "Crooms Academy Athletic Department",
+     "role": "Assistant Athletic Director",
+     "person_name": "Keith Wright",
+     "phone": "407-320-5739",
+     "email": null,
+     "url": "https://www.cait.scps.k12.fl.us/forms-clearance",
+     "source_id": "s3"
+    }
+   ],
+   "disclosure_workflow": null,
+   "important_claims": [
+    "Crooms fields interscholastic teams. Its About Us page says: 'Crooms offers a full menu of athletic programs to include baseball, basketball, volleyball, soccer, track, cross-country, bowling, golf, and swimming.'",
+    "Its Eligibility page says: 'Eligibility is determined by the FHSAA and Seminole County Public School Policy.' FHSAA membership was still not confirmed on the FHSAA list.",
+    "Clearance runs through Athletic Clearance (athleticclearance.com); NIL and Form GA1 are not mentioned in the text read.",
+    "Athletic Director is listed as Michael DiNapoli, 407-320-5723, [email on the official page] on the Forms & Clearance page.",
+    "The school has no football team listed."
+   ],
+   "ambiguities": [
+    "FHSAA membership was not confirmed against the FHSAA 2026-27 member list. The list PDF is blocked by robots.txt for the fetch tool and the directory widget could not be opened. The division value rests only on the school's own pages, which use FHSAA forms and eligibility rules.",
+    "The Banner Sports Programs page says 'the upcoming school year' without naming the year.",
+    "An athletics handbook link was reported on the Athletics Home page but its address was not captured and it was not read. It may contain conduct rules.",
+    "All pages were read through a summarising tool, so quotes are marked extraction."
+   ],
+   "conflicts": [],
+   "manual_review": [
+    "https://www.cait.scps.k12.fl.us/athletics-home : open the handbook link by hand and check for NIL, amateurism, logo or uniform rules.",
+    "https://www.cait.scps.k12.fl.us/banner-sports-programs : open the 'Sponsor Packet'.",
+    "FHSAA List of Member Schools 2026-27, linked from https://fhsaa.com/sports/2020/1/30/Membership.aspx: open by hand and confirm the school's entry."
+   ],
+   "not_found": [
+    "School NIL policy, guidance or FAQ",
+    "Form GA1 handling at the school",
+    "Text of the athletics handbook (link reported, not read)",
+    "Rules on use of school name, logo or uniform in athlete content",
+    "Facility-use, filming or commercial photography rules",
+    "Confirmation on the FHSAA 2026-27 member list"
+   ],
+   "slug": "crooms-academy-of-information-technology-sanford",
+   "name": "Crooms Academy of Information Technology",
+   "short_name": "Crooms Academy",
+   "city": "Sanford",
+   "street_address": "2200 Historic Goldsboro Blvd.",
+   "postal_code": "32771",
+   "website_url": "https://www.cait.scps.k12.fl.us/",
+   "athletics_url": "https://www.cait.scps.k12.fl.us/athletics-home",
+   "sports": {
+    "unspecified": [
+     "Bowling",
+     "Cross Country",
+     "Boys Golf",
+     "Girls Golf",
+     "Swimming",
+     "Girls Volleyball",
+     "Sideline Cheerleading",
+     "Boys Basketball",
+     "Girls Basketball",
+     "Boys Soccer",
+     "Girls Soccer",
+     "Baseball",
+     "Track & Field",
+     "Boys Volleyball"
+    ]
+   },
+   "sports_source_id": "s2",
+   "sources": [
+    {
+     "id": "s1",
+     "title": "Crooms Academy - About Us",
+     "url": "https://www.cait.scps.k12.fl.us/about-us",
+     "organization": "Crooms Academy of Information Technology (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Gives official name, address, phone and a statement that the school offers athletic programs."
+    },
+    {
+     "id": "s2",
+     "title": "Crooms Academy - Athletics Home",
+     "url": "https://www.cait.scps.k12.fl.us/athletics-home",
+     "organization": "Crooms Academy of Information Technology (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Teams by season, athletics menu, FHSAA link, 'Athletic Sponsor' link. No NIL or Form GA1 mention reported."
+    },
+    {
+     "id": "s3",
+     "title": "Crooms Academy - Forms & Clearance",
+     "url": "https://www.cait.scps.k12.fl.us/forms-clearance",
+     "organization": "Crooms Academy of Information Technology (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Clearance checklist, Athletic Clearance link, EL2 and ECG forms, athletic department contacts."
+    },
+    {
+     "id": "s4",
+     "title": "Crooms Academy - Eligibility",
+     "url": "https://www.cait.scps.k12.fl.us/eligibility",
+     "organization": "Crooms Academy of Information Technology (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Academic eligibility and NCAA links. No NIL or amateurism text reported."
+    },
+    {
+     "id": "s5",
+     "title": "Crooms Academy - Banner Sports Programs",
+     "url": "https://www.cait.scps.k12.fl.us/banner-sports-programs",
+     "organization": "Crooms Academy of Information Technology (Seminole County Public Schools)",
+     "source_type": "official_webpage",
+     "is_primary": true,
+     "published_on": null,
+     "notes": "Read through WebFetch. Banner sponsor request and a 'Sponsor Packet' link. Undated."
+    }
+   ],
+   "policy_search": {
+    "public_policy_found": false,
+    "locations_checked": [
+     "cait.scps.k12.fl.us/about-us (About Us)",
+     "cait.scps.k12.fl.us/athletics-home (Athletics Home and athletics menu)",
+     "cait.scps.k12.fl.us/forms-clearance (Forms & Clearance)",
+     "cait.scps.k12.fl.us/eligibility (Eligibility)",
+     "cait.scps.k12.fl.us/banner-sports-programs (Banner Sports Programs)",
+     "Web search for Seminole County Public Schools NIL policy (no official SCPS result returned)"
+    ],
+    "locations_unreachable": [
+     "'Sponsor Packet' document linked from Banner Sports Programs: not opened (link URL not captured).",
+     "Athletics handbook link reported on Athletics Home: not opened (link URL not captured).",
+     "FHSAA List of Member Schools 2026-27 PDF (https://fhsaa.com/documents/2026/8/28//Membership_List_2026_27_8_28_26.pdf?id=8026): fetch refused, URL is disallowed by robots.txt. Not retried by other means.",
+     "FHSAA member directory widget (https://fhsaa.homecampus.com/widget/school/directory): fetch permission prompt was not answered, so it was not opened."
+    ],
+    "notes": "School-specific NIL policy: Not located in the public sources reviewed as of October 4, 2026. Crooms does field interscholastic teams, per its own athletics pages. The Forms & Clearance page names Athletic Clearance, the EL2 form and an ECG form. It does not mention NIL or Form GA1 in the text read."
+   }
+  }
+ ]
+}
