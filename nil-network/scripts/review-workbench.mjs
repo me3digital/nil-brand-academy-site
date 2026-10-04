@@ -50,20 +50,27 @@ dl.f ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; 
 .tag { font-size: 12px; color: var(--muted) }
 .tw { overflow-x: auto } table { border-collapse: collapse; width: 100%; font-size: 13px; background: var(--panel) } th, td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--line); vertical-align: top } th { font-size: 11px; text-transform: uppercase; letter-spacing: .05em; color: var(--muted) } td.n { font-variant-numeric: tabular-nums; text-align: right }
 code { font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; background: var(--accent-soft); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere }
+.item { border-top: 1px solid var(--line); padding: 12px 0; display: flex; flex-direction: column; gap: 6px }
+.item h4 { margin: 0; font: 700 15px var(--body) } .item blockquote { margin: 0; padding: 6px 10px; border-left: 3px solid var(--line); font-size: 13px; color: var(--muted) }
+.dec { display: flex; gap: 6px; flex-wrap: wrap } .dec button { font: 700 12px var(--body); border: 1px solid var(--line); background: var(--panel); color: var(--fg); padding: 6px 10px; border-radius: 6px; cursor: pointer }
+.dec button[aria-pressed="true"].ap { background: var(--good-bg); color: var(--good); border-color: var(--good) } .dec button[aria-pressed="true"].rj { background: var(--bad-bg); color: var(--bad); border-color: var(--bad) } .dec button[aria-pressed="true"].fx { background: var(--warn-bg); color: var(--warn); border-color: var(--warn) }
+.risk { font: 700 10px var(--body); text-transform: uppercase; letter-spacing: .05em; padding: 2px 6px; border-radius: 4px } .risk.high { background: var(--bad-bg); color: var(--bad) } .risk.medium { background: var(--warn-bg); color: var(--warn) } .risk.low, .risk.none { background: var(--hold-bg); color: var(--hold) }
+details.step { background: var(--panel); border: 1px solid var(--line); border-radius: 10px } details.step > summary { cursor: pointer; padding: 12px 14px; font-weight: 700 } details.step > div { padding: 0 14px 12px }
 .copy { font: 700 11px var(--body); border: 1px solid var(--line); background: transparent; color: var(--accent); border-radius: 6px; padding: 2px 7px; cursor: pointer }
 @media (max-width: 560px) { dl.f { grid-template-columns: 1fr } details.rec > summary { grid-template-columns: 34px minmax(0, 1fr) } details.rec > summary .pill { grid-column: 2; justify-self: start } }
 </style>
 <div class="wrap">
   <header style="display:flex;flex-direction:column;gap:8px">
     <h1>Florida Pilot Review Workbench</h1>
-    <p class="lede">One record per school, built from the database on <span id="gen"></span>. Nothing here has been reviewed by a person yet. Statewide and national rules are reviewed once in the rule queue, and every school inherits that review.</p>
+    <p class="lede">Review queue, school records and unopened sources, built from the database on <span id="gen"></span>. Nothing here has been reviewed by a person yet. Statewide and national rules are reviewed once in the rule queue, and every school inherits that review.</p>
   </header>
   <div class="stats" id="stats"></div>
   <div class="tabs" role="tablist">
-    <button role="tab" id="tab-schools" aria-selected="true" aria-controls="schools">Schools</button>
-    <button role="tab" id="tab-queue" aria-selected="false" aria-controls="queue">Rule queue</button>
+    <button role="tab" id="tab-queue" aria-selected="true" aria-controls="queue">Review queue</button>
+    <button role="tab" id="tab-schools" aria-selected="false" aria-controls="schools">Schools</button>
+    <button role="tab" id="tab-access" aria-selected="false" aria-controls="access">Unopened sources</button>
   </div>
-  <section id="schools" role="tabpanel" aria-labelledby="tab-schools" style="display:flex;flex-direction:column;gap:12px">
+  <section id="schools" role="tabpanel" aria-labelledby="tab-schools" hidden style="flex-direction:column;gap:12px">
     <div class="bar">
       <input type="search" id="q" placeholder="Search a school or city" aria-label="Search a school or city">
       <div class="chips" id="chips"></div>
@@ -71,9 +78,17 @@ code { font: 12px ui-monospace, SFMono-Regular, Menlo, monospace; background: va
     <p class="count" id="count"></p>
     <div class="list" id="list"></div>
   </section>
-  <section id="queue" role="tabpanel" aria-labelledby="tab-queue" hidden style="flex-direction:column;gap:16px">
-    <p class="lede">Work top to bottom. Central rules first: one review covers every page that inherits the rule. To record a review, a person runs the command in the Supabase SQL editor with their own name. Automated names are refused.</p>
-    <div id="qbody" style="display:flex;flex-direction:column;gap:18px"></div>
+  <section id="queue" role="tabpanel" aria-labelledby="tab-queue" style="display:flex;flex-direction:column;gap:16px">
+    <p class="lede">Work top to bottom. Each rule is reviewed once, however many pages show it. Your marks are saved in this browser only. They do not change the database: a person records each approved review with the command the page builds for you.</p>
+    <div class="bar"><label for="who" class="muted">Reviewer name</label><input type="text" id="who" placeholder="Your full name" style="font:15px var(--body);padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel);color:var(--fg);min-width:0;flex:0 1 240px">
+      <button type="button" class="copy" id="copyall" style="padding:8px 12px">Copy commands for everything marked Approve</button><span class="count" id="progress"></span></div>
+    <div id="qbody" style="display:flex;flex-direction:column;gap:10px"></div>
+    <p class="muted" id="notq"></p>
+  </section>
+  <section id="access" role="tabpanel" aria-labelledby="tab-access" hidden style="flex-direction:column;gap:12px">
+    <p class="lede">Every document research could not open, one row per unique document. Class A is a critical primary source: a page with an unread class A source cannot be strong or SEO-eligible.</p>
+    <div class="chips" id="achips"></div>
+    <div class="tw"><table><thead><tr><th>Class</th><th>Status</th><th>Risk</th><th>Document</th><th>Pages affected</th><th>Claim it could affect</th><th>Supported elsewhere by</th></tr></thead><tbody id="abody"></tbody></table></div>
   </section>
 </div>
 <script id="data" type="application/json">${data}</script>
@@ -88,7 +103,7 @@ const R = D.records.map((r) => ({ ...r, group: group(r) }));
 const order = { eligible: 0, hold: 1, thin: 2, incomplete: 3 };
 R.sort((a, b) => order[a.group] - order[b.group] || a.value_class.localeCompare(b.value_class) || b.nil_items - a.nil_items || a.name.localeCompare(b.name));
 const n = (f) => R.filter(f).length;
-document.getElementById('stats').innerHTML = [[R.length, 'Schools'], [n((r) => r.group === 'eligible'), 'Eligible, review pending'], [n((r) => r.group === 'hold'), 'On hold'], [n((r) => r.group === 'thin'), 'Keep noindex'], [n((r) => r.group === 'incomplete'), 'Incomplete'], [D.queue.filter((x) => x.group === 'central').length, 'Central rules to review']]
+document.getElementById('stats').innerHTML = [[R.length, 'Schools'], [n((r) => r.group === 'eligible'), 'Eligible, review pending'], [n((r) => r.group === 'hold'), 'On hold'], [n((r) => r.group === 'thin'), 'Keep noindex'], [n((r) => r.group === 'incomplete'), 'Incomplete'], [D.workload.tier1_total + D.workload.tier2_total, 'Unique rules']]
   .map(([v, l]) => '<div class="stat"><b>' + v + '</b><span>' + l + '</span></div>').join('');
 const FILTERS = [['all', 'All'], ['eligible', 'Eligible'], ['hold', 'Hold'], ['thin', 'Keep noindex'], ['incomplete', 'Incomplete'], ['college', 'Colleges'], ['high_school', 'High schools']];
 let active = 'all';
@@ -130,12 +145,38 @@ function draw() {
 }
 chips.addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; active = b.dataset.k; chips.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', x === b)); draw(); });
 q.addEventListener('input', draw); draw();
-// rule queue
-const G = [['central', 'Part 1. Central rules', 'Reviewed once. Every school under the rule inherits the review.'], ['shared', 'Part 2. Conference and district rules', 'Each is shared by a few schools.'], ['school', 'Part 3. School-specific rules', 'Review alongside the school record.']];
-document.getElementById('qbody').innerHTML = G.map(([k, h, d]) => { const rows = D.queue.filter((x) => x.group === k);
-  return '<div style="display:flex;flex-direction:column;gap:8px"><h2>' + h + ' (' + rows.length + ')</h2><p class="muted">' + d + '</p><div class="tw"><table><thead><tr><th>Issuer</th><th>Topic</th><th>Bottom line</th><th>Citation</th><th>State</th><th>Pages</th><th>Record a review</th></tr></thead><tbody>'
-    + rows.map((x) => '<tr><td>' + esc(x.issuer) + '</td><td>' + esc(x.topic) + '</td><td>' + x.answer + '</td><td>' + esc(x.citation) + '</td><td>' + x.trust + '</td><td class="n">' + x.pages + '</td><td><code>' + esc(x.slug) + '</code> <button type="button" class="copy" data-c="select record_human_review(\\'' + esc(x.slug) + '\\', \\'Your Name\\', \\'note\\');">Copy command</button></td></tr>').join('') + '</tbody></table></div></div>'; }).join('');
-document.getElementById('qbody').addEventListener('click', async (e) => { const b = e.target.closest('.copy'); if (!b) return; try { await navigator.clipboard.writeText(b.dataset.c); b.textContent = 'Copied'; } catch { b.textContent = b.dataset.c; } });
+// review queue
+const I = new Map(D.items.map((x) => [x.slug, x]));
+let marks = {}; try { marks = JSON.parse(localStorage.getItem('nil-review-marks') || '{}'); } catch (e) {}
+const save = () => { try { localStorage.setItem('nil-review-marks', JSON.stringify(marks)); } catch (e) {} };
+const itemHtml = (x) => '<div class="item" data-slug="' + x.slug + '"><h4>' + esc(x.claim) + ' <span class="risk ' + x.risk + '">' + x.risk + ' risk</span></h4>'
+  + '<p><b>' + esc(x.issuer) + ': ' + x.bottom_line + '.</b> ' + esc(x.summary) + (x.conditions ? ' <span class="muted">' + esc(x.conditions) + '</span>' : '') + '</p>'
+  + x.sources.map((s) => '<blockquote>' + (s.quote ? '&ldquo;' + esc(s.quote) + '&rdquo;<br>' : '') + '<a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.title) + '</a>' + (s.locator ? ', ' + esc(s.locator) : '') + (s.date ? ' <span class="tag">' + s.date + '</span>' : '') + '</blockquote>').join('')
+  + '<p class="tag">Citation: ' + esc(x.citation) + ' &middot; Machine check: ' + esc(x.machine) + ' &middot; Shown on ' + x.pages + ' page' + (x.pages === 1 ? '' : 's') + ' &middot; <code>' + x.slug + '</code></p>'
+  + '<p class="tag"><b>You are approving:</b> ' + esc(x.approving) + '</p>'
+  + '<div class="dec">' + [['ap', 'Approve'], ['rj', 'Reject'], ['fx', 'Needs correction']].map(([k, l]) => '<button type="button" class="' + k + '" data-k="' + k + '" aria-pressed="' + (marks[x.slug] === k) + '">' + l + '</button>').join('') + '</div></div>';
+const qb = document.getElementById('qbody');
+qb.innerHTML = D.steps.map((st, n) => '<details class="step" id="step-' + n + '"' + (n < 2 ? ' open' : '') + '><summary>' + (n + 1) + '. ' + esc(st.title) + ' <span class="tag" data-step="' + n + '"></span></summary><div><p class="muted">' + esc(st.note) + (st.page ? ' <a href="' + STAGE + st.page + '" target="_blank" rel="noopener">Open the staging page</a>' : '') + '</p>'
+  + st.rules.map((sl) => itemHtml(I.get(sl))).join('') + (st.page ? '<div class="item"><h4>Page approval</h4><p>After every rule above is approved and recorded, read the assembled page once and approve it: is it accurate, useful and appropriately worded?</p><p><code>select approve_page(\\'' + st.page + '\\', \\'Your Name\\');</code></p></div>' : '') + '</div></details>').join('');
+const prog = () => { const all = D.steps.flatMap((s) => s.rules); const c = (k) => all.filter((s) => marks[s] === k).length;
+  document.getElementById('progress').textContent = c('ap') + ' approved, ' + c('rj') + ' rejected, ' + c('fx') + ' need correction, ' + (all.length - c('ap') - c('rj') - c('fx')) + ' of ' + all.length + ' not yet marked';
+  D.steps.forEach((st, n) => { document.querySelector('[data-step="' + n + '"]').textContent = st.rules.filter((s) => marks[s]).length + ' of ' + st.rules.length + ' marked'; }); };
+qb.addEventListener('click', (e) => { const b = e.target.closest('.dec button'); if (!b) return; const it = b.closest('.item'); const sl = it.dataset.slug;
+  marks[sl] = marks[sl] === b.dataset.k ? undefined : b.dataset.k; it.querySelectorAll('.dec button').forEach((x) => x.setAttribute('aria-pressed', marks[sl] === x.dataset.k)); save(); prog(); });
+document.getElementById('copyall').addEventListener('click', async (e) => { const who = document.getElementById('who').value.trim(); const b = e.currentTarget;
+  if (!who) { b.textContent = 'Enter your name first'; return; }
+  const sql = D.steps.flatMap((s) => s.rules).filter((s) => marks[s] === 'ap').map((s) => "select record_human_review('" + s + "', '" + who.replace(/'/g, "''") + "', 'Reviewed in the workbench');").join('\\n');
+  try { await navigator.clipboard.writeText(sql); b.textContent = 'Copied. Paste into the Supabase SQL editor'; } catch (err) { b.textContent = 'Copy failed. Use a desktop browser'; } });
+const notQ = D.records.filter((r) => r.seo_status !== 'SEO_ELIGIBLE_HUMAN_REVIEW_PENDING');
+document.getElementById('notq').textContent = 'Not in the queue, because the page stays noindex whatever a reviewer does: ' + notQ.map((r) => r.name).join(', ') + '.';
+prog();
+// unopened sources
+const AF = [['open', 'Still unread'], ['AB', 'Class A and B'], ['all', 'All ' + D.access.length]]; let af = 'open';
+const ac = document.getElementById('achips'); ac.innerHTML = AF.map(([k, l]) => '<button type="button" data-k="' + k + '" aria-pressed="' + (k === af) + '">' + l + '</button>').join('');
+const ST = { opened_now: 'Opened Oct 4', still_inaccessible: 'Still inaccessible', login_required: 'Behind a login', not_found_404: 'Page gone', not_retried: 'Not retried' };
+const adraw = () => { const rows = D.access.filter((a) => af === 'all' || (af === 'AB' ? 'AB'.includes(a.class) : a.status !== 'opened_now'));
+  document.getElementById('abody').innerHTML = rows.map((a) => '<tr><td><b>' + a.class + '</b></td><td>' + ST[a.status] + '</td><td><span class="risk ' + a.risk + '">' + a.risk + '</span></td><td>' + (a.url ? '<a href="' + esc(a.url) + '" target="_blank" rel="noopener">' + esc(a.title) + '</a>' : esc(a.title)) + '<br><span class="tag">' + esc(a.why || '') + (a.finding ? ' Finding: ' + esc(a.finding) : '') + '</span></td><td>' + esc(a.owners.join(', ')) + '</td><td>' + esc(a.claim || '') + '</td><td>' + esc(a.support || '') + '</td></tr>').join(''); };
+ac.addEventListener('click', (e) => { const b = e.target.closest('button'); if (!b) return; af = b.dataset.k; ac.querySelectorAll('button').forEach((x) => x.setAttribute('aria-pressed', x === b)); adraw(); }); adraw();
 const tabs = [...document.querySelectorAll('[role=tab]')];
 tabs.forEach((t) => t.addEventListener('click', () => { tabs.forEach((x) => { const on = x === t; x.setAttribute('aria-selected', on); document.getElementById(x.getAttribute('aria-controls')).hidden = !on; }); }));
 </script>

@@ -24,7 +24,7 @@ for (const w of [390, 1280]) {
   p.on('requestfailed', (r) => { if (r.url().startsWith(base)) errs.push('requestfailed ' + r.url()); });
   for (const pth of paths) {
     errs = [];
-    const res = await p.goto(base + pth, { waitUntil: 'networkidle' });
+    const res = await p.goto(base + pth, { waitUntil: 'load' });
     const status = res.status();
     const xrobots = res.headers()['x-robots-tag'] || null;
     const r = await p.evaluate(() => {
@@ -97,7 +97,7 @@ for (const h of brokenInternal) bad('(site)', 'broken internal link', h);
   const find = async (qv, type = '') => p.evaluate(({ qv, type }) => { const root = document.querySelector('[data-find]'); const q = root.querySelector('[data-find-q]'); const t = root.querySelector('[data-find-type]');
     t.value = type; q.value = qv; q.dispatchEvent(new Event('input', { bubbles: true }));
     return [...root.querySelectorAll('.findlist li')].filter((li) => !li.hidden).map((li) => li.querySelector('.fn').textContent + ' [' + li.dataset.type + ']'); }, { qv, type });
-  const T = [];
+  const T = []; const hubs = () => Object.keys(out.pages).filter((x) => /\/(colleges|high-schools)\/[^/]+\/$/.test(x));
   const expect = async (label, qv, type, test) => { const r = await find(qv, type); const ok = test(r); T.push({ label, query: qv, type: type || 'all', results: r.length, ok, sample: r.slice(0, 4) }); if (!ok) bad('/nil/', 'Find My School: ' + label, `${qv} -> ${r.join('; ')}`); };
   const names = (r) => r.map((x) => x.replace(/ \[.*$/, ''));
   await expect('everything listed with no filter', '', '', (r) => r.length === Object.keys(out.pages).filter((x) => /\/(colleges|high-schools)\/[^/]+\/$/.test(x)).length);
@@ -111,9 +111,12 @@ for (const h of brokenInternal) bad('(site)', 'broken internal link', h);
   await expect('city', 'Tallahassee', '', (r) => r.length === 2 && r.every((x) => /college/.test(x)));
   await expect('city with many schools', 'Orlando', '', (r) => r.length >= 10 && r.some((x) => /college/.test(x)) && r.some((x) => /high_school/.test(x)));
   await expect('city plus type words', 'orlando high school', '', (r) => r.length >= 9 && r.every((x) => /high_school/.test(x)));
-  await expect('type filter: college only', '', 'college', (r) => r.length === 13 && r.every((x) => /college/.test(x)));
-  await expect('type filter: high school only', '', 'high_school', (r) => r.length === 17 && r.every((x) => /high_school/.test(x)));
-  await expect('same word, college vs high school kept apart', 'Seminole', 'high_school', (r) => r.length === 1 && /Seminole High School/.test(r[0]));
+  await expect('type filter: college only', '', 'college', (r) => r.length === hubs().filter((x) => /colleges/.test(x)).length && r.every((x) => /college/.test(x)));
+  await expect('type filter: high school only', '', 'high_school', (r) => r.length === hubs().filter((x) => /high-schools/.test(x)).length && r.every((x) => /high_school/.test(x)));
+  await expect('name match ranks above county match', 'Seminole High School', '', (r) => /^Seminole High School/.test(r[0]) && r.every((x) => /high_school/.test(x)));
+  await expect('county search', 'seminole county', 'high_school', (r) => r.length === 9);
+  await expect('same place name: school named for it comes first', 'Winter Park', '', (r) => /^Winter Park High School/.test(r[0]) && r.length === 2);
+  await expect('two schools in one city, name match first', 'Oviedo', '', (r) => /^Oviedo High School/.test(r[0]) && r.length === 2);
   await expect('same city, two colleges', 'Jacksonville', 'college', (r) => r.length === 2);
   await expect('same place name in a college and a high school filter', 'Winter Park', 'college', (r) => r.length === 0);
   await expect('"Miami" finds both Miami schools', 'Miami', '', (r) => r.length === 2);

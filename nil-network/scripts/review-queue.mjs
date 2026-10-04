@@ -99,6 +99,52 @@ for (const t of ['institutions', 'school_districts', 'governing_bodies', 'source
 fs.writeFileSync('review/summary.json', JSON.stringify({ schools: summary, sources: src, counts, queue: { central: central.length, shared: shared.length, school: school.length },
   centralByIssuer: Object.fromEntries([...new Set(central.map((r) => r.issuer))].map((i) => [i, central.filter((r) => r.issuer === i).length])),
   conflicts: await q(`select r.slug, c.severity, c.summary from conflicts c join rules r on r.id = c.rule_id where c.status = 'open' order by c.severity, r.slug`) }, null, 1));
-fs.writeFileSync('review/data.json', JSON.stringify({ generated: new Date().toISOString().slice(0, 10), records, queue: queue.map((r) => ({ slug: r.rule_slug, scope: r.scope_type, issuer: r.issuer, topic: r.topic, answer: ANS[r.answer], citation: r.citation, trust: TRUST[r.trust_state], pages: Number(r.pages_inheriting), summary: r.summary, group: central.includes(r) ? 'central' : shared.includes(r) ? 'shared' : 'school' })) }));
+// ---- tiered, prioritised queue (Phase 3B)
+const HIGH = new Set(['disclosure-required', 'deal-review', 'pay-for-play', 'prohibited-categories', 'penalties', 'agents', 'boosters', 'collectives', 'school-staff-involvement', 'recruiting-inducement', 'transfers', 'international-athletes', 'school-payments', 'nil-allowed']);
+const MED = new Set(['school-logos-marks', 'uniform-in-content', 'school-facilities', 'school-name-reference', 'event-footage', 'deal-terms', 'contract-length', 'parent-guardian', 'team-activities']);
+const detail = await q(`select r.slug, r.scope_type, r.applies_to, t.slug as topic_slug, t.label as topic, t.question, v.id as vid, v.answer, v.summary, v.conditions, v.citation, v.trust_state, v.review_method, v.nil_specific, v.short_answer,
+    coalesce(gb.short_name, st.name || ' law', d.name, i.short_name, i.name) as issuer, gb.body_type, i.slug as inst_slug, d.slug as district_slug
+  from rules r join rule_versions v on v.rule_id = r.id and v.is_current join rule_topics t on t.id = r.rule_topic_id
+  left join governing_bodies gb on gb.id = r.governing_body_id left join states st on st.id = r.state_id and r.scope_type = 'state'
+  left join school_districts d on d.id = r.district_id and r.scope_type = 'district' left join institutions i on i.id = r.institution_id and r.scope_type = 'institution'
+  where r.status = 'active' order by r.id`);
+const rsrc = await q(`select rs.rule_version_id as vid, rs.locator, rs.quote, rs.quote_check, s.title, s.url, s.published_on, s.is_primary from rule_version_sources rs join sources s on s.id = rs.source_id order by rs.id`);
+const METHOD = { raw_source_text: 'page text read by machine and matched to the quote', visual_source_check: 'read on screen from the official document', automated_extraction: 'machine summary only', human_review: 'human reviewed' };
+const items = detail.map((r) => ({
+  slug: r.slug, tier: r.scope_type === 'state' || r.scope_type === 'governing_body' ? 1 : 2, scope: r.scope_type, applies: r.applies_to, issuer: r.issuer, inst: r.inst_slug, district: r.district_slug,
+  claim: r.question, bottom_line: ANS[r.answer], summary: r.summary, conditions: r.conditions, citation: r.citation,
+  machine: `${TRUST[r.trust_state]}; ${METHOD[r.review_method] || r.review_method}`, trust: r.trust_state,
+  approving: r.trust_state === 'PUBLIC_POLICY_NOT_LOCATED' ? 'That "not located" is a fair statement of the search, and that nothing in the cited source answers the question.'
+    : r.trust_state === 'PENDING_INSTITUTION_CONFIRMATION' ? 'Nothing yet. This rule waits on the school. Review only if the school confirms it is current.'
+    : 'That the plain-English summary says what the quoted source says, no more and no less, and that the source is the current one.',
+  risk: HIGH.has(r.topic_slug) ? 'high' : MED.has(r.topic_slug) ? 'medium' : 'low', topic: r.topic, nil_specific: r.nil_specific,
+  pages: Number(queue.find((x) => x.rule_slug === r.slug)?.pages_inheriting || 0),
+  sources: rsrc.filter((x) => x.vid === r.vid).map((x) => ({ title: x.title, url: x.url, locator: x.locator, quote: x.quote, date: x.published_on ? String(x.published_on instanceof Date ? x.published_on.toISOString().slice(0, 10) : x.published_on) : null, primary: x.is_primary })),
+}));
+// review order: central college rules, then the strongest college, the other strong colleges, moderate colleges, then eligible high schools
+const elig = records.filter((r) => r.seo_status === 'SEO_ELIGIBLE_HUMAN_REVIEW_PENDING');
+const slugOf = (r) => r.path.split('/').slice(-2, -1)[0];
+const FIRST = 'university-of-florida';
+const colA = elig.filter((r) => r.type === 'college' && r.value_class === 'A').sort((a, b) => (slugOf(a) === FIRST ? -1 : slugOf(b) === FIRST ? 1 : b.nil_items - a.nil_items));
+const colB = elig.filter((r) => r.type === 'college' && r.value_class === 'B').sort((a, b) => b.nil_items - a.nil_items);
+const hsE = elig.filter((r) => r.type === 'high_school');
+const conf = (r) => items.filter((x) => x.tier === 1 && x.scope === 'governing_body' && r.conference && x.issuer === r.conference);
+const steps = [];
+steps.push({ title: 'Central college rules', note: 'NCAA, College Sports Commission and Florida law. Reviewed once, inherited by all 13 college pages.', rules: items.filter((x) => x.tier === 1 && x.applies !== 'high_school' && !['conference'].includes(detail.find((d) => d.slug === x.slug).body_type) && x.issuer !== 'FHSAA' && !(x.applies === 'both' && x.issuer === 'FHSAA')).filter((x) => detail.find((d) => d.slug === x.slug).applies_to !== 'high_school').map((x) => x.slug), page: null });
+for (const r of [...colA, ...colB]) steps.push({ title: r.name, note: `${r.value_class === 'A' ? 'Strong' : 'Moderate'} college page. ${slugOf(r) === FIRST ? 'Recommended first page to take through the whole workflow.' : ''}`.trim(), rules: [...conf(r).map((x) => x.slug), ...items.filter((x) => x.inst === slugOf(r)).map((x) => x.slug)], page: r.path });
+if (hsE.length) {
+  steps.push({ title: 'Central high school rules', note: 'FHSAA and Florida law. Reviewed once, inherited by every Florida high school page.', rules: items.filter((x) => x.tier === 1 && detail.find((d) => d.slug === x.slug).applies_to !== 'college' && (x.issuer === 'FHSAA' || detail.find((d) => d.slug === x.slug).applies_to === 'high_school')).map((x) => x.slug), page: null });
+  const dists = [...new Set(hsE.map((r) => r.district))];
+  for (const dn of dists) steps.push({ title: dn, note: 'District rules. Reviewed once, inherited by every school in the district.', rules: items.filter((x) => x.scope === 'district' && x.issuer === dn).map((x) => x.slug), page: null });
+  for (const r of hsE) steps.push({ title: r.name, note: 'High school page that passes the automated gate on the strength of its district NIL policy.', rules: items.filter((x) => x.inst === slugOf(r)).map((x) => x.slug), page: r.path });
+}
+const queued = new Set(steps.flatMap((s) => s.rules));
+const access = await q(`select sa.*, coalesce((select json_agg(coalesce(i.name, d.name) order by coalesce(i.name, d.name)) from source_access_pages sp left join institutions i on i.id = sp.institution_id left join school_districts d on d.id = sp.district_id where sp.issue_id = sa.id), '[]') as owners from source_access_issues sa order by sa.class, sa.status, sa.id`);
+const workload = { tier1_total: items.filter((x) => x.tier === 1).length, tier2_total: items.filter((x) => x.tier === 2).length, tier3_total: records.length,
+  tier1_queued: [...queued].filter((s) => items.find((x) => x.slug === s).tier === 1).length, tier2_queued: [...queued].filter((s) => items.find((x) => x.slug === s).tier === 2).length, tier3_queued: steps.filter((s) => s.page).length,
+  first_page: { rules_central: steps[0].rules.length, rules_school: steps[1]?.rules.length, approvals: 1 }, display_instances: Number((await q(`select count(*)::int n from v_institution_rules ir join pages p on p.institution_id = ir.institution_id`))[0].n) };
+fs.writeFileSync('review/data.json', JSON.stringify({ generated: new Date().toISOString().slice(0, 10), records, items, steps, workload,
+  access: access.map((a) => ({ title: a.title, organization: a.organization, url: a.url, class: a.class, status: a.status, risk: a.risk, occurrences: a.occurrences, claim: a.claim_affected, support: a.other_support, why: a.why_unopened, retry: a.retry, finding: a.finding, owners: typeof a.owners === 'string' ? JSON.parse(a.owners) : a.owners })) }));
+console.log('workload', JSON.stringify(workload)); console.log('steps', steps.map((s) => `${s.title}:${s.rules.length}`).join(' | '));
 console.log('central', central.length, 'shared', shared.length, 'school', school.length, '| sources', src, '| schools', summary.length);
 process.exit(0);

@@ -57,7 +57,8 @@ const policyLine = search
       ? `Public NIL guidance from ${short} was located and reviewed as of ${fmtDate(search.search_date)}.`
       : `No publicly available school-specific NIL policy was located in the sources reviewed as of ${fmtDate(search.search_date)}.`)
   : 'A search for a school-specific NIL policy has not been recorded yet.';
-const policyShort = search ? (search.public_policy_found ? 'Public guidance located' : 'No public policy located') : 'Not yet searched';
+const districtNil = isHS && topics.some((t) => t.layers.some((l) => l.scope_type === 'district' && l.nil_specific && l.answer !== 'not_addressed'));
+const policyShort = search ? (search.public_policy_found ? 'Public guidance located' : districtNil ? 'District NIL policy located' : 'No public policy located') : 'Not yet searched';
 const confidence = `${trust.VERIFIED_TO_OFFICIAL_SOURCE} of ${trust.total} rules checked against the official source`;
 const confidenceRest = [
   trust.NEEDS_REVIEW ? `${trust.NEEDS_REVIEW} under review` : null,
@@ -197,6 +198,7 @@ const discShort = discTopic ? strip(shortOf(discTopic.lead)) : 'No disclosure ru
     <div class={`note ${search && search.public_policy_found ? '' : 'warn'}`}>
       <b>{policyLine}</b>
       {search && !search.public_policy_found && <> That is a statement about what we could find in public, not about what the school has. An internal or unpublished policy may exist, so ask before you sign.</>}
+      {districtNil && <> The district does publish an NIL policy, shown below.</>}
       {search && search.notes && search.public_policy_found && <> {search.notes}</>}
     </div>
     {search && <details class="fold">

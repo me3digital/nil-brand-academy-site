@@ -36,10 +36,10 @@ async function attachSources(rows) {
   const proh = await q(`select rp.rule_version_id, pc.name, rp.wording from rule_version_prohibited_categories rp
     join prohibited_categories pc on pc.id = rp.prohibited_category_id where rp.rule_version_id = any($1::int[]) order by rp.prohibited_category_id`, [ids]);
   const conf = await q(`select c.*, r.slug as rule_slug from conflicts c join rules r on r.id = c.rule_id where c.status = 'open' order by c.id`);
-  const tr = await q(`select id, trust_state, review_method, review_note, short_answer, quick_status from rule_versions where id = any($1::int[])`, [ids]);
+  const tr = await q(`select id, trust_state, review_method, review_note, short_answer, quick_status, nil_specific from rule_versions where id = any($1::int[])`, [ids]);
   return rows.map((r) => ({
     ...r,
-    ...(() => { const t = tr.find((x) => x.id === r.rule_version_id) || {}; return { trust_state: t.trust_state, review_method: t.review_method, review_note: t.review_note, short_answer: t.short_answer, quick_status: t.quick_status }; })(),
+    ...(() => { const t = tr.find((x) => x.id === r.rule_version_id) || {}; return { trust_state: t.trust_state, review_method: t.review_method, review_note: t.review_note, short_answer: t.short_answer, quick_status: t.quick_status, nil_specific: t.nil_specific }; })(),
     sources: src.filter((s) => s.rule_version_id === r.rule_version_id),
     disclosure: disc.find((d) => d.rule_version_id === r.rule_version_id) || null,
     prohibited: proh.filter((p) => p.rule_version_id === r.rule_version_id),
@@ -147,7 +147,7 @@ export async function getStateHub(stateSlug) {
     const topics = buildTopics(rows);
     levels[level] = { topics, categories: groupByCategory(topics), scenarios: await buildScenarios(level, topics) };
   }
-  const changeLog = await q(`select c.*, s.slug as source_slug, s.url as source_url, s.title as source_title, coalesce(g.short_name, st.name || ' law') as issuer
+  const changeLog = await q(`select c.*, s.slug as source_slug, s.url as source_url, s.title as source_title, coalesce(g.short_name, st.name || ' law', (select coalesce(d.name, i.short_name, i.name) from rules r left join school_districts d on d.id = r.district_id left join institutions i on i.id = r.institution_id where r.id = c.rule_id), 'School') as issuer
     from rule_change_log c left join sources s on s.id = c.source_id left join governing_bodies g on g.id = c.governing_body_id left join states st on st.id = c.state_id
     where c.is_public order by c.changed_on desc, c.id`);
   const watch = await q(`select w.*, s.url as source_url, s.title as source_title from watch_items w left join sources s on s.id = w.source_id where w.is_open order by w.as_of desc, w.id`);
@@ -188,7 +188,7 @@ export async function getHub(stateSlug, type, slug) {
       if (r[0]) { g.external = r[0]; extraRuleRows.push(r[0]); }
     }
   }
-  const changeLog = await q(`select c.*, s.slug as source_slug, coalesce(g.short_name, st.name || ' law') as issuer
+  const changeLog = await q(`select c.*, s.slug as source_slug, coalesce(g.short_name, st.name || ' law', (select coalesce(d.name, i.short_name, i.name) from rules r left join school_districts d on d.id = r.district_id left join institutions i on i.id = r.institution_id where r.id = c.rule_id), 'School') as issuer
     from rule_change_log c left join sources s on s.id = c.source_id left join governing_bodies g on g.id = c.governing_body_id left join states st on st.id = c.state_id
     where c.is_public and c.rule_id in (select rule_id from v_institution_rules where institution_id = $1) order by c.changed_on desc, c.id`, [inst.id]);
   const watch = await q(`select w.*, s.slug as source_slug from watch_items w left join sources s on s.id = w.source_id
@@ -245,6 +245,7 @@ export const gateChecks = (g) => [
   ['Canonical complete', g.chk_canonical],
   ['Internal links complete', g.chk_internal_links],
   ['No unresolved high-severity source conflict', g.chk_no_open_conflict],
+  ['No unread critical primary source', g.chk_no_critical_source_gap],
   ['Human review complete (recorded by a person, once per rule)', g.chk_human_review],
   ['Editorial approval complete (recorded by a person)', g.chk_editorial_approval],
 ];
